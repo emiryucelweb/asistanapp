@@ -102,9 +102,11 @@ export default function PreRegisterForm(): JSX.Element {
     };
 
     try {
+      // Formspree ile basit fetch (CORS header'ları ile)
       const response = await fetch('https://formspree.io/f/mnngnddr', {
         method: 'POST',
         headers: {
+          'Accept': 'application/json',
           'Content-Type': 'application/json'
         },
         body: JSON.stringify(formData)
