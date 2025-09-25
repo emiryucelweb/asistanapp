@@ -76,36 +76,71 @@ export default function PreRegisterForm(): JSX.Element {
     setToast(t.thankyou);
   }
 
-  function handleStep2Submit() {
-    // Tüm bilgileri toplu olarak gönder
-    const subject = lang === 'tr' ? 'AsistanApp Ön Kayıt - Tam Bilgiler' : 'AsistanApp Pre-Registration - Complete Information';
-    const body = `
-=== ${lang === 'tr' ? 'KİŞİSEL BİLGİLER' : 'PERSONAL INFORMATION'} ===
-${lang === 'tr' ? 'Ad Soyad' : 'Full Name'}: ${form.name}
-${lang === 'tr' ? 'E-posta' : 'Email'}: ${form.email}
-${lang === 'tr' ? 'Telefon' : 'Phone'}: ${form.phone || 'Belirtilmedi / Not specified'}
-${lang === 'tr' ? 'Şirket' : 'Company'}: ${form.company || 'Belirtilmedi / Not specified'}
-${lang === 'tr' ? 'Dil Tercihi' : 'Language Preference'}: ${lang === 'tr' ? 'Türkçe' : 'English'}
+  async function submitToFormspree(includeGrowthData = false) {
+    const formData = {
+      // Temel bilgiler (her zaman gönderilir)
+      name: form.name,
+      email: form.email,
+      phone: form.phone || '',
+      company: form.company || '',
+      language: lang === 'tr' ? 'Türkçe' : 'English',
+      consent: form.consent,
+      registrationDate: new Date().toLocaleDateString(lang === 'tr' ? 'tr-TR' : 'en-US'),
+      registrationTime: new Date().toLocaleTimeString(lang === 'tr' ? 'tr-TR' : 'en-US'),
+      
+      // Demo tercihleri (sadece 2. adım tamamlanırsa)
+      ...(includeGrowthData && {
+        jobTitle: growth.jobTitle || '',
+        companySize: growth.companySize || '',
+        useCase: growth.useCase || '',
+        startTimeline: growth.start || '',
+        completedStep2: true
+      }),
+      
+      // Form tipi
+      formType: includeGrowthData ? 'Complete Registration' : 'Basic Registration'
+    };
 
-=== ${lang === 'tr' ? 'DEMO TERCİHLERİ' : 'DEMO PREFERENCES'} ===
-${lang === 'tr' ? 'Pozisyon' : 'Job Title'}: ${growth.jobTitle || 'Belirtilmedi / Not specified'}
-${lang === 'tr' ? 'Şirket Büyüklüğü' : 'Company Size'}: ${growth.companySize || 'Belirtilmedi / Not specified'}
-${lang === 'tr' ? 'Öncelikli Kullanım Amacı' : 'Primary Use Case'}: ${growth.useCase || 'Belirtilmedi / Not specified'}
-${lang === 'tr' ? 'Başlama Zamanı' : 'Start Timeline'}: ${growth.start || 'Belirtilmedi / Not specified'}
+    try {
+      const response = await fetch('https://formspree.io/f/mnngnddr', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+      });
 
-=== ${lang === 'tr' ? 'TALEP' : 'REQUEST'} ===
-${lang === 'tr' ? 
-  'Bu kişi AsistanApp ön kayıt listesine eklenmeyi ve kendisine özel demo hazırlanmasını talep ediyor.' : 
-  'This person requests to be added to the AsistanApp pre-registration list and wants a custom demo prepared for them.'
-}
+      if (response.ok) {
+        return true;
+      } else {
+        throw new Error('Form submission failed');
+      }
+    } catch (error) {
+      console.error('Form submission error:', error);
+      return false;
+    }
+  }
 
-${lang === 'tr' ? 'Kayıt Tarihi' : 'Registration Date'}: ${new Date().toLocaleDateString(lang === 'tr' ? 'tr-TR' : 'en-US')}
-    `.trim();
+  async function handleStep2Submit() {
+    const success = await submitToFormspree(true);
     
-    const mailto = `mailto:info@asistanapp.com.tr?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    window.location.href = mailto;
-    setToast(t.ok); 
-    setStep(3);
+    if (success) {
+      setToast(t.ok);
+      setStep(3);
+    } else {
+      setError(lang === 'tr' ? 'Bir hata oluştu, lütfen tekrar deneyin.' : 'An error occurred, please try again.');
+    }
+  }
+
+  async function handleSkipStep2() {
+    const success = await submitToFormspree(false);
+    
+    if (success) {
+      setToast(lang === 'tr' ? 'Ön kaydınız tamamlandı!' : 'Your pre-registration is complete!');
+      setStep(3);
+    } else {
+      setError(lang === 'tr' ? 'Bir hata oluştu, lütfen tekrar deneyin.' : 'An error occurred, please try again.');
+    }
   }
 
   return (
@@ -304,7 +339,7 @@ ${lang === 'tr' ? 'Kayıt Tarihi' : 'Registration Date'}: ${new Date().toLocaleD
               </button>
               <button 
                 type="button"
-                onClick={() => { setToast(t.ok); setStep(3); }}
+                onClick={handleSkipStep2}
                 style={{ 
                   background: 'transparent', 
                   border: 'none', 
