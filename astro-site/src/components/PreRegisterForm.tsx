@@ -5,7 +5,7 @@ type GrowthState = { jobTitle?: string; companySize?: string; useCase?: string; 
 
 const initialState: FormState = { name: '', email: '', consent: false };
 
-export default function PreRegisterForm(): JSX.Element {
+export default function PreRegisterForm() {
   const [lang, setLang] = useState<'tr'|'en'>('tr');
   const [step, setStep] = useState<1|2|3>(1);
   const [form, setForm] = useState<FormState>(initialState);
