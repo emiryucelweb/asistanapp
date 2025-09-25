@@ -1,0 +1,102 @@
+---
+import Layout from "../layouts/Layout.astro";
+import PreRegisterForm from "../components/PreRegisterForm";
+---
+
+<Layout 
+  title="Ön Kayıt – AsistanApp" 
+  description="AsistanApp için ön kayıt olun. Yapay zeka asistanınızı kurmaya hazır olduğunuzda size ulaşalım."
+>
+  <!-- Hero Section -->
+  <section class="hero section-sm observe-animation" style="background: var(--bg-accent);">
+    <div class="container text-center">
+      <h1 class="animate-fade-in-up">
+        <span data-i18n="tr">Ön Kayıt</span>
+        <span data-i18n="en">Pre-Registration</span>
+      </h1>
+      <p class="text-muted" style="font-size: var(--font-size-lg); max-width: 600px; margin: 0 auto;">
+        <span data-i18n="tr">
+          Yapay zeka asistanınızı kurmaya hazır olduğunuzda size ulaşalım. 
+          2 dakikada ön kayıt tamamlayın.
+        </span>
+        <span data-i18n="en">
+          Let us reach you when you're ready to set up your AI assistant. 
+          Complete pre-registration in 2 minutes.
+        </span>
+      </p>
+    </div>
+  </section>
+
+  <!-- Form Section -->
+  <section class="section observe-animation">
+    <div class="container">
+      <PreRegisterForm client:only="react" />
+    </div>
+  </section>
+
+  <!-- Benefits Section -->
+  <section class="section observe-animation" style="background: var(--bg-accent);">
+    <div class="container">
+      <h2 class="text-center">
+        <span data-i18n="tr">Ön Kayıt Avantajları</span>
+        <span data-i18n="en">Pre-Registration Benefits</span>
+      </h2>
+      
+      <div class="grid grid-3">
+        <div class="card text-center">
+          <div style="font-size: 3rem; margin-bottom: var(--space-4); color: var(--primary);">🎯</div>
+          <h3>
+            <span data-i18n="tr">Erken Erişim</span>
+            <span data-i18n="en">Early Access</span>
+          </h3>
+          <p>
+            <span data-i18n="tr">
+              Lansmanımızda ilk kullananlardan birin. 
+              Beta testine özel davet alın.
+            </span>
+            <span data-i18n="en">
+              Be among the first users at our launch. 
+              Get exclusive beta testing invitations.
+            </span>
+          </p>
+        </div>
+        
+        <div class="card text-center">
+          <div style="font-size: 3rem; margin-bottom: var(--space-4); color: var(--primary);">💰</div>
+          <h3>
+            <span data-i18n="tr">Özel İndirim</span>
+            <span data-i18n="en">Special Discount</span>
+          </h3>
+          <p>
+            <span data-i18n="tr">
+              İlk 6 ay %50 indirimle kullanın. 
+              Ön kayıt üyelerine özel fiyat.
+            </span>
+            <span data-i18n="en">
+              Use with 50% discount for the first 6 months. 
+              Special price for pre-registration members.
+            </span>
+          </p>
+        </div>
+        
+        <div class="card text-center">
+          <div style="font-size: 3rem; margin-bottom: var(--space-4); color: var(--primary);">🎓</div>
+          <h3>
+            <span data-i18n="tr">Ücretsiz Kurulum</span>
+            <span data-i18n="en">Free Setup</span>
+          </h3>
+          <p>
+            <span data-i18n="tr">
+              Teknik ekibimiz yapay zeka asistanınızı 
+              ücretsiz kurar ve eğitir.
+            </span>
+            <span data-i18n="en">
+              Our technical team sets up and trains 
+              your AI assistant for free.
+            </span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

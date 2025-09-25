@@ -1,0 +1,344 @@
+import React, { useMemo, useState, useEffect } from 'react';
+
+type FormState = { name: string; email: string; consent: boolean; phone?: string; company?: string };
+type GrowthState = { jobTitle?: string; companySize?: string; useCase?: string; start?: string };
+
+const initialState: FormState = { name: '', email: '', consent: false };
+
+export default function PreRegisterForm(): JSX.Element {
+  const [lang, setLang] = useState<'tr'|'en'>('tr');
+  const [step, setStep] = useState<1|2|3>(1);
+  const [form, setForm] = useState<FormState>(initialState);
+  const [growth, setGrowth] = useState<GrowthState>({});
+  const [error, setError] = useState<string>('');
+  const [toast, setToast] = useState<string>('');
+
+  // Sync with global language
+  useEffect(() => {
+    const currentLang = document.documentElement.getAttribute('data-lang') || 'tr';
+    setLang(currentLang as 'tr'|'en');
+  }, []);
+
+  const t = useMemo(() => ({
+    tr: {
+      progress: step===1? 'Adım 1 / 2' : 'Adım 2 / 2',
+      title1: 'Ön Kayıt Formu',
+      title2: 'Firmanıza özel demo hazırlayabilmemiz için birkaç soru daha',
+      name: 'Ad Soyad *', email: 'E-posta *', phone: 'Telefon', company: 'Şirket Adı',
+      consent: 'KVKK kapsamında bilgilerimin işlenmesine ve ürün duyuruları için kullanılmasına onay veriyorum.',
+      submit1: '🚀 Ön Kayıt Ol', submit2: '✅ Tercihleri Kaydet', skip: 'Şimdilik Atla',
+      ok: 'Tercihleriniz kaydedildi! Size özel demo hazırlamak için iletişime geçeceğiz.',
+      thankyou: 'Teşekkürler! Kayıt alındı, bir sonraki adıma geçebilirsiniz.',
+      jobTitle: 'Pozisyon', companySize: 'Şirket Büyüklüğü', useCase: 'Öncelikli Kullanım Amacı', startTime: 'Başlama Zamanı',
+      owner: 'Sahip/Kurucu', manager: 'Yönetici', employee: 'Çalışan', other: 'Diğer',
+      sales: 'Satış Artırma', support: 'Müşteri Destek Otomasyonu', payment: 'Ödeme Kolaylığı',
+      now: 'Hemen', month3: '3 Ay İçinde', month6: '6+ Ay Sonra'
+    },
+    en: {
+      progress: step===1? 'Step 1 of 2' : 'Step 2 of 2',
+      title1: 'Pre-Registration Form',
+      title2: 'A few more questions to help us prepare a custom demo for your company',
+      name: 'Full Name *', email: 'Email *', phone: 'Phone', company: 'Company Name',
+      consent: 'I consent to the processing of my information under KVKK/GDPR and its use for product announcements.',
+      submit1: '🚀 Join Waitlist', submit2: '✅ Save Preferences', skip: 'Skip for now',
+      ok: 'Your preferences have been saved! We will contact you to prepare a custom demo.',
+      thankyou: 'Thanks! Your signup is received, you can continue to the next step.',
+      jobTitle: 'Job Title', companySize: 'Company Size', useCase: 'Primary Use Case', startTime: 'Start Timeline',
+      owner: 'Owner/Founder', manager: 'Manager', employee: 'Employee', other: 'Other',
+      sales: 'Increase Sales', support: 'Customer Support Automation', payment: 'Payment Simplification',
+      now: 'Immediately', month3: 'Within 3 months', month6: '6+ months'
+    }
+  })[lang], [lang, step]);
+
+  function onChange(e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) {
+    setForm((s) => ({ ...s, [e.target.name]: e.target.value }));
+  }
+  
+  function onGrowthChange(e: React.ChangeEvent<HTMLSelectElement>) { 
+    setGrowth((s)=>({ ...s, [e.target.name]: e.target.value })); 
+  }
+
+  function validate(): string | null {
+    if (!form.name.trim()) return lang==='tr' ? 'Lütfen ad soyad giriniz.' : 'Please enter your full name.';
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) return lang==='tr' ? 'Geçerli bir e-posta giriniz.' : 'Please enter a valid email.';
+    if (!form.consent) return lang==='tr' ? 'KVKK onayını vermelisiniz.' : 'You must provide KVKK/GDPR consent.';
+    return null;
+  }
+
+  function handleSubmit(e: React.FormEvent) {
+    e.preventDefault();
+    const v = validate();
+    if (v) { setError(v); return; }
+    setError('');
+    
+    // Sadece adım 2'ye geç, mail gönderme
+    setStep(2); 
+    setToast(t.thankyou);
+  }
+
+  function handleStep2Submit() {
+    // Tüm bilgileri toplu olarak gönder
+    const subject = lang === 'tr' ? 'AsistanApp Ön Kayıt - Tam Bilgiler' : 'AsistanApp Pre-Registration - Complete Information';
+    const body = `
+=== ${lang === 'tr' ? 'KİŞİSEL BİLGİLER' : 'PERSONAL INFORMATION'} ===
+${lang === 'tr' ? 'Ad Soyad' : 'Full Name'}: ${form.name}
+${lang === 'tr' ? 'E-posta' : 'Email'}: ${form.email}
+${lang === 'tr' ? 'Telefon' : 'Phone'}: ${form.phone || 'Belirtilmedi / Not specified'}
+${lang === 'tr' ? 'Şirket' : 'Company'}: ${form.company || 'Belirtilmedi / Not specified'}
+${lang === 'tr' ? 'Dil Tercihi' : 'Language Preference'}: ${lang === 'tr' ? 'Türkçe' : 'English'}
+
+=== ${lang === 'tr' ? 'DEMO TERCİHLERİ' : 'DEMO PREFERENCES'} ===
+${lang === 'tr' ? 'Pozisyon' : 'Job Title'}: ${growth.jobTitle || 'Belirtilmedi / Not specified'}
+${lang === 'tr' ? 'Şirket Büyüklüğü' : 'Company Size'}: ${growth.companySize || 'Belirtilmedi / Not specified'}
+${lang === 'tr' ? 'Öncelikli Kullanım Amacı' : 'Primary Use Case'}: ${growth.useCase || 'Belirtilmedi / Not specified'}
+${lang === 'tr' ? 'Başlama Zamanı' : 'Start Timeline'}: ${growth.start || 'Belirtilmedi / Not specified'}
+
+=== ${lang === 'tr' ? 'TALEP' : 'REQUEST'} ===
+${lang === 'tr' ? 
+  'Bu kişi AsistanApp ön kayıt listesine eklenmeyi ve kendisine özel demo hazırlanmasını talep ediyor.' : 
+  'This person requests to be added to the AsistanApp pre-registration list and wants a custom demo prepared for them.'
+}
+
+${lang === 'tr' ? 'Kayıt Tarihi' : 'Registration Date'}: ${new Date().toLocaleDateString(lang === 'tr' ? 'tr-TR' : 'en-US')}
+    `.trim();
+    
+    const mailto = `mailto:info@asistanapp.com.tr?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = mailto;
+    setToast(t.ok); 
+    setStep(3);
+  }
+
+  return (
+    <div style={{ maxWidth: '800px', margin: '0 auto' }}>
+      <div className="card hover-lift animate-fade-in-up" style={{ padding: 'var(--space-8)' }}>
+        {/* Progress Header */}
+        <div style={{ 
+          display: 'flex', 
+          justifyContent: 'space-between', 
+          alignItems: 'center', 
+          marginBottom: 'var(--space-6)',
+          paddingBottom: 'var(--space-4)',
+          borderBottom: '1px solid var(--border-light)'
+        }}>
+          <div style={{ 
+            background: 'var(--primary-light)', 
+            color: 'var(--primary)', 
+            padding: 'var(--space-2) var(--space-4)', 
+            borderRadius: 'var(--radius-full)',
+            fontSize: 'var(--font-size-sm)',
+            fontWeight: 'var(--font-weight-semibold)'
+          }}>
+            {t.progress}
+          </div>
+          <div style={{ display: 'flex', gap: 'var(--space-1)' }}>
+            <button 
+              type="button" 
+              onClick={() => setLang('tr')}
+              style={{
+                background: lang === 'tr' ? 'var(--primary)' : 'transparent',
+                color: lang === 'tr' ? 'white' : 'var(--text-secondary)',
+                border: `1px solid ${lang === 'tr' ? 'var(--primary)' : 'var(--border-medium)'}`,
+                padding: 'var(--space-2) var(--space-3)',
+                borderRadius: 'var(--radius-full)',
+                fontSize: 'var(--font-size-xs)',
+                fontWeight: 'var(--font-weight-semibold)',
+                cursor: 'pointer',
+                transition: 'var(--transition-fast)'
+              }}
+            >
+              TR
+            </button>
+            <button 
+              type="button" 
+              onClick={() => setLang('en')}
+              style={{
+                background: lang === 'en' ? 'var(--primary)' : 'transparent',
+                color: lang === 'en' ? 'white' : 'var(--text-secondary)',
+                border: `1px solid ${lang === 'en' ? 'var(--primary)' : 'var(--border-medium)'}`,
+                padding: 'var(--space-2) var(--space-3)',
+                borderRadius: 'var(--radius-full)',
+                fontSize: 'var(--font-size-xs)',
+                fontWeight: 'var(--font-weight-semibold)',
+                cursor: 'pointer',
+                transition: 'var(--transition-fast)'
+              }}
+            >
+              EN
+            </button>
+          </div>
+        </div>
+
+        {/* Toast Messages */}
+        {toast && (
+          <div className="alert success" style={{ marginBottom: 'var(--space-6)' }}>
+            {toast}
+          </div>
+        )}
+
+        {/* Step 1: Basic Information */}
+        {step === 1 && (
+          <form onSubmit={handleSubmit}>
+            <h2 style={{ marginBottom: 'var(--space-6)' }}>{t.title1}</h2>
+            
+            <div className="grid grid-2" style={{ marginBottom: 'var(--space-6)' }}>
+              <div className="form-group">
+                <label className="form-label">{t.name}</label>
+                <input 
+                  className="form-input"
+                  name="name" 
+                  value={form.name} 
+                  onChange={onChange} 
+                  required 
+                  placeholder={lang === 'tr' ? 'Emir Yücel' : 'John Doe'}
+                />
+              </div>
+              
+              <div className="form-group">
+                <label className="form-label">{t.email}</label>
+                <input 
+                  className="form-input"
+                  name="email" 
+                  type="email" 
+                  value={form.email} 
+                  onChange={onChange} 
+                  required 
+                  placeholder="info@asistanapp.com.tr"
+                />
+              </div>
+              
+              <div className="form-group">
+                <label className="form-label">{t.company}</label>
+                <input 
+                  className="form-input"
+                  name="company" 
+                  value={form.company ?? ''} 
+                  onChange={onChange}
+                  placeholder={lang === 'tr' ? 'AsistanApp' : 'AsistanApp'}
+                />
+              </div>
+              
+              <div className="form-group">
+                <label className="form-label">{t.phone}</label>
+                <input 
+                  className="form-input"
+                  name="phone" 
+                  value={form.phone ?? ''} 
+                  onChange={onChange}
+                  placeholder="+90 543 899 2696"
+                />
+              </div>
+            </div>
+            
+            <div className="checkbox-group">
+              <input 
+                type="checkbox" 
+                checked={form.consent} 
+                onChange={(e) => setForm(s => ({...s, consent: e.target.checked}))}
+                id="consent"
+              />
+              <label htmlFor="consent" style={{ fontSize: 'var(--font-size-sm)', lineHeight: 'var(--line-height-normal)' }}>
+                {t.consent}
+              </label>
+            </div>
+            
+            {error && <div className="alert error">{error}</div>}
+            
+            <button className="btn btn-primary btn-lg" type="submit" style={{ width: '100%' }}>
+              {t.submit1}
+            </button>
+          </form>
+        )}
+
+        {/* Step 2: Additional Information */}
+        {step === 2 && (
+          <div>
+            <h2 style={{ marginBottom: 'var(--space-6)' }}>{t.title2}</h2>
+            
+            <div className="grid grid-2" style={{ marginBottom: 'var(--space-6)' }}>
+              <div className="form-group">
+                <label className="form-label">{t.jobTitle}</label>
+                <select className="form-select" name="jobTitle" onChange={onGrowthChange} defaultValue="">
+                  <option value="" disabled>—</option>
+                  <option value="owner">{t.owner}</option>
+                  <option value="manager">{t.manager}</option>
+                  <option value="employee">{t.employee}</option>
+                  <option value="other">{t.other}</option>
+                </select>
+              </div>
+              
+              <div className="form-group">
+                <label className="form-label">{t.companySize}</label>
+                <select className="form-select" name="companySize" onChange={onGrowthChange} defaultValue="">
+                  <option value="" disabled>—</option>
+                  <option value="1-10">1–10 {lang === 'tr' ? 'kişi' : 'people'}</option>
+                  <option value="11-50">11–50 {lang === 'tr' ? 'kişi' : 'people'}</option>
+                  <option value="50+">50+ {lang === 'tr' ? 'kişi' : 'people'}</option>
+                </select>
+              </div>
+              
+              <div className="form-group">
+                <label className="form-label">{t.useCase}</label>
+                <select className="form-select" name="useCase" onChange={onGrowthChange} defaultValue="">
+                  <option value="" disabled>—</option>
+                  <option value="sales">{t.sales}</option>
+                  <option value="support">{t.support}</option>
+                  <option value="payment">{t.payment}</option>
+                  <option value="other">{t.other}</option>
+                </select>
+              </div>
+              
+              <div className="form-group">
+                <label className="form-label">{t.startTime}</label>
+                <select className="form-select" name="start" onChange={onGrowthChange} defaultValue="">
+                  <option value="" disabled>—</option>
+                  <option value="now">{t.now}</option>
+                  <option value="3m">{t.month3}</option>
+                  <option value="6m+">{t.month6}</option>
+                </select>
+              </div>
+            </div>
+            
+            <div style={{ display: 'flex', gap: 'var(--space-4)', alignItems: 'center' }}>
+              <button className="btn btn-primary btn-lg" onClick={handleStep2Submit}>
+                {t.submit2}
+              </button>
+              <button 
+                type="button"
+                onClick={() => { setToast(t.ok); setStep(3); }}
+                style={{ 
+                  background: 'transparent', 
+                  border: 'none', 
+                  color: 'var(--text-secondary)', 
+                  textDecoration: 'underline', 
+                  cursor: 'pointer',
+                  fontSize: 'var(--font-size-sm)'
+                }}
+              >
+                {t.skip}
+              </button>
+            </div>
+          </div>
+        )}
+
+        {/* Step 3: Thank You */}
+        {step === 3 && (
+          <div className="text-center">
+            <div style={{ fontSize: '4rem', marginBottom: 'var(--space-4)' }}>🎉</div>
+            <h2 style={{ color: 'var(--primary)', marginBottom: 'var(--space-4)' }}>
+              {lang === 'tr' ? 'Teşekkürler!' : 'Thank You!'}
+            </h2>
+            <div className="alert success">
+              {t.ok}
+            </div>
+            <p style={{ marginTop: 'var(--space-6)', color: 'var(--text-muted)' }}>
+              {lang === 'tr' 
+                ? 'Size en kısa sürede dönüş yapacağız. Bu sayfayı kapatabilirsiniz.' 
+                : 'We will get back to you as soon as possible. You can close this page.'
+              }
+            </p>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}

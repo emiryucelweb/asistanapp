@@ -1,0 +1,363 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout 
+  title="Gizlilik Politikası – AsistanApp" 
+  description="AsistanApp gizlilik politikası. Kişisel verilerinizin korunması, KVKK ve GDPR uyumluluk politikaları."
+>
+  <!-- Hero Section -->
+  <section class="hero section-sm" style="background: var(--bg-accent);">
+    <div class="container text-center">
+      <h1>
+        <span data-i18n="tr">Gizlilik Politikası</span>
+        <span data-i18n="en">Privacy Policy</span>
+      </h1>
+      <p class="text-muted" style="font-size: var(--font-size-lg); max-width: 600px; margin: 0 auto;">
+        <span data-i18n="tr">
+          Kişisel verilerinizin güvenliği bizim için önceliklidir. KVKK ve GDPR uyumlu çalışırız.
+        </span>
+        <span data-i18n="en">
+          The security of your personal data is our priority. We work in compliance with KVKK and GDPR.
+        </span>
+      </p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <section class="section">
+    <div class="container">
+      <div style="max-width: 800px; margin: 0 auto;">
+        
+        <!-- Data Collection -->
+        <div class="card" style="margin-bottom: var(--space-8);">
+          <h2>
+            <span data-i18n="tr">📊 Hangi Verileri Topluyoruz?</span>
+            <span data-i18n="en">📊 What Data Do We Collect?</span>
+          </h2>
+          
+          <h3>
+            <span data-i18n="tr">Kişisel Bilgiler</span>
+            <span data-i18n="en">Personal Information</span>
+          </h3>
+          <ul>
+            <li>
+              <span data-i18n="tr">Ad, soyad ve iletişim bilgileri (e-posta, telefon)</span>
+              <span data-i18n="en">Name, surname, and contact information (email, phone)</span>
+            </li>
+            <li>
+              <span data-i18n="tr">Şirket bilgileri (şirket adı, sektör, çalışan sayısı)</span>
+              <span data-i18n="en">Company information (company name, industry, number of employees)</span>
+            </li>
+            <li>
+              <span data-i18n="tr">Ödeme bilgileri (kredi kartı bilgileri güvenli ödeme sağlayıcıları tarafından işlenir)</span>
+              <span data-i18n="en">Payment information (credit card information processed by secure payment providers)</span>
+            </li>
+          </ul>
+
+          <h3>
+            <span data-i18n="tr">Kullanım Verileri</span>
+            <span data-i18n="en">Usage Data</span>
+          </h3>
+          <ul>
+            <li>
+              <span data-i18n="tr">Platform kullanım istatistikleri</span>
+              <span data-i18n="en">Platform usage statistics</span>
+            </li>
+            <li>
+              <span data-i18n="tr">Müşteri konuşma logları (hizmet kalitesini artırmak için)</span>
+              <span data-i18n="en">Customer conversation logs (to improve service quality)</span>
+            </li>
+            <li>
+              <span data-i18n="tr">Sistem performans verileri</span>
+              <span data-i18n="en">System performance data</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Data Usage -->
+        <div class="card" style="margin-bottom: var(--space-8);">
+          <h2>
+            <span data-i18n="tr">🎯 Verilerinizi Nasıl Kullanırız?</span>
+            <span data-i18n="en">🎯 How Do We Use Your Data?</span>
+          </h2>
+          
+          <ul>
+            <li>
+              <span data-i18n="tr"><strong>Hizmet Sunumu:</strong> AsistanApp platformunu size sunmak ve çalıştırmak için</span>
+              <span data-i18n="en"><strong>Service Delivery:</strong> To provide and operate the AsistanApp platform for you</span>
+            </li>
+            <li>
+              <span data-i18n="tr"><strong>Müşteri Desteği:</strong> Teknik destek ve müşteri hizmetleri sağlamak için</span>
+              <span data-i18n="en"><strong>Customer Support:</strong> To provide technical support and customer services</span>
+            </li>
+            <li>
+              <span data-i18n="tr"><strong>Hizmet İyileştirme:</strong> Platform özelliklerini geliştirmek ve optimize etmek için</span>
+              <span data-i18n="en"><strong>Service Improvement:</strong> To improve and optimize platform features</span>
+            </li>
+            <li>
+              <span data-i18n="tr"><strong>Güvenlik:</strong> Dolandırıcılık ve kötüye kullanımı önlemek için</span>
+              <span data-i18n="en"><strong>Security:</strong> To prevent fraud and abuse</span>
+            </li>
+            <li>
+              <span data-i18n="tr"><strong>Yasal Yükümlülükler:</strong> Yasal gereklilikleri yerine getirmek için</span>
+              <span data-i18n="en"><strong>Legal Obligations:</strong> To fulfill legal requirements</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Data Protection -->
+        <div class="card" style="margin-bottom: var(--space-8);">
+          <h2>
+            <span data-i18n="tr">🔒 Verilerinizi Nasıl Koruyoruz?</span>
+            <span data-i18n="en">🔒 How Do We Protect Your Data?</span>
+          </h2>
+          
+          <h3>
+            <span data-i18n="tr">Teknik Güvenlik Önlemleri</span>
+            <span data-i18n="en">Technical Security Measures</span>
+          </h3>
+          <ul>
+            <li>
+              <span data-i18n="tr">AES-256-GCM şifreleme ile veri koruması</span>
+              <span data-i18n="en">Data protection with AES-256-GCM encryption</span>
+            </li>
+            <li>
+              <span data-i18n="tr">TLS 1.3 ile güvenli veri aktarımı</span>
+              <span data-i18n="en">Secure data transfer with TLS 1.3</span>
+            </li>
+            <li>
+              <span data-i18n="tr">Row Level Security (RLS) ile veri izolasyonu</span>
+              <span data-i18n="en">Data isolation with Row Level Security (RLS)</span>
+            </li>
+            <li>
+              <span data-i18n="tr">Düzenli güvenlik denetimleri ve penetrasyon testleri</span>
+              <span data-i18n="en">Regular security audits and penetration tests</span>
+            </li>
+          </ul>
+
+          <h3>
+            <span data-i18n="tr">Organizasyonel Önlemler</span>
+            <span data-i18n="en">Organizational Measures</span>
+          </h3>
+          <ul>
+            <li>
+              <span data-i18n="tr">Çalışanlar için veri güvenliği eğitimleri</span>
+              <span data-i18n="en">Data security training for employees</span>
+            </li>
+            <li>
+              <span data-i18n="tr">Sınırlı erişim kontrolleri ve yetkilendirme</span>
+              <span data-i18n="en">Limited access controls and authorization</span>
+            </li>
+            <li>
+              <span data-i18n="tr">Veri işleme kayıtlarının tutulması</span>
+              <span data-i18n="en">Maintaining data processing records</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Data Sharing -->
+        <div class="card" style="margin-bottom: var(--space-8);">
+          <h2>
+            <span data-i18n="tr">🤝 Verilerinizi Kimlerle Paylaşırız?</span>
+            <span data-i18n="en">🤝 Who Do We Share Your Data With?</span>
+          </h2>
+          
+          <p>
+            <span data-i18n="tr">
+              Kişisel verilerinizi üçüncü taraflarla <strong>paylaşmayız</strong>. 
+              Sadece aşağıdaki durumlar için sınırlı paylaşım yapabiliriz:
+            </span>
+            <span data-i18n="en">
+              We do <strong>not share</strong> your personal data with third parties. 
+              We may only share limited data for the following situations:
+            </span>
+          </p>
+          
+          <ul>
+            <li>
+              <span data-i18n="tr"><strong>Hizmet Sağlayıcıları:</strong> Ödeme işlemleri, e-posta gönderimi gibi teknik hizmetler için</span>
+              <span data-i18n="en"><strong>Service Providers:</strong> For technical services like payment processing, email delivery</span>
+            </li>
+            <li>
+              <span data-i18n="tr"><strong>Yasal Zorunluluklar:</strong> Mahkeme kararı veya yasal yükümlülük durumunda</span>
+              <span data-i18n="en"><strong>Legal Obligations:</strong> In case of court order or legal obligation</span>
+            </li>
+            <li>
+              <span data-i18n="tr"><strong>İş Devri:</strong> Şirket satışı veya birleşmesi durumunda</span>
+              <span data-i18n="en"><strong>Business Transfer:</strong> In case of company sale or merger</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Your Rights -->
+        <div class="card" style="margin-bottom: var(--space-8);">
+          <h2>
+            <span data-i18n="tr">⚖️ Haklarınız Nelerdir?</span>
+            <span data-i18n="en">⚖️ What Are Your Rights?</span>
+          </h2>
+          
+          <p>
+            <span data-i18n="tr">
+              KVKK ve GDPR kapsamında aşağıdaki haklara sahipsiniz:
+            </span>
+            <span data-i18n="en">
+              Under KVKK and GDPR, you have the following rights:
+            </span>
+          </p>
+          
+          <ul>
+            <li>
+              <span data-i18n="tr"><strong>Bilgi Alma Hakkı:</strong> Hangi verilerinizin işlendiğini öğrenme</span>
+              <span data-i18n="en"><strong>Right to Information:</strong> Learning which of your data is processed</span>
+            </li>
+            <li>
+              <span data-i18n="tr"><strong>Erişim Hakkı:</strong> Kişisel verilerinizin kopyasını alma</span>
+              <span data-i18n="en"><strong>Right of Access:</strong> Getting a copy of your personal data</span>
+            </li>
+            <li>
+              <span data-i18n="tr"><strong>Düzeltme Hakkı:</strong> Yanlış verilerin düzeltilmesini isteme</span>
+              <span data-i18n="en"><strong>Right to Rectification:</strong> Requesting correction of incorrect data</span>
+            </li>
+            <li>
+              <span data-i18n="tr"><strong>Silme Hakkı:</strong> Verilerinizin silinmesini isteme</span>
+              <span data-i18n="en"><strong>Right to Erasure:</strong> Requesting deletion of your data</span>
+            </li>
+            <li>
+              <span data-i18n="tr"><strong>Taşınabilirlik Hakkı:</strong> Verilerinizi başka platforma aktarma</span>
+              <span data-i18n="en"><strong>Right to Portability:</strong> Transferring your data to another platform</span>
+            </li>
+            <li>
+              <span data-i18n="tr"><strong>İtiraz Hakkı:</strong> Veri işlenmesine itiraz etme</span>
+              <span data-i18n="en"><strong>Right to Object:</strong> Objecting to data processing</span>
+            </li>
+          </ul>
+          
+          <p>
+            <span data-i18n="tr">
+              Bu haklarınızı kullanmak için <a href="mailto:info@asistanapp.com.tr" style="color: var(--primary);">info@asistanapp.com.tr</a> 
+              adresine e-posta gönderebilirsiniz.
+            </span>
+            <span data-i18n="en">
+              To exercise these rights, you can send an email to <a href="mailto:info@asistanapp.com.tr" style="color: var(--primary);">info@asistanapp.com.tr</a>.
+            </span>
+          </p>
+        </div>
+
+        <!-- Data Retention -->
+        <div class="card" style="margin-bottom: var(--space-8);">
+          <h2>
+            <span data-i18n="tr">🗂️ Verilerinizi Ne Kadar Saklarız?</span>
+            <span data-i18n="en">🗂️ How Long Do We Keep Your Data?</span>
+          </h2>
+          
+          <ul>
+            <li>
+              <span data-i18n="tr"><strong>Hesap Verileri:</strong> Hesabınız aktif olduğu sürece</span>
+              <span data-i18n="en"><strong>Account Data:</strong> As long as your account is active</span>
+            </li>
+            <li>
+              <span data-i18n="tr"><strong>Konuşma Logları:</strong> Hizmet kalitesi için 2 yıl (isteğe bağlı olarak daha kısa)</span>
+              <span data-i18n="en"><strong>Conversation Logs:</strong> 2 years for service quality (optionally shorter)</span>
+            </li>
+            <li>
+              <span data-i18n="tr"><strong>Ödeme Kayıtları:</strong> Yasal zorunluluk gereği 10 yıl</span>
+              <span data-i18n="en"><strong>Payment Records:</strong> 10 years due to legal obligation</span>
+            </li>
+            <li>
+              <span data-i18n="tr"><strong>Pazarlama Verileri:</strong> Onayınızı geri çekene kadar</span>
+              <span data-i18n="en"><strong>Marketing Data:</strong> Until you withdraw your consent</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Cookies -->
+        <div class="card" style="margin-bottom: var(--space-8);">
+          <h2>
+            <span data-i18n="tr">🍪 Çerezler (Cookies)</span>
+            <span data-i18n="en">🍪 Cookies</span>
+          </h2>
+          
+          <p>
+            <span data-i18n="tr">
+              Web sitemizde kullanıcı deneyimini iyileştirmek için çerezler kullanıyoruz:
+            </span>
+            <span data-i18n="en">
+              We use cookies on our website to improve user experience:
+            </span>
+          </p>
+          
+          <ul>
+            <li>
+              <span data-i18n="tr"><strong>Zorunlu Çerezler:</strong> Sitenin çalışması için gerekli</span>
+              <span data-i18n="en"><strong>Essential Cookies:</strong> Necessary for the site to function</span>
+            </li>
+            <li>
+              <span data-i18n="tr"><strong>Analitik Çerezler:</strong> Site kullanımını anlamak için</span>
+              <span data-i18n="en"><strong>Analytics Cookies:</strong> To understand site usage</span>
+            </li>
+            <li>
+              <span data-i18n="tr"><strong>Tercih Çerezleri:</strong> Dil seçimi gibi ayarlarınızı hatırlamak için</span>
+              <span data-i18n="en"><strong>Preference Cookies:</strong> To remember your settings like language choice</span>
+            </li>
+          </ul>
+          
+          <p>
+            <span data-i18n="tr">
+              Tarayıcı ayarlarınızdan çerezleri yönetebilir veya silebilirsiniz.
+            </span>
+            <span data-i18n="en">
+              You can manage or delete cookies from your browser settings.
+            </span>
+          </p>
+        </div>
+
+        <!-- Contact -->
+        <div class="card">
+          <h2>
+            <span data-i18n="tr">📞 İletişim</span>
+            <span data-i18n="en">📞 Contact</span>
+          </h2>
+          
+          <p>
+            <span data-i18n="tr">
+              Gizlilik politikamız hakkında sorularınız varsa veya haklarınızı kullanmak istiyorsanız:
+            </span>
+            <span data-i18n="en">
+              If you have questions about our privacy policy or want to exercise your rights:
+            </span>
+          </p>
+          
+          <ul style="list-style: none; padding: 0;">
+            <li style="margin-bottom: var(--space-2);">
+              <strong>E-posta:</strong> <a href="mailto:info@asistanapp.com.tr" style="color: var(--primary);">info@asistanapp.com.tr</a>
+            </li>
+            <li style="margin-bottom: var(--space-2);">
+              <strong>
+                <span data-i18n="tr">Telefon:</span>
+                <span data-i18n="en">Phone:</span>
+              </strong> +90 543 899 2696
+            </li>
+            <li>
+              <strong>
+                <span data-i18n="tr">Adres:</span>
+                <span data-i18n="en">Address:</span>
+              </strong> 
+              <span data-i18n="tr">İstanbul, Türkiye</span>
+              <span data-i18n="en">Istanbul, Turkey</span>
+            </li>
+          </ul>
+          
+          <p style="margin-top: var(--space-4); font-size: var(--font-size-sm); color: var(--text-muted);">
+            <span data-i18n="tr">
+              Son güncelleme: 25 Eylül 2025
+            </span>
+            <span data-i18n="en">
+              Last updated: September 25, 2025
+            </span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

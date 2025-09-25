@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Özellikler - AsistanApp | asistanapp.com.tr</title>
+    <meta name="description" content="AsistanApp özellikleri: çok kanallı iletişim, AI pipeline, RAG, ödeme ve randevu yönetimi, KVKK/GDPR güvenliği, gözlemlenebilirlik.">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #2c3e50; background: linear-gradient(135deg,#f5f7fa,#c3cfe2); }
+        .container { max-width: 1200px; margin: 0 auto; background: #fff; box-shadow: 0 10px 30px rgba(0,0,0,.08); border-radius: 10px; overflow: hidden; }
+        header { background: linear-gradient(135deg,#667eea,#764ba2); color: #fff; }
+        nav { display:flex; justify-content:space-between; align-items:center; padding: 1.2rem 2rem; flex-wrap: wrap; }
+        .logo { font-size: 1.8rem; font-weight: 700; text-shadow: 2px 2px 4px rgba(0,0,0,.25); }
+        .nav-links { display:flex; list-style:none; gap: 1.2rem; }
+        .nav-links a { color:#fff; text-decoration:none; padding:.5rem 1rem; border-radius:24px; transition:.2s; }
+        .nav-links a:hover { background: rgba(255,255,255,.25); }
+        .nav-links a.active { background: rgba(255,255,255,.35); }
+        .page-hero { text-align:center; padding: 3.5rem 2rem; color:#fff; background: linear-gradient(135deg,#667eea,#764ba2); }
+        .page-hero h1 { font-size:2.8rem; margin-bottom: .5rem; text-shadow: 2px 2px 4px rgba(0,0,0,.25); }
+        .page-hero p { opacity:.95; font-size:1.2rem; max-width: 800px; margin: 0 auto; }
+        .section { padding: 3rem 2rem; }
+        .section h2 { text-align:center; font-size:2.2rem; margin-bottom: 2rem; }
+        .grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap: 1.5rem; }
+        .card { background: linear-gradient(135deg,#f8f9fa,#e9ecef); border:1px solid #e9ecef; border-radius:14px; padding:1.6rem; transition:.25s; }
+        .card:hover { transform: translateY(-6px); box-shadow: 0 12px 30px rgba(0,0,0,.08); }
+        .icon { font-size:2rem; margin-bottom:.6rem; background: linear-gradient(45deg,#667eea,#764ba2); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
+        .card h3 { font-size:1.2rem; margin-bottom:.4rem; }
+        .card p { color:#6c757d; line-height:1.7; }
+        .note { background: #fff3cd; border: 1px solid #ffe08a; color:#856404; padding:1rem 1.2rem; border-radius:10px; margin: 2rem 0 0; }
+        footer { background: linear-gradient(135deg,#2c3e50,#34495e); color:#fff; text-align:center; padding: 1.2rem; }
+        @media (max-width:768px){ .nav-links{flex-direction:column; width:100%; gap:.6rem; margin-top:.8rem;} .page-hero h1{font-size:2.2rem;} }
+    </style>
+    </head>
+<body>
+    <div class="container">
+        <header>
+            <nav>
+                <div class="logo">AsistanApp</div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Ana Sayfa</a></li>
+                    <li><a href="features.html" class="active">Özellikler</a></li>
+                    <li><a href="solutions.html">Çözümler</a></li>
+                    <li><a href="integrations.html">Entegrasyonlar</a></li>
+                    <li><a href="pricing.html">Fiyatlandırma</a></li>
+                    <li><a href="faq.html">SSS</a></li>
+                    <li><a href="pre-register.html">Ön Kayıt</a></li>
+                    <li><a href="about.html">Hakkımızda</a></li>
+                    <li><a href="contact.html">İletişim</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="page-hero">
+            <h1>Özellikler</h1>
+            <p>Çok kanallı iletişim, AI pipeline, RAG, ödeme ve randevu yönetimi; KVKK/GDPR uyumlu üretim mimarisi.</p>
+        </section>
+
+        <section class="section">
+            <h2>İletişim ve Kanallar</h2>
+            <div class="grid">
+                <div class="card"><div class="icon">📱</div><h3>Çok Kanallı</h3><p>WhatsApp, Instagram/Facebook, Twitter/X, Web widget ve ses çağrıları tek panelde.</p></div>
+                <div class="card"><div class="icon">🧠</div><h3>AI Pipeline</h3><p>RAG tabanlı bağlam toplama, model yönlendirme, şema doğrulamalı güvenli çıktı.</p></div>
+                <div class="card"><div class="icon">🗣️</div><h3>Sesli Asistan</h3><p>WebRTC, VAD ve anlık STT/TTS ile doğal konuşma deneyimi.</p></div>
+                <div class="card"><div class="icon">🔀</div><h3>Message Aggregator</h3><p>30 sn pencere ile mesaj birleştirme, idempotent teslim ve kanallar arası bütünlük.</p></div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Satış, Ödeme ve Randevu</h2>
+            <div class="grid">
+                <div class="card"><div class="icon">🛒</div><h3>Ürün & Sipariş</h3><p>Ürün kataloğu, varyantlar, sepet, sipariş ve raporlama.</p></div>
+                <div class="card"><div class="icon">💳</div><h3>Ödeme</h3><p>Stripe (global), PayTR ve Iyzico (TR); otomatik sağlayıcı seçimi ve webhook doğrulama.</p></div>
+                <div class="card"><div class="icon">📆</div><h3>Randevu</h3><p>Slot arama, çakışma önleme, hatırlatma ve durum takibi.</p></div>
+                <div class="card"><div class="icon">📈</div><h3>Upsell</h3><p>Kural tabanlı öneriler, çapraz satış ve teklif bileşenleri.</p></div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Güvenlik ve Uyumluluk</h2>
+            <div class="grid">
+                <div class="card"><div class="icon">🔒</div><h3>KVKK/GDPR</h3><p>Rıza yönetimi, veri silme/portabilite ve log maskeleme.</p></div>
+                <div class="card"><div class="icon">🧩</div><h3>Multi-Tenant & RLS</h3><p>Satır seviyesinde izolasyon, oran sınırlama ve kota.</p></div>
+                <div class="card"><div class="icon">🛡️</div><h3>Uçtan Uca Güvenlik</h3><p>JWT+RBAC, hız limiti, imza doğrulama, TLS 1.3, AES-256-GCM.</p></div>
+                <div class="card"><div class="icon">📊</div><h3>Gözlemlenebilirlik</h3><p>Prometheus, Grafana, Loki ve OTel ile metrik/log/trace.</p></div>
+            </div>
+            <div class="note">Not: Tüm konfigürasyon .env veya kiracı ayarlarından yönetilir; hard-coded gizli bilgi yoktur.</div>
+        </section>
+
+        <footer>
+            <p>&copy; 2025 AsistanApp. Tüm hakları saklıdır.</p>
+        </footer>
+    </div>
+</body>
+</html>
+
+

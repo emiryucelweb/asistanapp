@@ -1,0 +1,103 @@
+---
+---
+<header class="site-header">
+  <nav class="navbar container">
+      <a class="logo" href="/">
+        <img src="/logo.svg" alt="AsistanApp" />
+        AsistanApp
+      </a>
+      
+      <ul class="nav-links">
+        <li>
+          <a href="/">
+            <span data-i18n="tr">Ana Sayfa</span>
+            <span data-i18n="en">Home</span>
+          </a>
+        </li>
+        <li>
+          <a href="/features">
+            <span data-i18n="tr">Özellikler</span>
+            <span data-i18n="en">Features</span>
+          </a>
+        </li>
+        <li>
+          <a href="/solutions">
+            <span data-i18n="tr">Çözümler</span>
+            <span data-i18n="en">Solutions</span>
+          </a>
+        </li>
+        <li>
+          <a href="/integrations">
+            <span data-i18n="tr">Entegrasyonlar</span>
+            <span data-i18n="en">Integrations</span>
+          </a>
+        </li>
+        <li>
+          <a href="/pricing">
+            <span data-i18n="tr">Fiyatlandırma</span>
+            <span data-i18n="en">Pricing</span>
+          </a>
+        </li>
+        <li>
+          <a href="/faq">
+            <span data-i18n="tr">SSS</span>
+            <span data-i18n="en">FAQ</span>
+          </a>
+        </li>
+        <li>
+          <a href="/about">
+            <span data-i18n="tr">Hakkımızda</span>
+            <span data-i18n="en">About</span>
+          </a>
+        </li>
+        <li>
+          <a href="/contact">
+            <span data-i18n="tr">İletişim</span>
+            <span data-i18n="en">Contact</span>
+          </a>
+        </li>
+        <li>
+          <a class="btn" href="/pre-register">
+            <span data-i18n="tr">Ön Kayıt</span>
+            <span data-i18n="en">Waitlist</span>
+          </a>
+        </li>
+      </ul>
+      
+      <div class="lang">
+        <button type="button" onclick="window.setLang && window.setLang('tr')">TR</button>
+        <button type="button" onclick="window.setLang && window.setLang('en')">EN</button>
+      </div>
+  </nav>
+</header>
+
+<script>
+  // Language switching functionality
+  document.addEventListener('DOMContentLoaded', function() {
+    const langButtons = document.querySelectorAll('.lang button');
+    
+    function updateActiveButton() {
+      const currentLang = document.documentElement.getAttribute('data-lang') || 'tr';
+      langButtons.forEach(btn => {
+        btn.classList.toggle('active', btn.textContent.toLowerCase() === currentLang);
+      });
+    }
+    
+    // Initial update
+    updateActiveButton();
+    
+    // Listen for language changes
+    const observer = new MutationObserver(function(mutations) {
+      mutations.forEach(function(mutation) {
+        if (mutation.type === 'attributes' && mutation.attributeName === 'data-lang') {
+          updateActiveButton();
+        }
+      });
+    });
+    
+    observer.observe(document.documentElement, { 
+      attributes: true, 
+      attributeFilter: ['data-lang'] 
+    });
+  });
+</script>

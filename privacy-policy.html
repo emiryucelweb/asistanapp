@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gizlilik Politikası - AsistanApp | asistanapp.com.tr</title>
+    <meta name="description" content="AsistanApp gizlilik politikası. Kişisel verilerinizin korunması, KVKK uyumluluğu ve veri güvenliği hakkında detaylı bilgiler.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+            background-color: white;
+            min-height: 100vh;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 1rem 0;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: #3498db;
+        }
+        
+        main {
+            padding: 2rem;
+        }
+        
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 2rem;
+            font-size: 2.5rem;
+        }
+        
+        .page-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+        
+        .page-header h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .page-header p {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .content {
+            padding: 4rem 2rem;
+        }
+        
+        .policy-section {
+            margin-bottom: 3rem;
+            padding: 2.5rem;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border-radius: 15px;
+            border-left: 5px solid #3498db;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .policy-section h2 {
+            color: #2c3e50;
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 0.5rem;
+        }
+        
+        .policy-section p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: #555;
+        }
+        
+        .policy-section ul {
+            margin-left: 2rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .policy-section li {
+            margin-bottom: 0.8rem;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #555;
+        }
+        
+        .highlight {
+            background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
+            padding: 2rem;
+            border-radius: 10px;
+            border: 2px solid #ffc107;
+            margin: 2rem 0;
+            box-shadow: 0 3px 10px rgba(255, 193, 7, 0.2);
+        }
+        
+        .highlight h3 {
+            color: #856404;
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .highlight p {
+            color: #856404;
+            font-weight: 500;
+            font-size: 1.1rem;
+        }
+        
+        .data-types {
+            background: linear-gradient(135deg, #e8f4fd 0%, #d1ecf1 100%);
+            padding: 2rem;
+            border-radius: 10px;
+            border: 1px solid #bee5eb;
+            margin: 2rem 0;
+        }
+        
+        .data-types h3 {
+            color: #0c5460;
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+        }
+        
+        .data-types ul {
+            margin-left: 1.5rem;
+        }
+        
+        .data-types li {
+            color: #0c5460;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 2rem;
+        }
+        
+        @media (max-width: 768px) {
+            .nav-links {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <nav>
+                <div class="logo">AsistanApp</div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Ana Sayfa</a></li>
+                    <li><a href="features.html">Özellikler</a></li>
+                    <li><a href="solutions.html">Çözümler</a></li>
+                    <li><a href="integrations.html">Entegrasyonlar</a></li>
+                    <li><a href="pricing.html">Fiyatlandırma</a></li>
+                    <li><a href="faq.html">SSS</a></li>
+                    <li><a href="pre-register.html">Ön Kayıt</a></li>
+                    <li><a href="about.html">Hakkımızda</a></li>
+                    <li><a href="contact.html">İletişim</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <main>
+            <section class="page-header">
+                <h1>Gizlilik Politikası</h1>
+                <p>Kişisel verilerinizin korunması bizim önceliğimizdir</p>
+            </section>
+            
+            <div class="content">
+                <div class="policy-section">
+                    <h2>Genel Bilgiler</h2>
+                    <p>AsistanApp olarak, kullanıcılarımızın kişisel verilerini korumak bizim en büyük önceliğimizdir. Bu gizlilik politikası, kişisel verilerinizin nasıl toplandığını, kullanıldığını, saklandığını ve korunduğunu detaylı olarak açıklamaktadır.</p>
+                    
+                    <p>6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK) ve ilgili mevzuat hükümlerine uygun olarak hazırlanmıştır. Bu politika, AsistanApp hizmetlerini kullanan tüm kişiler için geçerlidir.</p>
+                </div>
+                
+                <div class="policy-section">
+                    <h2>Toplanan Kişisel Veriler</h2>
+                    <p>Hizmetlerimizi kullanırken aşağıdaki kategorilerde kişisel verilerinizi toplayabiliriz:</p>
+                    
+                    <div class="data-types">
+                        <h3>Kimlik Verileri</h3>
+                        <ul>
+                            <li>Ad, soyad</li>
+                            <li>E-posta adresi</li>
+                            <li>Telefon numarası</li>
+                            <li>Şirket bilgileri</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="data-types">
+                        <h3>İletişim Verileri</h3>
+                        <ul>
+                            <li>WhatsApp mesaj içerikleri</li>
+                            <li>Müşteri hizmetleri kayıtları</li>
+                            <li>E-posta iletişim geçmişi</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="data-types">
+                        <h3>Teknik Veriler</h3>
+                        <ul>
+                            <li>IP adresi</li>
+                            <li>Tarayıcı bilgileri</li>
+                            <li>Cihaz bilgileri</li>
+                            <li>Kullanım istatistikleri</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="policy-section">
+                    <h2>Veri İşleme Amaçları</h2>
+                    <p>Kişisel verilerinizi aşağıdaki amaçlarla işliyoruz:</p>
+                    <ul>
+                        <li>Hizmet kalitesini artırmak ve geliştirmek</li>
+                        <li>Müşteri desteği sağlamak</li>
+                        <li>Yasal yükümlülüklerimizi yerine getirmek</li>
+                        <li>Güvenlik önlemleri almak</li>
+                        <li>İstatistiksel analizler yapmak</li>
+                        <li>Pazarlama faaliyetleri (onayınız dahilinde)</li>
+                    </ul>
+                </div>
+                
+                <div class="policy-section">
+                    <h2>Veri Paylaşımı ve Aktarım</h2>
+                    <p>Kişisel verilerinizi üçüncü kişilerle paylaşmayız. Verileriniz yalnızca aşağıdaki durumlarda kullanılır:</p>
+                    <ul>
+                        <li>Yasal yükümlülüklerimizi yerine getirmek için</li>
+                        <li>Hizmet kalitesini artırmak için</li>
+                        <li>Açık rızanız verildiğinde</li>
+                        <li>Mahkeme kararı veya yasal zorunluluk durumunda</li>
+                    </ul>
+                </div>
+                
+                <div class="highlight">
+                    <h3>🔒 Veri Silme Hakkınız</h3>
+                    <p><strong>Önemli:</strong> KVKK kapsamında veri silme taleplerinizi <a href="mailto:info@asistanapp.com.tr" style="color: #856404; text-decoration: none;">info@asistanapp.com.tr</a> adresine gönderebilirsiniz. Talebiniz 30 gün içinde işleme alınacak ve sonuçlandırılacaktır. Ayrıca verilerinizin düzeltilmesi, erişim sağlanması ve işlenme amacının belirtilmesi haklarınız da bulunmaktadır.</p>
+                </div>
+                
+                <div class="policy-section">
+                    <h2>Çerezler (Cookies) ve Takip Teknolojileri</h2>
+                    <p>Web sitemizde aşağıdaki amaçlarla çerezler kullanılabilir:</p>
+                    <ul>
+                        <li>Site performansını ölçmek ve analiz etmek</li>
+                        <li>Kullanıcı deneyimini iyileştirmek</li>
+                        <li>Güvenlik amaçlı olarak</li>
+                        <li>Kişiselleştirilmiş içerik sunmak</li>
+                    </ul>
+                    <p>Çerezleri tarayıcı ayarlarınızdan yönetebilir, istediğiniz zaman silebilirsiniz. Ancak bazı çerezlerin devre dışı bırakılması site işlevselliğini etkileyebilir.</p>
+                </div>
+                
+                <div class="policy-section">
+                    <h2>Veri Güvenliği ve Koruma</h2>
+                    <p>Kişisel verilerinizi korumak için aşağıdaki güvenlik önlemlerini alırız:</p>
+                    <ul>
+                        <li>SSL/TLS şifreleme teknolojileri</li>
+                        <li>Güvenli sunucu altyapısı</li>
+                        <li>Düzenli güvenlik güncellemeleri</li>
+                        <li>Erişim kontrolü ve yetkilendirme</li>
+                        <li>Veri yedekleme ve kurtarma sistemleri</li>
+                    </ul>
+                </div>
+                
+                <div class="policy-section">
+                    <h2>Veri Saklama Süreleri</h2>
+                    <p>Kişisel verilerinizi, işleme amacının gerektirdiği süre boyunca saklarız. Genel olarak:</p>
+                    <ul>
+                        <li>Müşteri verileri: Hizmet süresi + 5 yıl</li>
+                        <li>İletişim kayıtları: 3 yıl</li>
+                        <li>Teknik loglar: 1 yıl</li>
+                        <li>Pazarlama verileri: Rıza geri çekilene kadar</li>
+                    </ul>
+                </div>
+                
+                <div class="policy-section">
+                    <h2>Çocukların Gizliliği</h2>
+                    <p>Hizmetlerimiz 18 yaş altındaki kişilere yönelik değildir. 18 yaş altındaki kişilerden bilerek kişisel veri toplamayız. Böyle bir durum tespit edilirse, veriler derhal silinir.</p>
+                </div>
+                
+                <div class="policy-section">
+                    <h2>Politika Güncellemeleri</h2>
+                    <p>Bu gizlilik politikası gerektiğinde güncellenebilir. Önemli değişiklikler kullanıcılara e-posta yoluyla bildirilir. Güncel politika her zaman web sitemizde yayınlanır.</p>
+                </div>
+                
+                <div class="policy-section">
+                    <h2>İletişim ve Şikayetler</h2>
+                    <p>Bu gizlilik politikası hakkında sorularınız, veri işleme faaliyetlerimiz hakkında bilgi talepleriniz veya şikayetleriniz için:</p>
+                    <ul>
+                        <li>E-posta: <a href="mailto:info@asistanapp.com.tr" style="color: #0c5460; text-decoration: none;">info@asistanapp.com.tr</a></li>
+                        <li>Telefon: +90 543 899 2696</li>
+                        <li>Adres: İstanbul, Türkiye</li>
+                    </ul>
+                    <p>KVKK kapsamında şikayetlerinizi Kişisel Verileri Koruma Kurulu'na da iletebilirsiniz.</p>
+                </div>
+            </div>
+        </main>
+        
+        <footer>
+            <p>&copy; 2025 AsistanApp. Tüm hakları saklıdır.</p>
+        </footer>
+    </div>
+</body>
+</html>

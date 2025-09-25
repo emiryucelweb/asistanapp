@@ -1,0 +1,296 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout 
+  title="Fiyatlandırma – AsistanApp" 
+  description="AsistanApp fiyatlandırma planları. Başlangıçtan kurumsala kadar her işletme için uygun paketler ve esnek ödeme seçenekleri."
+>
+  <!-- Hero Section -->
+  <section class="hero section-sm observe-animation" style="background: var(--bg-accent);">
+    <div class="container text-center">
+      <h1 class="animate-fade-in-up">
+        <span data-i18n="tr">Fiyatlandırma Planları</span>
+        <span data-i18n="en">Pricing Plans</span>
+      </h1>
+      <p class="text-muted animate-fade-in-up" style="font-size: var(--font-size-lg); max-width: 700px; margin: 0 auto; animation-delay: 0.2s; opacity: 0;">
+        <span data-i18n="tr">
+          İşinizin büyüklüğüne uygun esnek fiyatlandırma. Sadece kullandığınız kadar ödeyin, 
+          yıllık ödemede %20 indirim kazanın.
+        </span>
+        <span data-i18n="en">
+          Flexible pricing suitable for your business size. Pay only for what you use, 
+          get 20% discount on annual payments.
+        </span>
+      </p>
+      <div class="chip animate-scale-in" style="animation-delay: 0.4s; opacity: 0;">
+        <span data-i18n="tr">💡 Yıllık ödemede %20 indirim → 2 ay bedava</span>
+        <span data-i18n="en">💡 20% discount on annual payment → 2 months free</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Plans -->
+  <section class="section observe-animation">
+    <div class="container">
+      <!-- Top 3 Plans -->
+      <div class="grid grid-3" style="gap: var(--space-6); margin-bottom: var(--space-12);">
+        <!-- Starter Plan -->
+        <div class="card text-center hover-lift animate-fade-in-up" style="padding: var(--space-6);">
+          <div class="animate-float" style="font-size: 3rem; margin-bottom: var(--space-3);">⭐</div>
+          <h3 style="color: var(--primary); font-size: var(--font-size-xl);">
+            <span data-i18n="tr">Starter</span>
+            <span data-i18n="en">Starter</span>
+          </h3>
+          <div style="font-size: 2.5rem; font-weight: var(--font-weight-bold); color: var(--primary); margin: var(--space-4) 0;">
+            <span data-i18n="tr">990 TL</span>
+            <span data-i18n="en">$59</span>
+            <span style="font-size: var(--font-size-base); color: var(--text-muted);">
+              <span data-i18n="tr">/ay</span>
+              <span data-i18n="en">/month</span>
+            </span>
+          </div>
+          
+          <ul style="text-align: left; margin-bottom: var(--space-6); line-height: 1.6; font-size: var(--font-size-sm);">
+            <li style="margin-bottom: var(--space-2);">
+              <span data-i18n="tr">✅ Tek dil desteği</span>
+              <span data-i18n="en">✅ Single language</span>
+            </li>
+            <li style="margin-bottom: var(--space-2);">
+              <span data-i18n="tr">✅ Temel chatbot</span>
+              <span data-i18n="en">✅ Basic chatbot</span>
+            </li>
+            <li style="margin-bottom: var(--space-2);">
+              <span data-i18n="tr">✅ Website entegrasyonu</span>
+              <span data-i18n="en">✅ Website integration</span>
+            </li>
+            <li style="margin-bottom: var(--space-2);">
+              <span data-i18n="tr">✅ 3.000 mesaj/ay</span>
+              <span data-i18n="en">✅ 3,000 messages/month</span>
+            </li>
+            <li style="color: var(--text-muted);">
+              <span data-i18n="tr">❌ Sesli konuşma yok</span>
+              <span data-i18n="en">❌ No voice calls</span>
+            </li>
+          </ul>
+          
+          <a class="btn btn-secondary hover-glow" href="/pre-register" style="width: 100%; font-size: var(--font-size-sm);">
+            <span data-i18n="tr">Ön Kayıt Ol</span>
+            <span data-i18n="en">Join Waitlist</span>
+          </a>
+        </div>
+
+        <!-- Growth Plan -->
+        <div class="card text-center hover-lift animate-fade-in-up" style="border: 3px solid var(--primary); position: relative; padding: var(--space-6);">
+          <div style="position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--primary); color: white; padding: 0.3rem 1rem; border-radius: var(--radius-full); font-size: var(--font-size-xs); font-weight: var(--font-weight-bold);">
+            <span data-i18n="tr">POPÜLER</span>
+            <span data-i18n="en">POPULAR</span>
+          </div>
+          
+          <div class="animate-float" style="font-size: 3rem; margin-bottom: var(--space-3); animation-delay: 0.5s;">🚀</div>
+          <h3 style="color: var(--primary); font-size: var(--font-size-xl);">
+            <span data-i18n="tr">Growth</span>
+            <span data-i18n="en">Growth</span>
+          </h3>
+          <div style="font-size: 2.5rem; font-weight: var(--font-weight-bold); color: var(--primary); margin: var(--space-4) 0;">
+            <span data-i18n="tr">3.490 TL</span>
+            <span data-i18n="en">$199</span>
+            <span style="font-size: var(--font-size-base); color: var(--text-muted);">
+              <span data-i18n="tr">/ay</span>
+              <span data-i18n="en">/month</span>
+            </span>
+          </div>
+          
+          <ul style="text-align: left; margin-bottom: var(--space-6); line-height: 1.6; font-size: var(--font-size-sm);">
+            <li style="margin-bottom: var(--space-2);">
+              <span data-i18n="tr">✅ Çok dilli destek (TR+EN)</span>
+              <span data-i18n="en">✅ Multi-language (TR+EN)</span>
+            </li>
+            <li style="margin-bottom: var(--space-2);">
+              <span data-i18n="tr">✅ Gelişmiş otomasyon</span>
+              <span data-i18n="en">✅ Advanced automation</span>
+            </li>
+            <li style="margin-bottom: var(--space-2);">
+              <span data-i18n="tr">✅ WhatsApp, Instagram</span>
+              <span data-i18n="en">✅ WhatsApp, Instagram</span>
+            </li>
+            <li style="margin-bottom: var(--space-2);">
+              <span data-i18n="tr">✅ CRM entegrasyonu</span>
+              <span data-i18n="en">✅ CRM integration</span>
+            </li>
+            <li style="margin-bottom: var(--space-2);">
+              <span data-i18n="tr">✅ 15.000 mesaj/ay</span>
+              <span data-i18n="en">✅ 15,000 messages/month</span>
+            </li>
+            <li>
+              <span data-i18n="tr">✅ 100 dk sesli konuşma</span>
+              <span data-i18n="en">✅ 100 min voice calls</span>
+            </li>
+          </ul>
+          
+          <a class="btn btn-primary hover-glow hover-bounce" href="/pre-register" style="width: 100%; font-size: var(--font-size-sm);">
+            <span data-i18n="tr">Ön Kayıt Ol</span>
+            <span data-i18n="en">Join Waitlist</span>
+          </a>
+        </div>
+
+        <!-- Enterprise Plan -->
+        <div class="card text-center hover-lift animate-fade-in-up" style="padding: var(--space-6);">
+          <div class="animate-float" style="font-size: 3rem; margin-bottom: var(--space-3); animation-delay: 1s;">🏢</div>
+          <h3 style="color: var(--primary); font-size: var(--font-size-xl);">
+            <span data-i18n="tr">Enterprise</span>
+            <span data-i18n="en">Enterprise</span>
+          </h3>
+          <div style="font-size: 2.5rem; font-weight: var(--font-weight-bold); color: var(--primary); margin: var(--space-4) 0;">
+            <span data-i18n="tr">9.900 TL</span>
+            <span data-i18n="en">$599</span>
+            <span style="font-size: var(--font-size-base); color: var(--text-muted);">
+              <span data-i18n="tr">/ay</span>
+              <span data-i18n="en">/month</span>
+            </span>
+          </div>
+          
+          <ul style="text-align: left; margin-bottom: var(--space-6); line-height: 1.6; font-size: var(--font-size-sm);">
+            <li style="margin-bottom: var(--space-2);">
+              <span data-i18n="tr">✅ Sınırsız dil desteği</span>
+              <span data-i18n="en">✅ Unlimited languages</span>
+            </li>
+            <li style="margin-bottom: var(--space-2);">
+              <span data-i18n="tr">✅ Özel eğitilmiş AI</span>
+              <span data-i18n="en">✅ Custom trained AI</span>
+            </li>
+            <li style="margin-bottom: var(--space-2);">
+              <span data-i18n="tr">✅ Tüm kanallar</span>
+              <span data-i18n="en">✅ All channels</span>
+            </li>
+            <li style="margin-bottom: var(--space-2);">
+              <span data-i18n="tr">✅ Özel dashboard</span>
+              <span data-i18n="en">✅ Custom dashboard</span>
+            </li>
+            <li style="margin-bottom: var(--space-2);">
+              <span data-i18n="tr">✅ 50.000 mesaj/ay</span>
+              <span data-i18n="en">✅ 50,000 messages/month</span>
+            </li>
+            <li>
+              <span data-i18n="tr">✅ 500 dk telefon+IVR</span>
+              <span data-i18n="en">✅ 500 min phone+IVR</span>
+            </li>
+          </ul>
+          
+          <a class="btn btn-secondary hover-glow" href="/pre-register" style="width: 100%; font-size: var(--font-size-sm);">
+            <span data-i18n="tr">Ön Kayıt Ol</span>
+            <span data-i18n="en">Join Waitlist</span>
+          </a>
+        </div>
+      </div>
+      
+      <!-- Custom Plan (Centered at bottom) -->
+      <div style="display: flex; justify-content: center;">
+        <div class="card text-center hover-lift animate-fade-in-up" style="background: linear-gradient(135deg, var(--bg-accent), var(--primary-light)); padding: var(--space-5); max-width: 350px;">
+          <div class="animate-float" style="font-size: 2.5rem; margin-bottom: var(--space-3); animation-delay: 1.5s;">🎯</div>
+          <h3 style="color: var(--primary); font-size: var(--font-size-lg);">
+            <span data-i18n="tr">Özel Çözüm</span>
+            <span data-i18n="en">Custom Solution</span>
+          </h3>
+          <div style="font-size: 1.8rem; font-weight: var(--font-weight-bold); color: var(--primary); margin: var(--space-3) 0;">
+            <span data-i18n="tr">Teklif Üzerine</span>
+            <span data-i18n="en">Quote Based</span>
+          </div>
+          
+          <ul style="text-align: left; margin-bottom: var(--space-5); line-height: 1.5; font-size: var(--font-size-sm);">
+            <li style="margin-bottom: var(--space-2);">
+              <span data-i18n="tr">✅ Özel limitler</span>
+              <span data-i18n="en">✅ Custom limits</span>
+            </li>
+            <li style="margin-bottom: var(--space-2);">
+              <span data-i18n="tr">✅ Çağrı merkezi</span>
+              <span data-i18n="en">✅ Call center</span>
+            </li>
+            <li style="margin-bottom: var(--space-2);">
+              <span data-i18n="tr">✅ Özel entegrasyonlar</span>
+              <span data-i18n="en">✅ Custom integrations</span>
+            </li>
+            <li>
+              <span data-i18n="tr">✅ Özel sunucu</span>
+              <span data-i18n="en">✅ Dedicated server</span>
+            </li>
+          </ul>
+          
+          <a class="btn btn-primary hover-glow hover-bounce" href="/contact" style="width: 100%; font-size: var(--font-size-sm);">
+            <span data-i18n="tr">Özel Teklif Al</span>
+            <span data-i18n="en">Get Custom Quote</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Annual Discount Banner -->
+  <section class="section observe-animation" style="background: linear-gradient(135deg, var(--primary), var(--orange-600)); color: white;">
+    <div class="container text-center">
+      <div class="animate-scale-in">
+        <h2 style="color: white; margin-bottom: var(--space-4);">
+          <span data-i18n="tr">💡 Yıllık Ödeme Avantajı</span>
+          <span data-i18n="en">💡 Annual Payment Advantage</span>
+        </h2>
+        <p style="font-size: var(--font-size-xl); margin-bottom: var(--space-6); color: rgba(255,255,255,0.9);">
+          <span data-i18n="tr">
+            Yıllık ödemeyi seçin, %20 indirim kazanın! 
+            Bu da size 2 ay bedava kullanım demek.
+          </span>
+          <span data-i18n="en">
+            Choose annual payment and get 20% discount! 
+            That means 2 months of free usage for you.
+          </span>
+        </p>
+        <div style="display: flex; justify-content: center; gap: var(--space-8); flex-wrap: wrap;">
+          <div class="stat-item">
+            <h3 style="color: white; font-size: var(--font-size-3xl);">%20</h3>
+            <p style="color: rgba(255,255,255,0.8);">
+              <span data-i18n="tr">İndirim</span>
+              <span data-i18n="en">Discount</span>
+            </p>
+          </div>
+          <div class="stat-item">
+            <h3 style="color: white; font-size: var(--font-size-3xl);">2</h3>
+            <p style="color: rgba(255,255,255,0.8);">
+              <span data-i18n="tr">Ay Bedava</span>
+              <span data-i18n="en">Months Free</span>
+            </p>
+          </div>
+          <div class="stat-item">
+            <h3 style="color: white; font-size: var(--font-size-3xl);">0</h3>
+            <p style="color: rgba(255,255,255,0.8);">
+              <span data-i18n="tr">Gizli Maliyet</span>
+              <span data-i18n="en">Hidden Costs</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section observe-animation" style="background: var(--bg-accent);">
+    <div class="container text-center">
+      <h2 class="animate-fade-in-up">
+        <span data-i18n="tr">Hangi Plan Size Uygun?</span>
+        <span data-i18n="en">Which Plan Suits You?</span>
+      </h2>
+      <p class="animate-fade-in-up" style="font-size: var(--font-size-lg); margin-bottom: var(--space-8); animation-delay: 0.2s; opacity: 0;">
+        <span data-i18n="tr">
+          Emin değil misiniz? Ön kayıt olun, lansmanımızda size en uygun planı önerelim. 
+          İstediğiniz zaman plan değiştirebilirsiniz.
+        </span>
+        <span data-i18n="en">
+          Not sure? Join our waitlist and we'll recommend the most suitable plan for you at launch. 
+          You can change plans anytime.
+        </span>
+      </p>
+      <a class="btn btn-primary btn-lg hover-glow hover-bounce animate-scale-in" href="/pre-register" style="animation-delay: 0.4s; opacity: 0;">
+        <span data-i18n="tr">🚀 Ön Kayıt Ol</span>
+        <span data-i18n="en">🚀 Join the Waitlist</span>
+      </a>
+    </div>
+  </section>
+</Layout>
