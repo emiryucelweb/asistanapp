@@ -4,126 +4,129 @@ import Layout from "../layouts/Layout.astro";
 
 <Layout 
   title="Hakkımızda – AsistanApp" 
-  description="AsistanApp, işletmelerin yapay zeka ile müşterileriyle konuşmasını sağlayan yenilikçi platform. Emir Yücel tarafından kuruldu."
+  description="İşletmelerin müşterileriyle 7/24 profesyonel iletişim kurmasını sağlayan akıllı asistan platformu. 2 sektör canlı, 64 sektör geliştiriliyor."
 >
-  <!-- Hero Section -->
+  <!-- Hero -->
   <section class="hero section-sm observe-animation" style="background: var(--bg-accent);">
     <div class="container text-center">
       <h1 class="animate-fade-in-up">
-        <span data-i18n="tr">AsistanApp Hakkında</span>
-        <span data-i18n="en">About AsistanApp</span>
+        <span data-i18n="tr">İşletmeler İçin Güvenilir Asistan</span>
+        <span data-i18n="en">Reliable Assistant for Businesses</span>
       </h1>
-      <p class="text-muted" style="font-size: var(--font-size-lg); max-width: 600px; margin: 0 auto;">
+      <p class="text-muted animate-fade-in-up" style="font-size: var(--font-size-lg); max-width: 700px; margin: 0 auto; animation-delay: 0.2s; opacity: 0;">
         <span data-i18n="tr">
-          Yapay zekanın müşterilerle konuşmasını sağlayan yenilikçi platform.
+          Müşterilerinizle 7/24 konuşan, randevu alan, sipariş yöneten akıllı asistan. 
+          İşinizi kolaylaştırır, müşteri memnuniyetini artırır.
         </span>
         <span data-i18n="en">
-          The innovative platform that enables AI to talk to customers.
+          Intelligent assistant that talks to your customers 24/7, books appointments, manages orders. 
+          Simplifies your work, increases customer satisfaction.
         </span>
       </p>
     </div>
   </section>
 
-  <!-- Mission Section -->
+  <!-- Mission -->
   <section class="section observe-animation">
     <div class="container">
-      <div class="grid grid-2 items-center gap-8">
+      <div class="grid grid-2" style="align-items: center; gap: var(--space-12);">
         <div>
-          <h2>
+          <h2 class="animate-fade-in-up">
             <span data-i18n="tr">Misyonumuz</span>
             <span data-i18n="en">Our Mission</span>
           </h2>
-          <p style="font-size: var(--font-size-lg); line-height: var(--line-height-relaxed);">
+          <p class="animate-fade-in-up" style="font-size: var(--font-size-lg); line-height: 1.7; margin-bottom: var(--space-4); animation-delay: 0.2s; opacity: 0;">
             <span data-i18n="tr">
-              Her işletmenin müşterileriyle 7/24 akıllı konuşmalar yapabilmesini sağlamak. 
-              Yapay zeka teknolojisini herkesin erişebileceği, kullanabileceği hale getirmek.
+              Her işletmenin müşterileriyle kesintisiz ve profesyonel iletişim kurmasını sağlamak. 
+              İşletme sahiplerinin asıl işlerine odaklanmasını, müşteri iletişimini asistanlarının 
+              yönetmesini mümkün kılmak.
             </span>
             <span data-i18n="en">
-              Enable every business to have intelligent 24/7 conversations with their customers. 
-              Make artificial intelligence technology accessible and usable for everyone.
+              Enable every business to maintain uninterrupted and professional communication with their customers. 
+              Allow business owners to focus on their core work while their assistants manage customer communication.
             </span>
           </p>
-          <p>
+          <p class="animate-fade-in-up" style="font-size: var(--font-size-base); line-height: 1.7; color: var(--text-secondary); animation-delay: 0.4s; opacity: 0;">
             <span data-i18n="tr">
-              AsistanApp ile küçük işletmeden büyük şirkete kadar herkes, 
-              müşteri hizmetlerini yapay zeka ile güçlendirebilir.
+              <strong>66 farklı sektör için çözümler geliştiriyoruz.</strong> Şu anda diş klinikleri ve 
+              kafe/restoranlar için tam entegre sistemimiz hazır. Diğer 64 sektör için çalışmalarımız devam ediyor.
             </span>
             <span data-i18n="en">
-              With AsistanApp, from small businesses to large companies, 
-              everyone can strengthen their customer service with artificial intelligence.
+              <strong>We're developing solutions for 66 different sectors.</strong> Our fully integrated system 
+              is currently ready for dental clinics and cafes/restaurants. Work continues for the other 64 sectors.
             </span>
           </p>
         </div>
-        <div class="text-center">
-          <div style="font-size: 8rem; margin-bottom: var(--space-4);">🤖💬</div>
-          <div class="chip" style="font-size: var(--font-size-sm);">
-            <span data-i18n="tr">AI + İnsan = Mükemmel Hizmet</span>
-            <span data-i18n="en">AI + Human = Perfect Service</span>
+        <div class="text-center animate-fade-in-up" style="animation-delay: 0.6s; opacity: 0;">
+          <div style="font-size: 8rem; margin-bottom: var(--space-4);">🤝</div>
+          <div class="chip" style="font-size: var(--font-size-base);">
+            <span data-i18n="tr">2 Canlı • 64 Geliştiriliyor</span>
+            <span data-i18n="en">2 Live • 64 In Development</span>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Values Section -->
+  <!-- Values -->
   <section class="section observe-animation" style="background: var(--bg-accent);">
     <div class="container">
-      <h2 class="text-center">
+      <h2 class="text-center animate-fade-in-up">
         <span data-i18n="tr">Değerlerimiz</span>
         <span data-i18n="en">Our Values</span>
       </h2>
       
-      <div class="grid grid-3">
-        <div class="card text-center">
-          <div style="font-size: 3rem; margin-bottom: var(--space-4);">🎯</div>
-          <h3>
-            <span data-i18n="tr">Müşteri Odaklılık</span>
-            <span data-i18n="en">Customer Focus</span>
+      <div class="grid grid-3" style="gap: var(--space-8);">
+        <div class="card text-center hover-lift animate-fade-in-up">
+          <div style="font-size: 3rem; margin-bottom: var(--space-4);">⚡</div>
+          <h3 style="margin-bottom: var(--space-3);">
+            <span data-i18n="tr">Hız & Güvenilirlik</span>
+            <span data-i18n="en">Speed & Reliability</span>
           </h3>
-          <p>
+          <p style="color: var(--text-secondary); line-height: 1.7;">
             <span data-i18n="tr">
-              Her özelliği müşteri ihtiyaçlarını düşünerek geliştiriyoruz. 
-              Kullanıcı deneyimi her zaman önceliğimiz.
+              Müşterileriniz anında yanıt almalı, işiniz hiç durmamalı. 
+              AsistanApp 7/24 kesintisiz çalışır, her mesaja saniyeler içinde yanıt verir.
             </span>
             <span data-i18n="en">
-              We develop every feature by considering customer needs. 
-              User experience is always our priority.
+              Your customers should get instant responses, your business should never stop. 
+              AsistanApp works 24/7 uninterrupted, responds to every message within seconds.
             </span>
           </p>
         </div>
         
-        <div class="card text-center">
+        <div class="card text-center hover-lift animate-fade-in-up" style="animation-delay: 0.2s; opacity: 0;">
           <div style="font-size: 3rem; margin-bottom: var(--space-4);">🔒</div>
-          <h3>
-            <span data-i18n="tr">Güvenlik</span>
-            <span data-i18n="en">Security</span>
+          <h3 style="margin-bottom: var(--space-3);">
+            <span data-i18n="tr">Veri Güvenliği</span>
+            <span data-i18n="en">Data Security</span>
           </h3>
-          <p>
+          <p style="color: var(--text-secondary); line-height: 1.7;">
             <span data-i18n="tr">
-              Müşteri verilerinizin güvenliği bizim için kutsal. 
-              En yüksek güvenlik standartlarını uyguluyoruz.
+              Müşteri bilgileriniz korunur, iş verileriniz güvenli şekilde yönetilir. 
+              KVKK ve GDPR uyumlu, maksimum güvenlik.
             </span>
             <span data-i18n="en">
-              The security of your customer data is sacred to us. 
-              We implement the highest security standards.
+              Your customer information is protected, business data is managed securely. 
+              KVKK and GDPR compliant, maximum security.
             </span>
           </p>
         </div>
         
-        <div class="card text-center">
-          <div style="font-size: 3rem; margin-bottom: var(--space-4);">🚀</div>
-          <h3>
-            <span data-i18n="tr">İnovasyon</span>
-            <span data-i18n="en">Innovation</span>
+        <div class="card text-center hover-lift animate-fade-in-up" style="animation-delay: 0.4s; opacity: 0;">
+          <div style="font-size: 3rem; margin-bottom: var(--space-4);">🎯</div>
+          <h3 style="margin-bottom: var(--space-3);">
+            <span data-i18n="tr">Sektöre Özel Çözüm</span>
+            <span data-i18n="en">Industry-Specific Solution</span>
           </h3>
-          <p>
+          <p style="color: var(--text-secondary); line-height: 1.7;">
             <span data-i18n="tr">
-              Teknolojinin sınırlarını zorluyoruz. Sürekli öğreniyor, 
-              gelişiyor ve yenilik yaratıyoruz.
+              Her sektörün dili farklıdır. Diş kliniği veya kafe — her birine özel terminoloji, 
+              süreçler ve çözümler. Asistanınız işinizi bilir.
             </span>
             <span data-i18n="en">
-              We push the boundaries of technology. We continuously learn, 
-              develop, and create innovation.
+              Every sector has its own language. Dental clinic or cafe — specific terminology, 
+              processes, and solutions for each. Your assistant knows your business.
             </span>
           </p>
         </div>
@@ -131,116 +134,77 @@ import Layout from "../layouts/Layout.astro";
     </div>
   </section>
 
-  <!-- Team Section -->
+  <!-- How We Work -->
   <section class="section observe-animation">
     <div class="container">
-      <h2 class="text-center">
-        <span data-i18n="tr">Ekibimiz</span>
-        <span data-i18n="en">Our Team</span>
-      </h2>
-      
-      <div class="flex justify-center">
-        <div class="card" style="max-width: 500px; text-center;">
-          <div style="font-size: 4rem; margin-bottom: var(--space-4);">👨‍💼</div>
-          <h3>Emir Yücel</h3>
-          <p class="text-muted" style="margin-bottom: var(--space-4);">
-            <span data-i18n="tr">Kurucu & CEO</span>
-            <span data-i18n="en">Founder & CEO</span>
-          </p>
-          <p>
-            <span data-i18n="tr">
-              Full-Stack AI geliştirici, DevOps uzmanı ve güvenlik/uyumluluk sorumlusu. 
-              AsistanApp'i sıfırdan geliştiren teknik lider.
-            </span>
-            <span data-i18n="en">
-              Full-Stack AI developer, DevOps expert, and security/compliance officer. 
-              The technical leader who developed AsistanApp from scratch.
-            </span>
-          </p>
-          <div style="margin-top: var(--space-6);">
-            <a href="https://www.linkedin.com/in/emrycl32" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
-              <span data-i18n="tr">LinkedIn'de Bağlan</span>
-              <span data-i18n="en">Connect on LinkedIn</span>
-            </a>
-          </div>
-        </div>
+      <div class="text-center" style="margin-bottom: var(--space-10);">
+        <h2 class="animate-fade-in-up">
+          <span data-i18n="tr">Nasıl Çalışıyoruz?</span>
+          <span data-i18n="en">How Do We Work?</span>
+        </h2>
+        <p class="animate-fade-in-up" style="max-width: 700px; margin: 0 auto; color: var(--text-secondary); animation-delay: 0.2s; opacity: 0;">
+          <span data-i18n="tr">
+            İşletmenizi tanır, ihtiyaçlarınızı belirler, size özel asistanınızı hazırlarız. 
+            Tüm süreçte yanınızdayız.
+          </span>
+          <span data-i18n="en">
+            We get to know your business, determine your needs, prepare your custom assistant. 
+            We're with you throughout the entire process.
+          </span>
+        </p>
       </div>
-    </div>
-  </section>
 
-  <!-- Technology Section -->
-  <section class="section observe-animation" style="background: var(--bg-accent);">
-    <div class="container">
-      <h2 class="text-center">
-        <span data-i18n="tr">Teknoloji Altyapımız</span>
-        <span data-i18n="en">Our Technology Stack</span>
-      </h2>
-      
-      <div class="grid grid-2">
-        <div class="card hover-lift animate-fade-in-up">
-          <h3>
-            <span data-i18n="tr">🤖 Yapay Zeka</span>
-            <span data-i18n="en">🤖 Artificial Intelligence</span>
+      <div class="grid grid-3">
+        <div class="card text-center hover-lift animate-fade-in-up">
+          <div style="font-size: 3rem; margin-bottom: var(--space-4); color: var(--primary);">1️⃣</div>
+          <h3 style="color: var(--primary); margin-bottom: var(--space-3);">
+            <span data-i18n="tr">Tanışma & Analiz</span>
+            <span data-i18n="en">Meeting & Analysis</span>
           </h3>
-          <p>
+          <p style="color: var(--text-secondary); line-height: 1.7;">
             <span data-i18n="tr">
-              GPT-5-mini ve GPT-4o modelleri, RAG teknolojisi, 
-              gerçek zamanlı konuşma işleme ve doğal dil anlama.
+              İşletmenizi, süreçlerinizi, müşterilerinizi tanırız. 
+              Neye ihtiyacınız olduğunu belirleriz.
             </span>
             <span data-i18n="en">
-              GPT-5-mini and GPT-4o models, RAG technology, 
-              real-time speech processing and natural language understanding.
+              We get to know your business, processes, customers. 
+              We determine what you need.
             </span>
           </p>
         </div>
-        
-        <div class="card hover-lift animate-fade-in-up">
-          <h3>
-            <span data-i18n="tr">☁️ Bulut Altyapı</span>
-            <span data-i18n="en">☁️ Cloud Infrastructure</span>
+
+        <div class="card text-center hover-lift animate-fade-in-up" style="animation-delay: 0.2s; opacity: 0;">
+          <div style="font-size: 3rem; margin-bottom: var(--space-4); color: var(--primary);">2️⃣</div>
+          <h3 style="color: var(--primary); margin-bottom: var(--space-3);">
+            <span data-i18n="tr">Kurulum & Test</span>
+            <span data-i18n="en">Setup & Testing</span>
           </h3>
-          <p>
+          <p style="color: var(--text-secondary); line-height: 1.7;">
             <span data-i18n="tr">
-              Ölçeklenebilir mikroservis mimarisi, otomatik yedekleme, 
-              izleme ve alarm sistemleri ile %99.9 uptime.
+              Asistanınızı yapılandırır, test ederiz. 
+              Her şey doğru çalışana kadar devam ederiz.
             </span>
             <span data-i18n="en">
-              Scalable microservice architecture, automatic backup, 
-              monitoring and alarm systems with 99.9% uptime.
+              We configure your assistant, test it. 
+              We continue until everything works correctly.
             </span>
           </p>
         </div>
-        
-        <div class="card hover-lift animate-fade-in-up">
-          <h3>
-            <span data-i18n="tr">🔗 Entegrasyonlar</span>
-            <span data-i18n="en">🔗 Integrations</span>
+
+        <div class="card text-center hover-lift animate-fade-in-up" style="animation-delay: 0.4s; opacity: 0;">
+          <div style="font-size: 3rem; margin-bottom: var(--space-4); color: var(--primary);">3️⃣</div>
+          <h3 style="color: var(--primary); margin-bottom: var(--space-3);">
+            <span data-i18n="tr">Canlı & Destek</span>
+            <span data-i18n="en">Live & Support</span>
           </h3>
-          <p>
+          <p style="color: var(--text-secondary); line-height: 1.7;">
             <span data-i18n="tr">
-              WhatsApp Business API, Meta platformları, Twilio, 
-              Stripe, PayTR, Chatwoot ve 50+ popüler servis.
+              Asistanınız müşterilerinizle konuşmaya başlar. 
+              Biz de yanınızda olmaya devam ederiz.
             </span>
             <span data-i18n="en">
-              WhatsApp Business API, Meta platforms, Twilio, 
-              Stripe, PayTR, Chatwoot and 50+ popular services.
-            </span>
-          </p>
-        </div>
-        
-        <div class="card hover-lift animate-fade-in-up">
-          <h3>
-            <span data-i18n="tr">🛡️ Güvenlik</span>
-            <span data-i18n="en">🛡️ Security</span>
-          </h3>
-          <p>
-            <span data-i18n="tr">
-              End-to-end şifreleme, KVKK/GDPR uyumluluk, 
-              çok katmanlı güvenlik ve sürekli penetrasyon testleri.
-            </span>
-            <span data-i18n="en">
-              End-to-end encryption, KVKK/GDPR compliance, 
-              multi-layer security and continuous penetration testing.
+              Your assistant starts talking to your customers. 
+              We continue to be by your side.
             </span>
           </p>
         </div>
@@ -248,30 +212,30 @@ import Layout from "../layouts/Layout.astro";
     </div>
   </section>
 
-  <!-- Contact CTA -->
   <section class="section observe-animation">
     <div class="container text-center">
-      <h2>
-        <span data-i18n="tr">Bizimle İletişime Geçin</span>
-        <span data-i18n="en">Get in Touch</span>
+      <h2 class="animate-fade-in-up">
+        <span data-i18n="tr">İşletmeniz İçin Hazırız</span>
+        <span data-i18n="en">We're Ready for Your Business</span>
       </h2>
-      <p style="font-size: var(--font-size-lg); margin-bottom: var(--space-8);">
+      <p class="animate-fade-in-up" style="font-size: var(--font-size-lg); margin-bottom: var(--space-8); max-width: 700px; margin-left: auto; margin-right: auto; color: var(--text-secondary); animation-delay: 0.2s; opacity: 0;">
         <span data-i18n="tr">
-          AsistanApp hakkında daha fazla bilgi almak veya özel çözümler için 
-          bizimle iletişime geçin.
+          Diş kliniği veya kafe/restoran işletiyorsanız, asistanınız hemen hazırlanabilir. 
+          Farklı bir sektördeyseniz, özel çözüm için bizimle iletişime geçin.
         </span>
         <span data-i18n="en">
-          Contact us for more information about AsistanApp or custom solutions.
+          If you run a dental clinic or cafe/restaurant, your assistant can be prepared immediately. 
+          If you're in a different sector, contact us for a custom solution.
         </span>
       </p>
-      <div class="flex justify-center gap-4">
-        <a class="btn btn-primary btn-lg" href="/contact">
-          <span data-i18n="tr">📧 İletişim</span>
-          <span data-i18n="en">📧 Contact</span>
+      <div style="display: flex; gap: var(--space-4); justify-content: center; flex-wrap: wrap;">
+        <a class="btn btn-primary btn-lg hover-glow hover-bounce animate-scale-in" href="/pre-register" style="animation-delay: 0.4s; opacity: 0;">
+          <span data-i18n="tr">🚀 Ücretsiz Demo İste</span>
+          <span data-i18n="en">🚀 Request Free Demo</span>
         </a>
-        <a class="btn btn-secondary btn-lg" href="/pre-register">
-          <span data-i18n="tr">🚀 Ön Kayıt</span>
-          <span data-i18n="en">🚀 Pre-Register</span>
+        <a class="btn btn-secondary btn-lg hover-scale animate-scale-in" href="/contact" style="animation-delay: 0.6s; opacity: 0;">
+          <span data-i18n="tr">✉️ İletişime Geç</span>
+          <span data-i18n="en">✉️ Contact Us</span>
         </a>
       </div>
     </div>

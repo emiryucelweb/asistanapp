@@ -4,23 +4,177 @@ import Layout from "../layouts/Layout.astro";
 
 <Layout 
   title="Entegrasyonlar – AsistanApp" 
-  description="AsistanApp'in desteklediği entegrasyonlar. WhatsApp, Stripe, Twilio, Chatwoot ve 50+ popüler servis."
+  description="AsistanApp sektörünüze özel yazılımlarla sorunsuz çalışır. Randevu sistemleri, POS cihazları, muhasebe yazılımları."
 >
   <!-- Hero Section -->
   <section class="hero section-sm observe-animation" style="background: var(--bg-accent);">
     <div class="container text-center">
       <h1 class="animate-fade-in-up">
-        <span data-i18n="tr">Entegrasyonlar</span>
-        <span data-i18n="en">Integrations</span>
+        <span data-i18n="tr">Sektörünüze Özel Entegrasyonlar</span>
+        <span data-i18n="en">Industry-Specific Integrations</span>
       </h1>
-      <p class="text-muted" style="font-size: var(--font-size-lg); max-width: 600px; margin: 0 auto;">
+      <p class="text-muted" style="font-size: var(--font-size-lg); max-width: 700px; margin: 0 auto;">
         <span data-i18n="tr">
-          Mevcut sistemlerinizle sorunsuz entegrasyon. 50+ popüler servisle çalışır.
+          Halihazırda kullandığınız yazılımlarla sorunsuz çalışır. Her sektöre özel çözümler.
         </span>
         <span data-i18n="en">
-          Seamless integration with your existing systems. Works with 50+ popular services.
+          Works seamlessly with your existing software. Custom solutions for each industry.
         </span>
       </p>
+    </div>
+  </section>
+
+  <!-- Dental Clinic Integrations -->
+  <section class="section observe-animation">
+    <div class="container">
+      <div class="text-center" style="margin-bottom: var(--space-8);">
+        <div style="font-size: 4rem; margin-bottom: var(--space-4);">🦷</div>
+        <h2>
+          <span data-i18n="tr">Diş Kliniği Yazılımları</span>
+          <span data-i18n="en">Dental Clinic Software</span>
+        </h2>
+        <p class="text-muted" style="max-width: 600px; margin: 0 auto;">
+          <span data-i18n="tr">
+            Randevu sisteminiz, hasta takip yazılımınız - asistanınız hepsini kontrol eder.
+          </span>
+          <span data-i18n="en">
+            Your appointment system, patient tracking software - your assistant controls everything.
+          </span>
+        </p>
+      </div>
+      
+      <div class="grid grid-3">
+        <div class="card text-center hover-lift animate-fade-in-up">
+          <div style="font-size: 3rem; margin-bottom: var(--space-4); color: var(--primary);">📅</div>
+          <h3>
+            <span data-i18n="tr">Randevu Sistemleri</span>
+            <span data-i18n="en">Appointment Systems</span>
+          </h3>
+          <p>
+            <span data-i18n="tr">
+              Mevcut randevu yazılımınızla entegre olur. 
+              Müşteri randevu almak istediğinde otomatik kaydeder.
+            </span>
+            <span data-i18n="en">
+              Integrates with your existing appointment software. 
+              Automatically records when customer wants an appointment.
+            </span>
+          </p>
+        </div>
+        
+        <div class="card text-center hover-lift animate-fade-in-up">
+          <div style="font-size: 3rem; margin-bottom: var(--space-4); color: #3498DB;">��</div>
+          <h3>
+            <span data-i18n="tr">Hasta Kayıt Sistemleri</span>
+            <span data-i18n="en">Patient Record Systems</span>
+          </h3>
+          <p>
+            <span data-i18n="tr">
+              Hasta bilgilerini yazılımınızdan okur. 
+              "Son tedavi ne zamandı?" sorusuna anında yanıt verir.
+            </span>
+            <span data-i18n="en">
+              Reads patient information from your software. 
+              Instantly answers "When was my last treatment?"
+            </span>
+          </p>
+        </div>
+        
+        <div class="card text-center hover-lift animate-fade-in-up">
+          <div style="font-size: 3rem; margin-bottom: var(--space-4); color: #2ECC71;">📋</div>
+          <h3>
+            <span data-i18n="tr">Tedavi Planlama</span>
+            <span data-i18n="en">Treatment Planning</span>
+          </h3>
+          <p>
+            <span data-i18n="tr">
+              Tedavi planlarını ve fiyatlarını bilir. 
+              Müşteriye hemen bilgi verir, onay alırsa kaydeder.
+            </span>
+            <span data-i18n="en">
+              Knows treatment plans and prices. 
+              Immediately informs customer, records if approved.
+            </span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cafe & Restaurant Integrations -->
+  <section class="section observe-animation" style="background: var(--bg-accent);">
+    <div class="container">
+      <div class="text-center" style="margin-bottom: var(--space-8);">
+        <div style="font-size: 4rem; margin-bottom: var(--space-4);">☕</div>
+        <h2>
+          <span data-i18n="tr">Kafe & Restoran Sistemleri</span>
+          <span data-i18n="en">Cafe & Restaurant Systems</span>
+        </h2>
+        <p class="text-muted" style="max-width: 600px; margin: 0 auto;">
+          <span data-i18n="tr">
+            POS cihazınız, mutfak ekranınız, adisyon sisteminiz - hepsi entegre.
+          </span>
+          <span data-i18n="en">
+            Your POS device, kitchen screen, billing system - all integrated.
+          </span>
+        </p>
+      </div>
+      
+      <div class="grid grid-3">
+        <div class="card text-center hover-lift animate-fade-in-up">
+          <div style="font-size: 3rem; margin-bottom: var(--space-4); color: #E67E22;">🍔</div>
+          <h3>
+            <span data-i18n="tr">POS Sistemleri</span>
+            <span data-i18n="en">POS Systems</span>
+          </h3>
+          <p>
+            <span data-i18n="tr">
+              Sipariş geldiğinde direkt POS'unuza düşer. 
+              Mutfak ekranında görünür, adisyon kesilir.
+            </span>
+            <span data-i18n="en">
+              When order arrives, goes directly to your POS. 
+              Appears on kitchen screen, bill is created.
+            </span>
+          </p>
+        </div>
+        
+        <div class="card text-center hover-lift animate-fade-in-up">
+          <div style="font-size: 3rem; margin-bottom: var(--space-4); color: #9B59B6;">📱</div>
+          <h3>
+            <span data-i18n="tr">Menü Yönetimi</span>
+            <span data-i18n="en">Menu Management</span>
+          </h3>
+          <p>
+            <span data-i18n="tr">
+              Menünüz otomatik güncellenir. Tükenen ürünleri 
+              asistan bilir, müşteriye alternatif önerir.
+            </span>
+            <span data-i18n="en">
+              Your menu updates automatically. Assistant knows 
+              sold-out items, suggests alternatives to customer.
+            </span>
+          </p>
+        </div>
+        
+        <div class="card text-center hover-lift animate-fade-in-up">
+          <div style="font-size: 3rem; margin-bottom: var(--space-4); color: #E74C3C;">🪑</div>
+          <h3>
+            <span data-i18n="tr">Masa Rezervasyonu</span>
+            <span data-i18n="en">Table Reservation</span>
+          </h3>
+          <p>
+            <span data-i18n="tr">
+              Boş masaları kontrol eder, rezervasyon alır. 
+              Müşteriye onay mesajı gönderir.
+            </span>
+            <span data-i18n="en">
+              Checks available tables, takes reservations. 
+              Sends confirmation message to customer.
+            </span>
+          </p>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -28,67 +182,45 @@ import Layout from "../layouts/Layout.astro";
   <section class="section observe-animation">
     <div class="container">
       <h2 class="text-center">
-        <span data-i18n="tr">📱 İletişim Kanalları</span>
-        <span data-i18n="en">📱 Communication Channels</span>
+        <span data-i18n="tr">📱 Müşterilerinizle İletişim</span>
+        <span data-i18n="en">📱 Customer Communication</span>
       </h2>
+      <p class="text-muted text-center" style="margin-bottom: var(--space-8); max-width: 600px; margin-left: auto; margin-right: auto;">
+        <span data-i18n="tr">
+          Müşterileriniz nereden yazsalar asistanınız yanıt verir.
+        </span>
+        <span data-i18n="en">
+          Your assistant responds wherever your customers write from.
+        </span>
+      </p>
       
       <div class="grid grid-4">
         <div class="card text-center hover-lift animate-fade-in-up">
           <div style="font-size: 3rem; margin-bottom: var(--space-4); color: #25D366;">💬</div>
-          <h3>WhatsApp Business</h3>
+          <h3>WhatsApp</h3>
           <p>
             <span data-i18n="tr">
-              Resmi WhatsApp Business API ile müşterilerinizle konuşun. 
-              Template mesajları ve medya desteği.
+              İşletme numaranıza gelen WhatsApp mesajları 
+              anında yanıtlanır.
             </span>
             <span data-i18n="en">
-              Talk to your customers with official WhatsApp Business API. 
-              Template messages and media support.
+              WhatsApp messages to your business number 
+              are responded instantly.
             </span>
           </p>
         </div>
         
         <div class="card text-center hover-lift animate-fade-in-up">
           <div style="font-size: 3rem; margin-bottom: var(--space-4); color: #E4405F;">📷</div>
-          <h3>Instagram Direct</h3>
+          <h3>Instagram</h3>
           <p>
             <span data-i18n="tr">
-              Instagram Direct mesajlarını otomatik yanıtlayın. 
-              Ürün etiketleme ve story entegrasyonu.
+              Instagram'dan gelen direct mesajlara 
+              otomatik yanıt verir.
             </span>
             <span data-i18n="en">
-              Automatically respond to Instagram Direct messages. 
-              Product tagging and story integration.
-            </span>
-          </p>
-        </div>
-        
-        <div class="card text-center hover-lift animate-fade-in-up">
-          <div style="font-size: 3rem; margin-bottom: var(--space-4); color: #1877F2;">👥</div>
-          <h3>Facebook Messenger</h3>
-          <p>
-            <span data-i18n="tr">
-              Facebook sayfanızdan gelen mesajları AI ile yanıtlayın. 
-              Chatbot ve canlı destek entegrasyonu.
-            </span>
-            <span data-i18n="en">
-              Respond to messages from your Facebook page with AI. 
-              Chatbot and live support integration.
-            </span>
-          </p>
-        </div>
-        
-        <div class="card text-center hover-lift animate-fade-in-up">
-          <div style="font-size: 3rem; margin-bottom: var(--space-4); color: #1DA1F2;">🐦</div>
-          <h3>Twitter/X DM</h3>
-          <p>
-            <span data-i18n="tr">
-              Twitter/X direct mesajlarını otomatik yönetin. 
-              Müşteri şikayetlerini hızla çözün.
-            </span>
-            <span data-i18n="en">
-              Automatically manage Twitter/X direct messages. 
-              Quickly resolve customer complaints.
+              Automatically responds to Instagram 
+              direct messages.
             </span>
           </p>
         </div>
@@ -96,17 +228,17 @@ import Layout from "../layouts/Layout.astro";
         <div class="card text-center hover-lift animate-fade-in-up">
           <div style="font-size: 3rem; margin-bottom: var(--space-4); color: var(--primary);">🌐</div>
           <h3>
-            <span data-i18n="tr">Web Widget</span>
-            <span data-i18n="en">Web Widget</span>
+            <span data-i18n="tr">Web Siteniz</span>
+            <span data-i18n="en">Your Website</span>
           </h3>
           <p>
             <span data-i18n="tr">
-              Web sitenize chat widget ekleyin. 
-              Ziyaretçilerinizle anında konuşun.
+              Web sitenize sohbet kutusu ekler. 
+              Ziyaretçilerle anında konuşur.
             </span>
             <span data-i18n="en">
-              Add chat widget to your website. 
-              Talk to your visitors instantly.
+              Adds chat box to your website. 
+              Talks with visitors instantly.
             </span>
           </p>
         </div>
@@ -114,239 +246,17 @@ import Layout from "../layouts/Layout.astro";
         <div class="card text-center hover-lift animate-fade-in-up">
           <div style="font-size: 3rem; margin-bottom: var(--space-4); color: #FF6B6B;">📞</div>
           <h3>
-            <span data-i18n="tr">Sesli Aramalar</span>
-            <span data-i18n="en">Voice Calls</span>
+            <span data-i18n="tr">Telefon</span>
+            <span data-i18n="en">Phone</span>
           </h3>
           <p>
             <span data-i18n="tr">
-              Twilio ile sesli asistan. Telefon açıldığında 
-              AI gerçek insan gibi konuşur.
+              Telefonu açtığında asistanınız 
+              gerçek insan gibi konuşur.
             </span>
             <span data-i18n="en">
-              Voice assistant with Twilio. When phone rings, 
-              AI talks like a real human.
-            </span>
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Payment Systems -->
-  <section class="section observe-animation" style="background: var(--bg-accent);">
-    <div class="container">
-      <h2 class="text-center">
-        <span data-i18n="tr">💳 Ödeme Sistemleri</span>
-        <span data-i18n="en">💳 Payment Systems</span>
-      </h2>
-      
-      <div class="grid grid-3">
-        <div class="card text-center hover-lift animate-fade-in-up">
-          <div style="font-size: 3rem; margin-bottom: var(--space-4); color: #635BFF;">💳</div>
-          <h3>Stripe</h3>
-          <p>
-            <span data-i18n="tr">
-              Dünya çapında güvenli ödeme alın. Kredi kartı, 
-              banka kartı ve dijital cüzdanlar.
-            </span>
-            <span data-i18n="en">
-              Accept secure payments worldwide. Credit cards, 
-              debit cards, and digital wallets.
-            </span>
-          </p>
-        </div>
-        
-        <div class="card text-center hover-lift animate-fade-in-up">
-          <div style="font-size: 3rem; margin-bottom: var(--space-4); color: #E74C3C;">💰</div>
-          <h3>PayTR</h3>
-          <p>
-            <span data-i18n="tr">
-              Türkiye'nin yerli ödeme sistemi. 
-              Tüm Türk bankalarıyla entegre.
-            </span>
-            <span data-i18n="en">
-              Turkey's local payment system. 
-              Integrated with all Turkish banks.
-            </span>
-          </p>
-        </div>
-        
-        <div class="card text-center hover-lift animate-fade-in-up">
-          <div style="font-size: 3rem; margin-bottom: var(--space-4); color: #FF9500;">🏦</div>
-          <h3>Iyzico</h3>
-          <p>
-            <span data-i18n="tr">
-              Türkiye'de popüler ödeme çözümü. 
-              Taksit seçenekleri ve güvenli ödeme.
-            </span>
-            <span data-i18n="en">
-              Popular payment solution in Turkey. 
-              Installment options and secure payment.
-            </span>
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Business Tools -->
-  <section class="section observe-animation">
-    <div class="container">
-      <h2 class="text-center">
-        <span data-i18n="tr">🛠️ İş Araçları</span>
-        <span data-i18n="en">🛠️ Business Tools</span>
-      </h2>
-      
-      <div class="grid grid-3">
-        <div class="card text-center hover-lift animate-fade-in-up">
-          <div style="font-size: 3rem; margin-bottom: var(--space-4); color: #3498DB;">💬</div>
-          <h3>Chatwoot</h3>
-          <p>
-            <span data-i18n="tr">
-              Müşteri destek platformu entegrasyonu. 
-              AI ve insan desteğini birleştirin.
-            </span>
-            <span data-i18n="en">
-              Customer support platform integration. 
-              Combine AI and human support.
-            </span>
-          </p>
-        </div>
-        
-        <div class="card text-center hover-lift animate-fade-in-up">
-          <div style="font-size: 3rem; margin-bottom: var(--space-4); color: #9B59B6;">📊</div>
-          <h3>PostHog</h3>
-          <p>
-            <span data-i18n="tr">
-              Müşteri davranışı analizi. Konuşma performansını 
-              ve dönüşüm oranlarını izleyin.
-            </span>
-            <span data-i18n="en">
-              Customer behavior analysis. Track conversation performance 
-              and conversion rates.
-            </span>
-          </p>
-        </div>
-        
-        <div class="card text-center hover-lift animate-fade-in-up">
-          <div style="font-size: 3rem; margin-bottom: var(--space-4); color: #2ECC71;">🔄</div>
-          <h3>Airbyte</h3>
-          <p>
-            <span data-i18n="tr">
-              Veri entegrasyonu ve senkronizasyon. 
-              Tüm sistemlerinizi birbirine bağlayın.
-            </span>
-            <span data-i18n="en">
-              Data integration and synchronization. 
-              Connect all your systems together.
-            </span>
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- E-commerce Platforms -->
-  <section class="section observe-animation" style="background: var(--bg-accent);">
-    <div class="container">
-      <h2 class="text-center">
-        <span data-i18n="tr">🛒 E-Ticaret Platformları</span>
-        <span data-i18n="en">🛒 E-Commerce Platforms</span>
-      </h2>
-      
-      <div class="grid grid-4">
-        <div class="card text-center hover-lift animate-fade-in-up">
-          <div style="font-size: 3rem; margin-bottom: var(--space-4); color: #96BF48;">🛍️</div>
-          <h3>Shopify</h3>
-          <p>
-            <span data-i18n="tr">Ürün kataloğu ve sipariş entegrasyonu</span>
-            <span data-i18n="en">Product catalog and order integration</span>
-          </p>
-        </div>
-        
-        <div class="card text-center hover-lift animate-fade-in-up">
-          <div style="font-size: 3rem; margin-bottom: var(--space-4); color: #21759B;">🌐</div>
-          <h3>WooCommerce</h3>
-          <p>
-            <span data-i18n="tr">WordPress e-ticaret entegrasyonu</span>
-            <span data-i18n="en">WordPress e-commerce integration</span>
-          </p>
-        </div>
-        
-        <div class="card text-center hover-lift animate-fade-in-up">
-          <div style="font-size: 3rem; margin-bottom: var(--space-4); color: #FF6900;">🏪</div>
-          <h3>Magento</h3>
-          <p>
-            <span data-i18n="tr">Kurumsal e-ticaret çözümleri</span>
-            <span data-i18n="en">Enterprise e-commerce solutions</span>
-          </p>
-        </div>
-        
-        <div class="card text-center hover-lift animate-fade-in-up">
-          <div style="font-size: 3rem; margin-bottom: var(--space-4); color: var(--primary);">🏬</div>
-          <h3>
-            <span data-i18n="tr">Özel API</span>
-            <span data-i18n="en">Custom API</span>
-          </h3>
-          <p>
-            <span data-i18n="tr">Kendi sisteminizle entegrasyon</span>
-            <span data-i18n="en">Integration with your own system</span>
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CRM & Analytics -->
-  <section class="section observe-animation">
-    <div class="container">
-      <h2 class="text-center">
-        <span data-i18n="tr">📈 CRM ve Analitik</span>
-        <span data-i18n="en">📈 CRM & Analytics</span>
-      </h2>
-      
-      <div class="grid grid-3">
-        <div class="card text-center hover-lift animate-fade-in-up">
-          <div style="font-size: 3rem; margin-bottom: var(--space-4); color: #FF6B35;">📊</div>
-          <h3>HubSpot</h3>
-          <p>
-            <span data-i18n="tr">
-              CRM entegrasyonu. Müşteri bilgilerini 
-              otomatik senkronize edin.
-            </span>
-            <span data-i18n="en">
-              CRM integration. Automatically synchronize 
-              customer information.
-            </span>
-          </p>
-        </div>
-        
-        <div class="card text-center hover-lift animate-fade-in-up">
-          <div style="font-size: 3rem; margin-bottom: var(--space-4); color: #4285F4;">📈</div>
-          <h3>Google Analytics</h3>
-          <p>
-            <span data-i18n="tr">
-              Konuşma performansını Google Analytics'te 
-              izleyin ve optimize edin.
-            </span>
-            <span data-i18n="en">
-              Track and optimize conversation performance 
-              in Google Analytics.
-            </span>
-          </p>
-        </div>
-        
-        <div class="card text-center hover-lift animate-fade-in-up">
-          <div style="font-size: 3rem; margin-bottom: var(--space-4); color: #FF4B4B;">🎯</div>
-          <h3>Salesforce</h3>
-          <p>
-            <span data-i18n="tr">
-              Kurumsal CRM entegrasyonu. Lead'leri 
-              otomatik CRM'e aktarın.
-            </span>
-            <span data-i18n="en">
-              Enterprise CRM integration. Automatically 
-              transfer leads to CRM.
+              When phone rings, your assistant 
+              talks like a real person.
             </span>
           </p>
         </div>
@@ -358,29 +268,92 @@ import Layout from "../layouts/Layout.astro";
   <section class="section observe-animation" style="background: var(--primary); color: white;">
     <div class="container text-center">
       <h2 style="color: white;">
-        <span data-i18n="tr">🔧 Özel Entegrasyon İhtiyacınız Var mı?</span>
-        <span data-i18n="en">🔧 Need Custom Integration?</span>
+        <span data-i18n="tr">🔧 Sizin Yazılımınızla Entegre Olalım</span>
+        <span data-i18n="en">🔧 Let's Integrate With Your Software</span>
       </h2>
       <p style="font-size: var(--font-size-lg); color: rgba(255,255,255,0.9); margin-bottom: var(--space-8);">
         <span data-i18n="tr">
-          Kullandığınız sistem listede yok mu? Özel entegrasyonlar geliştirebiliriz. 
-          API dokümantasyonunuz varsa, bağlantı kurabiliriz.
+          Kullandığınız başka bir yazılım mı var? Size özel entegrasyon yapabiliriz. 
+          Randevu sisteminiz, muhasebe programınız, CRM'iniz - hangisiyle çalışıyorsanız bağlayabiliriz.
         </span>
         <span data-i18n="en">
-          Your system not on the list? We can develop custom integrations. 
-          If you have API documentation, we can connect.
+          Using another software? We can create custom integration for you. 
+          Your appointment system, accounting program, CRM - we can connect with whatever you're using.
         </span>
       </p>
       <div class="flex justify-center gap-4">
-        <a class="btn btn-lg" href="/contact" style="background: white; color: var(--primary);">
-          <span data-i18n="tr">📞 Özel Entegrasyon Talebi</span>
-          <span data-i18n="en">📞 Custom Integration Request</span>
-        </a>
-        <a class="btn btn-lg" href="/pre-register" style="background: rgba(255,255,255,0.2); color: white; border: 2px solid white;">
-          <span data-i18n="tr">🚀 Ön Kayıt</span>
+        <a class="btn btn-lg" href="/pre-register" style="background: white; color: var(--primary);">
+          <span data-i18n="tr">🚀 Ön Kayıt Yap</span>
           <span data-i18n="en">🚀 Pre-Register</span>
+        </a>
+        <a class="btn btn-lg" href="/contact" style="background: rgba(255,255,255,0.2); color: white; border: 2px solid white;">
+          <span data-i18n="tr">💬 Entegrasyon Hakkında Konuş</span>
+          <span data-i18n="en">💬 Talk About Integration</span>
         </a>
       </div>
     </div>
   </section>
+
 </Layout>
+
+<style>
+  .grid {
+    display: grid;
+    gap: var(--space-6);
+    margin-top: var(--space-8);
+  }
+  
+  .grid-3 {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+  
+  .grid-4 {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  }
+  
+  .card {
+    padding: var(--space-6);
+    background: var(--card-bg);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+  }
+  
+  .card h3 {
+    margin: var(--space-4) 0;
+    font-size: var(--font-size-xl);
+  }
+  
+  .card p {
+    color: var(--text-muted);
+    line-height: 1.6;
+  }
+  
+  .hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .hover-lift:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+  }
+  
+  .flex {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .justify-center {
+    justify-content: center;
+  }
+  
+  .gap-4 {
+    gap: var(--space-4);
+  }
+  
+  @media (max-width: 768px) {
+    .grid-3, .grid-4 {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
