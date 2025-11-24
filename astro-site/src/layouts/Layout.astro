@@ -2,6 +2,8 @@
 import "../styles/global.css";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import CookieConsent from "../components/CookieConsent.tsx";
+import WhatsAppButton from "../components/WhatsAppButton.tsx";
 
 interface Props {
   title?: string;
@@ -22,6 +24,9 @@ const {
     <meta name="description" content={description} />
     <title>{title}</title>
     
+    <!-- Canonical URL -->
+    <link rel="canonical" href={`https://asistanapp.com.tr${Astro.url.pathname}`} />
+    
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     
@@ -32,123 +37,100 @@ const {
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://asistanapp.com.tr" />
+    <meta property="og:url" content={`https://asistanapp.com.tr${Astro.url.pathname}`} />
+    <meta property="og:image" content="https://asistanapp.com.tr/og-image.svg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="tr_TR" />
+    <meta property="og:site_name" content="AsistanApp" />
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content="https://asistanapp.com.tr/og-image.svg" />
+    <meta name="twitter:site" content="@asistanapp" />
     
-    <!-- Fonts -->
+    <!-- Fonts - Preload for Performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    </noscript>
+    
+    <!-- Structured Data - JSON-LD -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "AsistanApp",
+        "url": "https://asistanapp.com.tr",
+        "logo": "https://asistanapp.com.tr/logo.svg",
+        "description": "Çok kanallı AI asistan platformu. WhatsApp, Instagram, Facebook, Web ve Ses kanallarında yapay zeka destekli müşteri iletişimi.",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+90-543-899-2696",
+          "contactType": "customer service",
+          "email": "info@asistanapp.com.tr",
+          "availableLanguage": ["Turkish", "English"]
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Istanbul",
+          "addressCountry": "TR"
+        },
+        "sameAs": [
+          "https://www.linkedin.com/in/emrycl32"
+        ]
+      }
+    </script>
+    
+    <!-- Google Analytics 4 with Consent Mode v2 -->
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      
+      // Default consent to denied for GDPR compliance
+      gtag('consent', 'default', {
+        'analytics_storage': 'denied',
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied',
+        'wait_for_update': 500
+      });
+      
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX', {
+        'anonymize_ip': true,
+        'cookie_flags': 'SameSite=None;Secure'
+      });
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
   </head>
   
   <body>
+    <a href="#main-content" class="skip-link">
+      <span data-i18n="tr">Ana içeriğe geç</span>
+      <span data-i18n="en">Skip to main content</span>
+    </a>
     <div class="page-container">
       <Header />
       
-      <main>
+      <main id="main-content">
         <slot />
       </main>
       
       <Footer />
     </div>
     
-    <!-- Language switching script -->
-    <script is:inline>
-      (function() {
-        // Initialize language from localStorage or default to Turkish
-        function initLanguage() {
-          try {
-            const saved = localStorage.getItem('asistanapp-lang');
-            const lang = saved || 'tr';
-            document.documentElement.setAttribute('data-lang', lang);
-            return lang;
-          } catch (e) {
-            return 'tr';
-          }
-        }
-        
-        // Set language and save to localStorage
-        function setLanguage(lang) {
-          try {
-            document.documentElement.setAttribute('data-lang', lang);
-            localStorage.setItem('asistanapp-lang', lang);
-            
-            // Update active button states
-            const buttons = document.querySelectorAll('.lang button');
-            buttons.forEach(btn => {
-              btn.classList.toggle('active', btn.textContent.toLowerCase() === lang);
-            });
-          } catch (e) {
-            console.warn('Could not save language preference:', e);
-          }
-        }
-        
-        // Global function for language switching
-        window.setLang = setLanguage;
-        
-        // Initialize on page load
-        const currentLang = initLanguage();
-        
-        // Wait for DOM to be ready, then update button states
-        if (document.readyState === 'loading') {
-          document.addEventListener('DOMContentLoaded', function() {
-            setLanguage(currentLang);
-            initAnimations();
-          });
-        } else {
-          setLanguage(currentLang);
-          initAnimations();
-        }
-
-        // Initialize smooth animations
-        function initAnimations() {
-          // Intersection Observer for scroll animations
-          if ('IntersectionObserver' in window) {
-            const observer = new IntersectionObserver((entries) => {
-              entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                  entry.target.classList.add('in-view');
-                  // Trigger staggered animations for children
-                  const staggerElements = entry.target.querySelectorAll('.animate-stagger > *');
-                  staggerElements.forEach((child, index) => {
-                    setTimeout(() => {
-                      child.style.opacity = '1';
-                      child.classList.add('animate-fade-in-up');
-                    }, index * 150);
-                  });
-                  observer.unobserve(entry.target);
-                }
-              });
-            }, {
-              threshold: 0.1,
-              rootMargin: '50px'
-            });
-
-            // Observe all animation elements
-            document.querySelectorAll('.observe-animation').forEach(el => {
-              observer.observe(el);
-            });
-          }
-
-          // Add smooth scrolling to anchor links
-          document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-              e.preventDefault();
-              const target = document.querySelector(this.getAttribute('href'));
-              if (target) {
-                target.scrollIntoView({
-                  behavior: 'smooth',
-                  block: 'start'
-                });
-              }
-            });
-          });
-        }
-      })();
-    </script>
+    <!-- Cookie Consent Banner -->
+    <CookieConsent client:only="react" />
+    
+    <!-- WhatsApp Contact Button -->
+    <WhatsAppButton client:only="react" />
+    
+    <!-- External Scripts -->
+    <script src="/scripts/site.js" defer></script>
   </body>
 </html>

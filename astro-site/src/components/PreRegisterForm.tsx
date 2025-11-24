@@ -12,6 +12,7 @@ export default function PreRegisterForm() {
   const [growth, setGrowth] = useState<GrowthState>({});
   const [error, setError] = useState<string>('');
   const [toast, setToast] = useState<string>('');
+  const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
 
   // Sync with global language
   useEffect(() => {
@@ -124,24 +125,38 @@ export default function PreRegisterForm() {
   }
 
   async function handleStep2Submit() {
-    const success = await submitToFormspree(true);
+    setIsSubmitting(true);
+    setError('');
     
-    if (success) {
-      setToast(t.ok);
-      setStep(3);
-    } else {
-      setError(lang === 'tr' ? 'Bir hata oluştu, lütfen tekrar deneyin.' : 'An error occurred, please try again.');
+    try {
+      const success = await submitToFormspree(true);
+      
+      if (success) {
+        setToast(t.ok);
+        setStep(3);
+      } else {
+        setError(lang === 'tr' ? 'Bir hata oluştu, lütfen tekrar deneyin.' : 'An error occurred, please try again.');
+      }
+    } finally {
+      setIsSubmitting(false);
     }
   }
 
   async function handleSkipStep2() {
-    const success = await submitToFormspree(false);
+    setIsSubmitting(true);
+    setError('');
     
-    if (success) {
-      setToast(lang === 'tr' ? 'Ön kaydınız tamamlandı!' : 'Your pre-registration is complete!');
-      setStep(3);
-    } else {
-      setError(lang === 'tr' ? 'Bir hata oluştu, lütfen tekrar deneyin.' : 'An error occurred, please try again.');
+    try {
+      const success = await submitToFormspree(false);
+      
+      if (success) {
+        setToast(lang === 'tr' ? 'Ön kaydınız tamamlandı!' : 'Your pre-registration is complete!');
+        setStep(3);
+      } else {
+        setError(lang === 'tr' ? 'Bir hata oluştu, lütfen tekrar deneyin.' : 'An error occurred, please try again.');
+      }
+    } finally {
+      setIsSubmitting(false);
     }
   }
 
@@ -219,33 +234,38 @@ export default function PreRegisterForm() {
             
             <div className="grid grid-2" style={{ marginBottom: 'var(--space-6)' }}>
               <div className="form-group">
-                <label className="form-label">{t.name}</label>
+                <label htmlFor="name" className="form-label">{t.name}</label>
                 <input 
+                  id="name"
                   className="form-input"
                   name="name" 
                   value={form.name} 
                   onChange={onChange} 
                   required 
+                  aria-required="true"
                   placeholder={lang === 'tr' ? 'Emir Yücel' : 'John Doe'}
                 />
               </div>
               
               <div className="form-group">
-                <label className="form-label">{t.email}</label>
+                <label htmlFor="email" className="form-label">{t.email}</label>
                 <input 
+                  id="email"
                   className="form-input"
                   name="email" 
                   type="email" 
                   value={form.email} 
                   onChange={onChange} 
                   required 
+                  aria-required="true"
                   placeholder="info@asistanapp.com.tr"
                 />
               </div>
               
               <div className="form-group">
-                <label className="form-label">{t.company}</label>
+                <label htmlFor="company" className="form-label">{t.company}</label>
                 <input 
+                  id="company"
                   className="form-input"
                   name="company" 
                   value={form.company ?? ''} 
@@ -255,10 +275,12 @@ export default function PreRegisterForm() {
               </div>
               
               <div className="form-group">
-                <label className="form-label">{t.phone}</label>
+                <label htmlFor="phone" className="form-label">{t.phone}</label>
                 <input 
+                  id="phone"
                   className="form-input"
                   name="phone" 
+                  type="tel"
                   value={form.phone ?? ''} 
                   onChange={onChange}
                   placeholder="+90 543 899 2696"
@@ -280,8 +302,33 @@ export default function PreRegisterForm() {
             
             {error && <div className="alert error">{error}</div>}
             
-            <button className="btn btn-primary btn-lg" type="submit" style={{ width: '100%' }}>
-              {t.submit1}
+            <button 
+              className="btn btn-primary btn-lg" 
+              type="submit" 
+              style={{ 
+                width: '100%',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                gap: 'var(--space-2)'
+              }}
+              disabled={isSubmitting}
+            >
+              {isSubmitting && (
+                <span className="spinner" style={{
+                  width: '16px',
+                  height: '16px',
+                  border: '2px solid rgba(255, 255, 255, 0.3)',
+                  borderTop: '2px solid white',
+                  borderRadius: '50%',
+                  display: 'inline-block',
+                  animation: 'spin 0.6s linear infinite'
+                }}></span>
+              )}
+              {isSubmitting 
+                ? (lang === 'tr' ? 'Gönderiliyor...' : 'Submitting...') 
+                : t.submit1
+              }
             </button>
           </form>
         )}
@@ -293,8 +340,8 @@ export default function PreRegisterForm() {
             
             <div className="grid grid-2" style={{ marginBottom: 'var(--space-6)' }}>
               <div className="form-group">
-                <label className="form-label">{t.jobTitle}</label>
-                <select className="form-select" name="jobTitle" onChange={onGrowthChange} defaultValue="">
+                <label htmlFor="jobTitle" className="form-label">{t.jobTitle}</label>
+                <select id="jobTitle" className="form-select" name="jobTitle" onChange={onGrowthChange} defaultValue="">
                   <option value="" disabled>—</option>
                   <option value="owner">{t.owner}</option>
                   <option value="manager">{t.manager}</option>
@@ -304,8 +351,8 @@ export default function PreRegisterForm() {
               </div>
               
               <div className="form-group">
-                <label className="form-label">{t.companySize}</label>
-                <select className="form-select" name="companySize" onChange={onGrowthChange} defaultValue="">
+                <label htmlFor="companySize" className="form-label">{t.companySize}</label>
+                <select id="companySize" className="form-select" name="companySize" onChange={onGrowthChange} defaultValue="">
                   <option value="" disabled>—</option>
                   <option value="1-10">1–10 {lang === 'tr' ? 'kişi' : 'people'}</option>
                   <option value="11-50">11–50 {lang === 'tr' ? 'kişi' : 'people'}</option>
@@ -314,8 +361,8 @@ export default function PreRegisterForm() {
               </div>
               
               <div className="form-group">
-                <label className="form-label">{t.useCase}</label>
-                <select className="form-select" name="useCase" onChange={onGrowthChange} defaultValue="">
+                <label htmlFor="useCase" className="form-label">{t.useCase}</label>
+                <select id="useCase" className="form-select" name="useCase" onChange={onGrowthChange} defaultValue="">
                   <option value="" disabled>—</option>
                   <option value="sales">{t.sales}</option>
                   <option value="support">{t.support}</option>
@@ -325,8 +372,8 @@ export default function PreRegisterForm() {
               </div>
               
               <div className="form-group">
-                <label className="form-label">{t.startTime}</label>
-                <select className="form-select" name="start" onChange={onGrowthChange} defaultValue="">
+                <label htmlFor="startTime" className="form-label">{t.startTime}</label>
+                <select id="startTime" className="form-select" name="start" onChange={onGrowthChange} defaultValue="">
                   <option value="" disabled>—</option>
                   <option value="now">{t.now}</option>
                   <option value="3m">{t.month3}</option>
@@ -335,20 +382,48 @@ export default function PreRegisterForm() {
               </div>
             </div>
             
+            {error && <div className="alert error" style={{ marginBottom: 'var(--space-4)' }}>{error}</div>}
+            
             <div style={{ display: 'flex', gap: 'var(--space-4)', alignItems: 'center' }}>
-              <button className="btn btn-primary btn-lg" onClick={handleStep2Submit}>
-                {t.submit2}
+              <button 
+                className="btn btn-primary btn-lg" 
+                onClick={handleStep2Submit}
+                disabled={isSubmitting}
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  gap: 'var(--space-2)'
+                }}
+              >
+                {isSubmitting && (
+                  <span className="spinner" style={{
+                    width: '16px',
+                    height: '16px',
+                    border: '2px solid rgba(255, 255, 255, 0.3)',
+                    borderTop: '2px solid white',
+                    borderRadius: '50%',
+                    display: 'inline-block',
+                    animation: 'spin 0.6s linear infinite'
+                  }}></span>
+                )}
+                {isSubmitting 
+                  ? (lang === 'tr' ? 'Kaydediliyor...' : 'Saving...') 
+                  : t.submit2
+                }
               </button>
               <button 
                 type="button"
                 onClick={handleSkipStep2}
+                disabled={isSubmitting}
                 style={{ 
                   background: 'transparent', 
                   border: 'none', 
-                  color: 'var(--text-secondary)', 
+                  color: isSubmitting ? 'var(--text-muted)' : 'var(--text-secondary)', 
                   textDecoration: 'underline', 
-                  cursor: 'pointer',
-                  fontSize: 'var(--font-size-sm)'
+                  cursor: isSubmitting ? 'not-allowed' : 'pointer',
+                  fontSize: 'var(--font-size-sm)',
+                  opacity: isSubmitting ? 0.5 : 1
                 }}
               >
                 {t.skip}
@@ -359,12 +434,19 @@ export default function PreRegisterForm() {
 
         {/* Step 3: Thank You */}
         {step === 3 && (
-          <div className="text-center">
-            <div style={{ fontSize: '4rem', marginBottom: 'var(--space-4)' }}>🎉</div>
+          <div className="text-center animate-fade-in-scale">
+            <div className="celebrate" style={{ fontSize: '4rem', marginBottom: 'var(--space-4)', display: 'inline-block' }}>
+              🎉
+            </div>
             <h2 style={{ color: 'var(--primary)', marginBottom: 'var(--space-4)' }}>
               {lang === 'tr' ? 'Teşekkürler!' : 'Thank You!'}
             </h2>
-            <div className="alert success">
+            <div className="alert success" style={{
+              background: 'linear-gradient(135deg, #10b981 0%, #059669 100%)',
+              color: 'white',
+              border: 'none',
+              boxShadow: '0 10px 30px rgba(16, 185, 129, 0.3)'
+            }}>
               {t.ok}
             </div>
             <p style={{ marginTop: 'var(--space-6)', color: 'var(--text-muted)' }}>
@@ -373,6 +455,26 @@ export default function PreRegisterForm() {
                 : 'We will get back to you as soon as possible. You can close this page.'
               }
             </p>
+            
+            {/* Confetti Elements */}
+            <div style={{ position: 'relative', height: '0', overflow: 'visible' }}>
+              {[...Array(12)].map((_, i) => (
+                <span
+                  key={i}
+                  className="confetti"
+                  style={{
+                    position: 'absolute',
+                    left: `${Math.random() * 100}%`,
+                    top: '0',
+                    fontSize: '1.5rem',
+                    animationDelay: `${Math.random() * 0.5}s`,
+                    animationDuration: `${1 + Math.random()}s`
+                  }}
+                >
+                  {['🎊', '🎉', '✨', '⭐', '💫', '🌟'][Math.floor(Math.random() * 6)]}
+                </span>
+              ))}
+            </div>
           </div>
         )}
       </div>

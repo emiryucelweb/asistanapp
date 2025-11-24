@@ -125,6 +125,27 @@ body {
 }
 
 /* =========================================
+   Accessibility - Skip Link
+========================================= */
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--primary);
+  color: white;
+  padding: var(--space-2) var(--space-4);
+  text-decoration: none;
+  font-weight: var(--font-weight-semibold);
+  z-index: 200;
+  border-radius: 0 0 var(--radius-md) 0;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* =========================================
    Layout Components
 ========================================= */
 
@@ -868,6 +889,16 @@ html[data-lang="en"] .en-only {
 .animate-stagger > *:nth-child(5) { animation-delay: 0.5s; opacity: 0; }
 .animate-stagger > *:nth-child(6) { animation-delay: 0.6s; opacity: 0; }
 
+/* NoScript Fallback - Ensure content visible without JavaScript */
+noscript .animate-fade-in-up,
+noscript .animate-scale-in,
+noscript .observe-animation,
+noscript .animate-stagger > * {
+  opacity: 1 !important;
+  transform: none !important;
+  animation: none !important;
+}
+
 /* Hover Effects */
 .hover-lift {
   transition: all var(--transition-normal);
@@ -986,5 +1017,90 @@ html {
 .observe-animation.in-view {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* =========================================
+   Landing Page Specific Animations
+========================================= */
+
+/* Spinner Animation for Loading States */
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.spinner {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+}
+
+/* Fade In + Scale Up Animation */
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-fade-in-scale {
+  animation: fadeInScale 0.5s ease-out forwards;
+}
+
+/* WhatsApp Button Pulse Ring */
+@keyframes pulseRing {
+  0% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.3;
+  }
+  100% {
+    transform: scale(1.2);
+    opacity: 0;
+  }
+}
+
+/* Success Celebration Animation */
+@keyframes celebrate {
+  0%, 100% {
+    transform: scale(1) rotate(0deg);
+  }
+  25% {
+    transform: scale(1.1) rotate(-5deg);
+  }
+  75% {
+    transform: scale(1.1) rotate(5deg);
+  }
+}
+
+.celebrate {
+  animation: celebrate 0.6s ease-in-out;
+}
+
+/* Confetti Animation */
+@keyframes confetti {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.confetti {
+  animation: confetti 1.5s ease-out forwards;
 }
 
