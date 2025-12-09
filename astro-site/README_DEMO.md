@@ -2,21 +2,26 @@
 
 ## Overview
 
-The `/demo` route serves a **100% static** interactive demo of the AsistanApp platform. This is a completely isolated, client-side application with **NO backend API calls**.
+The `/demo` route serves the **real AsistanApp Panel UI** - a fully functional customer management dashboard. This is a 100% static deployment with **NO backend API calls** (read-only mode).
 
 **Location:** `/public/demo/` (statically served by Astro)
 
 **Public URL:** `https://asistanapp.com.tr/demo`
 
+**Source:** Built from `/home/emir/Desktop/asistanapp/apps/panel/dist/`
+
 ---
 
 ## What is the Demo?
 
-The demo site is a **standalone Vite/React application** that demonstrates:
-- Interactive UI mockups of AsistanApp features
-- Chat interface simulations
-- User flow demonstrations
-- Static content only
+The demo site is the **actual AsistanApp panel application** that demonstrates:
+- **3-Panel Interface:** User can select between different panel types (Admin, Agent, Super Admin)
+- **Complete Dashboard:** Full UI of customer panel with all screens
+- **Localization:** Turkish (TR) and English (EN) language support
+- **Chat Management:** Conversation interfaces and chat screens
+- **Reports & Analytics:** Report generation and data visualization pages
+- **Settings & Configuration:** Panel settings screens
+- **Read-Only Mode:** Static deployment - no actual data mutations
 
 **Important:** The demo:
 - ✅ Does NOT call real backend APIs
@@ -35,10 +40,12 @@ astro-site/
 │   └── components/
 │       └── Header.astro          # <-- "Demo" button added here
 ├── public/
-│   └── demo/                      # <-- Static demo content (built Vite app)
+│   └── demo/                      # <-- Real panel build output
 │       ├── index.html
-│       ├── README.md
-│       └── (other static assets)
+│       ├── assets/                # JS/CSS bundles (fix asset paths here!)
+│       ├── locales/               # i18n JSON files (TR/EN)
+│       ├── favicon.svg
+│       └── sw.js                  # Service worker
 └── README_DEMO.md                 # <-- This file
 ```
 
@@ -46,40 +53,64 @@ astro-site/
 
 ## How to Update the Demo
 
-### Source Location
-The **original source** of the demo site is located at:
+### Source Locations
+
+**Panel Application Source:**
+```
+~/Desktop/asistanapp/apps/panel/
+```
+This is the **real AsistanApp panel** - a Vite/React project with:
+- Full UI components for 3-panel selection
+- Dashboard pages for Admin/Agent/Super Admin roles
+- Chat management interfaces
+- Reports and analytics screens
+- Localization (TR/EN) support
+
+**Legacy Demo Site Source:**
 ```
 ~/Desktop/asistanapp-site-new/
 ```
-
-This is a **Vite/React project** with its own `package.json`, source code, and build process.
+(Not used for current `/demo` route)
 
 ### Update Workflow
 
-1. **Navigate to the source project:**
+**If you need to rebuild the panel for `/demo`:**
+
+1. **Navigate to the panel source:**
    ```bash
-   cd ~/Desktop/asistanapp-site-new/
+   cd ~/Desktop/asistanapp/apps/panel/
    ```
 
-2. **Make your changes** to the React source code in `src/`
+2. **Make your changes** to the React panel source code
 
-3. **Build the demo:**
+3. **Build the panel:**
    ```bash
    npm run build
    ```
+   (Output: `./dist/`)
 
-4. **Copy the built files** to the website:
+4. **Copy the built panel** to the website:
    ```bash
-   cp -r dist/* ~/Desktop/asistanapp-frontend/astro-site/public/demo/
+   rm -rf ~/Desktop/asistanapp-frontend/astro-site/public/demo
+   cp -r dist ~/Desktop/asistanapp-frontend/astro-site/public/demo
    ```
 
-5. **Commit and push the changes:**
+5. **Fix asset paths** (replace `/assets/` with `/demo/assets/`):
+   ```bash
+   cd ~/Desktop/asistanapp-frontend/astro-site/public/demo
+   sed -i 's|href="/assets/|href="/demo/assets/|g' index.html
+   sed -i 's|src="/assets/|src="/demo/assets/|g' index.html
+   ```
+
+6. **Commit and push:**
    ```bash
    cd ~/Desktop/asistanapp-frontend/astro-site/
    git add public/demo/
-   git commit -m "chore: update demo site"
+   git commit -m "feat: update panel deployment to /demo"
    git push origin main
    ```
+   
+   **Cloudflare Pages will auto-rebuild and deploy.**
 
 ---
 
