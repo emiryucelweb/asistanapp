@@ -1,0 +1,738 @@
+{
+  "sidebar": {
+    "dashboard": "Ana Sayfa",
+    "conversations": "Konuşmalar",
+    "teamChat": "Ekip Chat",
+    "aiAssistant": "AI Asistan",
+    "profile": "Profil",
+    "new": "YENİ",
+    "breakTimeExpired": "Süre doldu!",
+    "remaining": "{{time}} kaldı"
+  },
+  "status": {
+    "label": "Durum",
+    "available": "Müsait",
+    "busy": "Meşgul",
+    "away": "Uzakta",
+    "onBreak": "Molada",
+    "offline": "Çevrimdışı",
+    "changeStatus": "Durumu Değiştir",
+    "updated": "Durum güncellendi",
+    "messages": {
+      "available": "✅ Müsait duruma geçtiniz! Yeni konuşmalar alabilirsiniz.",
+      "busy": "🔴 Meşgul duruma geçtiniz. Acil durumlar dışında yeni konuşmalar size atanmayacak.",
+      "away": "⏰ Uzakta duruma geçtiniz. Yeni konuşmalar size atanmayacak.",
+      "onBreak": "☕ Molaya alındınız! Yeni konuşmalar size atanmayacak."
+    }
+  },
+  "breakTimer": {
+    "remaining": "{{time}} kaldı",
+    "timeUp": "Süre doldu!"
+  },
+  "dashboard": {
+    "title": "Ana Sayfa",
+    "pageTitle": "Gösterge Paneli",
+    "subtitle": "Bugünkü görevleriniz ve performansınız",
+    "welcome": "Hoş geldin",
+    "welcomeWithName": "Hoş geldin, {{name}} 👋",
+    "todayStats": "Bugünkü İstatistikler",
+    "totalConversations": "Toplam Konuşma",
+    "activeConversations": "Aktif Konuşma",
+    "resolvedToday": "Bugün Çözülen",
+    "resolvedConversations": "Çözülen Konuşma",
+    "pendingConversations": "Bekleyen Konuşma",
+    "pendingConversationsList": "Bekleyen Konuşmalar",
+    "averageResponseTime": "Ortalama Yanıt Süresi",
+    "responseTime": "Yanıt Süresi",
+    "satisfactionScore": "{{score}}/{{max}}",
+    "satisfaction": "Memnuniyet",
+    "customerScore": "Müşteri Puanı",
+    "recentActivity": "Son Aktiviteler",
+    "greatJob": "Harika gidiyorsun! 🎉",
+    "replyNow": "Hemen yanıtla →",
+    "today": "Bugün",
+    "now": "Şu an",
+    "average": "Ortalama",
+    "target": "Hedef",
+    "targetResponseTime": "Hedef: <10 dk",
+    "resolutionRate": "%{{rate}} çözüm oranı",
+    "newMessages_one": "{{count}} yeni mesaj",
+    "newMessages_other": "{{count}} yeni mesaj",
+    "allMessagesRead": "Tüm mesajlar okundu",
+    "noAssignedConversations": "Şu anda atanmış konuşma yok",
+    "autoAssignMessage": "Yeni konuşmalar otomatik olarak size atanacak",
+    "justNow": "Az önce",
+    "feedback": {
+      "excellent": "⭐ Harika!",
+      "good": "👍 İyi!",
+      "keepGoing": "💪 Devam et!"
+    }
+  },
+  "callHistory": {
+    "searchPlaceholder": "İsim veya telefon numarası ara...",
+    "title": "Arama Geçmişi",
+    "recordCount": "{{count}} arama kaydı",
+    "all": "Tümü",
+    "incoming": "Gelen",
+    "outgoing": "Giden",
+    "missed": "Cevapsız",
+    "unknown": "Bilinmiyor",
+    "listenRecording": "Kaydı Dinle",
+    "download": "İndir",
+    "noRecords": "Arama kaydı bulunamadı"
+  },
+  "tags": {
+    "title": "Etiketler",
+    "subtitle": "Konuşmayı etiketle",
+    "tagNamePlaceholder": "Etiket adı...",
+    "selectedTags": "Seçili Etiketler ({{count}})",
+    "availableTags": "Hazır Etiketler",
+    "customTagAdd": "Özel Etiket Ekle",
+    "saveSuccess": "{{count}} etiket kaydedildi",
+    "saveError": "Etiketler kaydedilemedi",
+    "predefined": {
+      "urgent": "Acil",
+      "vip": "VIP",
+      "complaint": "Şikayet",
+      "refund": "İade",
+      "technical": "Teknik",
+      "billing": "Fatura",
+      "feedback": "Geri Bildirim",
+      "followup": "Takip"
+    }
+  },
+  "quickReplies": {
+    "title": "Hızlı Yanıtlar",
+    "searchPlaceholder": "Şablon ara... (örn: /hosgeldin)",
+    "templateCount": "{{count}} şablon",
+    "noTemplates": "Şablon bulunamadı",
+    "shortcutHint": "💡 İpucu: Mesaj kutusunda / yazarak kısayol kullanabilirsiniz",
+    "return": "İade",
+    "categories": {
+      "all": "Tümü",
+      "greeting": "Karşılama",
+      "order": "Sipariş",
+      "return": "İade",
+      "product": "Ürün",
+      "shipping": "Kargo",
+      "general": "Genel",
+      "closing": "Kapanış"
+    }
+  },
+  "assignment": {
+    "notePlaceholder": "Örn: Müşteri X konusunda uzman bir agent talep ediyor..."
+  },
+  "aiChat": {
+    "title": "Asistan",
+    "subtitle": "Operasyonel Destek",
+    "askQuestion": "Soru sorun...",
+    "header": {
+      "title": "Asistan",
+      "subtitle": "Müşteri bilgileri ve firma içi durum hakkında sor"
+    },
+    "welcome": {
+      "message": "Merhaba {{name}}! Ben senin AI asistanınım. \n\nSana şunlarda yardımcı olabilirim:\n• 📊 Müşteri bilgileri ve geçmiş konuşmalar\n• 💬 Firma içi konuşma özetleri\n• 📈 Günlük istatistikler ve performans\n• 👥 Ekip üyeleri ve durumları\n• 🎯 Müşteri davranış analizi\n\nNasıl yardımcı olabilirim?",
+      "defaultName": "Agent"
+    },
+    "suggestions": {
+      "title": "Şunları da sorabilirsin:",
+      "todayStats": "Bugün kaç müşteri ile konuştum?",
+      "frequentQuestions": "En çok sorulan sorular neler?",
+      "waitingCustomers": "Bekleyen müşteriler var mı?",
+      "teamStatus": "Ekip üyelerinin durumu nedir?",
+      "performance": "Performansım nasıl?",
+      "dailyPerformance": "Günlük performans",
+      "activeConversations": "Aktif konuşmalar",
+      "avgResponseTime": "Ortalama yanıt süresi"
+    },
+    "queries": {
+      "waitingCustomers": "Şu anda bekleyen müşteriler kimler?",
+      "dailyPerformance": "Bugünkü performansım nasıl?",
+      "activeConversations": "Kaç aktif konuşmam var?",
+      "avgResponseTime": "Ortalama yanıt sürem ne kadar?"
+    },
+    "welcomeMessage": "Merhaba! Size nasıl yardımcı olabilirim? Müşteri durumları, takım aktiviteleri veya performans metrikleri hakkında bilgi alabilirim.",
+    "infoTitle": "Operasyonel Bilgi Asistanı",
+    "infoDescription": "Bu asistan müşteri durumları, takım aktiviteleri ve performans metrikleri hakkında bilgi sağlar.",
+    "quickQuestions": "Hızlı Sorular:",
+    "responses": {
+      "default": "🤔 Anladım! Şu konularda size yardımcı olabilirim:\n\n• Bekleyen ve aktif müşteriler\n• Günlük performans metrikleri\n• Takım durumu ve yoğunluk\n• Ortalama yanıt süreleri\n• Müşteri bilgileri\n\nBaşka ne öğrenmek istersiniz?",
+      "processing": "Sorunuzu işliyorum, lütfen bekleyin..."
+    },
+    "send": "Gönder",
+    "disclaimer": "AI yalnızca müşteri bilgileri ve firma içi durum hakkında bilgi verir",
+    "history": "Geçmiş",
+    "clear": "Temizle",
+    "thinking": "Düşünüyor...",
+    "askPlaceholder": "AI asistanına sorunuzu sorun..."
+  },
+  "keyboard": {
+    "focusSearch": "Arama çubuğuna odaklan",
+    "sendMessage": "Mesaj gönder",
+    "quickReplies": "Hızlı yanıtlar",
+    "closeModals": "Modalları kapat",
+    "nextConversation": "Sonraki konuşma",
+    "previousConversation": "Önceki konuşma",
+    "resolveConversation": "Konuşmayı çöz",
+    "showShortcuts": "Klavye kısayolları",
+    "addTags": "Etiket ekle",
+    "transfer": "Transfer et",
+    "categories": {
+      "general": "Genel",
+      "conversations": "Konuşmalar",
+      "quickActions": "Hızlı İşlemler"
+    },
+    "help": {
+      "title": "Klavye Kısayolları",
+      "subtitle": "Daha hızlı çalışmak için kısayolları kullanın",
+      "tipPrefix": "İpucu:",
+      "tipText": "Bu yardım menüsünü açmak için ? tuşuna basın"
+    }
+  },
+  "queue": {
+    "title": "Bekleyen Konuşmalar",
+    "waitingCount": "{{count}} konuşma atama bekliyor",
+    "availableAgents": "{{count}} müsait ekip üyesi mevcut",
+    "noAvailableAgents": "Müsait ekip üyesi yok",
+    "noAvailableAgentsDesc": "Konuşmalar sırada bekliyor. Ekip üyeleri müsait olduğunda otomatik atanacak.",
+    "noQueue": "Sırada bekleyen konuşma yok",
+    "position": "#{{position}}. Sırada",
+    "unknownCustomer": "Bilinmeyen Müşteri",
+    "noLastMessage": "Son mesaj yok",
+    "waitingFor": "Bekliyor: {{time}}",
+    "unknownTime": "Bilinmiyor",
+    "takeOver": "Üstlen",
+    "assign": "Ata",
+    "selectAgent": "Ekip üyesi seç:",
+    "assignSuccess": "Konuşma başarıyla atandı",
+    "assignError": "Konuşma atanamadı",
+    "takeOverSuccess": "Konuşma başarıyla devralındı",
+    "takeOverError": "Konuşma devralınamadı"
+  },
+  "typingIndicator": {
+    "defaultName": "Müşteri"
+  },
+  "conversations": {
+    "title": "Konuşmalar",
+    "count": "{{count}} konuşma",
+    "selectConversation": "Bir konuşma seçin",
+    "noConversations": "Konuşma bulunamadı",
+    "loading": "Yükleniyor...",
+    "searchPlaceholder": "Konuşmalarda ara...",
+    "searchWithShortcut": "Konuşmalarda ara... (Ctrl+K)",
+    "addNotesPlaceholder": "Bu konuşma hakkında notlar ekleyin...",
+    "messagePlaceholder": "Mesajınızı yazın...",
+    "filterByStatus": "Duruma göre filtrele",
+    "filterByChannel": "Kanala göre filtrele",
+    "filterByPriority": "Önceliğe göre filtrele",
+    "sortBy": "Sırala",
+    "sortByPriority": "Önceliğe göre",
+    "sortByTime": "Zamana göre",
+    "sortByUnread": "Okunmamışlara göre",
+    "assignToMe": "Bana Ata",
+    "resolve": "Çöz",
+    "reopen": "Yeniden Aç",
+    "transfer": "Aktar",
+    "addNote": "Not Ekle",
+    "addTag": "Etiket Ekle",
+    "viewHistory": "Geçmişi Görüntüle",
+    "tabs": {
+      "all": "Tümü",
+      "assigned": "Atanmış",
+      "my": "Benim",
+      "waiting": "Bekleyen"
+    },
+    "actions": {
+      "conversationTakenOver": "Konuşmayı devraldınız: {{customerName}}",
+      "messageCopied": "Mesaj kopyalandı",
+      "copyFailed": "Kopyalanamadı"
+    },
+    "filters": {
+      "filters": "Filtreler",
+      "applied": "Filtreler uygulandı",
+      "advancedFilters": "Gelişmiş Filtreler",
+      "activeFiltersCount": "{{count}} filtre aktif",
+      "channels": "Kanallar",
+      "tags": "Etiketler",
+      "priority": "Öncelik",
+      "assignedTo": "Atanan Kişi",
+      "dateRange": "Tarih Aralığı",
+      "startDate": "Başlangıç",
+      "endDate": "Bitiş",
+      "activeConversations": "aktif konuşma"
+    },
+    "list": {
+      "urgentPriority": "Acil",
+      "highPriority": "Orta",
+      "lowPriority": "Düşük",
+      "aiStuck": "AI Takıldı",
+      "forward": "Yönlendir",
+      "lockedBy": "{{name}} tarafından kilitlendi"
+    },
+    "header": {
+      "close": "Kapat",
+      "back": "Geri",
+      "closeEsc": "Kapat (Esc)",
+      "addNote": "Not Ekle",
+      "tags": "Etiketler",
+      "takeOver": "Devral",
+      "resolve": "Çözüldü",
+      "fullscreen": "Tam Ekran (F11)",
+      "exitFullscreen": "Tam Ekrandan Çık (Esc)"
+    },
+    "messageInput": {
+      "placeholder": "Mesajınızı yazın... (/ ile hızlı yanıt)",
+      "quickReplies": "Hızlı Yanıtlar",
+      "notes": "Notlar",
+      "addFile": "Dosya Ekle",
+      "addEmoji": "Emoji Ekle",
+      "removeFile": "Dosyayı Kaldır",
+      "sendMessage": "Mesaj Gönder",
+      "lockedBy": "Bu konuşma {{name}} tarafından devralındı",
+      "mustTakeOver": "Bu konuşmayı devralmalısınız",
+      "cannotSend": "Mesaj gönderemezsiniz",
+      "file": "Dosya",
+      "photoVideo": "Fotoğraf/Video",
+      "uploading": "Dosyalar yükleniyor..."
+    },
+    "messageArea": {
+      "aiAssistant": "AI Asistan",
+      "typing": "Yazıyor..."
+    },
+    "notes": {
+      "title": "Notlar",
+      "saved": "Not kaydedildi!"
+    },
+    "assignment": {
+      "title": "Konuşmayı Yönlendir",
+      "subtitle": "Yönlendirmek istediğiniz çalışanı seçin",
+      "selectAgent": "Çalışan Seç",
+      "currentAssignee": "(Mevcut)",
+      "reasonLabel": "Sebep / Gerekçe (İsteğe Bağlı)",
+      "reasonWillBeShown": "Bu sebep, atanan agent'a görünecektir",
+      "success": "Konuşma başarıyla atandı!",
+      "successWithReason": "Konuşma başarıyla atandı! - Sebep: {{reason}}",
+      "statusOnline": "Çevrimiçi",
+      "statusBusy": "Meşgul",
+      "statusOffline": "Çevrimdışı"
+    },
+    "customerHistory": {
+      "customerId": "Müşteri ID:",
+      "orders": "Sipariş",
+      "total": "Toplam",
+      "lastSeen": "Görülme",
+      "contactInfo": "İletişim Bilgileri",
+      "member": "Üye:",
+      "tagsTitle": "Etiketler",
+      "pastConversations": "Geçmiş Konuşmalar",
+      "agent": "Agent:",
+      "resolved": "Çözüldü",
+      "ordersTitle": "Siparişler",
+      "items": "ürün",
+      "notesTitle": "Notlar",
+      "addNewNote": "Yeni Not Ekle",
+      "timeAgo": {
+        "hoursAgo": "{{count}} saat önce",
+        "daysAgo": "{{count}} gün önce",
+        "monthsAgo": "{{count}} ay önce"
+      }
+    },
+    "voiceCall": {
+      "onHold": "Beklemede",
+      "active": "Aktif",
+      "aiHistory": "AI Geçmişi",
+      "notesTitle": "Notlar",
+      "previousIssues": "Önceki Sorunlar",
+      "aiAssistantTitle": "AI Asistan",
+      "thinking": "AI düşünüyor...",
+      "response": "Yanıt:",
+      "createAppointment": "Randevu Oluştur",
+      "bookAppointment": "Randevu Al",
+      "hold": "Beklet",
+      "continue": "Devam"
+    },
+    "detail": {
+      "urgentPriority": "ACİL",
+      "activePriority": "AKTİF",
+      "emergencyCallTakenOver": "Acil Arama Devralındı",
+      "emergencyCallDescription": "Bu konuşma acil arama sistemi üzerinden size yönlendirildi. Müşteri yardım bekliyor.",
+      "aiAssistant": "(Asistan)",
+      "send": "Gönder",
+      "loading": "Yükleniyor..."
+    },
+    "customerInfo": "Müşteri Bilgileri",
+    "conversationDetails": "Konuşma Detayları",
+    "typing": "Yazıyor...",
+    "online": "Çevrimiçi",
+    "offline": "Çevrimdışı",
+    "lastSeen": "Son görülme: {{time}}"
+  },
+  "messages": {
+    "send": "Gönder",
+    "typeMessage": "Mesaj yazın...",
+    "attachFile": "Dosya Ekle",
+    "emoji": "Emoji",
+    "quickReplies": "Hızlı Yanıtlar",
+    "templates": "Şablonlar",
+    "sent": "Gönderildi",
+    "delivered": "İletildi",
+    "read": "Okundu",
+    "failed": "Başarısız",
+    "fileUploaded": "Dosya yüklendi",
+    "fileSizeExceeded": "Dosya boyutu çok büyük",
+    "unsupportedFormat": "Desteklenmeyen format",
+    "copyMessage": "Mesajı Kopyala",
+    "deleteMessage": "Mesajı Sil",
+    "editMessage": "Mesajı Düzenle",
+    "replyTo": "Yanıtla",
+    "fileSent": "Dosya gönderildi",
+    "sendFailed": "Mesaj gönderilemedi",
+    "validation": {
+      "messageOrFileRequired": "Mesaj veya dosya gerekli",
+      "maxFilesExceeded": "En fazla {{maxFiles}} dosya eklenebilir",
+      "invalidFiles": "Geçersiz dosyalar",
+      "filesAdded": "{{count}} dosya eklendi",
+      "invalidMessage": "Geçersiz mesaj",
+      "messageTooShort": "Mesaj çok kısa",
+      "messageTooLong": "Mesaj çok uzun (maksimum {{max}} karakter)",
+      "noteTooLong": "Not çok uzun (maksimum {{max}} karakter)",
+      "tagEmpty": "Etiket boş olamaz",
+      "tagTooLong": "Etiket çok uzun (maksimum {{max}} karakter)",
+      "tagInvalidChars": "Etiket geçersiz karakterler içeriyor",
+      "invalidPhone": "Geçersiz telefon numarası",
+      "invalidEmail": "Geçersiz e-posta adresi",
+      "fileTooLarge": "Dosya boyutu çok büyük (maksimum {{max}} MB)",
+      "noFileSelected": "Dosya seçilmedi",
+      "tooManyFiles": "Çok fazla dosya (maksimum {{max}})",
+      "noValidFiles": "Geçerli dosya bulunamadı",
+      "invalidFileType": "Geçersiz dosya türü",
+      "invalidProtocol": "Geçersiz protokol",
+      "invalidUrl": "Geçersiz URL",
+      "excessiveCaps": "Aşırı büyük harf kullanımı",
+      "repetitiveContent": "Tekrarlayan içerik",
+      "excessiveLinks": "Aşırı link içeriği"
+    }
+  },
+  "channels": {
+    "whatsapp": "WhatsApp",
+    "instagram": "Instagram",
+    "web": "Web Chat",
+    "phone": "Telefon",
+    "email": "E-posta"
+  },
+  "priority": {
+    "low": "Düşük",
+    "normal": "Normal",
+    "high": "Yüksek",
+    "urgent": "Acil"
+  },
+  "conversationStatus": {
+    "waiting": "Beklemede",
+    "assigned": "Atandı",
+    "resolved": "Çözüldü",
+    "closed": "Kapatıldı",
+    "transferred": "Aktarıldı"
+  },
+  "common": {
+    "close": "Kapat",
+    "cancel": "İptal",
+    "save": "Kaydet",
+    "refresh": "Yenile",
+    "reset": "Sıfırla",
+    "apply": "Uygula",
+    "forward": "Yönlendir",
+    "copyMessage": "Mesajı Kopyala",
+    "markAllRead": "Tümünü Okundu İşaretle"
+  },
+  "layout": {
+    "closeMenu": "Close menu",
+    "toggleMenu": "Toggle menu",
+    "notifications": "Notifications",
+    "collapseSidebar": "Sidebar'ı küçült",
+    "expandSidebar": "Sidebar'ı genişlet"
+  },
+  "profile": {
+    "title": "Profil Ayarları",
+    "subtitle": "Kişisel bilgilerinizi ve tercihlerinizi yönetin",
+    "edit": "Düzenle",
+    "defaultName": "Agent Kullanıcı",
+    "defaultEmail": "agent@example.com",
+    "sections": {
+      "profileInfo": "Profil Bilgileri",
+      "security": "Güvenlik",
+      "preferences": "Tercihler"
+    },
+    "fields": {
+      "name": "Ad Soyad",
+      "email": "E-posta",
+      "emailImmutable": "E-posta adresi değiştirilemez",
+      "phone": "Telefon",
+      "role": "Rol",
+      "joinDate": "Katılma Tarihi"
+    },
+    "security": {
+      "passwordReset": "Şifre Sıfırlama",
+      "sendResetLink": "E-posta adresinize şifre sıfırlama linki gönder",
+      "resetButton": "Şifre Sıfırla",
+      "emailNotFound": "E-posta adresi bulunamadı",
+      "sendingResetEmail": "Şifre sıfırlama maili gönderiliyor...",
+      "resetEmailSent": "Yeni şifreniz {{email}} adresine gönderildi!",
+      "resetEmailFailed": "Şifre sıfırlama maili gönderilemedi. Lütfen tekrar deneyin."
+    },
+    "preferences": {
+      "theme": {
+        "label": "Tema",
+        "dark": "Koyu mod",
+        "light": "Aydınlık mod"
+      },
+      "emailNotifications": {
+        "label": "E-posta Bildirimleri",
+        "description": "Önemli olaylar için e-posta al"
+      },
+      "pushNotifications": {
+        "label": "Anlık Bildirimler",
+        "description": "Yeni mesajlar için anlık bildirim"
+      },
+      "soundEffects": {
+        "label": "Ses Efektleri",
+        "description": "Bildirim sesleri"
+      },
+      "autoAssign": {
+        "label": "Otomatik Atama",
+        "description": "Yeni konuşmaları otomatik al"
+      }
+    },
+    "languages": {
+      "tr": "Türkçe",
+      "en": "English"
+    },
+    "personalInfo": "Kişisel Bilgiler",
+    "name": "Ad Soyad",
+    "email": "E-posta",
+    "phone": "Telefon",
+    "avatar": "Profil Fotoğrafı",
+    "changeAvatar": "Fotoğrafı Değiştir",
+    "uploadAvatar": "Fotoğraf Yükle",
+    "settings": "Ayarlar",
+    "language": "Dil",
+    "languageLabel": "Dil",
+    "languageDescription": "Arayüz dili",
+    "languageChanged": "Dil değiştirildi",
+    "preferenceSaved": "Tercihler kaydedildi",
+    "preferencesFailed": "Tercihler kaydedilemedi",
+    "profileUpdateFailed": "Profil güncellenemedi",
+    "theme": "Tema",
+    "notifications": "Bildirimler",
+    "changePassword": "Şifre Değiştir",
+    "currentPassword": "Mevcut Şifre",
+    "newPassword": "Yeni Şifre",
+    "confirmPassword": "Şifreyi Onayla",
+    "updateProfile": "Profili Güncelle",
+    "profileUpdated": "Profil güncellendi",
+    "passwordChanged": "Şifre değiştirildi",
+    "settingsLabels": {
+      "changeTheme": "Tema değiştir",
+      "emailNotifications": "E-posta bildirimleri",
+      "pushNotifications": "Anlık bildirimler",
+      "soundEffects": "Ses efektleri",
+      "autoAssign": "Otomatik atama"
+    }
+  },
+  "notifications": {
+    "title": "Bildirimler",
+    "unreadCount": "{{count}} okunmamış",
+    "filterAll": "Tümü ({{count}})",
+    "filterUnread": "Okunmamış ({{count}})",
+    "empty": "Bildirim yok",
+    "emptyUnread": "Okunmamış bildirim yok",
+    "markAllRead": "Tümünü Okundu İşaretle",
+    "clearAll": "Tümünü Temizle",
+    "newMessage": "Yeni mesaj",
+    "newAssignment": "Yeni atama",
+    "mentionedYou": "Sizi etiketledi",
+    "conversationResolved": "Konuşma çözüldü",
+    "conversationTransferred": "Konuşma aktarıldı",
+    "mention": "Mention",
+    "mentionedYouIn": "sizi etiketledi:",
+    "clickToView": "Görüntülemek için tıklayın"
+  },
+  "search": {
+    "searchConversations": "Konuşmalarda ara",
+    "searchCustomers": "Müşterilerde ara",
+    "searchMessages": "Mesajlarda ara",
+    "noResultsFound": "Sonuç bulunamadı",
+    "tryDifferentKeywords": "Farklı anahtar kelimeler deneyin"
+  },
+  "voiceCall": {
+    "notesPlaceholder": "Notlarınızı yazın...",
+    "askQuestionPlaceholder": "Soru sorun...",
+    "serviceOptional": "Hizmet (opsiyonel)",
+    "noteOptional": "Not (opsiyonel)",
+    "end": "Sonlandır",
+    "muteMic": "Mikrofonu Kapat",
+    "unmuteMic": "Mikrofonu Aç",
+    "muteSpeaker": "Hoparlörü Kapat",
+    "unmuteSpeaker": "Hoparlörü Aç",
+    "selectDateTime": "Lütfen tarih ve saat seçin",
+    "appointmentCreated": "Randevu başarıyla oluşturuldu",
+    "appointmentCreateFailed": "Randevu oluşturulamadı",
+    "messageFileSent": "Dosya gönderildi",
+    "messageSendFailed": "Mesaj gönderilemedi",
+    "conversationClosed": "Konuşma başarıyla kapatıldı",
+    "conversationCloseFailed": "Konuşma kapatılamadı",
+    "aiResponseReady": "AI yanıt hazır",
+    "aiResponseFailed": "AI yanıt alınamadı",
+    "aiNoResponse": "AI yanıt üretemedi, lütfen sorunuzu yeniden ifade edin",
+    "pleaseWriteQuestion": "Lütfen bir soru yazın",
+    "questionTooShort": "Soru çok kısa, lütfen daha detaylı sorun",
+    "questionTooLong": "Soru çok uzun, lütfen kısaltın",
+    "takeoverFailed": "Konuşma devralınamadı"
+  },
+  "voice": {
+    "reject": "Reddet",
+    "answer": "Cevapla",
+    "ignore": "Yoksay",
+    "close": "Kapat",
+    "internal": "Dahili",
+    "incomingCall": "Gelen Arama",
+    "outgoingCall": "Giden Arama",
+    "ringing": "Aranıyor...",
+    "call": "Arama",
+    "speaking": "Görüşen",
+    "waiting": "bekliyor",
+    "status": {
+      "ringing": "Arama geliyor...",
+      "connecting": "Bağlanıyor...",
+      "connected": "Görüşme devam ediyor",
+      "onHold": "Beklemede",
+      "transferring": "Transfer ediliyor"
+    },
+    "priority": {
+      "urgent": "ACİL",
+      "high": "ÖNEMLİ",
+      "normal": "NORMAL",
+      "low": "Düşük"
+    },
+    "aiHandoff": {
+      "title": "AI YÖNLENDİRMESİ",
+      "defaultReason": "AI tıkandı, insan desteği gerekli",
+      "talkedFor": "AI ile",
+      "summary": "AI Konuşma Özeti",
+      "whatDiscussed": "AI ile Ne Konuşuldu:",
+      "whyStuck": "AI Neden Tıkandı:",
+      "customerIntent": "Müşteri Amacı:",
+      "customerMood": "Müşteri Duygu Durumu",
+      "sentiment": {
+        "positive": "Olumlu",
+        "negative": "Olumsuz",
+        "neutral": "Nötr"
+      },
+      "previousInteractions": "Önceki Etkileşimler",
+      "last": "Son",
+      "quickNotes": "Hızlı Notlar:",
+      "suggestedResponse": "Önerilen Yanıt:",
+      "notes": "Notlar:",
+      "autoReject": "Arama {{seconds}} saniye sonra otomatik reddedilecek",
+      "transcript": "AI Konuşma Kaydı",
+      "transcriptCount": "{{count}} mesaj • AI ile yapılan görüşme",
+      "aiAssistant": "AI Asistan",
+      "customer": "Müşteri",
+      "transcriptDisclaimer": "Bu konuşma metni AI tarafından otomatik olarak oluşturulmuştur"
+    },
+    "addNote": "Not Ekle",
+    "callDetails": "Arama Detayları",
+    "callDetailsSubtitle": "Müşteri bilgileri ve arama notları",
+    "customer": "Müşteri",
+    "callStartTime": "Arama Başlangıcı",
+    "callType": "Arama Türü",
+    "internalCall": "Dahili Arama",
+    "externalCall": "Dış Hat",
+    "viewDetails": "Detayları Gör",
+    "connecting": "Bağlanıyor",
+    "connectingDescription": "Müşteri ile bağlantı kuruluyor, lütfen bekleyin...",
+    "connectionFailed": "Bağlantı kurulamadı. Lütfen tekrar deneyin.",
+    "callNotes": "Arama Notları",
+    "callNotesHint": "💡 İpucu: Arama sırasında önemli noktaları not alın",
+    "phoneCallNote": "<strong>Not:</strong> Bu bir telefon aramasıdır. Müşteriyle yazılı mesajlaşmak için aramayı sonlandırın ve konuşmalar sekmesinden devam edin.",
+    "callNotesPlaceholder": "Arama sırasında notlar alın...\n\nÖrnek:\n- Müşteri ürün bilgisi istedi\n- Fiyat teklifi yapıldı\n- Randevu oluşturuldu",
+    "endCall": "Aramayı Sonlandır",
+    "save": "Kaydet",
+    "transfer": "Aktar",
+    "callTransfer": "Arama Transferi",
+    "searchAgent": "Agent Ara",
+    "noAgentsAvailable": "Uygun agent bulunamadı",
+    "transferType": "Transfer Tipi",
+    "blindTransfer": "Direkt Transfer",
+    "blindTransferDesc": "Aramayı hemen devret, sen çık",
+    "attendedTransfer": "Danışmalı Transfer",
+    "attendedTransferDesc": "Önce agent'la konuş, sonra devret",
+    "transferSuccess": "Arama başarıyla aktarıldı!",
+    "searchPlaceholder": "Agent, departman veya yetenek ara...",
+    "transferNotePlaceholder": "Örn: Müşteri teknik destek istiyor...",
+    "transferNoteLabel": "Transfer Notu (Opsiyonel)",
+    "cancel": "İptal",
+    "connectionQuality": {
+      "excellent": "Mükemmel",
+      "good": "İyi",
+      "fair": "Orta",
+      "poor": "Zayıf"
+    },
+    "callStatus": {
+      "onHold": "Beklemede",
+      "connected": "Bağlı",
+      "recording": "Kayıt Ediliyor"
+    },
+    "controls": {
+      "muted": "Kapalı",
+      "microphone": "Mikrofon",
+      "resume": "Devam",
+      "hold": "Beklet",
+      "speaker": "Hoparlör",
+      "transfer": "Transfer"
+    },
+    "notesSaved": "Arama notları kaydedildi"
+  },
+  "typing": {
+    "defaultName": "Müşteri"
+  },
+  "call": {
+    "status": {
+      "closed": "Kapalı",
+      "missed": "Cevapsız"
+    },
+    "transfer": {
+      "available": "Müsait",
+      "busy": "Meşgul",
+      "offline": "Çevrimdışı"
+    },
+    "microphone": "Mikrofon"
+  },
+  "openConversation": "Konuşmayı Aç",
+  "auth": {
+    "logout": "Çıkış Yap",
+    "logoutSuccess": "Başarıyla çıkış yaptınız"
+  },
+  "header": {
+    "welcome": "Hoş Geldin! 👋",
+    "supportTeam": "Destek Ekibi",
+    "myProfile": "Profilim",
+    "settingsPreferences": "Ayarlar ve tercihler"
+  },
+  "errors": {
+    "networkError": "Ağ bağlantı hatası. Lütfen internet bağlantınızı kontrol edin.",
+    "validationError": "Geçersiz veri. Lütfen girişlerinizi kontrol edin.",
+    "unauthorized": "Oturum süreniz dolmuş. Lütfen tekrar giriş yapın.",
+    "forbidden": "Bu işlemi yapmaya yetkiniz yok.",
+    "notFound": "İstenen kaynak bulunamadı.",
+    "timeoutError": "İstek zaman aşımına uğradı. Lütfen tekrar deneyin.",
+    "serverError": "Sunucu hatası oluştu. Lütfen daha sonra tekrar deneyin.",
+    "unknownError": "Bilinmeyen bir hata oluştu. Lütfen tekrar deneyin.",
+    "somethingWentWrong": "Bir Şeyler Ters Gitti",
+    "errorDescription": "Üzgünüz, bir hata oluştu. Lütfen sayfayı yenilemeyi deneyin veya ana sayfaya dönün.",
+    "stackTrace": "Hata Detayları",
+    "tryAgain": "Tekrar Dene",
+    "goHome": "Ana Sayfa",
+    "persistentIssue": "Sorun devam ederse",
+    "supportTeam": "destek ekibimize"
+  }
+}

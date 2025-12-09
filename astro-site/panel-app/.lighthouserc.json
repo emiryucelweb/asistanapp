@@ -1,0 +1,58 @@
+{
+  "ci": {
+    "collect": {
+      "startServerCommand": "npm run preview",
+      "startServerReadyPattern": "Local",
+      "url": [
+        "http://localhost:4173",
+        "http://localhost:4173/agent/dashboard",
+        "http://localhost:4173/agent/conversations",
+        "http://localhost:4173/admin/dashboard",
+        "http://localhost:4173/admin/team"
+      ],
+      "numberOfRuns": 3,
+      "settings": {
+        "preset": "desktop",
+        "throttling": {
+          "rttMs": 40,
+          "throughputKbps": 10240,
+          "cpuSlowdownMultiplier": 1
+        },
+        "screenEmulation": {
+          "mobile": false,
+          "width": 1440,
+          "height": 900,
+          "deviceScaleFactor": 1,
+          "disabled": false
+        }
+      }
+    },
+    "assert": {
+      "preset": "lighthouse:recommended",
+      "assertions": {
+        "categories:performance": ["error", {"minScore": 0.85}],
+        "categories:accessibility": ["error", {"minScore": 0.90}],
+        "categories:best-practices": ["error", {"minScore": 0.85}],
+        "categories:seo": ["error", {"minScore": 0.85}],
+        "first-contentful-paint": ["error", {"maxNumericValue": 1500}],
+        "largest-contentful-paint": ["error", {"maxNumericValue": 2500}],
+        "cumulative-layout-shift": ["error", {"maxNumericValue": 0.1}],
+        "total-blocking-time": ["error", {"maxNumericValue": 300}],
+        "interactive": ["error", {"maxNumericValue": 3000}],
+        "color-contrast": ["error", {"minScore": 1}],
+        "aria-allowed-attr": ["error", {"minScore": 1}],
+        "aria-required-attr": ["error", {"minScore": 1}],
+        "button-name": ["error", {"minScore": 1}],
+        "image-alt": ["error", {"minScore": 1}],
+        "label": ["error", {"minScore": 1}],
+        "link-name": ["error", {"minScore": 1}],
+        "unused-javascript": ["warn", {"maxNumericValue": 200000}],
+        "uses-responsive-images": ["warn", {"minScore": 0.8}]
+      }
+    },
+    "upload": {
+      "target": "temporary-public-storage"
+    }
+  }
+}
+

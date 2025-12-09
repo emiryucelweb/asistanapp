@@ -1,0 +1,353 @@
+/**
+ * Design Tokens - AsistanApp
+ * 
+ * Centralized design system with CSS variables
+ * Supports light/dark mode seamlessly
+ */
+
+:root {
+  /* ==========================================
+     SEMANTIC COLORS - Light Mode (Default)
+  ========================================== */
+  
+  /* Background */
+  --color-bg-primary: 255 255 255; /* white */
+  --color-bg-secondary: 249 250 251; /* gray-50 */
+  --color-bg-tertiary: 243 244 246; /* gray-100 */
+  --color-bg-elevated: 255 255 255; /* white */
+  --color-bg-overlay: 0 0 0; /* black for modals */
+  
+  /* Surface (cards, panels) */
+  --color-surface: 255 255 255;
+  --color-surface-hover: 249 250 251;
+  --color-surface-active: 243 244 246;
+  
+  /* Text */
+  --color-text-primary: 17 24 39; /* gray-900 */
+  --color-text-secondary: 75 85 99; /* gray-600 */
+  --color-text-tertiary: 156 163 175; /* gray-400 */
+  --color-text-inverse: 255 255 255;
+  --color-text-disabled: 209 213 219; /* gray-300 */
+  
+  /* Border */
+  --color-border-primary: 229 231 235; /* gray-200 */
+  --color-border-secondary: 243 244 246; /* gray-100 */
+  --color-border-focus: 59 130 246; /* blue-500 */
+  
+  /* Interactive */
+  --color-interactive-primary: 59 130 246; /* blue-500 */
+  --color-interactive-primary-hover: 37 99 235; /* blue-600 */
+  --color-interactive-secondary: 107 114 128; /* gray-500 */
+  --color-interactive-disabled: 229 231 235; /* gray-200 */
+  
+  /* Status */
+  --color-success: 34 197 94; /* green-500 */
+  --color-warning: 245 158 11; /* amber-500 */
+  --color-error: 239 68 68; /* red-500 */
+  --color-info: 14 165 233; /* sky-500 */
+  
+  /* Status backgrounds */
+  --color-success-bg: 240 253 244; /* green-50 */
+  --color-warning-bg: 255 251 235; /* amber-50 */
+  --color-error-bg: 254 242 242; /* red-50 */
+  --color-info-bg: 240 249 255; /* sky-50 */
+  
+  /* Brand (AsistanApp Orange) */
+  --color-brand-primary: 249 115 22; /* orange-500 */
+  --color-brand-secondary: 251 146 60; /* orange-400 */
+  --color-brand-tertiary: 255 247 237; /* orange-50 */
+  
+  /* ==========================================
+     SPACING & SIZING
+  ========================================== */
+  
+  --spacing-xs: 0.25rem; /* 4px */
+  --spacing-sm: 0.5rem; /* 8px */
+  --spacing-md: 1rem; /* 16px */
+  --spacing-lg: 1.5rem; /* 24px */
+  --spacing-xl: 2rem; /* 32px */
+  --spacing-2xl: 3rem; /* 48px */
+  
+  /* ==========================================
+     TYPOGRAPHY
+  ========================================== */
+  
+  --font-size-xs: 0.75rem; /* 12px */
+  --font-size-sm: 0.875rem; /* 14px */
+  --font-size-base: 1rem; /* 16px */
+  --font-size-lg: 1.125rem; /* 18px */
+  --font-size-xl: 1.25rem; /* 20px */
+  --font-size-2xl: 1.5rem; /* 24px */
+  --font-size-3xl: 1.875rem; /* 30px */
+  
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  
+  --line-height-tight: 1.25;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.75;
+  
+  /* ==========================================
+     SHADOWS
+  ========================================== */
+  
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1);
+  
+  /* ==========================================
+     TRANSITIONS
+  ========================================== */
+  
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-base: 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  
+  /* ==========================================
+     Z-INDEX SCALE
+  ========================================== */
+  
+  --z-dropdown: 1000;
+  --z-sticky: 1020;
+  --z-fixed: 1030;
+  --z-modal-backdrop: 1040;
+  --z-modal: 1050;
+  --z-popover: 1060;
+  --z-tooltip: 1070;
+  
+  /* ==========================================
+     BORDER RADIUS
+  ========================================== */
+  
+  --radius-sm: 0.25rem; /* 4px */
+  --radius-md: 0.375rem; /* 6px */
+  --radius-lg: 0.5rem; /* 8px */
+  --radius-xl: 0.75rem; /* 12px */
+  --radius-2xl: 1rem; /* 16px */
+  --radius-full: 9999px;
+}
+
+/* ==========================================
+   DARK MODE OVERRIDES
+========================================== */
+
+.dark {
+  /* Background */
+  --color-bg-primary: 15 23 42; /* slate-900 */
+  --color-bg-secondary: 30 41 59; /* slate-800 */
+  --color-bg-tertiary: 51 65 85; /* slate-700 */
+  --color-bg-elevated: 30 41 59; /* slate-800 */
+  --color-bg-overlay: 0 0 0;
+  
+  /* Surface */
+  --color-surface: 30 41 59; /* slate-800 */
+  --color-surface-hover: 51 65 85; /* slate-700 */
+  --color-surface-active: 71 85 105; /* slate-600 */
+  
+  /* Text */
+  --color-text-primary: 248 250 252; /* slate-50 */
+  --color-text-secondary: 203 213 225; /* slate-300 */
+  --color-text-tertiary: 148 163 184; /* slate-400 */
+  --color-text-inverse: 15 23 42; /* slate-900 */
+  --color-text-disabled: 100 116 139; /* slate-500 */
+  
+  /* Border */
+  --color-border-primary: 51 65 85; /* slate-700 */
+  --color-border-secondary: 71 85 105; /* slate-600 */
+  --color-border-focus: 96 165 250; /* blue-400 */
+  
+  /* Interactive */
+  --color-interactive-primary: 96 165 250; /* blue-400 */
+  --color-interactive-primary-hover: 59 130 246; /* blue-500 */
+  --color-interactive-secondary: 148 163 184; /* slate-400 */
+  --color-interactive-disabled: 71 85 105; /* slate-600 */
+  
+  /* Status */
+  --color-success: 74 222 128; /* green-400 */
+  --color-warning: 251 191 36; /* amber-400 */
+  --color-error: 248 113 113; /* red-400 */
+  --color-info: 56 189 248; /* sky-400 */
+  
+  /* Status backgrounds */
+  --color-success-bg: 22 101 52 / 0.2; /* green-800 with opacity */
+  --color-warning-bg: 146 64 14 / 0.2; /* amber-800 with opacity */
+  --color-error-bg: 153 27 27 / 0.2; /* red-800 with opacity */
+  --color-info-bg: 7 89 133 / 0.2; /* sky-800 with opacity */
+  
+  /* Brand */
+  --color-brand-primary: 251 146 60; /* orange-400 */
+  --color-brand-secondary: 253 186 116; /* orange-300 */
+  --color-brand-tertiary: 124 45 18 / 0.2; /* orange-900 with opacity */
+  
+  /* Shadows (more subtle in dark mode) */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.3);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.4);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.5);
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.6);
+}
+
+/* ==========================================
+   UTILITY CLASSES FOR SEMANTIC COLORS
+========================================== */
+
+/* Background utilities */
+.bg-primary {
+  background-color: rgb(var(--color-bg-primary));
+}
+
+.bg-secondary {
+  background-color: rgb(var(--color-bg-secondary));
+}
+
+.bg-surface {
+  background-color: rgb(var(--color-surface));
+}
+
+.bg-surface-hover:hover {
+  background-color: rgb(var(--color-surface-hover));
+}
+
+/* Text utilities */
+.text-primary {
+  color: rgb(var(--color-text-primary));
+}
+
+.text-secondary {
+  color: rgb(var(--color-text-secondary));
+}
+
+.text-tertiary {
+  color: rgb(var(--color-text-tertiary));
+}
+
+/* Border utilities */
+.border-primary {
+  border-color: rgb(var(--color-border-primary));
+}
+
+.border-focus {
+  border-color: rgb(var(--color-border-focus));
+}
+
+/* Interactive utilities */
+.btn-primary {
+  background-color: rgb(var(--color-interactive-primary));
+  color: rgb(var(--color-text-inverse));
+}
+
+.btn-primary:hover {
+  background-color: rgb(var(--color-interactive-primary-hover));
+}
+
+/* Status utilities */
+.status-success {
+  color: rgb(var(--color-success));
+}
+
+.status-warning {
+  color: rgb(var(--color-warning));
+}
+
+.status-error {
+  color: rgb(var(--color-error));
+}
+
+.status-info {
+  color: rgb(var(--color-info));
+}
+
+/* ==========================================
+   ANIMATION PRESETS
+========================================== */
+
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.animate-slide-in-right {
+  animation: slideInFromRight 0.3s ease-out;
+}
+
+.animate-slide-in-left {
+  animation: slideInFromLeft 0.3s ease-out;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.2s ease-out;
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.2s ease-out;
+}
+
+/* ==========================================
+   FOCUS VISIBLE STYLES (Accessibility)
+========================================== */
+
+*:focus-visible {
+  outline: 2px solid rgb(var(--color-border-focus));
+  outline-offset: 2px;
+}
+
+/* ==========================================
+   SMOOTH TRANSITIONS
+========================================== */
+
+* {
+  transition-property: color, background-color, border-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+/* Disable transitions for reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+

@@ -1,0 +1,428 @@
+/**
+ * Hook Test Template
+ * 
+ * Copy this template when creating tests for new hooks
+ * Replace [HookName] with your hook name
+ * Follow AAA pattern (Arrange, Act, Assert)
+ * 
+ * @usage
+ * 1. Copy this file to your hook's __tests__ folder
+ * 2. Rename to [HookName].test.ts
+ * 3. Replace all [HookName] placeholders
+ * 4. Add your test cases
+ * 5. Run: npm run test -- path/to/test
+ */
+
+import { describe, it, expect, beforeEach, vi } from 'vitest';
+import { renderHook, waitFor, act } from '@testing-library/react';
+import { [HookName] } from '../[HookName]';
+
+// ============================================================================
+// SETUP & MOCKS
+// ============================================================================
+
+// Mock dependencies
+vi.mock('@/some/dependency', () => ({
+  useSomething: vi.fn(() => 'mock data'),
+}));
+
+// Mock API calls (if needed)
+const mockApiCall = vi.fn();
+vi.mock('@/lib/api', () => ({
+  api: {
+    call: mockApiCall,
+  },
+}));
+
+// ============================================================================
+// TEST SUITE
+// ============================================================================
+
+describe('[HookName]', () => {
+  // -------------------------------------
+  // SETUP & CLEANUP
+  // -------------------------------------
+
+  beforeEach(() => {
+    // Reset mocks before each test
+    vi.clearAllMocks();
+  });
+
+  // -------------------------------------
+  // INITIAL STATE TESTS
+  // -------------------------------------
+
+  describe('Initial State', () => {
+    it('should return initial state', () => {
+      // Arrange & Act
+      const { result } = renderHook(() => [HookName]());
+
+      // Assert
+      expect(result.current.data).toBeNull();
+      expect(result.current.isLoading).toBe(false);
+      expect(result.current.error).toBeNull();
+    });
+
+    it('should accept initial options', () => {
+      // Arrange
+      const options = {
+        initialValue: 'test',
+      };
+
+      // Act
+      const { result } = renderHook(() => [HookName](options));
+
+      // Assert
+      expect(result.current.data).toBe('test');
+    });
+  });
+
+  // -------------------------------------
+  // STATE UPDATE TESTS
+  // -------------------------------------
+
+  describe('State Updates', () => {
+    it('should update state when function is called', () => {
+      // Arrange
+      const { result } = renderHook(() => [HookName]());
+
+      // Act
+      act(() => {
+        result.current.updateData('new value');
+      });
+
+      // Assert
+      expect(result.current.data).toBe('new value');
+    });
+
+    it('should handle multiple updates', () => {
+      // Arrange
+      const { result } = renderHook(() => [HookName]());
+
+      // Act
+      act(() => {
+        result.current.updateData('first');
+      });
+      act(() => {
+        result.current.updateData('second');
+      });
+
+      // Assert
+      expect(result.current.data).toBe('second');
+    });
+
+    it('should batch state updates', () => {
+      // Arrange
+      const { result } = renderHook(() => [HookName]());
+      let renderCount = 0;
+
+      // Track renders
+      renderHook(() => {
+        renderCount++;
+        return [HookName]();
+      });
+
+      // Act
+      act(() => {
+        result.current.updateData('first');
+        result.current.updateData('second');
+      });
+
+      // Assert
+      // Should only render once (batched)
+      expect(renderCount).toBe(1);
+    });
+  });
+
+  // -------------------------------------
+  // ASYNC OPERATIONS TESTS
+  // -------------------------------------
+
+  describe('Async Operations', () => {
+    it('should set loading state during async operation', async () => {
+      // Arrange
+      mockApiCall.mockImplementation(() => 
+        new Promise(resolve => setTimeout(() => resolve('data'), 100))
+      );
+      const { result } = renderHook(() => [HookName]());
+
+      // Act
+      act(() => {
+        result.current.fetchData();
+      });
+
+      // Assert
+      expect(result.current.isLoading).toBe(true);
+      
+      await waitFor(() => {
+        expect(result.current.isLoading).toBe(false);
+      });
+    });
+
+    it('should set data on successful fetch', async () => {
+      // Arrange
+      mockApiCall.mockResolvedValue('fetched data');
+      const { result } = renderHook(() => [HookName]());
+
+      // Act
+      await act(async () => {
+        await result.current.fetchData();
+      });
+
+      // Assert
+      expect(result.current.data).toBe('fetched data');
+      expect(result.current.error).toBeNull();
+    });
+
+    it('should set error on failed fetch', async () => {
+      // Arrange
+      const error = new Error('Fetch failed');
+      mockApiCall.mockRejectedValue(error);
+      const { result } = renderHook(() => [HookName]());
+
+      // Act
+      await act(async () => {
+        await result.current.fetchData();
+      });
+
+      // Assert
+      expect(result.current.data).toBeNull();
+      expect(result.current.error).toBe(error);
+    });
+
+    it('should cancel pending request on unmount', async () => {
+      // Arrange
+      mockApiCall.mockImplementation(() => 
+        new Promise(resolve => setTimeout(() => resolve('data'), 1000))
+      );
+      const { result, unmount } = renderHook(() => [HookName]());
+
+      // Act
+      act(() => {
+        result.current.fetchData();
+      });
+      unmount();
+
+      // Assert
+      // Should not update state after unmount
+      await new Promise(resolve => setTimeout(resolve, 1100));
+      // No assertion needed, just shouldn't throw error
+    });
+  });
+
+  // -------------------------------------
+  // CALLBACK TESTS
+  // -------------------------------------
+
+  describe('Callbacks', () => {
+    it('should call onSuccess callback', async () => {
+      // Arrange
+      const onSuccess = vi.fn();
+      mockApiCall.mockResolvedValue('data');
+      const { result } = renderHook(() => [HookName]({ onSuccess }));
+
+      // Act
+      await act(async () => {
+        await result.current.fetchData();
+      });
+
+      // Assert
+      expect(onSuccess).toHaveBeenCalledWith('data');
+    });
+
+    it('should call onError callback', async () => {
+      // Arrange
+      const onError = vi.fn();
+      const error = new Error('Failed');
+      mockApiCall.mockRejectedValue(error);
+      const { result } = renderHook(() => [HookName]({ onError }));
+
+      // Act
+      await act(async () => {
+        await result.current.fetchData();
+      });
+
+      // Assert
+      expect(onError).toHaveBeenCalledWith(error);
+    });
+
+    it('should memoize callbacks', () => {
+      // Arrange
+      const callback = vi.fn();
+      const { result, rerender } = renderHook(
+        ({ cb }) => [HookName]({ callback: cb }),
+        { initialProps: { cb: callback } }
+      );
+
+      // Act
+      const firstCallback = result.current.callback;
+      rerender({ cb: callback });
+      const secondCallback = result.current.callback;
+
+      // Assert
+      expect(firstCallback).toBe(secondCallback);
+    });
+  });
+
+  // -------------------------------------
+  // DEPENDENCY TESTS
+  // -------------------------------------
+
+  describe('Dependencies', () => {
+    it('should refetch when dependency changes', async () => {
+      // Arrange
+      mockApiCall.mockResolvedValue('data');
+      const { result, rerender } = renderHook(
+        ({ id }) => [HookName]({ id }),
+        { initialProps: { id: 1 } }
+      );
+
+      // Act
+      await waitFor(() => {
+        expect(mockApiCall).toHaveBeenCalledTimes(1);
+      });
+
+      rerender({ id: 2 });
+
+      // Assert
+      await waitFor(() => {
+        expect(mockApiCall).toHaveBeenCalledTimes(2);
+      });
+    });
+
+    it('should not refetch when unrelated prop changes', async () => {
+      // Arrange
+      mockApiCall.mockResolvedValue('data');
+      const { result, rerender } = renderHook(
+        ({ id, other }) => [HookName]({ id }),
+        { initialProps: { id: 1, other: 'test' } }
+      );
+
+      // Act
+      await waitFor(() => {
+        expect(mockApiCall).toHaveBeenCalledTimes(1);
+      });
+
+      rerender({ id: 1, other: 'changed' });
+
+      // Assert
+      await waitFor(() => {
+        expect(mockApiCall).toHaveBeenCalledTimes(1); // Still 1
+      });
+    });
+  });
+
+  // -------------------------------------
+  // CLEANUP TESTS
+  // -------------------------------------
+
+  describe('Cleanup', () => {
+    it('should cleanup on unmount', () => {
+      // Arrange
+      const cleanup = vi.fn();
+      const { unmount } = renderHook(() => [HookName]({ cleanup }));
+
+      // Act
+      unmount();
+
+      // Assert
+      expect(cleanup).toHaveBeenCalled();
+    });
+
+    it('should cleanup before re-running effect', () => {
+      // Arrange
+      const cleanup = vi.fn();
+      const { rerender } = renderHook(
+        ({ value }) => [HookName]({ value, cleanup }),
+        { initialProps: { value: 1 } }
+      );
+
+      // Act
+      rerender({ value: 2 });
+
+      // Assert
+      expect(cleanup).toHaveBeenCalledTimes(1);
+    });
+  });
+
+  // -------------------------------------
+  // EDGE CASES
+  // -------------------------------------
+
+  describe('Edge Cases', () => {
+    it('should handle rapid successive calls', async () => {
+      // Arrange
+      mockApiCall.mockResolvedValue('data');
+      const { result } = renderHook(() => [HookName]());
+
+      // Act
+      await act(async () => {
+        result.current.fetchData();
+        result.current.fetchData();
+        result.current.fetchData();
+      });
+
+      // Assert
+      // Should handle properly (debounce, cancel, or queue)
+      expect(mockApiCall).toHaveBeenCalled();
+    });
+
+    it('should handle null/undefined values', () => {
+      // Arrange & Act
+      const { result } = renderHook(() => [HookName]({ initialValue: null }));
+
+      // Assert
+      expect(result.current.data).toBeNull();
+      expect(() => result.current.updateData(undefined)).not.toThrow();
+    });
+
+    it('should handle empty options', () => {
+      // Arrange & Act
+      const { result } = renderHook(() => [HookName]({}));
+
+      // Assert
+      expect(result.current).toBeDefined();
+    });
+  });
+
+  // -------------------------------------
+  // PERFORMANCE TESTS
+  // -------------------------------------
+
+  describe('Performance', () => {
+    it('should not cause unnecessary re-renders', () => {
+      // Arrange
+      let renderCount = 0;
+      const { rerender } = renderHook(() => {
+        renderCount++;
+        return [HookName]();
+      });
+
+      // Act
+      rerender();
+      rerender();
+
+      // Assert
+      // Should only render 3 times (initial + 2 rerenders)
+      expect(renderCount).toBe(3);
+    });
+
+    it('should memoize expensive computations', () => {
+      // Arrange
+      const expensiveComputation = vi.fn(() => 'result');
+      const { result, rerender } = renderHook(() => 
+        [HookName]({ computation: expensiveComputation })
+      );
+
+      // Act
+      const firstResult = result.current.computedValue;
+      rerender();
+      const secondResult = result.current.computedValue;
+
+      // Assert
+      expect(expensiveComputation).toHaveBeenCalledTimes(1);
+      expect(firstResult).toBe(secondResult);
+    });
+  });
+});
+

@@ -1,0 +1,143 @@
+ 
+
+/**
+ * Agent Forgot Password Page
+ */
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
+import { Headset, Mail, ArrowLeft, CheckCircle, AlertCircle } from 'lucide-react';
+
+const AgentForgotPasswordPage: React.FC = () => {
+  const { t } = useTranslation('common');
+  const [email, setEmail] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
+  const [error, setError] = useState('');
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setError('');
+    setIsLoading(true);
+
+    try {
+      // TODO: Implement actual password reset logic
+      await new Promise(resolve => setTimeout(resolve, 1500));
+      setIsSuccess(true);
+    } catch (err: any) {
+      setError(err.message || t('auth.resetPasswordError'));
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  if (isSuccess) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 flex items-center justify-center p-4">
+        <div className="relative w-full max-w-md">
+          <div className="bg-white dark:bg-slate-800/50 backdrop-blur-xl rounded-2xl border border-gray-200 dark:border-slate-700 p-8 shadow-2xl text-center">
+            <div className="inline-flex items-center justify-center w-16 h-16 bg-green-500/10 rounded-full mb-4">
+              <CheckCircle className="w-8 h-8 text-green-500" />
+            </div>
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">{t('auth.emailSent')}</h2>
+            <p className="text-gray-600 dark:text-gray-400 mb-6">
+              {t('auth.resetLinkSent')} <span className="text-gray-900 dark:text-white font-medium">{email}</span>.
+            </p>
+            <Link
+              to="/agent/login"
+              className="inline-flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors"
+            >
+              <ArrowLeft className="w-4 h-4" />
+              {t('auth.backToLogin')}
+            </Link>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 flex items-center justify-center p-4">
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAxOGMzLjMxIDAgNiAyLjY5IDYgNnMtMi42OSA2LTYgNi02LTIuNjktNi02IDIuNjktNiA2LTZ6TTI0IDQyYzMuMzEgMCA2IDIuNjkgNiA2cy0yLjY5IDYtNiA2LTYtMi42OS02LTYgMi42OS02IDYtNnoiIHN0cm9rZT0iIzFhMjAzZSIgc3Ryb2tlLXdpZHRoPSIuNSIvPjwvZz48L3N2Zz4=')] opacity-10 dark:opacity-20" />
+
+      <div className="relative w-full max-w-md">
+        <div className="text-center mb-8">
+          <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-600 rounded-2xl mb-4">
+            <Headset className="w-8 h-8 text-white" />
+          </div>
+          <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">{t('auth.forgotPasswordTitle')}</h1>
+          <p className="text-gray-600 dark:text-gray-400">{t('auth.forgotPasswordSubtitle')}</p>
+        </div>
+
+        <div className="bg-white dark:bg-slate-800/50 backdrop-blur-xl rounded-2xl border border-gray-200 dark:border-slate-700 p-8 shadow-2xl">
+          {error && (
+            <div className="mb-6 p-4 bg-red-50 dark:bg-red-500/10 border border-red-200 dark:border-red-500/50 rounded-lg flex items-start gap-3">
+              <AlertCircle className="w-5 h-5 text-red-600 dark:text-red-500 flex-shrink-0 mt-0.5" />
+              <p className="text-sm text-red-700 dark:text-red-200">{error}</p>
+            </div>
+          )}
+
+          <form onSubmit={handleSubmit} className="space-y-6">
+            <div>
+              <label htmlFor="agent-forgot-password-email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                E-posta Adresi
+              </label>
+              <div className="relative">
+                <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
+                <input
+                  id="agent-forgot-password-email"
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  className="w-full pl-10 pr-4 py-3 bg-gray-50 dark:bg-slate-900/50 border border-gray-300 dark:border-slate-600 rounded-lg text-gray-900 dark:text-white placeholder-gray-500 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                  placeholder="agent@company.com"
+                  required
+                />
+              </div>
+            </div>
+
+            <button
+              type="submit"
+              disabled={isLoading}
+              className="w-full py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+            >
+              {isLoading ? (
+                <>
+                  <div className="flex items-center justify-center gap-0.5">
+                    {[0, 1, 2].map((i) => (
+                      <div
+                        key={i}
+                        className="w-1 h-1 rounded-full bg-white animate-bounce"
+                        style={{
+                          animationDelay: `${i * 0.15}s`,
+                          animationDuration: '0.6s',
+                        }}
+                      />
+                    ))}
+                  </div>
+                  <span>Gönderiliyor...</span>
+                </>
+              ) : (
+                <span>Sıfırlama Bağlantısı Gönder</span>
+              )}
+            </button>
+          </form>
+
+          <div className="mt-6 pt-6 border-t border-gray-200 dark:border-slate-700">
+            <Link
+              to="/agent/login"
+              className="flex items-center justify-center gap-2 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-300 transition-colors"
+            >
+              <ArrowLeft className="w-4 h-4" />
+              Giriş sayfasına dön
+            </Link>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default AgentForgotPasswordPage;
+
+

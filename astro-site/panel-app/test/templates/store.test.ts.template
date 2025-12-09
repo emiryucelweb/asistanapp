@@ -1,0 +1,507 @@
+/**
+ * Store Test Template (Zustand)
+ * 
+ * Copy this template when creating tests for new Zustand stores
+ * Replace [StoreName] with your store name
+ * Follow AAA pattern (Arrange, Act, Assert)
+ * 
+ * @usage
+ * 1. Copy this file to your store's __tests__ folder
+ * 2. Rename to [storeName].test.ts
+ * 3. Replace all [StoreName] placeholders
+ * 4. Add your test cases
+ * 5. Run: npm run test -- path/to/test
+ */
+
+import { describe, it, expect, beforeEach, vi } from 'vitest';
+import { renderHook, act } from '@testing-library/react';
+import { use[StoreName]Store } from '../[storeName]-store';
+
+// ============================================================================
+// NOTE: Zustand Store Testing
+// ============================================================================
+// Two approaches:
+// 1. Direct getState() - Faster, simpler (RECOMMENDED for most tests)
+//    const store = use[StoreName]Store.getState();
+//    store.action();
+//    const state = use[StoreName]Store.getState();
+//
+// 2. renderHook() - For testing selectors or React integration
+//    const { result } = renderHook(() => use[StoreName]Store(state => state.selector));
+//
+// This template shows both approaches. Use getState() by default.
+// ============================================================================
+
+// ============================================================================
+// SETUP & MOCKS
+// ============================================================================
+
+// Mock external dependencies (if needed)
+vi.mock('@/lib/api', () => ({
+  api: {
+    call: vi.fn(),
+  },
+}));
+
+// ============================================================================
+// TEST SUITE
+// ============================================================================
+
+describe('[StoreName]Store', () => {
+  // -------------------------------------
+  // SETUP & CLEANUP
+  // -------------------------------------
+
+  beforeEach(() => {
+    // Reset store before each test
+    // NOTE: Adapt this to your store's reset mechanism
+    // Examples:
+    // - use[StoreName]Store.getState().reset();
+    // - use[StoreName]Store.getState().clearItems();
+    // - use[StoreName]Store.getState().dismissAll();
+    const store = use[StoreName]Store.getState();
+    // Call your store's reset/clear methods here
+    
+    // Clear mocks
+    vi.clearAllMocks();
+  });
+
+  // -------------------------------------
+  // INITIAL STATE TESTS
+  // -------------------------------------
+
+  describe('Initial State', () => {
+    it('should have correct initial state', () => {
+      // Arrange & Act
+      const store = use[StoreName]Store.getState();
+
+      // Assert
+      expect(store.data).toEqual([]);
+      expect(store.isLoading).toBe(false);
+      expect(store.error).toBeNull();
+    });
+
+    it('should have all required actions', () => {
+      // Arrange & Act
+      const store = use[StoreName]Store.getState();
+
+      // Assert
+      expect(typeof store.addItem).toBe('function');
+      expect(typeof store.removeItem).toBe('function');
+      expect(typeof store.updateItem).toBe('function');
+      // Add all your store actions
+    });
+  });
+
+  // -------------------------------------
+  // ACTION TESTS
+  // -------------------------------------
+
+  describe('Actions', () => {
+    it('should add item to store', () => {
+      // Arrange
+      const newItem = { id: '1', name: 'Test Item' };
+      const store = use[StoreName]Store.getState();
+
+      // Act
+      store.addItem(newItem);
+
+      // Assert
+      const state = use[StoreName]Store.getState();
+      expect(state.items).toContainEqual(newItem);
+      expect(state.items).toHaveLength(1);
+    });
+
+    it('should remove item from store', () => {
+      // Arrange
+      const item = { id: '1', name: 'Test Item' };
+      const store = use[StoreName]Store.getState();
+      
+      store.addItem(item);
+
+      // Act
+      store.removeItem('1');
+
+      // Assert
+      const state = use[StoreName]Store.getState();
+      expect(state.items).not.toContainEqual(item);
+      expect(state.items).toHaveLength(0);
+    });
+
+    it('should update item in store', () => {
+      // Arrange
+      const item = { id: '1', name: 'Original' };
+      const store = use[StoreName]Store.getState();
+      
+      store.addItem(item);
+
+      // Act
+      store.updateItem('1', { name: 'Updated' });
+
+      // Assert
+      const state = use[StoreName]Store.getState();
+      expect(state.items[0].name).toBe('Updated');
+    });
+
+    it('should clear all items', () => {
+      // Arrange
+      const store = use[StoreName]Store.getState();
+      
+      store.addItem({ id: '1', name: 'Item 1' });
+      store.addItem({ id: '2', name: 'Item 2' });
+
+      // Act
+      store.clearItems();
+
+      // Assert
+      const state = use[StoreName]Store.getState();
+      expect(state.items).toHaveLength(0);
+    });
+  });
+
+  // -------------------------------------
+  // SELECTOR TESTS
+  // -------------------------------------
+
+  describe('Selectors', () => {
+    it('should select item by id', () => {
+      // Arrange
+      const { result } = renderHook(() => use[StoreName]Store());
+      const item = { id: '1', name: 'Test Item' };
+      
+      act(() => {
+        result.current.addItem(item);
+      });
+
+      // Act
+      const { result: selectorResult } = renderHook(() =>
+        use[StoreName]Store((state) => state.getItemById('1'))
+      );
+
+      // Assert
+      expect(selectorResult.current).toEqual(item);
+    });
+
+    it('should filter items by criteria', () => {
+      // Arrange
+      const { result } = renderHook(() => use[StoreName]Store());
+      
+      act(() => {
+        result.current.addItem({ id: '1', name: 'Active', status: 'active' });
+        result.current.addItem({ id: '2', name: 'Inactive', status: 'inactive' });
+      });
+
+      // Act
+      const { result: selectorResult } = renderHook(() =>
+        use[StoreName]Store((state) => 
+          state.items.filter(item => item.status === 'active')
+        )
+      );
+
+      // Assert
+      expect(selectorResult.current).toHaveLength(1);
+      expect(selectorResult.current[0].name).toBe('Active');
+    });
+
+    it('should compute derived state', () => {
+      // Arrange
+      const { result } = renderHook(() => use[StoreName]Store());
+      
+      act(() => {
+        result.current.addItem({ id: '1', value: 10 });
+        result.current.addItem({ id: '2', value: 20 });
+      });
+
+      // Act
+      const { result: totalResult } = renderHook(() =>
+        use[StoreName]Store((state) => 
+          state.items.reduce((sum, item) => sum + item.value, 0)
+        )
+      );
+
+      // Assert
+      expect(totalResult.current).toBe(30);
+    });
+  });
+
+  // -------------------------------------
+  // ASYNC OPERATIONS TESTS
+  // -------------------------------------
+
+  describe('Async Operations', () => {
+    it('should set loading state during fetch', async () => {
+      // Arrange
+      const { result } = renderHook(() => use[StoreName]Store());
+
+      // Act
+      act(() => {
+        result.current.fetchItems();
+      });
+
+      // Assert
+      expect(result.current.isLoading).toBe(true);
+    });
+
+    it('should set data on successful fetch', async () => {
+      // Arrange
+      const mockData = [{ id: '1', name: 'Item' }];
+      const { result } = renderHook(() => use[StoreName]Store());
+
+      // Act
+      await act(async () => {
+        await result.current.fetchItems();
+      });
+
+      // Assert
+      expect(result.current.items).toEqual(mockData);
+      expect(result.current.isLoading).toBe(false);
+      expect(result.current.error).toBeNull();
+    });
+
+    it('should set error on failed fetch', async () => {
+      // Arrange
+      const error = new Error('Fetch failed');
+      const { result } = renderHook(() => use[StoreName]Store());
+
+      // Act
+      await act(async () => {
+        await result.current.fetchItems();
+      });
+
+      // Assert
+      expect(result.current.error).toBe(error);
+      expect(result.current.isLoading).toBe(false);
+    });
+  });
+
+  // -------------------------------------
+  // STATE PERSISTENCE TESTS
+  // -------------------------------------
+
+  describe('State Persistence', () => {
+    it('should persist state to localStorage', () => {
+      // Arrange
+      const { result } = renderHook(() => use[StoreName]Store());
+      const item = { id: '1', name: 'Test' };
+
+      // Act
+      act(() => {
+        result.current.addItem(item);
+      });
+
+      // Assert
+      const stored = localStorage.getItem('[storeName]');
+      expect(stored).toContain(item.name);
+    });
+
+    it('should restore state from localStorage', () => {
+      // Arrange
+      const storedState = { items: [{ id: '1', name: 'Restored' }] };
+      localStorage.setItem('[storeName]', JSON.stringify(storedState));
+
+      // Act
+      const { result } = renderHook(() => use[StoreName]Store());
+
+      // Assert
+      expect(result.current.items).toEqual(storedState.items);
+    });
+
+    it('should handle corrupted localStorage data', () => {
+      // Arrange
+      localStorage.setItem('[storeName]', 'invalid json');
+
+      // Act & Assert
+      expect(() => {
+        renderHook(() => use[StoreName]Store());
+      }).not.toThrow();
+    });
+  });
+
+  // -------------------------------------
+  // RESET TESTS
+  // -------------------------------------
+
+  describe('Reset', () => {
+    it('should reset store to initial state', () => {
+      // Arrange
+      const { result } = renderHook(() => use[StoreName]Store());
+      
+      act(() => {
+        result.current.addItem({ id: '1', name: 'Item' });
+        result.current.setLoading(true);
+        result.current.setError(new Error('Error'));
+      });
+
+      // Act
+      act(() => {
+        result.current.reset();
+      });
+
+      // Assert
+      expect(result.current.items).toEqual([]);
+      expect(result.current.isLoading).toBe(false);
+      expect(result.current.error).toBeNull();
+    });
+
+    it('should clear persisted state on reset', () => {
+      // Arrange
+      const { result } = renderHook(() => use[StoreName]Store());
+      
+      act(() => {
+        result.current.addItem({ id: '1', name: 'Item' });
+      });
+
+      // Act
+      act(() => {
+        result.current.reset();
+      });
+
+      // Assert
+      const stored = localStorage.getItem('[storeName]');
+      expect(stored).toBeNull();
+    });
+  });
+
+  // -------------------------------------
+  // EDGE CASES
+  // -------------------------------------
+
+  describe('Edge Cases', () => {
+    it('should handle adding duplicate items', () => {
+      // Arrange
+      const { result } = renderHook(() => use[StoreName]Store());
+      const item = { id: '1', name: 'Item' };
+
+      // Act
+      act(() => {
+        result.current.addItem(item);
+        result.current.addItem(item);
+      });
+
+      // Assert
+      // Should prevent duplicates or handle appropriately
+      expect(result.current.items).toHaveLength(1);
+    });
+
+    it('should handle removing non-existent item', () => {
+      // Arrange
+      const { result } = renderHook(() => use[StoreName]Store());
+
+      // Act & Assert
+      expect(() => {
+        act(() => {
+          result.current.removeItem('non-existent');
+        });
+      }).not.toThrow();
+    });
+
+    it('should handle updating non-existent item', () => {
+      // Arrange
+      const { result } = renderHook(() => use[StoreName]Store());
+
+      // Act & Assert
+      expect(() => {
+        act(() => {
+          result.current.updateItem('non-existent', { name: 'Updated' });
+        });
+      }).not.toThrow();
+    });
+
+    it('should handle null/undefined values', () => {
+      // Arrange
+      const { result } = renderHook(() => use[StoreName]Store());
+
+      // Act & Assert
+      expect(() => {
+        act(() => {
+          result.current.addItem(null);
+          result.current.addItem(undefined);
+        });
+      }).not.toThrow();
+    });
+  });
+
+  // -------------------------------------
+  // PERFORMANCE TESTS
+  // -------------------------------------
+
+  describe('Performance', () => {
+    it('should not trigger unnecessary re-renders', () => {
+      // Arrange
+      let renderCount = 0;
+      const { rerender } = renderHook(() => {
+        renderCount++;
+        return use[StoreName]Store((state) => state.count);
+      });
+
+      // Act
+      act(() => {
+        use[StoreName]Store.getState().setUnrelatedState('value');
+      });
+      rerender();
+
+      // Assert
+      // Should only render twice (initial + rerender)
+      expect(renderCount).toBe(2);
+    });
+
+    it('should handle large datasets efficiently', () => {
+      // Arrange
+      const { result } = renderHook(() => use[StoreName]Store());
+      const largeDataset = Array.from({ length: 10000 }, (_, i) => ({
+        id: `${i}`,
+        name: `Item ${i}`,
+      }));
+
+      // Act
+      const startTime = performance.now();
+      act(() => {
+        largeDataset.forEach(item => result.current.addItem(item));
+      });
+      const endTime = performance.now();
+
+      // Assert
+      expect(result.current.items).toHaveLength(10000);
+      expect(endTime - startTime).toBeLessThan(1000); // Should take < 1s
+    });
+  });
+
+  // -------------------------------------
+  // SUBSCRIPTION TESTS
+  // -------------------------------------
+
+  describe('Subscriptions', () => {
+    it('should notify subscribers on state change', () => {
+      // Arrange
+      const subscriber = vi.fn();
+      const unsubscribe = use[StoreName]Store.subscribe(subscriber);
+
+      // Act
+      act(() => {
+        use[StoreName]Store.getState().addItem({ id: '1', name: 'Item' });
+      });
+
+      // Assert
+      expect(subscriber).toHaveBeenCalled();
+      
+      // Cleanup
+      unsubscribe();
+    });
+
+    it('should unsubscribe correctly', () => {
+      // Arrange
+      const subscriber = vi.fn();
+      const unsubscribe = use[StoreName]Store.subscribe(subscriber);
+
+      // Act
+      unsubscribe();
+      act(() => {
+        use[StoreName]Store.getState().addItem({ id: '1', name: 'Item' });
+      });
+
+      // Assert
+      expect(subscriber).not.toHaveBeenCalled();
+    });
+  });
+});
+

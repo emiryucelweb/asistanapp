@@ -1,0 +1,366 @@
+/**
+ * Component Test Template
+ * 
+ * Copy this template when creating tests for new components
+ * Replace [ComponentName] with your component name
+ * Follow AAA pattern (Arrange, Act, Assert)
+ * 
+ * @usage
+ * 1. Copy this file to your component's __tests__ folder
+ * 2. Rename to [ComponentName].test.tsx
+ * 3. Replace all [ComponentName] placeholders
+ * 4. Add your test cases
+ * 5. Run: npm run test -- path/to/test
+ */
+
+import { describe, it, expect, beforeEach, vi } from 'vitest';
+import { render, screen, waitFor } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
+import { [ComponentName] } from '../[ComponentName]';
+
+// ============================================================================
+// SETUP & MOCKS
+// ============================================================================
+
+// Mock i18n (MUST be at top level, before imports that use it)
+vi.mock('react-i18next', () => ({
+  useTranslation: () => ({
+    t: (key: string) => {
+      const translations: Record<string, string> = {
+        // Add component-specific translations
+        '[component].title': 'Component Title',
+        '[component].button': 'Click Me',
+      };
+      return translations[key] || key;
+    },
+  }),
+}));
+
+// Mock dependencies (if needed)
+vi.mock('@/some/dependency', () => ({
+  useSomething: vi.fn(() => ({
+    data: 'mock data',
+    isLoading: false,
+  })),
+}));
+
+// ============================================================================
+// TEST SUITE
+// ============================================================================
+
+describe('[ComponentName]', () => {
+  // -------------------------------------
+  // SETUP & CLEANUP
+  // -------------------------------------
+  
+  beforeEach(() => {
+    // Reset mocks before each test
+    vi.clearAllMocks();
+  });
+
+  // -------------------------------------
+  // RENDERING TESTS
+  // -------------------------------------
+
+  describe('Rendering', () => {
+    it('should render without crashing', () => {
+      // Arrange
+      const props = {
+        // Add required props
+      };
+
+      // Act
+      render(<[ComponentName] {...props} />);
+
+      // Assert
+      expect(screen.getByRole('[role]')).toBeInTheDocument();
+    });
+
+    it('should render with correct text', () => {
+      // Arrange
+      const props = {
+        text: 'Hello World',
+      };
+
+      // Act
+      render(<[ComponentName] {...props} />);
+
+      // Assert
+      expect(screen.getByText('Hello World')).toBeInTheDocument();
+    });
+
+    it('should render with correct styling', () => {
+      // Arrange
+      const props = {
+        variant: 'primary',
+      };
+
+      // Act
+      render(<[ComponentName] {...props} />);
+
+      // Assert
+      const element = screen.getByRole('[role]');
+      expect(element).toHaveClass('primary');
+    });
+  });
+
+  // -------------------------------------
+  // INTERACTION TESTS
+  // -------------------------------------
+
+  describe('User Interactions', () => {
+    it('should call onClick when clicked', async () => {
+      // Arrange
+      const user = userEvent.setup();
+      const onClick = vi.fn();
+      const props = {
+        onClick,
+      };
+
+      // Act
+      render(<[ComponentName] {...props} />);
+      await user.click(screen.getByRole('button'));
+
+      // Assert
+      expect(onClick).toHaveBeenCalledTimes(1);
+    });
+
+    it('should update input value on change', async () => {
+      // Arrange
+      const user = userEvent.setup();
+      const onChange = vi.fn();
+      const props = {
+        onChange,
+      };
+
+      // Act
+      render(<[ComponentName] {...props} />);
+      const input = screen.getByRole('textbox');
+      await user.type(input, 'test');
+
+      // Assert
+      expect(onChange).toHaveBeenCalled();
+      expect(input).toHaveValue('test');
+    });
+
+    it('should handle keyboard navigation', async () => {
+      // Arrange
+      const user = userEvent.setup();
+      const onSelect = vi.fn();
+      const props = {
+        onSelect,
+      };
+
+      // Act
+      render(<[ComponentName] {...props} />);
+      await user.keyboard('{ArrowDown}');
+      await user.keyboard('{Enter}');
+
+      // Assert
+      expect(onSelect).toHaveBeenCalled();
+    });
+  });
+
+  // -------------------------------------
+  // STATE TESTS
+  // -------------------------------------
+
+  describe('State Management', () => {
+    it('should update state on user action', async () => {
+      // Arrange
+      const user = userEvent.setup();
+      render(<[ComponentName] />);
+
+      // Act
+      await user.click(screen.getByRole('button', { name: /toggle/i }));
+
+      // Assert
+      await waitFor(() => {
+        expect(screen.getByText('Active')).toBeInTheDocument();
+      });
+    });
+
+    it('should reset state when prop changes', () => {
+      // Arrange
+      const { rerender } = render(
+        <[ComponentName] value="initial" />
+      );
+
+      // Act
+      rerender(<[ComponentName] value="updated" />);
+
+      // Assert
+      expect(screen.getByText('updated')).toBeInTheDocument();
+    });
+  });
+
+  // -------------------------------------
+  // CONDITIONAL RENDERING TESTS
+  // -------------------------------------
+
+  describe('Conditional Rendering', () => {
+    it('should render loading state', () => {
+      // Arrange
+      const props = {
+        isLoading: true,
+      };
+
+      // Act
+      render(<[ComponentName] {...props} />);
+
+      // Assert
+      expect(screen.getByText(/loading/i)).toBeInTheDocument();
+    });
+
+    it('should render error state', () => {
+      // Arrange
+      const props = {
+        error: 'Something went wrong',
+      };
+
+      // Act
+      render(<[ComponentName] {...props} />);
+
+      // Assert
+      expect(screen.getByText('Something went wrong')).toBeInTheDocument();
+    });
+
+    it('should not render when hidden', () => {
+      // Arrange
+      const props = {
+        hidden: true,
+      };
+
+      // Act
+      render(<[ComponentName] {...props} />);
+
+      // Assert
+      expect(screen.queryByRole('[role]')).not.toBeInTheDocument();
+    });
+  });
+
+  // -------------------------------------
+  // ACCESSIBILITY TESTS
+  // -------------------------------------
+
+  describe('Accessibility', () => {
+    it('should have correct ARIA attributes', () => {
+      // Arrange & Act
+      render(<[ComponentName] />);
+
+      // Assert
+      const element = screen.getByRole('[role]');
+      expect(element).toHaveAttribute('aria-label');
+    });
+
+    it('should be keyboard accessible', async () => {
+      // Arrange
+      const user = userEvent.setup();
+      const onAction = vi.fn();
+      
+      // Act
+      render(<[ComponentName] onAction={onAction} />);
+      await user.tab();
+      await user.keyboard('{Enter}');
+
+      // Assert
+      expect(onAction).toHaveBeenCalled();
+    });
+
+    it('should announce to screen readers', () => {
+      // Arrange & Act
+      render(<[ComponentName] />);
+
+      // Assert
+      expect(screen.getByRole('status')).toBeInTheDocument();
+    });
+  });
+
+  // -------------------------------------
+  // EDGE CASES
+  // -------------------------------------
+
+  describe('Edge Cases', () => {
+    it('should handle empty data', () => {
+      // Arrange
+      const props = {
+        data: [],
+      };
+
+      // Act
+      render(<[ComponentName] {...props} />);
+
+      // Assert
+      expect(screen.getByText(/no data/i)).toBeInTheDocument();
+    });
+
+    it('should handle very long text', () => {
+      // Arrange
+      const longText = 'A'.repeat(1000);
+      const props = {
+        text: longText,
+      };
+
+      // Act
+      render(<[ComponentName] {...props} />);
+
+      // Assert
+      expect(screen.getByText(longText)).toBeInTheDocument();
+    });
+
+    it('should handle rapid clicks', async () => {
+      // Arrange
+      const user = userEvent.setup();
+      const onClick = vi.fn();
+      
+      // Act
+      render(<[ComponentName] onClick={onClick} />);
+      const button = screen.getByRole('button');
+      await user.click(button);
+      await user.click(button);
+      await user.click(button);
+
+      // Assert
+      // Should debounce or handle properly
+      expect(onClick).toHaveBeenCalledTimes(3);
+    });
+  });
+
+  // -------------------------------------
+  // INTEGRATION TESTS (if applicable)
+  // -------------------------------------
+
+  describe('Integration', () => {
+    it('should work with parent component', () => {
+      // Arrange
+      const ParentComponent = () => (
+        <div>
+          <[ComponentName] />
+        </div>
+      );
+
+      // Act
+      render(<ParentComponent />);
+
+      // Assert
+      expect(screen.getByRole('[role]')).toBeInTheDocument();
+    });
+
+    it('should communicate with sibling components', async () => {
+      // Arrange
+      const onUpdate = vi.fn();
+      
+      // Act
+      render(
+        <div>
+          <[ComponentName] onUpdate={onUpdate} />
+          {/* Other components */}
+        </div>
+      );
+
+      // Assert
+      // Test interaction
+    });
+  });
+});
+

@@ -1,0 +1,54 @@
+{
+  "chrome": true,
+  "verbose": true,
+  "save": "axe-results.json",
+  "tags": ["wcag2a", "wcag2aa", "wcag21a", "wcag21aa", "best-practice"],
+  "rules": {
+    "color-contrast": {
+      "enabled": true
+    },
+    "landmark-one-main": {
+      "enabled": true
+    },
+    "page-has-heading-one": {
+      "enabled": true
+    },
+    "region": {
+      "enabled": true
+    },
+    "bypass": {
+      "enabled": true
+    },
+    "aria-allowed-attr": {
+      "enabled": true
+    },
+    "aria-required-attr": {
+      "enabled": true
+    },
+    "aria-valid-attr-value": {
+      "enabled": true
+    },
+    "button-name": {
+      "enabled": true
+    },
+    "image-alt": {
+      "enabled": true
+    },
+    "label": {
+      "enabled": true
+    },
+    "link-name": {
+      "enabled": true
+    },
+    "document-title": {
+      "enabled": true
+    },
+    "html-has-lang": {
+      "enabled": true
+    },
+    "valid-lang": {
+      "enabled": true
+    }
+  }
+}
+

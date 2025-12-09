@@ -1,0 +1,476 @@
+{
+  "app": {
+    "name": "Asistan",
+    "title": "Asistan - Müşteri Destek Platformu",
+    "description": "Yapay zeka destekli müşteri destek platformu"
+  },
+  "common": {
+    "loading": "Yükleniyor...",
+    "error": "Hata",
+    "success": "Başarılı",
+    "warning": "Uyarı",
+    "info": "Bilgi",
+    "save": "Kaydet",
+    "saving": "Kaydediliyor...",
+    "cancel": "İptal",
+    "delete": "Sil",
+    "processing": "İşleniyor...",
+    "edit": "Düzenle",
+    "add": "Ekle",
+    "create": "Oluştur",
+    "update": "Güncelle",
+    "search": "Ara",
+    "searchMessages": "Mesajlarda ara...",
+    "filter": "Filtrele",
+    "sort": "Sırala",
+    "actions": "İşlemler",
+    "yes": "Evet",
+    "no": "Hayır",
+    "ok": "Tamam",
+    "close": "Kapat",
+    "back": "Geri",
+    "next": "İleri",
+    "previous": "Önceki",
+    "confirm": "Onayla",
+    "continue": "Devam Et",
+    "submit": "Gönder",
+    "reset": "Sıfırla",
+    "clear": "Temizle",
+    "select": "Seç",
+    "selectAll": "Tümünü Seç",
+    "deselectAll": "Seçimi Kaldır",
+    "apply": "Uygula",
+    "download": "İndir",
+    "upload": "Yükle",
+    "export": "Dışa Aktar",
+    "import": "İçe Aktar",
+    "print": "Yazdır",
+    "refresh": "Yenile",
+    "retry": "Tekrar Dene",
+    "more": "Daha Fazla",
+    "less": "Daha Az",
+    "show": "Göster",
+    "hide": "Gizle",
+    "expand": "Genişlet",
+    "collapse": "Daralt",
+    "view": "Görüntüle",
+    "details": "Detaylar"
+  },
+  "navigation": {
+    "home": "Ana Sayfa",
+    "dashboard": "Gösterge Paneli",
+    "conversations": "Konuşmalar",
+    "customers": "Müşteriler",
+    "reports": "Raporlar",
+    "settings": "Ayarlar",
+    "profile": "Profil",
+    "logout": "Çıkış Yap",
+    "help": "Yardım"
+  },
+  "sidebar": {
+    "dashboard": "Ana Sayfa",
+    "conversations": "Konuşmalar",
+    "teamChat": "Ekip Chat",
+    "reports": "Raporlar",
+    "settings": "Ayarlar",
+    "team": "Ekip",
+    "help": "Yardım",
+    "new": "YENİ",
+    "talkToAssistant": "Asistan ile Konuş",
+    "collapse": "Menüyü Daralt",
+    "expand": "Menüyü Genişlet",
+    "requestDemo": "Demo İste"
+  },
+  "theme": {
+    "switchToLight": "Açık Temaya Geç",
+    "switchToDark": "Koyu Temaya Geç"
+  },
+  "aiAssistant": {
+    "subtitle": "Raporlama ve Analiz Asistanı",
+    "greeting": "Merhaba! 👋 Ben AsistanApp AI asistanınızım. Size raporlama ve analizlerde yardımcı olabilirim.",
+    "suggestionsTitle": "💡 Şunları sorabilirsiniz:",
+    "suggestion1": "Bugünün performans raporunu göster",
+    "suggestion2": "Müşteri memnuniyeti nasıl?",
+    "suggestion3": "Hangi kanaldan en çok mesaj geliyor?",
+    "suggestion4": "Ekip performansını analiz et",
+    "inputPlaceholder": "Sorunuzu yazın..."
+  },
+  "header": {
+    "notifications": {
+      "title": "Bildirimler",
+      "newCount": "{{count}} yeni",
+      "conversationAssigned": "Konuşma Atandı",
+      "urgentConversationMessage": "{{name}} tarafından size acil konuşma atandı",
+      "conversationAssignedMessage": "{{name}} tarafından size bir konuşma atandı",
+      "performanceReport": "Asistan Performans Raporu",
+      "dailyReportReady": "Günlük performans raporunuz hazır",
+      "paymentSuccessful": "Ödeme Başarılı",
+      "subscriptionRenewed": "Aylık aboneliğiniz yenilendi",
+      "markAllRead": "Tümünü Okundu İşaretle",
+      "markAsRead": "Okundu",
+      "settings": "Bildirim Ayarları",
+      "noNotifications": "Bildiriminiz yok"
+    },
+    "userMenu": {
+      "profile": "Profil",
+      "business": "İşletme Bilgileri",
+      "billing": "Abonelik & Fatura",
+      "settings": "Ayarlar",
+      "logout": "Çıkış Yap",
+      "user": "Kullanıcı"
+    }
+  },
+  "time": {
+    "now": "Şimdi",
+    "justNow": "Az önce",
+    "minutesAgo": "{{count}} dakika önce",
+    "minutesAgo_plural": "{{count}} dakika önce",
+    "hoursAgo": "{{count}} saat önce",
+    "hoursAgo_plural": "{{count}} saat önce",
+    "daysAgo": "{{count}} gün önce",
+    "daysAgo_plural": "{{count}} gün önce",
+    "weeksAgo": "{{count}} hafta önce",
+    "weeksAgo_plural": "{{count}} hafta önce",
+    "monthsAgo": "{{count}} ay önce",
+    "monthsAgo_plural": "{{count}} ay önce",
+    "yearsAgo": "{{count}} yıl önce",
+    "yearsAgo_plural": "{{count}} yıl önce",
+    "today": "Bugün",
+    "yesterday": "Dün",
+    "tomorrow": "Yarın",
+    "thisWeek": "Bu Hafta",
+    "lastWeek": "Geçen Hafta",
+    "thisMonth": "Bu Ay",
+    "lastMonth": "Geçen Ay"
+  },
+  "status": {
+    "active": "Aktif",
+    "inactive": "Pasif",
+    "online": "Çevrimiçi",
+    "offline": "Çevrimdışı",
+    "away": "Uzakta",
+    "busy": "Meşgul",
+    "available": "Müsait",
+    "unavailable": "Müsait Değil",
+    "pending": "Beklemede",
+    "approved": "Onaylandı",
+    "rejected": "Reddedildi",
+    "completed": "Tamamlandı",
+    "inProgress": "Devam Ediyor",
+    "failed": "Başarısız"
+  },
+  "filters": {
+    "selectPlaceholder": "Seçim yapın",
+    "selectedCount": "{{count}} seçildi",
+    "selectAll": "Tümünü Seç",
+    "clear": "Temizle",
+    "noResults": "Sonuç bulunamadı"
+  },
+  "messages": {
+    "noData": "Veri bulunamadı",
+    "noResults": "Sonuç bulunamadı",
+    "emptyState": "Henüz kayıt yok",
+    "loadingData": "Veriler yükleniyor...",
+    "savingChanges": "Değişiklikler kaydediliyor...",
+    "changesSaved": "Değişiklikler kaydedildi",
+    "changesDiscarded": "Değişiklikler iptal edildi",
+    "confirmDelete": "Silmek istediğinizden emin misiniz?",
+    "confirmDiscard": "Değişiklikler kaydedilmemiş. Devam etmek istiyor musunuz?",
+    "errorOccurred": "Bir hata oluştu",
+    "tryAgain": "Lütfen tekrar deneyin",
+    "contactSupport": "Sorun devam ederse destek ekibiyle iletişime geçin",
+    "sessionExpired": "Oturumunuzun süresi doldu. Lütfen tekrar giriş yapın.",
+    "networkError": "Ağ bağlantısı hatası. İnternet bağlantınızı kontrol edin."
+  },
+  "forms": {
+    "required": "Bu alan zorunludur",
+    "invalid": "Geçersiz değer",
+    "tooShort": "Çok kısa",
+    "tooLong": "Çok uzun",
+    "invalidEmail": "Geçersiz e-posta adresi",
+    "invalidPhone": "Geçersiz telefon numarası",
+    "invalidUrl": "Geçersiz URL",
+    "passwordMismatch": "Şifreler eşleşmiyor",
+    "weakPassword": "Zayıf şifre",
+    "selectOption": "Bir seçenek seçin",
+    "uploadFile": "Dosya yükleyin",
+    "dragDropFile": "Dosyayı buraya sürükleyin veya tıklayın",
+    "maxFileSize": "Maksimum dosya boyutu: {{size}}",
+    "allowedFormats": "İzin verilen formatlar: {{formats}}"
+  },
+  "pagination": {
+    "page": "Sayfa",
+    "of": "/",
+    "showing": "Gösteriliyor",
+    "to": "-",
+    "items": "kayıt",
+    "perPage": "Sayfa başına",
+    "first": "İlk",
+    "last": "Son",
+    "rowsPerPage": "Sayfa başına satır"
+  },
+  "help": {
+    "title": "Yardım Merkezi",
+    "subtitle": "Sorularınızın cevaplarını bulun ve destek alın",
+    "searchPlaceholder": "Aradığınız soruyu veya konuyu yazın...",
+    "subjectPlaceholder": "Sorununuzu kısaca özetleyin",
+    "messagePlaceholder": "Sorununuzu detaylı bir şekilde açıklayın...",
+    "requiredFields": "Lütfen konu ve mesaj alanlarını doldurun.",
+    "ticketCreated": "Destek talebiniz başarıyla oluşturuldu! Kısa süre içinde size dönüş yapacağız.",
+    "createTicket": "Destek Talebi Oluştur",
+    "stats": {
+      "totalArticles": "Toplam Makale",
+      "videoTutorials": "Video Eğitim",
+      "activeTickets": "Aktif Talepler",
+      "avgResponseTime": "Ort. Yanıt Süresi"
+    },
+    "avgResponseValue": "2 saat",
+    "faq": {
+      "title": "Sık Sorulan Sorular",
+      "noResults": "Arama kriterlerinize uygun sonuç bulunamadı.",
+      "questions": {
+        "q1": "AsistanApp nasıl başlarım?",
+        "a1": "AsistanApp'e başlamak için önce hesap ayarlarınızı tamamlayın. Ardından AI asistanınızı özelleştirin ve sosyal medya kanallarınızı bağlayın. İlk adımlar rehberimizden detaylı bilgi alabilirsiniz.",
+        "q2": "İlk AI asistanımı nasıl oluştururum?",
+        "a2": "Ayarlar > Asistan bölümünden yeni bir AI asistan oluşturabilirsiniz. İşletme bilgilerinizi girin, tonunu seçin ve eğitim verilerinizi yükleyin. Sistem otomatik olarak öğrenmeye başlayacaktır.",
+        "q3": "WhatsApp entegrasyonu nasıl yapılır?",
+        "a3": "Ayarlar > Kanal Entegrasyonları > WhatsApp bölümünden QR kodu okutarak veya API key ile entegrasyon yapabilirsiniz. Detaylı kurulum rehberimizi takip edin.",
+        "q4": "AI konuşmaları nasıl insana devredebilirim?",
+        "a4": "Konuşmalar ekranında aktif bir konuşmanın detayına girip \"İnsana Devret\" butonuna tıklayarak manuel olarak devredebilirsiniz. Ayrıca AI belirli durumlarda (anlaşılamayan sorular, karmaşık talepler) otomatik olarak yardım isteyebilir.",
+        "q5": "Randevu sistemi nasıl çalışır?",
+        "a5": "AI asistanınız müşterilerinizle konuşurken uygun randevu saatlerini önerir. Siz de Ayarlar > Randevu Ayarları bölümünden çalışma saatlerinizi, randevu sürelerinizi ve özel günlerinizi belirleyebilirsiniz.",
+        "q6": "Bildirim ayarlarımı nasıl değiştiririm?",
+        "a6": "Ayarlar > Bildirimler bölümünden email, SMS ve push bildirim tercihlerinizi ayarlayabilirsiniz. Her kanal için ayrı bildirim kuralları oluşturabilirsiniz.",
+        "q7": "Yeni ekip üyesi nasıl eklerim?",
+        "a7": "Ekip sayfasından \"Yeni Ekip Üyesi Ekle\" butonuna tıklayın. Email, rol ve yetkileri belirleyin. Eklenen üye email ile davet alacaktır.",
+        "q8": "Ekip üyelerine nasıl yetki veririm?",
+        "a8": "Ekip sayfasından ilgili üyeyi seçin ve \"Düzenle\" butonuna tıklayın. Yetki ayarları bölümünden konuşma yönetimi, rapor görüntüleme, ayar değiştirme gibi yetkileri seçebilirsiniz.",
+        "q9": "Raporları nasıl dışa aktarırım?",
+        "a9": "Raporlar sayfasında istediğiniz raporu seçin. Tarih aralığını belirleyin ve sağ üst köşedeki \"Excel'e Aktar\" veya \"PDF'e Aktar\" butonlarını kullanın.",
+        "q10": "Asistan performans metriklerini nasıl yorumlarım?",
+        "a10": "Asistan performans raporunda yanıt süresi, başarı oranı, müşteri memnuniyeti gibi metrikler bulunur. Yeşil değerler iyi performansı, sarı değerler gelişim alanlarını gösterir.",
+        "q11": "AI yanıt vermiyor, ne yapmalıyım?",
+        "a11": "İlk olarak internet bağlantınızı kontrol edin. Ayarlar > Asistan bölümünden AI durumunu kontrol edin. Sorun devam ederse destek ekibimize ticket açın.",
+        "q12": "Mesajlar gecikmeli geliyor?",
+        "a12": "Kanal entegrasyonlarınızı kontrol edin. WhatsApp ve diğer platformlar için bağlantı durumunu Ayarlar > Kanal Entegrasyonları bölümünden kontrol edebilirsiniz."
+      }
+    },
+    "videos": {
+      "title": "Video Eğitimler",
+      "views": "görüntülenme",
+      "tutorials": {
+        "t1": "AsistanApp'e Hızlı Başlangıç",
+        "t2": "Asistan Kurulumu ve Özelleştirme",
+        "t3": "WhatsApp ve Instagram Entegrasyonu",
+        "t4": "Konuşma Yönetimi ve AI Devresi",
+        "t5": "Rapor ve Analiz Araçları",
+        "t6": "Ekip Yönetimi ve Yetkilendirme"
+      }
+    },
+    "support": {
+      "title": "Destek Al",
+      "description": "Sorununuzu hemen çözmek için destek ekibimizle iletişime geçin.",
+      "sendEmail": "Email Gönder"
+    },
+    "tickets": {
+      "title": "Taleplerim",
+      "noTickets": "Henüz destek talebiniz bulunmuyor.",
+      "lastUpdate": "Son güncelleme:",
+      "status": {
+        "open": "Açık",
+        "inProgress": "İşlemde",
+        "resolved": "Çözüldü"
+      },
+      "mockSubjects": {
+        "s1": "WhatsApp bağlantı sorunu",
+        "s2": "Fatura indirme hatası"
+      }
+    },
+    "documentation": {
+      "title": "Dokümantasyon",
+      "apiDocs": "API Dokümantasyonu",
+      "integrationGuide": "Entegrasyon Rehberi",
+      "security": "Güvenlik & Gizlilik",
+      "changelog": "Sürüm Notları"
+    },
+    "ticketForm": {
+      "title": "Destek Talebi Oluştur",
+      "subtitle": "Sorununuzu detaylı bir şekilde açıklayın",
+      "subject": "Konu",
+      "priority": "Öncelik",
+      "description": "Açıklama",
+      "attachments": "Ekler (Opsiyonel)",
+      "addFile": "Dosya veya ekran görüntüsü ekle",
+      "priorities": {
+        "low": "Düşük",
+        "normal": "Normal",
+        "high": "Yüksek",
+        "urgent": "Acil"
+      },
+      "tip": {
+        "title": "İpucu:",
+        "text": "Sorununuzu detaylı açıklamanız ve ekran görüntüleri eklemeniz, daha hızlı çözüm bulmamıza yardımcı olur."
+      },
+      "cancel": "İptal",
+      "submit": "Talep Oluştur"
+    }
+  },
+  "emptyStates": {
+    "noResults": "Sonuç bulunamadı",
+    "searchNoResults": "Arama kriterlerinize uygun sonuç bulunamadı.",
+    "searchNoResultsForQuery": "\"{{query}}\" için sonuç bulunamadı. Farklı anahtar kelimeler deneyin.",
+    "clearSearch": "Aramayı Temizle",
+    "noData": "Veri bulunamadı",
+    "noDataDescription": "Henüz gösterilecek veri bulunmuyor.",
+    "noMessages": "Henüz mesaj yok",
+    "noMessagesDescription": "Konuşmaya başlamak için ilk mesajı gönderin.",
+    "sendMessage": "Mesaj Gönder",
+    "noUsers": "Kullanıcı bulunamadı",
+    "noUsersDescription": "Henüz eklenmiş kullanıcı bulunmuyor.",
+    "addUser": "Kullanıcı Ekle",
+    "noFiles": "Dosya bulunamadı",
+    "noFilesDescription": "Henüz yüklenmiş dosya bulunmuyor.",
+    "uploadFile": "Dosya Yükle",
+    "emptyFolder": "Klasör boş",
+    "emptyFolderDescription": "Bu klasörde henüz içerik bulunmuyor.",
+    "noOrders": "Sipariş bulunamadı",
+    "noOrdersDescription": "Henüz sipariş bulunmuyor.",
+    "noEvents": "Etkinlik bulunamadı",
+    "noEventsDescription": "Takvimde gösterilecek etkinlik bulunmuyor.",
+    "createEvent": "Etkinlik Oluştur",
+    "error": "Bir hata oluştu",
+    "errorDescription": "Veriler yüklenirken bir sorun oluştu. Lütfen tekrar deneyin."
+  },
+  "templates": {
+    "notFound": "Şablon bulunamadı",
+    "tryDifferentSearch": "Farklı bir arama yapın"
+  },
+  "quickReply": {
+    "title": "Hızlı Yanıt Şablonları",
+    "addNew": "Yeni Şablon Ekle",
+    "comingSoon": "Yeni şablon ekleme özelliği yakında!",
+    "searchPlaceholder": "Şablon ara...",
+    "categories": {
+      "all": "Tümü",
+      "greeting": "Karşılama",
+      "appointment": "Randevu",
+      "product": "Ürün",
+      "support": "Destek",
+      "closing": "Kapanış"
+    },
+    "greeting": {
+      "title": "Karşılama Mesajı",
+      "content": "Merhaba! Size nasıl yardımcı olabilirim?"
+    },
+    "appointment": {
+      "title": "Randevu Teklifi",
+      "content": "Randevu oluşturmak ister misiniz? Size uygun tarih ve saati bildirebilir misiniz?"
+    },
+    "product": {
+      "title": "Ürün Bilgisi",
+      "content": "Bu ürün hakkında detaylı bilgi almak için lütfen ürün kodunu paylaşın."
+    },
+    "support": {
+      "title": "Destek Talebi",
+      "content": "Talebinizi aldık. Ekibimiz en kısa sürede sizinle iletişime geçecek."
+    },
+    "closing": {
+      "title": "Teşekkür & Kapanış",
+      "content": "Bize ulaştığınız için teşekkür ederiz. İyi günler dileriz!"
+    },
+    "price": {
+      "title": "Fiyat Bilgisi",
+      "content": "Fiyat bilgisi için lütfen bize ürün kodunu iletin. En güncel fiyatları size ileteceğiz."
+    },
+    "hours": {
+      "title": "Çalışma Saatleri",
+      "content": "Çalışma saatlerimiz: Pazartesi-Cuma 09:00-18:00, Cumartesi 10:00-16:00"
+    },
+    "address": {
+      "title": "Adres Bilgisi",
+      "content": "Mağaza adresimiz: İstanbul, Türkiye. Detaylı adres için web sitemizi ziyaret edebilirsiniz."
+    }
+  },
+  "dateRange": {
+    "label": "Tarih Aralığı",
+    "quickSelect": "Hızlı Seçim",
+    "customRange": "Özel Tarih Aralığı",
+    "startDate": "Başlangıç",
+    "endDate": "Bitiş",
+    "presets": {
+      "24h": "Son 24 Saat",
+      "7d": "Son 7 Gün",
+      "30d": "Son 30 Gün",
+      "3m": "Son 3 Ay",
+      "1y": "Son 1 Yıl"
+    }
+  },
+  "auth": {
+    "email": "E-posta adresi",
+    "emailPlaceholder": "E-posta adresinizi girin",
+    "password": "Şifre",
+    "passwordPlaceholder": "Şifrenizi girin",
+    "rememberMe": "Beni hatırla",
+    "forgotPassword": "Şifrenizi mi unuttunuz?",
+    "login": "Giriş Yap",
+    "loginFailed": "Giriş başarısız. Lütfen bilgilerinizi kontrol edin.",
+    "adminLoginSubtitle": "AsistanApp Yönetim Girişi",
+    "agentLoginTitle": "Ekip Üyesi Girişi",
+    "agentLoginSubtitle": "Müşteri görüşmelerinizi yönetin",
+    "forgotPasswordTitle": "Şifremi Unuttum",
+    "forgotPasswordSubtitle": "Şifrenizi sıfırlamak için e-posta adresinizi girin",
+    "emailSent": "E-posta Gönderildi!",
+    "resetLinkSent": "Şifre sıfırlama bağlantısı şu adrese gönderildi:",
+    "resetPasswordError": "Bir hata oluştu. Lütfen tekrar deneyin.",
+    "backToLogin": "Giriş sayfasına dön"
+  },
+  "errors": {
+    "notFound": {
+      "goBack": "Geri Dön",
+      "previousPage": "Önceki sayfa",
+      "home": "Ana Sayfa",
+      "goToDashboard": "Dashboard'a git",
+      "help": "Yardım",
+      "getSupport": "Destek al",
+      "popularPages": "Popüler Sayfalar:"
+    },
+    "serverError": {
+      "refresh": "Yenile",
+      "reloadPage": "Sayfayı yeniden yükle",
+      "home": "Ana Sayfa",
+      "goToDashboard": "Dashboard'a dön",
+      "support": "Destek",
+      "getHelp": "Yardım al",
+      "whatCanYouDo": "Ne Yapabilirsiniz?",
+      "tip1": "Sayfayı yenileyin: Geçici bir hata olabilir.",
+      "tip2": "Biraz bekleyin: Sistem otomatik olarak düzelecektir.",
+      "tip3": "Destek ekibimizle iletişime geçin: Sorununuzu bildirin."
+    }
+  },
+  "fileUpload": {
+    "fileSizeError": "Dosya boyutu {{maxSize}}MB'dan küçük olmalıdır",
+    "unsupportedFormat": "Desteklenmeyen dosya formatı",
+    "clickOrDrag": "Dosya yüklemek için tıklayın veya sürükleyin",
+    "dropFiles": "Dosyaları buraya bırakın",
+    "supportedFormats": "Desteklenen formatlar: {{formats}}",
+    "allFormatsSupported": "Tüm dosya formatları desteklenir",
+    "maxSize": "Maksimum {{maxSize}}MB",
+    "maxFiles": "{{maxFiles}} dosyaya kadar"
+  },
+  "units": {
+    "minutes": "dk",
+    "hours": "sa",
+    "days": "gün",
+    "seconds": "sn"
+  },
+  "labels": {
+    "average": "Ortalama",
+    "target": "Hedef",
+    "viewAll": "Tümünü Gör",
+    "date": "Tarih",
+    "time": "Saat",
+    "notSpecified": "Belirtilmedi",
+    "none": "Yok"
+  }
+}
+

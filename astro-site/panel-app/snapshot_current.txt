@@ -1,0 +1,391 @@
+.
+├── AGENT_UI_MASTER_COMPLETE.md
+├── BACKEND_REQUIREMENTS_AGENT.md
+├── BACKEND_REQUIREMENTS.md
+├── backups
+│   └── before_ai_replacement_20251011_234116.tar.gz
+├── COMPARISON_ANALYSIS.md
+├── index.html
+├── MIGRATION_REPORT.md
+├── package.json
+├── playwright.config.ts
+├── postcss.config.js
+├── PRODUCTION_CHECKLIST.md
+├── public
+│   ├── clear-storage.html
+│   ├── favicon.svg
+│   ├── fix-loading.html
+│   ├── logo.svg
+│   └── sw.js
+├── QUICK_TEST.sh
+├── snapshot_current.txt
+├── src
+│   ├── App.tsx
+│   ├── components
+│   │   ├── admin
+│   │   │   └── layout
+│   │   │       ├── AdminHeader.tsx
+│   │   │       ├── AdminLayout.tsx
+│   │   │       └── AdminSidebar.tsx
+│   │   ├── agent
+│   │   │   ├── ai
+│   │   │   │   └── AgentAIChatModal.tsx
+│   │   │   ├── conversations
+│   │   │   │   ├── AdvancedFilters.tsx
+│   │   │   │   ├── AssignmentModal.tsx
+│   │   │   │   ├── CustomerHistoryPanel.tsx
+│   │   │   │   ├── QuickReplies.tsx
+│   │   │   │   ├── TagsPanel.tsx
+│   │   │   │   └── TypingIndicator.tsx
+│   │   │   ├── dashboard
+│   │   │   ├── KeyboardShortcutsHelp.tsx
+│   │   │   ├── layout
+│   │   │   │   ├── AgentHeader.tsx
+│   │   │   │   ├── AgentLayout.tsx
+│   │   │   │   └── AgentSidebar.tsx
+│   │   │   └── notifications
+│   │   │       └── NotificationCenter.tsx
+│   │   ├── auth
+│   │   │   ├── ModuleGuard.tsx
+│   │   │   ├── ProtectedRoute.tsx
+│   │   │   ├── PublicRoute.tsx
+│   │   │   └── SubdomainGuard.tsx
+│   │   ├── charts
+│   │   │   ├── BarChartComponent.tsx
+│   │   │   ├── index.ts
+│   │   │   ├── PieChartComponent.tsx
+│   │   │   └── TrendLineChart.tsx
+│   │   ├── conversations
+│   │   │   └── ConversationQueuePanel.tsx
+│   │   ├── dashboard
+│   │   │   ├── AIPerformance.tsx
+│   │   │   ├── AlertList.tsx
+│   │   │   ├── ChannelDistribution.tsx
+│   │   │   ├── KPICards.tsx
+│   │   │   ├── TeamPerformance.tsx
+│   │   │   └── TrendChart.tsx
+│   │   ├── emergency
+│   │   ├── error
+│   │   │   └── ErrorBoundary.tsx
+│   │   ├── filters
+│   │   │   ├── DateRangePicker.tsx
+│   │   │   ├── index.ts
+│   │   │   └── MultiSelectFilter.tsx
+│   │   ├── forms
+│   │   │   ├── FormField.tsx
+│   │   │   ├── index.ts
+│   │   │   └── ValidatedProfileForm.tsx
+│   │   ├── layout
+│   │   │   ├── Header.tsx
+│   │   │   ├── MainLayout.tsx
+│   │   │   └── Sidebar.tsx
+│   │   ├── search
+│   │   │   ├── InConversationSearch.tsx
+│   │   │   ├── index.ts
+│   │   │   └── MessageSearch.tsx
+│   │   ├── templates
+│   │   │   ├── index.ts
+│   │   │   └── QuickReplyTemplates.tsx
+│   │   ├── tenants
+│   │   │   └── CreateTenantModal.tsx
+│   │   ├── theme
+│   │   │   ├── index.ts
+│   │   │   ├── __tests__
+│   │   │   │   └── ThemeSwitcher.test.tsx
+│   │   │   └── ThemeSwitcher.tsx
+│   │   ├── ui
+│   │   │   ├── button.tsx
+│   │   │   ├── EmojiPicker.tsx
+│   │   │   ├── EmptyState.tsx
+│   │   │   ├── FileUpload.tsx
+│   │   │   ├── FormInput.tsx
+│   │   │   ├── index.ts
+│   │   │   ├── index.tsx
+│   │   │   ├── LoadingSkeleton.tsx
+│   │   │   ├── LoadingSpinner.tsx
+│   │   │   ├── Modal.tsx
+│   │   │   ├── skeletons
+│   │   │   │   ├── ConversationsSkeleton.tsx
+│   │   │   │   ├── DashboardSkeleton.tsx
+│   │   │   │   └── index.ts
+│   │   │   └── Skeleton.tsx
+│   │   ├── upload
+│   │   │   ├── DragDropUpload.tsx
+│   │   │   ├── FileUploadManager.tsx
+│   │   │   └── index.ts
+│   │   └── voice
+│   │       ├── ActiveCallScreen.tsx
+│   │       ├── AgentIncomingCallAlert.tsx
+│   │       ├── AICallTranscript.tsx
+│   │       ├── CallHistoryPanel.tsx
+│   │       ├── CallTransferModal.tsx
+│   │       ├── IncomingCallModal.tsx
+│   │       └── OwnerCallNotification.tsx
+│   ├── config
+│   │   └── business-types.ts
+│   ├── constants
+│   │   └── voice-call.ts
+│   ├── contexts
+│   │   └── BusinessContext.tsx
+│   ├── data
+│   │   ├── mock-conversations.ts
+│   │   └── mock-data-generator.ts
+│   ├── features
+│   │   └── agent
+│   │       ├── components
+│   │       │   ├── ai
+│   │       │   │   └── AgentAIChatModal.tsx
+│   │       │   ├── conversations
+│   │       │   │   ├── AdvancedFilters.tsx
+│   │       │   │   ├── AssignmentModal.tsx
+│   │       │   │   ├── CustomerHistoryPanel.tsx
+│   │       │   │   ├── QuickReplies.tsx
+│   │       │   │   ├── TagsPanel.tsx
+│   │       │   │   └── TypingIndicator.tsx
+│   │       │   ├── dashboard
+│   │       │   ├── KeyboardShortcutsHelp.tsx
+│   │       │   ├── layout
+│   │       │   │   ├── AgentHeader.tsx
+│   │       │   │   ├── AgentLayout.tsx
+│   │       │   │   └── AgentSidebar.tsx
+│   │       │   └── notifications
+│   │       │       └── NotificationCenter.tsx
+│   │       ├── hooks
+│   │       │   └── useKeyboardShortcuts.ts
+│   │       ├── pages
+│   │       │   ├── ai-chat
+│   │       │   │   └── AgentAIChatPage.tsx
+│   │       │   ├── conversations
+│   │       │   │   ├── AgentConversations.tsx
+│   │       │   │   ├── ConversationDetail.tsx
+│   │       │   │   └── VoiceCallScreen.tsx
+│   │       │   ├── dashboard
+│   │       │   │   └── AgentDashboard.tsx
+│   │       │   └── profile
+│   │       │       ├── AgentProfilePage.tsx
+│   │       │       └── AgentProfile.tsx
+│   │       ├── stores
+│   │       │   ├── agent-status-store.tsx
+│   │       │   └── emergency-call-store.tsx
+│   │       ├── __tests__
+│   │       │   ├── components
+│   │       │   ├── hooks
+│   │       │   ├── pages
+│   │       │   ├── README.md
+│   │       │   └── stores
+│   │       ├── types
+│   │       └── utils
+│   ├── hooks
+│   │   ├── useAIChatbot.ts
+│   │   ├── useApiData.ts
+│   │   ├── useKeyboardShortcuts.ts
+│   │   ├── useMessageTemplates.ts
+│   │   ├── useMockData.ts
+│   │   ├── usePushNotifications.ts
+│   │   ├── useQuickActions.ts
+│   │   ├── useSmartSuggestions.ts
+│   │   ├── useStreamingChat.ts
+│   │   ├── useSuggestionsAnalytics.ts
+│   │   ├── useTeamChat.ts
+│   │   ├── useVoiceMessages.ts
+│   │   └── useWebSocket.tsx
+│   ├── i18n.ts
+│   ├── index.css
+│   ├── lib
+│   │   ├── api
+│   │   │   ├── client.ts
+│   │   │   ├── services
+│   │   │   │   ├── conversations.service.ts
+│   │   │   │   ├── dashboard.service.ts
+│   │   │   │   └── index.ts
+│   │   │   └── types.ts
+│   │   ├── i18n
+│   │   │   └── config.ts
+│   │   ├── react-query
+│   │   │   ├── hooks
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── useConversations.ts
+│   │   │   │   └── useDashboard.ts
+│   │   │   └── queryClient.ts
+│   │   ├── utils.ts
+│   │   ├── validations
+│   │   │   └── settings.schemas.ts
+│   │   └── websocket
+│   │       └── client.ts
+│   ├── main.tsx
+│   ├── pages
+│   │   ├── admin
+│   │   │   ├── AdminAnalytics.tsx
+│   │   │   ├── AdminDashboard.tsx
+│   │   │   ├── AdminSettings.tsx
+│   │   │   ├── AdminSystem.tsx
+│   │   │   └── AdminUsers.tsx
+│   │   ├── agent
+│   │   │   ├── ai-chat
+│   │   │   │   └── AgentAIChatPage.tsx
+│   │   │   ├── conversations
+│   │   │   │   ├── AgentConversations.tsx
+│   │   │   │   ├── ConversationDetail.tsx
+│   │   │   │   └── VoiceCallScreen.tsx
+│   │   │   ├── dashboard
+│   │   │   │   └── AgentDashboard.tsx
+│   │   │   └── profile
+│   │   │       ├── AgentProfilePage.tsx
+│   │   │       └── AgentProfile.tsx
+│   │   ├── auth
+│   │   │   ├── AdminForgotPasswordPage.tsx
+│   │   │   ├── AdminLoginPage.tsx
+│   │   │   ├── AgentForgotPasswordPage.tsx
+│   │   │   ├── AgentLoginPage.tsx
+│   │   │   ├── ForgotPasswordPage.tsx
+│   │   │   ├── LoginPage.tsx
+│   │   │   └── RegisterPage.tsx
+│   │   ├── conversations
+│   │   │   └── ConversationsPage.tsx
+│   │   ├── dashboard
+│   │   │   └── DashboardPage.tsx
+│   │   ├── demo
+│   │   ├── DisabledModulePage.tsx
+│   │   ├── error
+│   │   │   ├── NotFoundPage.tsx
+│   │   │   └── ServerErrorPage.tsx
+│   │   ├── help
+│   │   │   └── HelpPage.tsx
+│   │   ├── reports
+│   │   │   └── ReportsPage.tsx
+│   │   ├── settings
+│   │   │   ├── components
+│   │   │   │   ├── AISettings.tsx
+│   │   │   │   ├── AppointmentSettings.tsx
+│   │   │   │   ├── BillingSettings.tsx
+│   │   │   │   ├── BusinessSettings.tsx
+│   │   │   │   ├── ChannelSettings.tsx
+│   │   │   │   ├── CustomizationSettings.tsx
+│   │   │   │   ├── DataSettings.tsx
+│   │   │   │   ├── IntegrationSettings.tsx
+│   │   │   │   ├── NotificationSettings.tsx
+│   │   │   │   ├── ProfileSettings.tsx
+│   │   │   │   ├── SecuritySettings.tsx
+│   │   │   │   └── TeamSettings.tsx
+│   │   │   ├── SettingsPage.tsx
+│   │   │   └── TenantAPISettings.tsx
+│   │   ├── team
+│   │   │   ├── TeamChatPage.tsx
+│   │   │   └── TeamPage.tsx
+│   │   └── tenants
+│   │       ├── FinancialReportsPage.tsx
+│   │       ├── TenantDetailPage.tsx
+│   │       └── TenantsPage.tsx
+│   ├── providers
+│   │   └── business-context.tsx
+│   ├── services
+│   │   ├── api-service.ts
+│   │   ├── conversation-assignment.service.ts
+│   │   ├── message-templates.ts
+│   │   ├── smart-suggestions.ts
+│   │   ├── voice-call.service.ts
+│   │   ├── voice-transcription.ts
+│   │   └── websocket-service.tsx
+│   ├── shared
+│   │   ├── config
+│   │   │   └── business-types.ts
+│   │   ├── hooks
+│   │   │   ├── useAIChatbot.ts
+│   │   │   ├── useApiData.ts
+│   │   │   ├── useMessageTemplates.ts
+│   │   │   ├── useMockData.ts
+│   │   │   ├── usePushNotifications.ts
+│   │   │   ├── useQuickActions.ts
+│   │   │   ├── useSmartSuggestions.ts
+│   │   │   ├── useStreamingChat.ts
+│   │   │   ├── useSuggestionsAnalytics.ts
+│   │   │   ├── useTeamChat.ts
+│   │   │   ├── useVoiceMessages.ts
+│   │   │   └── useWebSocket.tsx
+│   │   ├── stores
+│   │   │   ├── auth-store.tsx
+│   │   │   ├── notification-store.tsx
+│   │   │   └── theme-store.tsx
+│   │   ├── __tests__
+│   │   │   ├── hooks
+│   │   │   ├── README.md
+│   │   │   ├── stores
+│   │   │   ├── ui
+│   │   │   └── utils
+│   │   ├── types
+│   │   ├── ui
+│   │   │   ├── button.tsx
+│   │   │   ├── charts
+│   │   │   │   ├── BarChartComponent.tsx
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── PieChartComponent.tsx
+│   │   │   │   └── TrendLineChart.tsx
+│   │   │   ├── EmojiPicker.tsx
+│   │   │   ├── EmptyState.tsx
+│   │   │   ├── FileUpload.tsx
+│   │   │   ├── FormInput.tsx
+│   │   │   ├── forms
+│   │   │   │   ├── FormField.tsx
+│   │   │   │   ├── index.ts
+│   │   │   │   └── ValidatedProfileForm.tsx
+│   │   │   ├── index.ts
+│   │   │   ├── index.tsx
+│   │   │   ├── LoadingSkeleton.tsx
+│   │   │   ├── LoadingSpinner.tsx
+│   │   │   ├── Modal.tsx
+│   │   │   ├── skeletons
+│   │   │   │   ├── ConversationsSkeleton.tsx
+│   │   │   │   ├── DashboardSkeleton.tsx
+│   │   │   │   └── index.ts
+│   │   │   ├── Skeleton.tsx
+│   │   │   ├── theme
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── __tests__
+│   │   │   │   │   └── ThemeSwitcher.test.tsx
+│   │   │   │   └── ThemeSwitcher.tsx
+│   │   │   └── upload
+│   │   │       ├── DragDropUpload.tsx
+│   │   │       ├── FileUploadManager.tsx
+│   │   │       └── index.ts
+│   │   └── utils
+│   │       ├── dev-only.ts
+│   │       ├── exportHelpers.ts
+│   │       ├── formatters.ts
+│   │       ├── subdomain.ts
+│   │       ├── toast.ts
+│   │       └── validations.ts
+│   ├── stores
+│   │   ├── agent-status-store.tsx
+│   │   ├── auth-store.tsx
+│   │   ├── emergency-call-store.tsx
+│   │   ├── notification-store.tsx
+│   │   └── theme-store.tsx
+│   ├── test
+│   │   ├── components
+│   │   ├── integration
+│   │   ├── mocks
+│   │   │   ├── handlers.ts
+│   │   │   └── server.ts
+│   │   └── setup.ts
+│   ├── tests
+│   ├── types
+│   │   └── index.ts
+│   └── utils
+│       ├── dev-only.ts
+│       ├── exportHelpers.ts
+│       ├── formatters.ts
+│       ├── subdomain.ts
+│       ├── toast.ts
+│       └── validations.ts
+├── tailwind.config.js
+├── TEST_VOICE_CALL.md
+├── tsconfig.json
+├── tsconfig.node.json
+├── tsconfig.node.tsbuildinfo
+├── tsconfig.tsbuildinfo
+├── TS_FIX_REPORT.md
+├── vite.config.d.ts
+├── vite.config.js
+└── vite.config.ts
+
+112 directories, 277 files

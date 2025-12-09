@@ -1,0 +1,739 @@
+{
+  "sidebar": {
+    "dashboard": "Dashboard",
+    "conversations": "Conversations",
+    "teamChat": "Team Chat",
+    "aiAssistant": "AI Assistant",
+    "profile": "Profile",
+    "new": "NEW",
+    "breakTimeExpired": "Time expired!",
+    "remaining": "{{time}} remaining"
+  },
+  "status": {
+    "label": "Status",
+    "available": "Available",
+    "busy": "Busy",
+    "away": "Away",
+    "onBreak": "On Break",
+    "offline": "Offline",
+    "changeStatus": "Change Status",
+    "updated": "Status updated",
+    "messages": {
+      "available": "✅ You are now available! You can receive new conversations.",
+      "busy": "🔴 You are now busy. New conversations will not be assigned except urgent ones.",
+      "away": "⏰ You are now away. New conversations will not be assigned.",
+      "onBreak": "☕ You are on break! New conversations will not be assigned."
+    }
+  },
+  "breakTimer": {
+    "remaining": "{{time}} remaining",
+    "timeUp": "Time's up!"
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "pageTitle": "Dashboard",
+    "subtitle": "Your tasks and performance today",
+    "welcome": "Welcome",
+    "welcomeWithName": "Welcome, {{name}} 👋",
+    "todayStats": "Today's Statistics",
+    "totalConversations": "Total Conversations",
+    "activeConversations": "Active Conversations",
+    "resolvedToday": "Resolved Today",
+    "resolvedConversations": "Resolved Conversations",
+    "pendingConversations": "Pending Conversations",
+    "pendingConversationsList": "Pending Conversations",
+    "averageResponseTime": "Average Response Time",
+    "responseTime": "Response Time",
+    "satisfactionScore": "{{score}}/{{max}}",
+    "satisfaction": "Satisfaction",
+    "customerScore": "Customer Score",
+    "recentActivity": "Recent Activity",
+    "greatJob": "Great job! 🎉",
+    "replyNow": "Reply now →",
+    "today": "Today",
+    "now": "Now",
+    "average": "Average",
+    "target": "Target",
+    "targetResponseTime": "Target: <10 min",
+    "resolutionRate": "{{rate}}% resolution rate",
+    "newMessages_one": "{{count}} new message",
+    "newMessages_other": "{{count}} new messages",
+    "allMessagesRead": "All messages read",
+    "noAssignedConversations": "No assigned conversations",
+    "autoAssignMessage": "New conversations will be automatically assigned to you",
+    "justNow": "Just now",
+    "feedback": {
+      "excellent": "⭐ Excellent!",
+      "good": "👍 Good!",
+      "keepGoing": "💪 Keep going!"
+    }
+  },
+  "callHistory": {
+    "searchPlaceholder": "Search by name or phone number...",
+    "title": "Call History",
+    "recordCount": "{{count}} call records",
+    "all": "All",
+    "incoming": "Incoming",
+    "outgoing": "Outgoing",
+    "missed": "Missed",
+    "unknown": "Unknown",
+    "listenRecording": "Listen Recording",
+    "download": "Download",
+    "noRecords": "No call records found"
+  },
+  "tags": {
+    "title": "Tags",
+    "subtitle": "Tag conversation",
+    "tagNamePlaceholder": "Tag name...",
+    "selectedTags": "Selected Tags ({{count}})",
+    "availableTags": "Available Tags",
+    "customTagAdd": "Add Custom Tag",
+    "saveSuccess": "{{count}} tag(s) saved",
+    "saveError": "Failed to save tags",
+    "predefined": {
+      "urgent": "Urgent",
+      "vip": "VIP",
+      "complaint": "Complaint",
+      "refund": "Refund",
+      "technical": "Technical",
+      "billing": "Billing",
+      "feedback": "Feedback",
+      "followup": "Follow-up"
+    }
+  },
+  "quickReplies": {
+    "title": "Quick Replies",
+    "searchPlaceholder": "Search template... (e.g: /welcome)",
+    "templateCount": "{{count}} template(s)",
+    "noTemplates": "No templates found",
+    "shortcutHint": "💡 Tip: Use / in the message box to access shortcuts",
+    "return": "Return",
+    "categories": {
+      "all": "All",
+      "greeting": "Greeting",
+      "order": "Order",
+      "return": "Return",
+      "product": "Product",
+      "shipping": "Shipping",
+      "general": "General",
+      "closing": "Closing"
+    }
+  },
+  "assignment": {
+    "notePlaceholder": "E.g: Customer requesting an agent specialized in X..."
+  },
+  "aiChat": {
+    "title": "Assistant",
+    "subtitle": "Operational Support",
+    "askQuestion": "Ask a question...",
+    "header": {
+      "title": "Assistant",
+      "subtitle": "Ask about customer information and internal status"
+    },
+    "welcome": {
+      "message": "Hello {{name}}! I'm your AI assistant. \n\nI can help you with:\n• 📊 Customer information and conversation history\n• 💬 Internal conversation summaries\n• 📈 Daily statistics and performance\n• 👥 Team members and their status\n• 🎯 Customer behavior analysis\n\nHow can I assist you?",
+      "defaultName": "Agent"
+    },
+    "suggestions": {
+      "title": "You can also ask:",
+      "todayStats": "How many customers did I talk to today?",
+      "frequentQuestions": "What are the most frequently asked questions?",
+      "waitingCustomers": "Are there any waiting customers?",
+      "teamStatus": "What is the status of team members?",
+      "performance": "How's my performance?",
+      "dailyPerformance": "Daily performance",
+      "activeConversations": "Active conversations",
+      "avgResponseTime": "Avg. response time"
+    },
+    "queries": {
+      "waitingCustomers": "Who are the customers waiting right now?",
+      "dailyPerformance": "How is my performance today?",
+      "activeConversations": "How many active conversations do I have?",
+      "avgResponseTime": "What is my average response time?"
+    },
+    "welcomeMessage": "Hello! How can I help you? I can provide information about customer situations, team activities, and performance metrics.",
+    "infoTitle": "Operational Information Assistant",
+    "infoDescription": "This assistant provides information about customer situations, team activities, and performance metrics.",
+    "quickQuestions": "Quick Questions:",
+    "responses": {
+      "default": "🤔 Got it! I can help you with:\n\n• Waiting and active customers\n• Daily performance metrics\n• Team status and workload\n• Average response times\n• Customer information\n\nWhat else would you like to know?",
+      "processing": "Processing your question, please wait..."
+    },
+    "send": "Send",
+    "disclaimer": "AI only provides information about customer data and internal status",
+    "history": "History",
+    "clear": "Clear",
+    "thinking": "Thinking...",
+    "askPlaceholder": "Ask your AI assistant..."
+  },
+  "keyboard": {
+    "focusSearch": "Focus search bar",
+    "sendMessage": "Send message",
+    "quickReplies": "Quick replies",
+    "closeModals": "Close modals",
+    "nextConversation": "Next conversation",
+    "previousConversation": "Previous conversation",
+    "resolveConversation": "Resolve conversation",
+    "showShortcuts": "Keyboard shortcuts",
+    "addTags": "Add tags",
+    "transfer": "Transfer",
+    "categories": {
+      "general": "General",
+      "conversations": "Conversations",
+      "quickActions": "Quick Actions"
+    },
+    "help": {
+      "title": "Keyboard Shortcuts",
+      "subtitle": "Use shortcuts to work faster",
+      "tipPrefix": "Tip:",
+      "tipText": "Press ? to open this help menu"
+    }
+  },
+  "queue": {
+    "title": "Waiting Conversations",
+    "waitingCount": "{{count}} conversation(s) waiting for assignment",
+    "availableAgents": "{{count}} available team member(s)",
+    "noAvailableAgents": "No available team members",
+    "noAvailableAgentsDesc": "Conversations are waiting in queue. They will be assigned automatically when team members become available.",
+    "noQueue": "No conversations waiting in queue",
+    "position": "#{{position}} in Queue",
+    "unknownCustomer": "Unknown Customer",
+    "noLastMessage": "No last message",
+    "waitingFor": "Waiting: {{time}}",
+    "unknownTime": "Unknown",
+    "takeOver": "Take Over",
+    "assign": "Assign",
+    "selectAgent": "Select team member:",
+    "assignSuccess": "Conversation assigned successfully",
+    "assignError": "Failed to assign conversation",
+    "takeOverSuccess": "Conversation taken over successfully",
+    "takeOverError": "Failed to take over conversation"
+  },
+  "typingIndicator": {
+    "defaultName": "Customer"
+  },
+  "conversations": {
+    "title": "Conversations",
+    "count": "{{count}} conversation(s)",
+    "selectConversation": "Select a conversation",
+    "noConversations": "No conversations found",
+    "loading": "Loading...",
+    "searchPlaceholder": "Search conversations...",
+    "searchWithShortcut": "Search conversations... (Ctrl+K)",
+    "addNotesPlaceholder": "Add notes about this conversation...",
+    "messagePlaceholder": "Type your message...",
+    "filterByStatus": "Filter by status",
+    "filterByChannel": "Filter by channel",
+    "filterByPriority": "Filter by priority",
+    "sortBy": "Sort by",
+    "sortByPriority": "By priority",
+    "sortByTime": "By time",
+    "sortByUnread": "By unread",
+    "assignToMe": "Assign to Me",
+    "resolve": "Resolve",
+    "reopen": "Reopen",
+    "transfer": "Transfer",
+    "addNote": "Add Note",
+    "addTag": "Add Tag",
+    "viewHistory": "View History",
+    "tabs": {
+      "all": "All",
+      "assigned": "Assigned",
+      "my": "Mine",
+      "waiting": "Waiting"
+    },
+    "actions": {
+      "conversationTakenOver": "You have taken over the conversation: {{customerName}}",
+      "messageCopied": "Message copied",
+      "copyFailed": "Copy failed"
+    },
+    "filters": {
+      "filters": "Filters",
+      "applied": "Filters applied",
+      "advancedFilters": "Advanced Filters",
+      "activeFiltersCount": "{{count}} filter(s) active",
+      "channels": "Channels",
+      "tags": "Tags",
+      "priority": "Priority",
+      "assignedTo": "Assigned To",
+      "dateRange": "Date Range",
+      "startDate": "Start",
+      "endDate": "End",
+      "activeConversations": "active conversation(s)"
+    },
+    "list": {
+      "urgentPriority": "Urgent",
+      "highPriority": "Medium",
+      "lowPriority": "Low",
+      "aiStuck": "AI Stuck",
+      "forward": "Forward",
+      "lockedBy": "Locked by {{name}}"
+    },
+    "header": {
+      "close": "Close",
+      "back": "Back",
+      "closeEsc": "Close (Esc)",
+      "addNote": "Add Note",
+      "tags": "Tags",
+      "takeOver": "Take Over",
+      "resolve": "Resolved",
+      "fullscreen": "Fullscreen (F11)",
+      "exitFullscreen": "Exit Fullscreen (Esc)"
+    },
+    "messageInput": {
+      "placeholder": "Type your message... (/ for quick replies)",
+      "quickReplies": "Quick Replies",
+      "notes": "Notes",
+      "addFile": "Add File",
+      "addEmoji": "Add Emoji",
+      "removeFile": "Remove File",
+      "sendMessage": "Send Message",
+      "lockedBy": "This conversation was taken over by {{name}}",
+      "mustTakeOver": "You must take over this conversation",
+      "cannotSend": "Cannot send message",
+      "file": "File",
+      "photoVideo": "Photo/Video",
+      "uploading": "Uploading files..."
+    },
+    "messageArea": {
+      "aiAssistant": "AI Assistant",
+      "typing": "Typing..."
+    },
+    "notes": {
+      "title": "Notes",
+      "saved": "Note saved!"
+    },
+    "assignment": {
+      "title": "Forward Conversation",
+      "subtitle": "Select the agent you want to forward to",
+      "selectAgent": "Select Agent",
+      "currentAssignee": "(Current)",
+      "reasonLabel": "Reason / Note (Optional)",
+      "reasonWillBeShown": "This reason will be shown to the assigned agent",
+      "success": "Conversation successfully assigned!",
+      "successWithReason": "Conversation successfully assigned! - Reason: {{reason}}",
+      "statusOnline": "Online",
+      "statusBusy": "Busy",
+      "statusOffline": "Offline"
+    },
+    "customerHistory": {
+      "customerId": "Customer ID:",
+      "orders": "Orders",
+      "total": "Total",
+      "lastSeen": "Last Seen",
+      "contactInfo": "Contact Information",
+      "member": "Member since:",
+      "tagsTitle": "Tags",
+      "pastConversations": "Past Conversations",
+      "agent": "Agent:",
+      "resolved": "Resolved",
+      "ordersTitle": "Orders",
+      "items": "item(s)",
+      "notesTitle": "Notes",
+      "addNewNote": "Add New Note",
+      "timeAgo": {
+        "hoursAgo": "{{count}} hour(s) ago",
+        "daysAgo": "{{count}} day(s) ago",
+        "monthsAgo": "{{count}} month(s) ago"
+      }
+    },
+    "voiceCall": {
+      "onHold": "On Hold",
+      "active": "Active",
+      "aiHistory": "AI History",
+      "notesTitle": "Notes",
+      "previousIssues": "Previous Issues",
+      "aiAssistantTitle": "AI Assistant",
+      "thinking": "AI thinking...",
+      "response": "Response:",
+      "createAppointment": "Create Appointment",
+      "bookAppointment": "Book Appointment",
+      "hold": "Hold",
+      "continue": "Continue"
+    },
+    "detail": {
+      "urgentPriority": "URGENT",
+      "activePriority": "ACTIVE",
+      "emergencyCallTakenOver": "Emergency Call Taken Over",
+      "emergencyCallDescription": "This conversation was forwarded to you through the emergency call system. The customer is waiting for help.",
+      "aiAssistant": "(Assistant)",
+      "send": "Send",
+      "loading": "Loading..."
+    },
+    "customerInfo": "Customer Information",
+    "conversationDetails": "Conversation Details",
+    "typing": "Typing...",
+    "online": "Online",
+    "offline": "Offline",
+    "lastSeen": "Last seen: {{time}}"
+  },
+  "messages": {
+    "send": "Send",
+    "typeMessage": "Type a message...",
+    "attachFile": "Attach File",
+    "emoji": "Emoji",
+    "quickReplies": "Quick Replies",
+    "templates": "Templates",
+    "sent": "Sent",
+    "delivered": "Delivered",
+    "read": "Read",
+    "failed": "Failed",
+    "fileUploaded": "File uploaded",
+    "fileSizeExceeded": "File size too large",
+    "unsupportedFormat": "Unsupported format",
+    "copyMessage": "Copy Message",
+    "deleteMessage": "Delete Message",
+    "editMessage": "Edit Message",
+    "replyTo": "Reply to",
+    "fileSent": "File sent",
+    "sendFailed": "Failed to send message",
+    "validation": {
+      "messageOrFileRequired": "Message or file required",
+      "maxFilesExceeded": "Maximum {{maxFiles}} files can be added",
+      "invalidFiles": "Invalid files",
+      "filesAdded": "{{count}} files added",
+      "invalidMessage": "Invalid message",
+      "messageTooShort": "Message too short",
+      "messageTooLong": "Message too long (maximum {{max}} characters)",
+      "noteTooLong": "Note too long (maximum {{max}} characters)",
+      "tagEmpty": "Tag cannot be empty",
+      "tagTooLong": "Tag too long (maximum {{max}} characters)",
+      "tagInvalidChars": "Tag contains invalid characters",
+      "invalidPhone": "Invalid phone number",
+      "invalidEmail": "Invalid email address",
+      "fileTooLarge": "File size too large (maximum {{max}} MB)",
+      "noFileSelected": "No file selected",
+      "tooManyFiles": "Too many files (maximum {{max}})",
+      "noValidFiles": "No valid files found",
+      "invalidFileType": "Invalid file type",
+      "invalidProtocol": "Invalid protocol",
+      "invalidUrl": "Invalid URL",
+      "excessiveCaps": "Excessive capitalization",
+      "repetitiveContent": "Repetitive content",
+      "excessiveLinks": "Too many links"
+    }
+  },
+  "channels": {
+    "whatsapp": "WhatsApp",
+    "instagram": "Instagram",
+    "web": "Web Chat",
+    "phone": "Phone",
+    "email": "Email"
+  },
+  "priority": {
+    "low": "Low",
+    "normal": "Normal",
+    "high": "High",
+    "urgent": "Urgent"
+  },
+  "conversationStatus": {
+    "waiting": "Waiting",
+    "assigned": "Assigned",
+    "resolved": "Resolved",
+    "closed": "Closed",
+    "transferred": "Transferred"
+  },
+  "common": {
+    "close": "Close",
+    "cancel": "Cancel",
+    "save": "Save",
+    "refresh": "Refresh",
+    "reset": "Reset",
+    "apply": "Apply",
+    "forward": "Forward",
+    "copyMessage": "Copy Message",
+    "markAllRead": "Mark All as Read"
+  },
+  "layout": {
+    "closeMenu": "Close menu",
+    "toggleMenu": "Toggle menu",
+    "notifications": "Notifications",
+    "collapseSidebar": "Collapse sidebar",
+    "expandSidebar": "Expand sidebar"
+  },
+  "profile": {
+    "title": "Profile Settings",
+    "subtitle": "Manage your personal information and preferences",
+    "edit": "Edit",
+    "defaultName": "Agent User",
+    "defaultEmail": "agent@example.com",
+    "sections": {
+      "profileInfo": "Profile Information",
+      "security": "Security",
+      "preferences": "Preferences"
+    },
+    "fields": {
+      "name": "Name",
+      "email": "Email",
+      "emailImmutable": "Email address cannot be changed",
+      "phone": "Phone",
+      "role": "Role",
+      "joinDate": "Join Date"
+    },
+    "security": {
+      "passwordReset": "Password Reset",
+      "sendResetLink": "Send password reset link to your email",
+      "resetButton": "Reset Password",
+      "emailNotFound": "Email address not found",
+      "sendingResetEmail": "Sending password reset email...",
+      "resetEmailSent": "Your new password has been sent to {{email}}!",
+      "resetEmailFailed": "Failed to send password reset email. Please try again."
+    },
+    "preferences": {
+      "theme": {
+        "label": "Theme",
+        "dark": "Dark mode",
+        "light": "Light mode"
+      },
+      "emailNotifications": {
+        "label": "Email Notifications",
+        "description": "Receive emails for important events"
+      },
+      "pushNotifications": {
+        "label": "Push Notifications",
+        "description": "Instant notifications for new messages"
+      },
+      "soundEffects": {
+        "label": "Sound Effects",
+        "description": "Notification sounds"
+      },
+      "autoAssign": {
+        "label": "Auto Assignment",
+        "description": "Automatically receive new conversations"
+      }
+    },
+    "languages": {
+      "tr": "Türkçe",
+      "en": "English"
+    },
+    "personalInfo": "Personal Information",
+    "name": "Name",
+    "email": "Email",
+    "phone": "Phone",
+    "avatar": "Avatar",
+    "changeAvatar": "Change Avatar",
+    "uploadAvatar": "Upload Avatar",
+    "settings": "Settings",
+    "language": "Language",
+    "theme": "Theme",
+    "notifications": "Notifications",
+    "changePassword": "Change Password",
+    "currentPassword": "Current Password",
+    "newPassword": "New Password",
+    "confirmPassword": "Confirm Password",
+    "updateProfile": "Update Profile",
+    "profileUpdated": "Profile updated",
+    "passwordChanged": "Password changed",
+    "languageLabel": "Language",
+    "languageDescription": "Interface language",
+    "languageChanged": "Language changed",
+    "preferenceSaved": "Preferences saved",
+    "preferencesFailed": "Failed to save preferences",
+    "profileUpdateFailed": "Failed to update profile",
+    "settingsLabels": {
+      "changeTheme": "Change theme",
+      "emailNotifications": "Email notifications",
+      "pushNotifications": "Push notifications",
+      "soundEffects": "Sound effects",
+      "autoAssign": "Auto-assign"
+    }
+  },
+  "notifications": {
+    "title": "Notifications",
+    "unreadCount": "{{count}} unread",
+    "filterAll": "All ({{count}})",
+    "filterUnread": "Unread ({{count}})",
+    "empty": "No notifications",
+    "emptyUnread": "No unread notifications",
+    "markAllRead": "Mark All as Read",
+    "clearAll": "Clear All",
+    "newMessage": "New message",
+    "newAssignment": "New assignment",
+    "mentionedYou": "Mentioned you",
+    "conversationResolved": "Conversation resolved",
+    "conversationTransferred": "Conversation transferred",
+    "mention": "Mention",
+    "mentionedYouIn": "mentioned you in",
+    "clickToView": "Click to view"
+  },
+  "search": {
+    "searchConversations": "Search conversations",
+    "searchCustomers": "Search customers",
+    "searchMessages": "Search messages",
+    "noResultsFound": "No results found",
+    "tryDifferentKeywords": "Try different keywords"
+  },
+  "voiceCall": {
+    "notesPlaceholder": "Write your notes...",
+    "askQuestionPlaceholder": "Ask a question...",
+    "serviceOptional": "Service (optional)",
+    "noteOptional": "Note (optional)",
+    "end": "End",
+    "muteMic": "Mute Microphone",
+    "unmuteMic": "Unmute Microphone",
+    "muteSpeaker": "Mute Speaker",
+    "unmuteSpeaker": "Unmute Speaker",
+    "selectDateTime": "Please select date and time",
+    "appointmentCreated": "Appointment created successfully",
+    "appointmentCreateFailed": "Failed to create appointment",
+    "messageFileSent": "File sent",
+    "messageSendFailed": "Failed to send message",
+    "conversationClosed": "Conversation closed successfully",
+    "conversationCloseFailed": "Failed to close conversation",
+    "aiResponseReady": "AI response ready",
+    "aiResponseFailed": "Failed to get AI response",
+    "aiNoResponse": "AI couldn't generate a response, please rephrase your question",
+    "pleaseWriteQuestion": "Please write a question",
+    "questionTooShort": "Question too short, please be more specific",
+    "questionTooLong": "Question too long, please shorten it",
+    "takeoverFailed": "Failed to take over conversation",
+    "notesSaveFailed": "Failed to save notes"
+  },
+  "voice": {
+    "reject": "Reject",
+    "answer": "Answer",
+    "ignore": "Ignore",
+    "close": "Close",
+    "internal": "Internal",
+    "incomingCall": "Incoming Call",
+    "outgoingCall": "Outgoing Call",
+    "ringing": "Ringing...",
+    "call": "Call",
+    "speaking": "Speaking",
+    "waiting": "waiting",
+    "status": {
+      "ringing": "Incoming call...",
+      "connecting": "Connecting...",
+      "connected": "Call in progress",
+      "onHold": "On hold",
+      "transferring": "Transferring"
+    },
+    "priority": {
+      "urgent": "URGENT",
+      "high": "IMPORTANT",
+      "normal": "NORMAL",
+      "low": "Low"
+    },
+    "aiHandoff": {
+      "title": "AI HANDOFF",
+      "defaultReason": "AI got stuck, human support needed",
+      "talkedFor": "Talked with AI for",
+      "summary": "AI Conversation Summary",
+      "whatDiscussed": "What Was Discussed with AI:",
+      "whyStuck": "Why AI Got Stuck:",
+      "customerIntent": "Customer Intent:",
+      "customerMood": "Customer Mood",
+      "sentiment": {
+        "positive": "Positive",
+        "negative": "Negative",
+        "neutral": "Neutral"
+      },
+      "previousInteractions": "Previous Interactions",
+      "last": "Last",
+      "quickNotes": "Quick Notes:",
+      "suggestedResponse": "Suggested Response:",
+      "notes": "Notes:",
+      "autoReject": "Call will be auto-rejected in {{seconds}} seconds",
+      "transcript": "AI Conversation Record",
+      "transcriptCount": "{{count}} messages • Conversation with AI",
+      "aiAssistant": "AI Assistant",
+      "customer": "Customer",
+      "transcriptDisclaimer": "This conversation transcript was automatically generated by AI"
+    },
+    "addNote": "Add Note",
+    "callDetails": "Call Details",
+    "callDetailsSubtitle": "Customer information and call notes",
+    "customer": "Customer",
+    "callStartTime": "Call Start Time",
+    "callType": "Call Type",
+    "internalCall": "Internal Call",
+    "externalCall": "External Line",
+    "viewDetails": "View Details",
+    "connecting": "Connecting",
+    "connectingDescription": "Connecting with customer, please wait...",
+    "connectionFailed": "Connection failed. Please try again.",
+    "callNotes": "Call Notes",
+    "callNotesHint": "💡 Tip: Take notes of important points during the call",
+    "phoneCallNote": "<strong>Note:</strong> This is a phone call. To message the customer in writing, end the call and continue from the conversations tab.",
+    "callNotesPlaceholder": "Take notes during the call...\n\nExample:\n- Customer requested product information\n- Price quote provided\n- Appointment scheduled",
+    "endCall": "End Call",
+    "save": "Save",
+    "transfer": "Transfer",
+    "callTransfer": "Call Transfer",
+    "searchAgent": "Search Agent",
+    "noAgentsAvailable": "No agents available",
+    "transferType": "Transfer Type",
+    "blindTransfer": "Blind Transfer",
+    "blindTransferDesc": "Transfer call immediately, you leave",
+    "attendedTransfer": "Attended Transfer",
+    "attendedTransferDesc": "Talk to agent first, then transfer",
+    "transferSuccess": "Call successfully transferred!",
+    "searchPlaceholder": "Search agent, department or skill...",
+    "transferNotePlaceholder": "E.g: Customer needs technical support...",
+    "transferNoteLabel": "Transfer Note (Optional)",
+    "cancel": "Cancel",
+    "connectionQuality": {
+      "excellent": "Excellent",
+      "good": "Good",
+      "fair": "Fair",
+      "poor": "Poor"
+    },
+    "callStatus": {
+      "onHold": "On Hold",
+      "connected": "Connected",
+      "recording": "Recording"
+    },
+    "controls": {
+      "muted": "Muted",
+      "microphone": "Microphone",
+      "resume": "Resume",
+      "hold": "Hold",
+      "speaker": "Speaker",
+      "transfer": "Transfer"
+    },
+    "notesSaved": "Call notes saved"
+  },
+  "typing": {
+    "defaultName": "Customer"
+  },
+  "call": {
+    "status": {
+      "closed": "Closed",
+      "missed": "Missed"
+    },
+    "transfer": {
+      "available": "Available",
+      "busy": "Busy",
+      "offline": "Offline"
+    },
+    "microphone": "Microphone"
+  },
+  "openConversation": "Open Conversation",
+  "auth": {
+    "logout": "Log Out",
+    "logoutSuccess": "Successfully logged out"
+  },
+  "header": {
+    "welcome": "Welcome! 👋",
+    "supportTeam": "Support Team",
+    "myProfile": "My Profile",
+    "settingsPreferences": "Settings and preferences"
+  },
+  "errors": {
+    "networkError": "Network connection error. Please check your internet connection.",
+    "validationError": "Invalid data. Please check your inputs.",
+    "unauthorized": "Your session has expired. Please log in again.",
+    "forbidden": "You don't have permission to perform this action.",
+    "notFound": "The requested resource was not found.",
+    "timeoutError": "Request timed out. Please try again.",
+    "serverError": "Server error occurred. Please try again later.",
+    "unknownError": "An unknown error occurred. Please try again.",
+    "somethingWentWrong": "Something Went Wrong",
+    "errorDescription": "We're sorry, an error occurred. Please try refreshing the page or return to the home page.",
+    "stackTrace": "Error Details",
+    "tryAgain": "Try Again",
+    "goHome": "Go Home",
+    "persistentIssue": "If the problem persists, please contact",
+    "supportTeam": "our support team"
+  }
+}

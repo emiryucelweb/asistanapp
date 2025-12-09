@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Clear i18n Cache</title>
+</head>
+<body>
+    <h1>Clearing i18n Cache...</h1>
+    <script>
+        // Clear all i18n related storage
+        localStorage.removeItem('i18nextLng');
+        sessionStorage.removeItem('i18nextLng');
+        
+        // Clear all cookies
+        document.cookie.split(";").forEach(function(c) { 
+            document.cookie = c.replace(/^ +/, "").replace(/=.*/, "=;expires=" + new Date().toUTCString() + ";path=/"); 
+        });
+        
+        // Clear service worker cache
+        if ('caches' in window) {
+            caches.keys().then(function(names) {
+                for (let name of names) caches.delete(name);
+            });
+        }
+        
+        alert('Cache cleared! Redirecting to home...');
+        setTimeout(() => window.location.href = '/', 1000);
+    </script>
+</body>
+</html>

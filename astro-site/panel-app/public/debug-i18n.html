@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>i18n Debug Tool</title>
+  <style>
+    body { font-family: monospace; padding: 20px; background: #1e1e1e; color: #d4d4d4; }
+    .section { margin: 20px 0; padding: 15px; border: 1px solid #444; border-radius: 8px; background: #252526; }
+    .section h2 { margin-top: 0; color: #4ec9b0; }
+    .button { padding: 10px 20px; margin: 5px; background: #0e639c; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 14px; }
+    .button:hover { background: #1177bb; }
+    .success { color: #4ec9b0; }
+    .error { color: #f48771; }
+    .warning { color: #dcdcaa; }
+    pre { background: #1e1e1e; padding: 10px; border-radius: 4px; overflow-x: auto; }
+    #output { margin-top: 20px; }
+  </style>
+</head>
+<body>
+  <h1>🔍 i18n Debug Tool</h1>
+  
+  <div class="section">
+    <h2>Quick Actions</h2>
+    <button class="button" onclick="checkI18n()">Check i18n Instance</button>
+    <button class="button" onclick="checkLocalStorage()">Check localStorage</button>
+    <button class="button" onclick="testLanguageChange()">Test Language Change</button>
+    <button class="button" onclick="checkTranslationFiles()">Check Translation Files</button>
+    <button class="button" onclick="clearAll()">Clear All & Reload</button>
+  </div>
+  
+  <div id="output"></div>
+  
+  <script>
+    function log(message, type = 'info') {
+      const output = document.getElementById('output');
+      const color = type === 'error' ? '#f48771' : type === 'success' ? '#4ec9b0' : type === 'warning' ? '#dcdcaa' : '#d4d4d4';
+      output.innerHTML += `<div style="color: ${color}; margin: 5px 0;">${message}</div>`;
+    }
+    
+    function logSection(title) {
+      const output = document.getElementById('output');
+      output.innerHTML += `<div class="section"><h2>${title}</h2><div id="section-${Date.now()}"></div></div>`;
+    }
+    
+    function checkI18n() {
+      document.getElementById('output').innerHTML = '';
+      logSection('🔍 i18n Instance Check');
+      
+      if (window.i18n) {
+        log('✅ window.i18n exists', 'success');
+        log(`Current language: ${window.i18n.language}`, 'info');
+        log(`Languages: ${JSON.stringify(window.i18n.languages)}`, 'info');
+        log(`Namespaces: ${JSON.stringify(window.i18n.options.ns)}`, 'info');
+        log(`Default namespace: ${window.i18n.options.defaultNS}`, 'info');
+        log(`Fallback language: ${window.i18n.options.fallbackLng}`, 'info');
+        
+        // Check if translations are loaded
+        const hasTranslations = window.i18n.hasResourceBundle('tr', 'admin');
+        log(`Has TR admin translations: ${hasTranslations}`, hasTranslations ? 'success' : 'error');
+        
+        const hasEnTranslations = window.i18n.hasResourceBundle('en', 'admin');
+        log(`Has EN admin translations: ${hasEnTranslations}`, hasEnTranslations ? 'success' : 'error');
+        
+        // Test translation
+        const testKey = 'dashboard.title';
+        const trValue = window.i18n.t(`admin:${testKey}`, { lng: 'tr' });
+        const enValue = window.i18n.t(`admin:${testKey}`, { lng: 'en' });
+        log(`Test TR: admin:${testKey} = "${trValue}"`, trValue.includes('admin:') ? 'error' : 'success');
+        log(`Test EN: admin:${testKey} = "${enValue}"`, enValue.includes('admin:') ? 'error' : 'success');
+      } else {
+        log('❌ window.i18n NOT FOUND! i18n not exposed or not in dev mode', 'error');
+      }
+    }
+    
+    function checkLocalStorage() {
+      document.getElementById('output').innerHTML = '';
+      logSection('💾 localStorage Check');
+      
+      const i18nextLng = localStorage.getItem('i18nextLng');
+      log(`i18nextLng: ${i18nextLng}`, i18nextLng ? 'success' : 'warning');
+      
+      const customization = localStorage.getItem('customization');
+      if (customization) {
+        try {
+          const parsed = JSON.parse(customization);
+          log(`customization.language: ${parsed.language}`, 'success');
+          log(`Full customization: <pre>${JSON.stringify(parsed, null, 2)}</pre>`, 'info');
+        } catch (e) {
+          log(`❌ Failed to parse customization: ${e.message}`, 'error');
+        }
+      } else {
+        log('⚠️ No customization in localStorage', 'warning');
+      }
+      
+      const theme = localStorage.getItem('theme');
+      log(`theme: ${theme}`, theme ? 'success' : 'warning');
+      
+      // Show all i18n related keys
+      const allKeys = Object.keys(localStorage).filter(k => k.includes('i18n') || k.includes('lng'));
+      log(`All i18n-related keys: ${JSON.stringify(allKeys)}`, 'info');
+    }
+    
+    async function testLanguageChange() {
+      document.getElementById('output').innerHTML = '';
+      logSection('🔄 Testing Language Change');
+      
+      if (!window.i18n) {
+        log('❌ window.i18n not found!', 'error');
+        return;
+      }
+      
+      const currentLang = window.i18n.language;
+      log(`Current language: ${currentLang}`, 'info');
+      
+      const newLang = currentLang === 'tr' ? 'en' : 'tr';
+      log(`Attempting to change to: ${newLang}`, 'info');
+      
+      try {
+        await window.i18n.changeLanguage(newLang);
+        log(`✅ Language changed to: ${window.i18n.language}`, 'success');
+        
+        // Check if HTML lang attribute updated
+        const htmlLang = document.documentElement.lang;
+        log(`HTML lang attribute: ${htmlLang}`, htmlLang === newLang ? 'success' : 'error');
+        
+        // Check localStorage
+        const storedLang = localStorage.getItem('i18nextLng');
+        log(`localStorage i18nextLng: ${storedLang}`, storedLang === newLang ? 'success' : 'error');
+        
+        // Test translation
+        const testKey = 'dashboard.title';
+        const value = window.i18n.t(`admin:${testKey}`);
+        log(`Test translation: admin:${testKey} = "${value}"`, value.includes('admin:') ? 'error' : 'success');
+        
+        log('⚠️ NOTE: This test only changes i18n. React components may not re-render automatically.', 'warning');
+      } catch (error) {
+        log(`❌ Failed to change language: ${error.message}`, 'error');
+      }
+    }
+    
+    async function checkTranslationFiles() {
+      document.getElementById('output').innerHTML = '';
+      logSection('📁 Translation Files Check');
+      
+      const languages = ['tr', 'en'];
+      const namespaces = ['common', 'auth', 'admin', 'agent'];
+      
+      for (const lng of languages) {
+        for (const ns of namespaces) {
+          const url = `/locales/${lng}/${ns}.json`;
+          try {
+            const response = await fetch(url + '?v=' + Date.now());
+            if (response.ok) {
+              const data = await response.json();
+              const keyCount = JSON.stringify(data).split('"').length / 2;
+              log(`✅ ${url} (${response.status}) - ~${keyCount} keys`, 'success');
+            } else {
+              log(`❌ ${url} (${response.status})`, 'error');
+            }
+          } catch (error) {
+            log(`❌ ${url} - ${error.message}`, 'error');
+          }
+        }
+      }
+    }
+    
+    function clearAll() {
+      if (confirm('This will clear all localStorage, cookies, and reload the page. Continue?')) {
+        // Clear localStorage
+        localStorage.clear();
+        
+        // Clear cookies
+        document.cookie.split(";").forEach(c => {
+          document.cookie = c.replace(/^ +/, "").replace(/=.*/, "=;expires=" + new Date().toUTCString() + ";path=/");
+        });
+        
+        // Clear session storage
+        sessionStorage.clear();
+        
+        log('✅ Cleared all storage. Reloading...', 'success');
+        setTimeout(() => window.location.reload(), 1000);
+      }
+    }
+    
+    // Auto-run on load
+    window.addEventListener('load', () => {
+      log('🚀 Debug tool loaded. Click buttons above to run diagnostics.', 'success');
+    });
+  </script>
+</body>
+</html>

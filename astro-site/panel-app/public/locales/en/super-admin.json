@@ -1,0 +1,180 @@
+{
+  "tenants": {
+    "title": "Tenants",
+    "add": "Add Tenant",
+    "edit": "Edit",
+    "delete": "Delete",
+    "searchPlaceholder": "Search tenants...",
+    "viewDetails": "View Details",
+    "moreActions": "More Actions",
+    "status": {
+      "all": "All Statuses",
+      "active": "Active",
+      "trial": "Trial",
+      "past_due": "Past Due",
+      "canceled": "Canceled"
+    },
+    "export": {
+      "button": "Export",
+      "exporting": "Exporting...",
+      "excel": "Excel (.xlsx)",
+      "csv": "CSV (.csv)"
+    },
+    "actions": {
+      "activate": "Activate"
+    },
+    "stats": {
+      "activeTenants": "Active Tenants"
+    },
+    "payment": {
+      "paid": "Paid",
+      "pending": "Pending",
+      "overdue": "Overdue"
+    },
+    "messages": {
+      "exportFailed": "Export failed",
+      "suspendReasonPrompt": "Enter suspension reason:",
+      "confirmSuspend": "Are you sure you want to suspend this tenant?",
+      "actionFailed": "Action failed",
+      "confirmDelete": "Are you sure you want to permanently delete this tenant? This action cannot be undone!",
+      "tenantCreated": "Tenant created successfully! (Backend integration pending)"
+    },
+    "create": {
+      "title": "Add New Tenant",
+      "steps": {
+        "companyInfo": "Company Information",
+        "contactPerson": "Contact Person",
+        "billingAddress": "Billing Address",
+        "planFeatures": "Plan & Features"
+      },
+      "buttons": {
+        "cancel": "Cancel",
+        "back": "Back",
+        "next": "Next",
+        "create": "Create Tenant"
+      },
+      "labels": {
+        "companyInfo": "Company Information",
+        "companyName": "Company Name",
+        "email": "Email",
+        "phone": "Phone",
+        "website": "Website",
+        "contactPerson": "Contact Person",
+        "firstName": "First Name",
+        "lastName": "Last Name",
+        "billingAddress": "Billing Address",
+        "legalName": "Legal Company Name",
+        "address": "Address",
+        "city": "City",
+        "district": "District/Region",
+        "postalCode": "Postal Code",
+        "country": "Country",
+        "taxNumber": "Tax Number",
+        "planFeatures": "Subscription & Features",
+        "planSelection": "Plan Selection",
+        "dataLocation": "Data Location",
+        "features": "Features",
+        "paymentStatus": "Payment Status",
+        "required": "*"
+      },
+      "plans": {
+        "starter": "Starter",
+        "professional": "Professional",
+        "enterprise": "Enterprise",
+        "free": "Trial"
+      },
+      "features": {
+        "voiceEnabled": "Voice Assistant",
+        "voiceDesc": "Phone and voice message support",
+        "multiChannel": "Multi-Channel",
+        "multiChannelDesc": "WhatsApp, Instagram, Facebook, etc.",
+        "analytics": "Advanced Analytics",
+        "analyticsDesc": "Detailed reports and dashboard",
+        "customIntegrations": "Custom Integrations",
+        "customIntegrationsDesc": "API and webhook support"
+      },
+      "dataLocations": {
+        "tr": "Turkey",
+        "eu": "Europe (EU)",
+        "us": "United States (US)"
+      },
+      "countries": {
+        "TR": "Turkey",
+        "US": "United States",
+        "GB": "United Kingdom",
+        "DE": "Germany"
+      },
+      "paymentTypes": {
+        "prepaid_yearly": "1 Year Prepaid (Payment received)",
+        "prepaid_6months": "6 Months Prepaid (Payment received)",
+        "monthly_commitment": "Annual Commitment - Monthly Payment",
+        "monthly_flexible": "Monthly Flexible Payment"
+      },
+      "misc": {
+        "step": "Step {{current}} / {{total}}",
+        "paymentNote": "Billing is automatically stopped for prepaid payments. For commitment/flexible payments, the customer will add a card.",
+        "apiConfigOptional": "API Configuration (Optional)",
+        "apiConfigNote": "Customer can also add this later from their own panel."
+      },
+      "validation": {
+        "companyNameRequired": "Company name required",
+        "firstNameRequired": "First name required",
+        "lastNameRequired": "Last name required",
+        "emailRequired": "Email required",
+        "phoneRequired": "Phone required",
+        "cityRequired": "City required",
+        "addressRequired": "Address required",
+        "postalCodeRequired": "Postal code required"
+      },
+      "placeholders": {
+        "companyName": "Company Name",
+        "companyEmail": "Email",
+        "companyPhone": "Phone",
+        "legalName": "Legal Company Name",
+        "address": "Address",
+        "city": "City",
+        "district": "District",
+        "adminFirstName": "First Name",
+        "adminLastName": "Last Name",
+        "adminEmail": "Email",
+        "adminPhone": "Phone",
+        "apiKeyPlaceholder": "API Key",
+        "anthropicKeyPlaceholder": "Anthropic API Key"
+      }
+    },
+    "tenantDetail": {
+      "notFound": "Tenant not found"
+    }
+  },
+  "billing": {
+    "title": "Billing",
+    "revenue": "Revenue"
+  },
+  "financial": {
+    "title": "Financial Reports",
+    "subtitle": "Overall financial summary and analysis for all tenants",
+    "periods": {
+      "30d": "Last 30 Days",
+      "90d": "Last 90 Days",
+      "1y": "Last 1 Year"
+    },
+    "export": {
+      "button": "Export",
+      "exporting": "Exporting...",
+      "loading": "Loading..."
+    },
+    "messages": {
+      "noDataYet": "No data loaded yet",
+      "exportFailed": "Export failed",
+      "loading": "Loading financial data...",
+      "loadFailed": "Failed to load data"
+    },
+    "insights": {
+      "lowChurn": "Low Churn",
+      "lowChurnDesc": "Stable customer base with {{rate}}% churn rate"
+    }
+  },
+  "tenantDetail": {
+    "notFound": "Tenant not found"
+  }
+}

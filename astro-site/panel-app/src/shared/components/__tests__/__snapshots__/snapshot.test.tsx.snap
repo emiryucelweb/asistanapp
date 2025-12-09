@@ -1,0 +1,826 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Snapshot Tests - Accessibility Attributes > should have correct ARIA attributes on alert 1`] = `
+<div
+  class="rounded-lg border p-4 bg-red-50 border-red-200 text-red-800 dark:bg-red-900/20 dark:border-red-800 dark:text-red-400"
+  role="alert"
+>
+  <div
+    class="flex"
+  >
+    <span
+      class="flex-shrink-0 mr-3"
+    >
+      ❌
+    </span>
+    <div
+      class="flex-1"
+    >
+      <h4
+        class="font-semibold mb-1"
+      >
+        Error
+      </h4>
+      <div
+        class="text-sm"
+      >
+        Something went wrong.
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Snapshot Tests - Accessibility Attributes > should have correct ARIA attributes on input with error 1`] = `
+<div
+  class="space-y-1"
+>
+  <label
+    class="block text-sm font-medium text-gray-700 dark:text-gray-300"
+  >
+    Email
+  </label>
+  <input
+    aria-describedby="error-message"
+    aria-invalid="true"
+    class="w-full px-4 py-2 rounded-lg border transition-colors
+    border-red-500 focus:ring-red-500 focus:border-red-500
+    bg-white dark:bg-slate-800
+    text-gray-900 dark:text-gray-100
+    focus:outline-none focus:ring-2"
+    type="text"
+    value=""
+  />
+  <p
+    class="text-sm text-red-600 dark:text-red-400"
+    id="error-message"
+  >
+    Invalid email format
+  </p>
+</div>
+`;
+
+exports[`Snapshot Tests - Accessibility Attributes > should have correct ARIA attributes on loading button 1`] = `
+<button
+  aria-busy="true"
+  class="inline-flex items-center justify-center font-medium rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-500 px-4 py-2 text-base "
+  disabled=""
+>
+  <svg
+    class="animate-spin -ml-1 mr-2 h-4 w-4"
+    fill="none"
+    viewBox="0 0 24 24"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <circle
+      class="opacity-25"
+      cx="12"
+      cy="12"
+      r="10"
+      stroke="currentColor"
+      stroke-width="4"
+    />
+    <path
+      class="opacity-75"
+      d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"
+      fill="currentColor"
+    />
+  </svg>
+  Submitting...
+</button>
+`;
+
+exports[`Snapshot Tests - Accessibility Attributes > should have dismiss button with aria-label 1`] = `
+<div
+  class="rounded-lg border p-4 bg-blue-50 border-blue-200 text-blue-800 dark:bg-blue-900/20 dark:border-blue-800 dark:text-blue-400"
+  role="alert"
+>
+  <div
+    class="flex"
+  >
+    <span
+      class="flex-shrink-0 mr-3"
+    >
+      💬
+    </span>
+    <div
+      class="flex-1"
+    >
+      <div
+        class="text-sm"
+      >
+        Dismissible alert
+      </div>
+    </div>
+    <button
+      aria-label="Dismiss"
+      class="flex-shrink-0 ml-3 -mr-1 p-1 rounded hover:bg-black/5 dark:hover:bg-white/5"
+      type="button"
+    >
+      ✕
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Snapshot Tests - Alert Component > should match snapshot for alert with title 1`] = `
+<div
+  class="rounded-lg border p-4 bg-blue-50 border-blue-200 text-blue-800 dark:bg-blue-900/20 dark:border-blue-800 dark:text-blue-400"
+  role="alert"
+>
+  <div
+    class="flex"
+  >
+    <span
+      class="flex-shrink-0 mr-3"
+    >
+      💬
+    </span>
+    <div
+      class="flex-1"
+    >
+      <h4
+        class="font-semibold mb-1"
+      >
+        Information
+      </h4>
+      <div
+        class="text-sm"
+      >
+        This alert has a title.
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Snapshot Tests - Alert Component > should match snapshot for all alert variants > alert-error 1`] = `
+<div
+  class="rounded-lg border p-4 bg-red-50 border-red-200 text-red-800 dark:bg-red-900/20 dark:border-red-800 dark:text-red-400"
+  role="alert"
+>
+  <div
+    class="flex"
+  >
+    <span
+      class="flex-shrink-0 mr-3"
+    >
+      ❌
+    </span>
+    <div
+      class="flex-1"
+    >
+      <div
+        class="text-sm"
+      >
+        This is an 
+        error
+         alert message.
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Snapshot Tests - Alert Component > should match snapshot for all alert variants > alert-info 1`] = `
+<div
+  class="rounded-lg border p-4 bg-blue-50 border-blue-200 text-blue-800 dark:bg-blue-900/20 dark:border-blue-800 dark:text-blue-400"
+  role="alert"
+>
+  <div
+    class="flex"
+  >
+    <span
+      class="flex-shrink-0 mr-3"
+    >
+      💬
+    </span>
+    <div
+      class="flex-1"
+    >
+      <div
+        class="text-sm"
+      >
+        This is an 
+        info
+         alert message.
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Snapshot Tests - Alert Component > should match snapshot for all alert variants > alert-success 1`] = `
+<div
+  class="rounded-lg border p-4 bg-green-50 border-green-200 text-green-800 dark:bg-green-900/20 dark:border-green-800 dark:text-green-400"
+  role="alert"
+>
+  <div
+    class="flex"
+  >
+    <span
+      class="flex-shrink-0 mr-3"
+    >
+      ✅
+    </span>
+    <div
+      class="flex-1"
+    >
+      <div
+        class="text-sm"
+      >
+        This is an 
+        success
+         alert message.
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Snapshot Tests - Alert Component > should match snapshot for all alert variants > alert-warning 1`] = `
+<div
+  class="rounded-lg border p-4 bg-yellow-50 border-yellow-200 text-yellow-800 dark:bg-yellow-900/20 dark:border-yellow-800 dark:text-yellow-400"
+  role="alert"
+>
+  <div
+    class="flex"
+  >
+    <span
+      class="flex-shrink-0 mr-3"
+    >
+      ⚠️
+    </span>
+    <div
+      class="flex-1"
+    >
+      <div
+        class="text-sm"
+      >
+        This is an 
+        warning
+         alert message.
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Snapshot Tests - Alert Component > should match snapshot for dismissible alert 1`] = `
+<div
+  class="rounded-lg border p-4 bg-yellow-50 border-yellow-200 text-yellow-800 dark:bg-yellow-900/20 dark:border-yellow-800 dark:text-yellow-400"
+  role="alert"
+>
+  <div
+    class="flex"
+  >
+    <span
+      class="flex-shrink-0 mr-3"
+    >
+      ⚠️
+    </span>
+    <div
+      class="flex-1"
+    >
+      <div
+        class="text-sm"
+      >
+        This alert can be dismissed.
+      </div>
+    </div>
+    <button
+      aria-label="Dismiss"
+      class="flex-shrink-0 ml-3 -mr-1 p-1 rounded hover:bg-black/5 dark:hover:bg-white/5"
+      type="button"
+    >
+      ✕
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Snapshot Tests - Badge Component > should match snapshot for all badge variants > badge-default 1`] = `
+<span
+  class="inline-flex items-center font-medium rounded-full bg-gray-100 text-gray-800 dark:bg-slate-700 dark:text-gray-200 px-2.5 py-1 text-sm"
+>
+  default
+</span>
+`;
+
+exports[`Snapshot Tests - Badge Component > should match snapshot for all badge variants > badge-error 1`] = `
+<span
+  class="inline-flex items-center font-medium rounded-full bg-red-100 text-red-800 dark:bg-red-900/20 dark:text-red-400 px-2.5 py-1 text-sm"
+>
+  error
+</span>
+`;
+
+exports[`Snapshot Tests - Badge Component > should match snapshot for all badge variants > badge-info 1`] = `
+<span
+  class="inline-flex items-center font-medium rounded-full bg-blue-100 text-blue-800 dark:bg-blue-900/20 dark:text-blue-400 px-2.5 py-1 text-sm"
+>
+  info
+</span>
+`;
+
+exports[`Snapshot Tests - Badge Component > should match snapshot for all badge variants > badge-success 1`] = `
+<span
+  class="inline-flex items-center font-medium rounded-full bg-green-100 text-green-800 dark:bg-green-900/20 dark:text-green-400 px-2.5 py-1 text-sm"
+>
+  success
+</span>
+`;
+
+exports[`Snapshot Tests - Badge Component > should match snapshot for all badge variants > badge-warning 1`] = `
+<span
+  class="inline-flex items-center font-medium rounded-full bg-yellow-100 text-yellow-800 dark:bg-yellow-900/20 dark:text-yellow-400 px-2.5 py-1 text-sm"
+>
+  warning
+</span>
+`;
+
+exports[`Snapshot Tests - Badge Component > should match snapshot for badge sizes > badge-md 1`] = `
+<span
+  class="inline-flex items-center font-medium rounded-full bg-gray-100 text-gray-800 dark:bg-slate-700 dark:text-gray-200 px-2.5 py-1 text-sm"
+>
+  Medium
+</span>
+`;
+
+exports[`Snapshot Tests - Badge Component > should match snapshot for badge sizes > badge-sm 1`] = `
+<span
+  class="inline-flex items-center font-medium rounded-full bg-gray-100 text-gray-800 dark:bg-slate-700 dark:text-gray-200 px-2 py-0.5 text-xs"
+>
+  Small
+</span>
+`;
+
+exports[`Snapshot Tests - Button Component > should match snapshot for all sizes > button-lg 1`] = `
+<button
+  aria-busy="false"
+  class="inline-flex items-center justify-center font-medium rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-500 px-6 py-3 text-lg "
+>
+  Large
+</button>
+`;
+
+exports[`Snapshot Tests - Button Component > should match snapshot for all sizes > button-md 1`] = `
+<button
+  aria-busy="false"
+  class="inline-flex items-center justify-center font-medium rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-500 px-4 py-2 text-base "
+>
+  Medium
+</button>
+`;
+
+exports[`Snapshot Tests - Button Component > should match snapshot for all sizes > button-sm 1`] = `
+<button
+  aria-busy="false"
+  class="inline-flex items-center justify-center font-medium rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-500 px-3 py-1.5 text-sm "
+>
+  Small
+</button>
+`;
+
+exports[`Snapshot Tests - Button Component > should match snapshot for danger button 1`] = `
+<button
+  aria-busy="false"
+  class="inline-flex items-center justify-center font-medium rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 bg-red-600 text-white hover:bg-red-700 focus:ring-red-500 px-4 py-2 text-base "
+>
+  Delete
+</button>
+`;
+
+exports[`Snapshot Tests - Button Component > should match snapshot for disabled button 1`] = `
+<button
+  aria-busy="false"
+  class="inline-flex items-center justify-center font-medium rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-500 px-4 py-2 text-base opacity-50 cursor-not-allowed"
+  disabled=""
+>
+  Disabled
+</button>
+`;
+
+exports[`Snapshot Tests - Button Component > should match snapshot for ghost button 1`] = `
+<button
+  aria-busy="false"
+  class="inline-flex items-center justify-center font-medium rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 bg-transparent text-gray-700 hover:bg-gray-100 focus:ring-gray-500 dark:text-gray-300 dark:hover:bg-slate-800 px-4 py-2 text-base "
+>
+  Ghost
+</button>
+`;
+
+exports[`Snapshot Tests - Button Component > should match snapshot for loading button 1`] = `
+<button
+  aria-busy="true"
+  class="inline-flex items-center justify-center font-medium rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-500 px-4 py-2 text-base "
+  disabled=""
+>
+  <svg
+    class="animate-spin -ml-1 mr-2 h-4 w-4"
+    fill="none"
+    viewBox="0 0 24 24"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <circle
+      class="opacity-25"
+      cx="12"
+      cy="12"
+      r="10"
+      stroke="currentColor"
+      stroke-width="4"
+    />
+    <path
+      class="opacity-75"
+      d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"
+      fill="currentColor"
+    />
+  </svg>
+  Loading...
+</button>
+`;
+
+exports[`Snapshot Tests - Button Component > should match snapshot for primary button 1`] = `
+<button
+  aria-busy="false"
+  class="inline-flex items-center justify-center font-medium rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-500 px-4 py-2 text-base "
+>
+  Click Me
+</button>
+`;
+
+exports[`Snapshot Tests - Button Component > should match snapshot for secondary button 1`] = `
+<button
+  aria-busy="false"
+  class="inline-flex items-center justify-center font-medium rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 bg-gray-200 text-gray-900 hover:bg-gray-300 focus:ring-gray-500 dark:bg-slate-700 dark:text-gray-100 px-4 py-2 text-base "
+>
+  Secondary
+</button>
+`;
+
+exports[`Snapshot Tests - Card Component > should match snapshot for bordered card 1`] = `
+<div
+  class="rounded-xl p-6 bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700"
+>
+  <div
+    class="mb-4"
+  >
+    <h3
+      class="text-lg font-semibold text-gray-900 dark:text-gray-100"
+    >
+      Bordered Card
+    </h3>
+  </div>
+  <p>
+    Content
+  </p>
+</div>
+`;
+
+exports[`Snapshot Tests - Card Component > should match snapshot for card with title 1`] = `
+<div
+  class="rounded-xl p-6 bg-white dark:bg-slate-800"
+>
+  <div
+    class="mb-4"
+  >
+    <h3
+      class="text-lg font-semibold text-gray-900 dark:text-gray-100"
+    >
+      Card Title
+    </h3>
+  </div>
+  <p>
+    Card content with title
+  </p>
+</div>
+`;
+
+exports[`Snapshot Tests - Card Component > should match snapshot for card with title and subtitle 1`] = `
+<div
+  class="rounded-xl p-6 bg-white dark:bg-slate-800"
+>
+  <div
+    class="mb-4"
+  >
+    <h3
+      class="text-lg font-semibold text-gray-900 dark:text-gray-100"
+    >
+      Card Title
+    </h3>
+    <p
+      class="text-sm text-gray-500 dark:text-gray-400 mt-1"
+    >
+      This is a subtitle
+    </p>
+  </div>
+  <p>
+    Card content with title and subtitle
+  </p>
+</div>
+`;
+
+exports[`Snapshot Tests - Card Component > should match snapshot for default card 1`] = `
+<div
+  class="rounded-xl p-6 bg-white dark:bg-slate-800"
+>
+  <p>
+    Card content goes here
+  </p>
+</div>
+`;
+
+exports[`Snapshot Tests - Card Component > should match snapshot for elevated card 1`] = `
+<div
+  class="rounded-xl p-6 bg-white dark:bg-slate-800 shadow-lg"
+>
+  <div
+    class="mb-4"
+  >
+    <h3
+      class="text-lg font-semibold text-gray-900 dark:text-gray-100"
+    >
+      Elevated Card
+    </h3>
+  </div>
+  <p>
+    Content
+  </p>
+</div>
+`;
+
+exports[`Snapshot Tests - Complex Compositions > should match snapshot for alert with action buttons 1`] = `
+<div
+  class="rounded-lg border p-4 bg-yellow-50 border-yellow-200 text-yellow-800 dark:bg-yellow-900/20 dark:border-yellow-800 dark:text-yellow-400"
+  role="alert"
+>
+  <div
+    class="flex"
+  >
+    <span
+      class="flex-shrink-0 mr-3"
+    >
+      ⚠️
+    </span>
+    <div
+      class="flex-1"
+    >
+      <h4
+        class="font-semibold mb-1"
+      >
+        Confirm Action
+      </h4>
+      <div
+        class="text-sm"
+      >
+        <p
+          class="mb-4"
+        >
+          Are you sure you want to proceed?
+        </p>
+        <div
+          class="flex gap-2"
+        >
+          <button
+            aria-busy="false"
+            class="inline-flex items-center justify-center font-medium rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 bg-red-600 text-white hover:bg-red-700 focus:ring-red-500 px-3 py-1.5 text-sm "
+          >
+            Confirm
+          </button>
+          <button
+            aria-busy="false"
+            class="inline-flex items-center justify-center font-medium rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 bg-transparent text-gray-700 hover:bg-gray-100 focus:ring-gray-500 dark:text-gray-300 dark:hover:bg-slate-800 px-3 py-1.5 text-sm "
+          >
+            Cancel
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Snapshot Tests - Complex Compositions > should match snapshot for card with badges 1`] = `
+<div
+  class="rounded-xl p-6 bg-white dark:bg-slate-800"
+>
+  <div
+    class="mb-4"
+  >
+    <h3
+      class="text-lg font-semibold text-gray-900 dark:text-gray-100"
+    >
+      Task Status
+    </h3>
+    <p
+      class="text-sm text-gray-500 dark:text-gray-400 mt-1"
+    >
+      Current sprint tasks
+    </p>
+  </div>
+  <div
+    class="space-y-2"
+  >
+    <div
+      class="flex items-center justify-between"
+    >
+      <span>
+        Implement feature A
+      </span>
+      <span
+        class="inline-flex items-center font-medium rounded-full bg-green-100 text-green-800 dark:bg-green-900/20 dark:text-green-400 px-2.5 py-1 text-sm"
+      >
+        Done
+      </span>
+    </div>
+    <div
+      class="flex items-center justify-between"
+    >
+      <span>
+        Review PR #123
+      </span>
+      <span
+        class="inline-flex items-center font-medium rounded-full bg-yellow-100 text-yellow-800 dark:bg-yellow-900/20 dark:text-yellow-400 px-2.5 py-1 text-sm"
+      >
+        In Progress
+      </span>
+    </div>
+    <div
+      class="flex items-center justify-between"
+    >
+      <span>
+        Fix bug #456
+      </span>
+      <span
+        class="inline-flex items-center font-medium rounded-full bg-red-100 text-red-800 dark:bg-red-900/20 dark:text-red-400 px-2.5 py-1 text-sm"
+      >
+        Blocked
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Snapshot Tests - Complex Compositions > should match snapshot for form card composition 1`] = `
+<div
+  class="rounded-xl p-6 bg-white dark:bg-slate-800"
+>
+  <div
+    class="mb-4"
+  >
+    <h3
+      class="text-lg font-semibold text-gray-900 dark:text-gray-100"
+    >
+      Login
+    </h3>
+    <p
+      class="text-sm text-gray-500 dark:text-gray-400 mt-1"
+    >
+      Enter your credentials
+    </p>
+  </div>
+  <div
+    class="space-y-4"
+  >
+    <div
+      class="space-y-1"
+    >
+      <label
+        class="block text-sm font-medium text-gray-700 dark:text-gray-300"
+      >
+        Email
+      </label>
+      <input
+        aria-invalid="false"
+        class="w-full px-4 py-2 rounded-lg border transition-colors
+    border-gray-300 dark:border-slate-600 focus:ring-blue-500 focus:border-blue-500
+    bg-white dark:bg-slate-800
+    text-gray-900 dark:text-gray-100
+    focus:outline-none focus:ring-2"
+        placeholder="email@example.com"
+        type="email"
+        value=""
+      />
+    </div>
+    <div
+      class="space-y-1"
+    >
+      <label
+        class="block text-sm font-medium text-gray-700 dark:text-gray-300"
+      >
+        Password
+      </label>
+      <input
+        aria-invalid="false"
+        class="w-full px-4 py-2 rounded-lg border transition-colors
+    border-gray-300 dark:border-slate-600 focus:ring-blue-500 focus:border-blue-500
+    bg-white dark:bg-slate-800
+    text-gray-900 dark:text-gray-100
+    focus:outline-none focus:ring-2"
+        placeholder="••••••••"
+        type="password"
+        value=""
+      />
+    </div>
+    <button
+      aria-busy="false"
+      class="inline-flex items-center justify-center font-medium rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-500 px-6 py-3 text-lg "
+    >
+      Sign In
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Snapshot Tests - Input Component > should match snapshot for default input 1`] = `
+<div
+  class="space-y-1"
+>
+  <input
+    aria-invalid="false"
+    class="w-full px-4 py-2 rounded-lg border transition-colors
+    border-gray-300 dark:border-slate-600 focus:ring-blue-500 focus:border-blue-500
+    bg-white dark:bg-slate-800
+    text-gray-900 dark:text-gray-100
+    focus:outline-none focus:ring-2"
+    placeholder="Enter text..."
+    type="text"
+    value=""
+  />
+</div>
+`;
+
+exports[`Snapshot Tests - Input Component > should match snapshot for disabled input 1`] = `
+<div
+  class="space-y-1"
+>
+  <label
+    class="block text-sm font-medium text-gray-700 dark:text-gray-300"
+  >
+    Username
+  </label>
+  <input
+    aria-invalid="false"
+    class="w-full px-4 py-2 rounded-lg border transition-colors
+    border-gray-300 dark:border-slate-600 focus:ring-blue-500 focus:border-blue-500
+    opacity-50 cursor-not-allowed bg-gray-100 dark:bg-slate-700
+    text-gray-900 dark:text-gray-100
+    focus:outline-none focus:ring-2"
+    disabled=""
+    type="text"
+    value="disabled-user"
+  />
+</div>
+`;
+
+exports[`Snapshot Tests - Input Component > should match snapshot for input with error 1`] = `
+<div
+  class="space-y-1"
+>
+  <label
+    class="block text-sm font-medium text-gray-700 dark:text-gray-300"
+  >
+    Password
+  </label>
+  <input
+    aria-describedby="error-message"
+    aria-invalid="true"
+    class="w-full px-4 py-2 rounded-lg border transition-colors
+    border-red-500 focus:ring-red-500 focus:border-red-500
+    bg-white dark:bg-slate-800
+    text-gray-900 dark:text-gray-100
+    focus:outline-none focus:ring-2"
+    type="password"
+    value=""
+  />
+  <p
+    class="text-sm text-red-600 dark:text-red-400"
+    id="error-message"
+  >
+    Password must be at least 8 characters
+  </p>
+</div>
+`;
+
+exports[`Snapshot Tests - Input Component > should match snapshot for input with label 1`] = `
+<div
+  class="space-y-1"
+>
+  <label
+    class="block text-sm font-medium text-gray-700 dark:text-gray-300"
+  >
+    Email Address
+  </label>
+  <input
+    aria-invalid="false"
+    class="w-full px-4 py-2 rounded-lg border transition-colors
+    border-gray-300 dark:border-slate-600 focus:ring-blue-500 focus:border-blue-500
+    bg-white dark:bg-slate-800
+    text-gray-900 dark:text-gray-100
+    focus:outline-none focus:ring-2"
+    placeholder="email@example.com"
+    type="email"
+    value=""
+  />
+</div>
+`;

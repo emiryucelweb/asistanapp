@@ -1,0 +1,476 @@
+{
+  "app": {
+    "name": "Asistan",
+    "title": "Asistan - Customer Support Platform",
+    "description": "AI-powered customer support platform"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "warning": "Warning",
+    "info": "Info",
+    "save": "Save",
+    "saving": "Saving...",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "processing": "Processing...",
+    "edit": "Edit",
+    "add": "Add",
+    "create": "Create",
+    "update": "Update",
+    "search": "Search",
+    "searchMessages": "Search messages...",
+    "filter": "Filter",
+    "sort": "Sort",
+    "actions": "Actions",
+    "yes": "Yes",
+    "no": "No",
+    "ok": "OK",
+    "close": "Close",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "confirm": "Confirm",
+    "continue": "Continue",
+    "submit": "Submit",
+    "reset": "Reset",
+    "clear": "Clear",
+    "select": "Select",
+    "selectAll": "Select All",
+    "deselectAll": "Deselect All",
+    "apply": "Apply",
+    "download": "Download",
+    "upload": "Upload",
+    "export": "Export",
+    "import": "Import",
+    "print": "Print",
+    "refresh": "Refresh",
+    "retry": "Retry",
+    "more": "More",
+    "less": "Less",
+    "show": "Show",
+    "hide": "Hide",
+    "expand": "Expand",
+    "collapse": "Collapse",
+    "view": "View",
+    "details": "Details"
+  },
+  "navigation": {
+    "home": "Home",
+    "dashboard": "Dashboard",
+    "conversations": "Conversations",
+    "customers": "Customers",
+    "reports": "Reports",
+    "settings": "Settings",
+    "profile": "Profile",
+    "logout": "Logout",
+    "help": "Help"
+  },
+  "sidebar": {
+    "dashboard": "Dashboard",
+    "conversations": "Conversations",
+    "teamChat": "Team Chat",
+    "reports": "Reports",
+    "settings": "Settings",
+    "team": "Team",
+    "help": "Help",
+    "new": "NEW",
+    "talkToAssistant": "Talk to Assistant",
+    "collapse": "Collapse Menu",
+    "expand": "Expand Menu",
+    "requestDemo": "Request Demo"
+  },
+  "theme": {
+    "switchToLight": "Switch to Light Theme",
+    "switchToDark": "Switch to Dark Theme"
+  },
+  "aiAssistant": {
+    "subtitle": "Reporting and Analysis Assistant",
+    "greeting": "Hello! 👋 I'm your AsistanApp AI assistant. I can help you with reporting and analysis.",
+    "suggestionsTitle": "💡 You can ask:",
+    "suggestion1": "Show today's performance report",
+    "suggestion2": "How is customer satisfaction?",
+    "suggestion3": "Which channel has the most messages?",
+    "suggestion4": "Analyze team performance",
+    "inputPlaceholder": "Type your question..."
+  },
+  "header": {
+    "notifications": {
+      "title": "Notifications",
+      "newCount": "{{count}} new",
+      "conversationAssigned": "Conversation Assigned",
+      "urgentConversationMessage": "{{name}} assigned you an urgent conversation",
+      "conversationAssignedMessage": "{{name}} assigned you a conversation",
+      "performanceReport": "Assistant Performance Report",
+      "dailyReportReady": "Your daily performance report is ready",
+      "paymentSuccessful": "Payment Successful",
+      "subscriptionRenewed": "Your monthly subscription has been renewed",
+      "markAllRead": "Mark All as Read",
+      "markAsRead": "Mark as Read",
+      "settings": "Notification Settings",
+      "noNotifications": "No notifications"
+    },
+    "userMenu": {
+      "profile": "Profile",
+      "business": "Business Information",
+      "billing": "Subscription & Billing",
+      "settings": "Settings",
+      "logout": "Logout",
+      "user": "User"
+    }
+  },
+  "time": {
+    "now": "Now",
+    "justNow": "Just now",
+    "minutesAgo": "{{count}} minute ago",
+    "minutesAgo_plural": "{{count}} minutes ago",
+    "hoursAgo": "{{count}} hour ago",
+    "hoursAgo_plural": "{{count}} hours ago",
+    "daysAgo": "{{count}} day ago",
+    "daysAgo_plural": "{{count}} days ago",
+    "weeksAgo": "{{count}} week ago",
+    "weeksAgo_plural": "{{count}} weeks ago",
+    "monthsAgo": "{{count}} month ago",
+    "monthsAgo_plural": "{{count}} months ago",
+    "yearsAgo": "{{count}} year ago",
+    "yearsAgo_plural": "{{count}} years ago",
+    "today": "Today",
+    "yesterday": "Yesterday",
+    "tomorrow": "Tomorrow",
+    "thisWeek": "This Week",
+    "lastWeek": "Last Week",
+    "thisMonth": "This Month",
+    "lastMonth": "Last Month"
+  },
+  "status": {
+    "active": "Active",
+    "inactive": "Inactive",
+    "online": "Online",
+    "offline": "Offline",
+    "away": "Away",
+    "busy": "Busy",
+    "available": "Available",
+    "unavailable": "Unavailable",
+    "pending": "Pending",
+    "approved": "Approved",
+    "rejected": "Rejected",
+    "completed": "Completed",
+    "inProgress": "In Progress",
+    "failed": "Failed"
+  },
+  "filters": {
+    "selectPlaceholder": "Make a selection",
+    "selectedCount": "{{count}} selected",
+    "selectAll": "Select All",
+    "clear": "Clear",
+    "noResults": "No results found"
+  },
+  "messages": {
+    "noData": "No data found",
+    "noResults": "No results found",
+    "emptyState": "No records yet",
+    "loadingData": "Loading data...",
+    "savingChanges": "Saving changes...",
+    "changesSaved": "Changes saved",
+    "changesDiscarded": "Changes discarded",
+    "confirmDelete": "Are you sure you want to delete?",
+    "confirmDiscard": "Changes have not been saved. Do you want to continue?",
+    "errorOccurred": "An error occurred",
+    "tryAgain": "Please try again",
+    "contactSupport": "If the problem persists, please contact support",
+    "sessionExpired": "Your session has expired. Please log in again.",
+    "networkError": "Network connection error. Please check your internet connection."
+  },
+  "forms": {
+    "required": "This field is required",
+    "invalid": "Invalid value",
+    "tooShort": "Too short",
+    "tooLong": "Too long",
+    "invalidEmail": "Invalid email address",
+    "invalidPhone": "Invalid phone number",
+    "invalidUrl": "Invalid URL",
+    "passwordMismatch": "Passwords do not match",
+    "weakPassword": "Weak password",
+    "selectOption": "Select an option",
+    "uploadFile": "Upload file",
+    "dragDropFile": "Drag and drop file here or click",
+    "maxFileSize": "Maximum file size: {{size}}",
+    "allowedFormats": "Allowed formats: {{formats}}"
+  },
+  "pagination": {
+    "page": "Page",
+    "of": "of",
+    "showing": "Showing",
+    "to": "to",
+    "items": "items",
+    "perPage": "Per page",
+    "first": "First",
+    "last": "Last",
+    "rowsPerPage": "Rows per page"
+  },
+  "help": {
+    "title": "Help Center",
+    "subtitle": "Find answers to your questions and get support",
+    "searchPlaceholder": "Search for a question or topic...",
+    "subjectPlaceholder": "Briefly summarize your issue",
+    "messagePlaceholder": "Describe your issue in detail...",
+    "requiredFields": "Please fill in the subject and message fields.",
+    "ticketCreated": "Your support request has been created successfully! We will get back to you shortly.",
+    "createTicket": "Create Support Request",
+    "stats": {
+      "totalArticles": "Total Articles",
+      "videoTutorials": "Video Tutorials",
+      "activeTickets": "Active Requests",
+      "avgResponseTime": "Avg Response Time"
+    },
+    "avgResponseValue": "2 hours",
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "noResults": "No results found matching your search criteria.",
+      "questions": {
+        "q1": "How do I get started with AsistanApp?",
+        "a1": "To get started with AsistanApp, first complete your account settings. Then customize your AI assistant and connect your social media channels. You can find detailed information in our getting started guide.",
+        "q2": "How do I create my first AI assistant?",
+        "a2": "You can create a new AI assistant from Settings > Assistant section. Enter your business information, select the tone, and upload your training data. The system will start learning automatically.",
+        "q3": "How do I integrate WhatsApp?",
+        "a3": "You can integrate by scanning the QR code or using an API key from Settings > Channel Integrations > WhatsApp section. Follow our detailed setup guide.",
+        "q4": "How can I transfer AI conversations to a human?",
+        "a4": "You can manually transfer by going to the conversation details on the Conversations screen and clicking the \"Transfer to Human\" button. Additionally, AI can automatically request help in certain situations (unclear questions, complex requests).",
+        "q5": "How does the appointment system work?",
+        "a5": "Your AI assistant suggests suitable appointment times while talking to your customers. You can set your working hours, appointment durations, and special days from Settings > Appointment Settings.",
+        "q6": "How do I change my notification settings?",
+        "a6": "You can configure your email, SMS, and push notification preferences from Settings > Notifications. You can create separate notification rules for each channel.",
+        "q7": "How do I add a new team member?",
+        "a7": "Click the \"Add New Team Member\" button on the Team page. Specify the email, role, and permissions. The added member will receive an email invitation.",
+        "q8": "How do I grant permissions to team members?",
+        "a8": "Select the relevant member from the Team page and click the \"Edit\" button. You can select permissions such as conversation management, report viewing, and settings change from the permissions section.",
+        "q9": "How do I export reports?",
+        "a9": "Select the desired report on the Reports page. Set the date range and use the \"Export to Excel\" or \"Export to PDF\" buttons in the top right corner.",
+        "q10": "How do I interpret assistant performance metrics?",
+        "a10": "The assistant performance report includes metrics such as response time, success rate, and customer satisfaction. Green values indicate good performance, yellow values indicate areas for improvement.",
+        "q11": "AI is not responding, what should I do?",
+        "a11": "First, check your internet connection. Check the AI status from Settings > Assistant section. If the problem persists, open a ticket with our support team.",
+        "q12": "Messages are arriving with delay?",
+        "a12": "Check your channel integrations. You can check the connection status for WhatsApp and other platforms from Settings > Channel Integrations."
+      }
+    },
+    "videos": {
+      "title": "Video Tutorials",
+      "views": "views",
+      "tutorials": {
+        "t1": "Quick Start to AsistanApp",
+        "t2": "Assistant Setup and Customization",
+        "t3": "WhatsApp and Instagram Integration",
+        "t4": "Conversation Management and AI Handoff",
+        "t5": "Report and Analysis Tools",
+        "t6": "Team Management and Authorization"
+      }
+    },
+    "support": {
+      "title": "Get Support",
+      "description": "Contact our support team to resolve your issue immediately.",
+      "sendEmail": "Send Email"
+    },
+    "tickets": {
+      "title": "My Requests",
+      "noTickets": "You don't have any support requests yet.",
+      "lastUpdate": "Last update:",
+      "status": {
+        "open": "Open",
+        "inProgress": "In Progress",
+        "resolved": "Resolved"
+      },
+      "mockSubjects": {
+        "s1": "WhatsApp connection issue",
+        "s2": "Invoice download error"
+      }
+    },
+    "documentation": {
+      "title": "Documentation",
+      "apiDocs": "API Documentation",
+      "integrationGuide": "Integration Guide",
+      "security": "Security & Privacy",
+      "changelog": "Release Notes"
+    },
+    "ticketForm": {
+      "title": "Create Support Request",
+      "subtitle": "Describe your issue in detail",
+      "subject": "Subject",
+      "priority": "Priority",
+      "description": "Description",
+      "attachments": "Attachments (Optional)",
+      "addFile": "Add file or screenshot",
+      "priorities": {
+        "low": "Low",
+        "normal": "Normal",
+        "high": "High",
+        "urgent": "Urgent"
+      },
+      "tip": {
+        "title": "Tip:",
+        "text": "Describing your issue in detail and adding screenshots helps us find a solution faster."
+      },
+      "cancel": "Cancel",
+      "submit": "Create Request"
+    }
+  },
+  "emptyStates": {
+    "noResults": "No results found",
+    "searchNoResults": "No results match your search criteria.",
+    "searchNoResultsForQuery": "No results found for \"{{query}}\". Try different keywords.",
+    "clearSearch": "Clear Search",
+    "noData": "No data found",
+    "noDataDescription": "There is no data to display yet.",
+    "noMessages": "No messages yet",
+    "noMessagesDescription": "Send the first message to start the conversation.",
+    "sendMessage": "Send Message",
+    "noUsers": "No users found",
+    "noUsersDescription": "No users have been added yet.",
+    "addUser": "Add User",
+    "noFiles": "No files found",
+    "noFilesDescription": "No files have been uploaded yet.",
+    "uploadFile": "Upload File",
+    "emptyFolder": "Folder is empty",
+    "emptyFolderDescription": "This folder is currently empty.",
+    "noOrders": "No orders found",
+    "noOrdersDescription": "There are no orders yet.",
+    "noEvents": "No events found",
+    "noEventsDescription": "No events to display in the calendar.",
+    "createEvent": "Create Event",
+    "error": "An error occurred",
+    "errorDescription": "Something went wrong while loading the data. Please try again."
+  },
+  "templates": {
+    "notFound": "Template not found",
+    "tryDifferentSearch": "Try a different search"
+  },
+  "quickReply": {
+    "title": "Quick Reply Templates",
+    "addNew": "Add New Template",
+    "comingSoon": "Add new template feature coming soon!",
+    "searchPlaceholder": "Search templates...",
+    "categories": {
+      "all": "All",
+      "greeting": "Greeting",
+      "appointment": "Appointment",
+      "product": "Product",
+      "support": "Support",
+      "closing": "Closing"
+    },
+    "greeting": {
+      "title": "Greeting Message",
+      "content": "Hello! How can I help you?"
+    },
+    "appointment": {
+      "title": "Appointment Offer",
+      "content": "Would you like to create an appointment? Can you let me know a convenient date and time?"
+    },
+    "product": {
+      "title": "Product Information",
+      "content": "Please share the product code for detailed information about this product."
+    },
+    "support": {
+      "title": "Support Request",
+      "content": "We have received your request. Our team will contact you as soon as possible."
+    },
+    "closing": {
+      "title": "Thank You & Closing",
+      "content": "Thank you for contacting us. Have a great day!"
+    },
+    "price": {
+      "title": "Price Information",
+      "content": "Please send us the product code for pricing information. We will send you the latest prices."
+    },
+    "hours": {
+      "title": "Business Hours",
+      "content": "Our business hours: Monday-Friday 09:00-18:00, Saturday 10:00-16:00"
+    },
+    "address": {
+      "title": "Address Information",
+      "content": "Our store address: Istanbul, Turkey. You can visit our website for detailed address."
+    }
+  },
+  "dateRange": {
+    "label": "Date Range",
+    "quickSelect": "Quick Select",
+    "customRange": "Custom Date Range",
+    "startDate": "Start",
+    "endDate": "End",
+    "presets": {
+      "24h": "Last 24 Hours",
+      "7d": "Last 7 Days",
+      "30d": "Last 30 Days",
+      "3m": "Last 3 Months",
+      "1y": "Last Year"
+    }
+  },
+  "auth": {
+    "email": "Email address",
+    "emailPlaceholder": "Enter your email",
+    "password": "Password",
+    "passwordPlaceholder": "Enter your password",
+    "rememberMe": "Remember me",
+    "forgotPassword": "Forgot your password?",
+    "login": "Log In",
+    "loginFailed": "Login failed. Please check your credentials.",
+    "adminLoginSubtitle": "AsistanApp Admin Login",
+    "agentLoginTitle": "Team Member Login",
+    "agentLoginSubtitle": "Manage your customer conversations",
+    "forgotPasswordTitle": "Forgot Password",
+    "forgotPasswordSubtitle": "Enter your email address to reset your password",
+    "emailSent": "Email Sent!",
+    "resetLinkSent": "Password reset link has been sent to:",
+    "resetPasswordError": "An error occurred. Please try again.",
+    "backToLogin": "Back to login"
+  },
+  "errors": {
+    "notFound": {
+      "goBack": "Go Back",
+      "previousPage": "Previous page",
+      "home": "Home",
+      "goToDashboard": "Go to Dashboard",
+      "help": "Help",
+      "getSupport": "Get support",
+      "popularPages": "Popular Pages:"
+    },
+    "serverError": {
+      "refresh": "Refresh",
+      "reloadPage": "Reload page",
+      "home": "Home",
+      "goToDashboard": "Go to Dashboard",
+      "support": "Support",
+      "getHelp": "Get help",
+      "whatCanYouDo": "What Can You Do?",
+      "tip1": "Refresh the page: It might be a temporary error.",
+      "tip2": "Wait a moment: The system will fix itself automatically.",
+      "tip3": "Contact our support team: Report your issue."
+    }
+  },
+  "fileUpload": {
+    "fileSizeError": "File size must be less than {{maxSize}}MB",
+    "unsupportedFormat": "Unsupported file format",
+    "clickOrDrag": "Click or drag to upload files",
+    "dropFiles": "Drop files here",
+    "supportedFormats": "Supported formats: {{formats}}",
+    "allFormatsSupported": "All file formats are supported",
+    "maxSize": "Maximum {{maxSize}}MB",
+    "maxFiles": "Up to {{maxFiles}} files"
+  },
+  "units": {
+    "minutes": "min",
+    "hours": "hrs",
+    "days": "days",
+    "seconds": "sec"
+  },
+  "labels": {
+    "average": "Average",
+    "target": "Target",
+    "viewAll": "View All",
+    "date": "Date",
+    "time": "Time",
+    "notSpecified": "Not specified",
+    "none": "None"
+  }
+}
+
