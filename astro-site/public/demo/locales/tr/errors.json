@@ -1,0 +1,16 @@
+{
+  "notFound": {
+    "title": "Sayfa Bulunamadı",
+    "message": "Aradığınız sayfa bulunamadı",
+    "backHome": "Ana Sayfaya Dön"
+  },
+  "serverError": {
+    "title": "Sunucu Hatası",
+    "message": "Bir hata oluştu, lütfen daha sonra tekrar deneyin"
+  },
+  "network": {
+    "title": "Bağlantı Hatası",
+    "message": "İnternet bağlantınızı kontrol edin"
+  }
+}
+

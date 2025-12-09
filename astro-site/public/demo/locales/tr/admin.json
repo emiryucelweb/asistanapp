@@ -1,0 +1,2341 @@
+{
+  "sidebar": {
+    "overview": "Genel Bakış",
+    "tenants": "Tenants",
+    "financialReports": "Finansal Raporlar",
+    "users": "Kullanıcılar",
+    "analytics": "Analitik",
+    "system": "Sistem",
+    "settings": "Ayarlar"
+  },
+  "system": {
+    "title": "Sistem Yönetimi",
+    "subtitle": "Platform altyapısı ve sistem durumu",
+    "recentLogs": "Son Sistem Logları",
+    "exporting": "Aktarılıyor...",
+    "export": "Export",
+    "logsShowing": "log kaydı gösteriliyor",
+    "close": "Kapat",
+    "metrics": {
+      "cpuUsage": "CPU Kullanımı",
+      "ramUsage": "RAM Kullanımı",
+      "diskUsage": "Disk Kullanımı",
+      "network": "Network"
+    },
+    "serviceStatus": "Servis Durumu",
+    "viewAllLogs": "Tüm logları görüntüle →",
+    "systemLogs": "Sistem Logları",
+    "systemLogsDesc": "Tüm sistem aktivitelerini görüntüle ve filtrele",
+    "searchLogs": "Log mesajlarında ara...",
+    "filterAll": "Tümü",
+    "filterInfo": "Info",
+    "filterWarning": "Warning",
+    "filterError": "Error",
+    "filter": "Filtre",
+    "search": "Ara",
+    "logRecords": "Log Kayıtları",
+    "level": "Seviye",
+    "message": "Mesaj",
+    "service": "Servis",
+    "time": "Zaman",
+    "exportFailed": "Loglar dışa aktarılamadı",
+    "totalLogs": "Toplam"
+  },
+  "help": {
+    "categories": {
+      "all": "Tümü",
+      "gettingStarted": "Başlangıç",
+      "features": "Özellikler",
+      "settings": "Ayarlar",
+      "team": "Ekip Yönetimi",
+      "analytics": "Raporlama",
+      "troubleshooting": "Sorun Giderme"
+    }
+  },
+  "notifications": {
+    "mockData": {
+      "newTenant": {
+        "title": "Yeni Firma Kaydı",
+        "message": "ABC Şirketi sisteme kaydoldu"
+      },
+      "paymentReceived": {
+        "title": "Ödeme Alındı",
+        "message": "XYZ A.Ş. yıllık ödeme yaptı"
+      }
+    }
+  },
+  "dashboard": {
+    "title": "Genel Bakış",
+    "subtitle": "AsistanApp platformu yönetim paneli",
+    "pageTitle": "Ana Sayfa",
+    "welcome": "Hoş Geldiniz",
+    "searchPlaceholder": "Firma ara, aktivite bul...",
+    "noResults": "Sonuç bulunamadı",
+    "searching": "Aranıyor...",
+    "recentActivity": "Son Aktiviteler",
+    "noActivity": "Henüz aktivite yok",
+    "systemHealth": "Sistem Sağlığı",
+    "systemStatus": "Sistem Durumu",
+    "operational": "Çalışıyor",
+    "slow": "Yavaş",
+    "allSystemsOperational": "Tüm sistemler çalışıyor",
+    "topTenants": "En İyi Performans Gösteren Firmalar",
+    "allReports": "Tüm raporlar →",
+    "noTenants": "Henüz firma yok",
+    "metrics": "Metrikler",
+    "recentAlerts": "Son Uyarılar",
+    "alerts": {
+      "highConversationVolume": "Yüksek Konuşma Hacmi",
+      "lowSatisfactionRate": "Düşük Memnuniyet Oranı",
+      "aiResponseTimeIncreased": "AI Yanıt Süresi Arttı",
+      "pendingConversationIncrease": "Bekleyen Konuşma Artışı",
+      "time": {
+        "hoursAgo": "{{count}} saat önce"
+      }
+    },
+    "channelDistribution": "Kanal Dağılımı",
+    "totalConversations": "Toplam Konuşma",
+    "channels": {
+      "phone": "Telefon"
+    },
+    "teamPerformance": "Ekip Performansı",
+    "teamPerformanceTable": {
+      "teamMember": "Ekip Üyesi",
+      "resolvedConversations": "Çözülen Konuşmalar",
+      "avgResponseTime": "Ortalama Yanıt Süresi",
+      "satisfactionRate": "Memnuniyet Oranı",
+      "mockNames": {
+        "member1": "Ahmet Yılmaz",
+        "member2": "Ayşe Kaya",
+        "member3": "Mehmet Demir"
+      },
+      "mockTimes": {
+        "hours": "{{count}} saat"
+      }
+    },
+    "kpi": {
+      "activeConversations": "Aktif Konuşmalar",
+      "aiResolutionRate": "AI Çözüm Oranı",
+      "customerSatisfaction": "Müşteri Memnuniyeti",
+      "revenue": "Gelir"
+    },
+    "aiPerformance": {
+      "title": "AI Performans Özeti",
+      "resolutionRate": "Çözüm Oranı",
+      "aiResolved": "AI Çözülen",
+      "handedToAgent": "İnsana Devredilen",
+      "pending": "Beklemede"
+    },
+    "selectDates": "Lütfen başlangıç ve bitiş tarihlerini seçin",
+    "apply": "Uygula",
+    "startDate": "Başlangıç Tarihi",
+    "endDate": "Bitiş Tarihi",
+    "revenueTrends": "Gelir Trendleri",
+    "conversationTrends": "Konuşma Trendleri",
+    "dateRanges": {
+      "24h": "Son 24 Saat",
+      "7d": "Son 7 Gün",
+      "30d": "Son 30 Gün",
+      "1y": "Son 1 Yıl",
+      "custom": "Özel Tarih"
+    },
+    "dateRangeDescriptions": {
+      "24h": "Son 24 saatin performansına genel bir bakış",
+      "7d": "Son 7 günün performansına genel bir bakış",
+      "30d": "Son 30 günün performansına genel bir bakış",
+      "1y": "Son 1 yılın performansına genel bir bakış",
+      "custom": "Seçili tarih aralığının performansına genel bir bakış"
+    },
+    "customDateRange": {
+      "startDate": "Başlangıç Tarihi",
+      "endDate": "Bitiş Tarihi"
+    },
+    "stats": {
+      "totalTenants": "Toplam Firma",
+      "active": "{{count}} aktif",
+      "trial": "{{count}} deneme",
+      "monthlyRevenue": "Aylık Gelir",
+      "growthThisMonth": "+{{rate}}% bu ay",
+      "netProfit": "Net Kar",
+      "profitMargin": "{{margin}}% kar marjı"
+    },
+    "table": {
+      "tenant": "Tenant",
+      "plan": "Plan",
+      "monthlyRevenue": "Aylık Gelir",
+      "growth": "Büyüme"
+    },
+    "quickActions": {
+      "tenantsManagement": "Firmalar Yönetimi",
+      "viewAllTenants": "Tüm firmaları görüntüle",
+      "financialReports": "Finansal Raporlar",
+      "revenueAnalysis": "Gelir ve maliyet analizi",
+      "analytics": "Analitik",
+      "detailedStats": "Detaylı istatistikler",
+      "system": "Sistem",
+      "systemStatus": "Sistem durumu ve loglar"
+    },
+    "quickLinks": {
+      "financialReports": "Finansal Raporlar",
+      "financialDesc": "Detaylı istatistikler",
+      "system": "Sistem",
+      "systemDesc": "Sistem durumu ve loglar"
+    },
+    "searchCompany": "Firma ara"
+  },
+  "conversations": {
+    "title": "Konuşmalar",
+    "subtitle": "Tüm kanallardan gelen mesajları yönetin",
+    "mockData": {
+      "messages": {
+        "instagram": {
+          "msg1": "Merhaba, fiyat listesi paylaşabilir misiniz? 😊",
+          "msg2": "Dm'den ulaşmak istedim, randevu alabilir miyim?",
+          "msg3": "Hikayenizde gördüğüm kampanya hala geçerli mi?",
+          "msg4": "Diş beyazlatma işlemi ne kadar sürer?",
+          "msg5": "Instagram'dan yazıyorum, bugün için müsaitlik var mı?"
+        },
+        "whatsapp": {
+          "msg1": "Merhaba, yarın için randevu alabilir miyim?",
+          "msg2": "Dr. Ayşe Hanım'dan randevu rica ediyorum",
+          "msg3": "Öğleden sonra müsaitlik var mı acaba?",
+          "msg4": "Geçen hafta başladığımız tedavinin devamı için gelmem gerekiyor",
+          "msg5": "Acil bir durumum var, bugün gelme şansım var mı?"
+        },
+        "facebook": {
+          "msg1": "Sayfanızı görüp yazmak istedim, fiyatlar hakkında bilgi alabilir miyim?",
+          "msg2": "Facebook'tan yazdım, implant tedavisi için bilgi istiyorum",
+          "msg3": "Perşembe günü müsait saatleriniz var mı?",
+          "msg4": "Özel sigorta kabul ediyor musunuz?",
+          "msg5": "Sayfanızdaki kampanyayı görmek istiyorum"
+        },
+        "web": {
+          "msg1": "Web sitenizden randevu formunu doldurdum",
+          "msg2": "Site üzerinden bilgi almak istemiştim, geri dönüş bekliyorum",
+          "msg3": "Online randevu sisteminiz çok pratik, teşekkürler",
+          "msg4": "Formda belirttiğim tarih için onay alabilir miyim?",
+          "msg5": "Web sitenizdeki fiyat listesini inceledim, detaylı bilgi istiyorum"
+        },
+        "phone": {
+          "msg1": "Alo, merhaba. Randevu almak için arıyorum",
+          "msg2": "Bugün akşam saatlerinde müsaitlik var mı?",
+          "msg3": "Çocuğum için pedodontist randevusu istiyorum",
+          "msg4": "Acil bir diş ağrım var, bugün bakabilir misiniz?",
+          "msg5": "Kanal tedavisi yaptırmam gerekiyor, ne zaman gelebilirim?"
+        }
+      }
+    },
+    "searchPlaceholder": "Konuşmalarda ara...",
+    "noConversationsFound": "Konuşma bulunamadı",
+    "autoArchiveInfo": "Konuşmalar 24 saat sonra otomatik olarak arşivlenir",
+    "loadMore": "Daha Fazla Yükle",
+    "addFile": "Dosya Ekle",
+    "messagePlaceholder": "Mesajınızı yazın...",
+    "sendMessage": "Mesaj Gönder",
+    "needsHelp": "Yardım Gerekli",
+    "tabs": {
+      "assistant": "Asistan",
+      "assistantShort": "AI",
+      "employee": "Çalışan",
+      "employeeShort": "Ekip",
+      "past": "Geçmiş Konuşmalar",
+      "pastShort": "Geçmiş",
+      "phone": "Telefon Konuşmaları",
+      "phoneShort": "Telefon",
+      "needsHelp": "Yardım Gerekli",
+      "needsHelpShort": "Yardım"
+    },
+    "time": {
+      "now": "Şimdi",
+      "minutesAgo": "{{count}} dk önce",
+      "hoursAgo": "{{count}} saat önce",
+      "daysAgo": "{{count}} gün önce",
+      "yesterday": "Dün",
+      "weeksAgo": "{{count}} hafta önce"
+    },
+    "timeLabels": {
+      "now": "Şimdi",
+      "minutesAgo": "{{count}} dakika önce",
+      "hoursAgo": "{{count}} saat önce"
+    },
+    "filters": {
+      "all": "Tümü",
+      "urgentCall": "ACİL ARAMA!",
+      "liveCalls": "canlı arama",
+      "needsHelpWaiting": "konuşma yardım bekliyor",
+      "needsHelp": "Yardım Gerekli",
+      "urgent": "Urgent",
+      "unread": "Okunmamış"
+    },
+    "badges": {
+      "urgent": "ACİL ARAMA",
+      "liveCall": "Canlı",
+      "newMessages": "yeni mesaj",
+      "humanAssistance": "İnsan yardımı",
+      "ai": "AI"
+    },
+    "assignedTo": "Konuşma {{name}}'e atandı!",
+    "actions": {
+      "assign": "Ata",
+      "viewProfile": "Profili Görüntüle",
+      "joinCall": "Aramaya Katıl",
+      "urgentJoinCall": "ACİL - ARAMAYA KATIL",
+      "send": "Gönder",
+      "close": "Kapat",
+      "cancel": "İptal",
+      "view": "Görüntüle",
+      "notes": "Notes",
+      "archive": "Arşivle",
+      "transfer": "Transfer",
+      "takeOver": "Takeover"
+    },
+    "conversation": {
+      "lastMessage": "Son mesaj:",
+      "callDuration": "Arama süresi:",
+      "selectConversation": "Konuşma Seçin",
+      "selectToStart": "Mesajlaşmaya başlamak için bir konuşma seçin",
+      "takingOver": "konuşmayı devralıyor"
+    },
+    "alerts": {
+      "urgentTitle": "🚨 ACİL ARAMA - MÜDAHALE GEREKLİ",
+      "urgentMessage": "Müşteri acil yardım talep ediyor. Lütfen hemen aramaya katılın!",
+      "liveCallTitle": "📞 Canlı Arama Devam Ediyor",
+      "liveCallAiMessage": "AI asistan müşteriyle konuşuyor. Gerekirse aramaya katılabilirsiniz.",
+      "liveCallAgentMessage": "{{agentName}} müşteriyle konuşuyor.",
+      "aiStuckTitle": "Asistan Yardım Bekliyor",
+      "voiceTranscript": "Sesli konuşma transkripti"
+    },
+    "attachments": {
+      "photo": "Fotoğraf",
+      "video": "Video",
+      "file": "Dosya"
+    },
+    "profile": {
+      "title": "Müşteri Profili",
+      "instagram": {
+        "username": "Instagram Kullanıcı Adı",
+        "visitProfile": "Profili Ziyaret Et"
+      },
+      "phone": {
+        "number": "Telefon Numarası",
+        "call": "Ara",
+        "liveCall": "Canlı Arama"
+      },
+      "whatsapp": {
+        "number": "Telefon Numarası",
+        "call": "Ara"
+      },
+      "facebook": {
+        "profile": "Facebook Profili",
+        "visitProfile": "Profili Ziyaret Et"
+      },
+      "web": {
+        "title": "Web Formundan Gelen Bilgiler",
+        "fullName": "Ad Soyad",
+        "email": "E-posta",
+        "phoneOptional": "Telefon (Opsiyonel)"
+      },
+      "history": "Geçmiş",
+      "notes": "Notes"
+    },
+    "assignModal": {
+      "title": "Konuşmayı Ata",
+      "selectAgent": "Ekip Üyesi Seç",
+      "activeConversations": "aktif konuşma"
+    },
+    "channels": {
+      "all": "Tüm Kanallar",
+      "whatsapp": "Whatsapp",
+      "instagram": "Instagram",
+      "web": "Web",
+      "facebook": "Facebook",
+      "phone": "Telefon"
+    },
+    "table": {
+      "customer": "Müşteri",
+      "channel": "Channel",
+      "lastMessage": "Son Mesaj",
+      "status": "Durum",
+      "priority": "Öncelik",
+      "assigned": "Assigned",
+      "date": "Date",
+      "actions": "İşlemler"
+    },
+    "status": {
+      "active": "Aktif",
+      "waiting": "Waiting",
+      "resolved": "Çözüldü",
+      "new": "New",
+      "needsHelp": "Yardım Gerekli"
+    },
+    "priority": {
+      "low": "Düşük",
+      "normal": "Normal",
+      "high": "Yüksek",
+      "urgent": "Urgent"
+    },
+    "mockData": {
+      "agents": {
+        "assistant": "Asistan",
+        "doctor": "Dr. Ayşe Yılmaz",
+        "receptionist": "Resepsiyonist Elif",
+        "representative": "Müşteri Temsilcisi"
+      }
+    },
+    "chat": {
+      "writeMessage": "Mesaj yaz...",
+      "send": "Gönder",
+      "attach": "Dosya Ekle",
+      "image": "Image",
+      "video": "Video",
+      "file": "File",
+      "voiceCall": "Sesli Arama",
+      "endCall": "Aramayı Bitir"
+    },
+    "empty": {
+      "title": "Konuşma bulunamadı",
+      "description": "Seçili filtrelere uygun konuşma yok",
+      "noMessages": "Henüz mesaj yok",
+      "startConversation": "Konuşmaya başlayın"
+    },
+    "messages": {
+      "aiStuck": "AI yardım istiyor",
+      "humanNeeded": "İnsan desteği gerekli",
+      "assigned": "Atandı: {{name}}",
+      "unassigned": "Atanmadı",
+      "callInProgress": "Arama devam ediyor",
+      "callDuration": "{{duration}} dakika"
+    },
+    "fullscreen": {
+      "enter": "Tam Ekran (F11)",
+      "exit": "Tam Ekrandan Çık (Esc)"
+    }
+  },
+  "users": {
+    "title": "Kullanıcılar",
+    "pageTitle": "Kullanıcı Yönetimi",
+    "pageSubtitle": "Tüm firma kullanıcılarını görüntüle ve yönet",
+    "add": "Kullanıcı Ekle",
+    "addNewUser": "Yeni Kullanıcı",
+    "edit": "Düzenle",
+    "delete": "Sil",
+    "save": "Kaydet",
+    "cancel": "İptal",
+    "search": "Kullanıcı ara...",
+    "moreActions": "Daha fazla",
+    "filter": "Filter",
+    "modals": {
+      "addUser": "Yeni Kullanıcı Ekle",
+      "editUser": "Kullanıcıyı Düzenle",
+      "deleteUser": "Kullanıcıyı Sil"
+    },
+    "placeholders": {
+      "name": "Örn: Ahmet Yılmaz",
+      "email": "ornek@firma.com",
+      "phone": "+90 555 123 4567",
+      "password": "En az 8 karakter"
+    },
+    "stats": {
+      "totalUsers": "Toplam Kullanıcı",
+      "active": "Aktif",
+      "inactive": "Pasif",
+      "admins": "Admins"
+    },
+    "status": {
+      "active": "Aktif",
+      "inactive": "Pasif"
+    },
+    "roles": {
+      "owner": "Sahip",
+      "admin": "Yönetici",
+      "manager": "Müdür",
+      "agent": "Temsilci"
+    },
+    "filterLabels": {
+      "status": "Durum",
+      "role": "Rol"
+    },
+    "filterOptions": {
+      "all": "Tümü",
+      "active": "Aktif",
+      "inactive": "Pasif"
+    },
+    "tableHeaders": {
+      "user": "Kullanıcı",
+      "tenant": "Tenant",
+      "role": "Rol",
+      "status": "Durum",
+      "lastLogin": "Son Giriş",
+      "actions": "İşlemler"
+    },
+    "actions": {
+      "activate": "Aktif Yap",
+      "deactivate": "Pasif Yap"
+    },
+    "formLabels": {
+      "name": "İsim",
+      "email": "E-posta",
+      "phone": "Telefon",
+      "role": "Rol",
+      "status": "Durum"
+    },
+    "messages": {
+      "statusChanged": "{{name}} kullanıcısı {{status}} yapıldı",
+      "statusChangeFailed": "Kullanıcı durumu değiştirilemedi",
+      "userUpdated": "{{name}} kullanıcısı başarıyla güncellendi!",
+      "userDeleted": "{{name}} kullanıcısı başarıyla silindi!",
+      "confirmDelete": "{{name}} kullanıcısını silmek istediğinizden emin misiniz? Bu işlem geri alınamaz.",
+      "userAdded": "{{name}} başarıyla eklendi! (Firma: {{tenant}}, Rol: {{role}})"
+    },
+    "createUser": "Kullanıcı Oluştur",
+    "addUserModal": {
+      "userInfo": "Kullanıcı Bilgileri",
+      "fullName": "Ad Soyad *",
+      "email": "Email *",
+      "phone": "Telefon",
+      "password": "Şifre *",
+      "tenantAndRole": "Firma ve Yetki",
+      "tenant": "Firma *",
+      "selectTenant": "Firma Seçin",
+      "role": "Rol *",
+      "dailyBreak": "Günlük Mola Hakkı",
+      "dailyBreakMinutes": "Günlük Mola Süresi (Dakika)",
+      "dailyBreakDescription": "Agent günde kaç dakika mola kullanabilir? (Örnek: 30 dakika)",
+      "weeklySchedule": "Haftalık Çalışma Programı",
+      "selectWorkingDays": "Haftanın hangi günleri çalışacak? (Çalışma günlerini seçin)",
+      "days": {
+        "monday": "Pazartesi",
+        "tuesday": "Salı",
+        "wednesday": "Çarşamba",
+        "thursday": "Perşembe",
+        "friday": "Cuma",
+        "saturday": "Cumartesi",
+        "sunday": "Pazar"
+      },
+      "daysShort": {
+        "mon": "Pzt",
+        "tue": "Sal",
+        "wed": "Çar",
+        "thu": "Per",
+        "fri": "Cum",
+        "sat": "Cmt",
+        "sun": "Paz"
+      },
+      "working": "✓ Çalışıyor",
+      "dayOff": "✗ İzinli",
+      "workingDay": "✓ Çalışma Günü",
+      "weekendOrDayOff": "✗ Hafta Sonu / İzin Günü",
+      "annualLeave": "Yıllık İzin Hakları",
+      "optional": "Optional",
+      "annualLeaveDays": "Yıllık İzin Hakkı (Gün)",
+      "defaultDays": "Varsayılan: 20 gün",
+      "usedLeave": "Kullanılan İzin (Gün)",
+      "previouslyUsed": "Daha önce kullanılan",
+      "remainingLeave": "Kalan İzin (Gün)",
+      "sufficient": "Sufficient",
+      "medium": "Medium",
+      "low": "Low",
+      "autoCalculated": "Otomatik hesaplanır",
+      "currentLeaveDates": "Şu Anki İzin Tarihleri (Opsiyonel)",
+      "leaveStartDate": "İzin Başlangıç Tarihi",
+      "leaveEndDate": "İzin Bitiş Tarihi",
+      "leaveDatesHint": "Kullanıcı şu anda izinli ise tarih aralığını girebilirsiniz, boş bırakabilirsiniz",
+      "leaveManagementInfo": "İzin kullanımı, team ekranından veya kullanıcı profil sayfasından güncellenebilir. Acil durumlarda team ekranından hızlı izinli işaretleme yapılabilir.",
+      "securityNotice": "Güvenlik Bildirisi",
+      "securityNoticeDesc": "Yeni kullanıcıya otomatik olarak hoş geldin emaili gönderilecek. İlk girişte şifre değiştirmesi gerekecektir."
+    },
+    "validation": {
+      "allFieldsRequired": "Lütfen tüm zorunlu alanları doldurun!",
+      "passwordMinLength": "Şifre en az 8 karakter olmalıdır!"
+    }
+  },
+  "team": {
+    "search": "Ekip üyesi ara (isim, email)...",
+    "title": "Ekip Yönetimi",
+    "subtitle": "Ekip üyelerini yönet ve performanslarını takip et",
+    "addMember": {
+      "_oldValue": "Yeni Ekip Üyesi Ekle",
+      "title": "Ekip Üyesi Ekle",
+      "personalInfo": "Kişisel Bilgiler",
+      "name": "Ad Soyad",
+      "email": "E-posta",
+      "phone": "Telefon",
+      "department": "Departman",
+      "role": "Rol",
+      "roleAndPermissions": "Rol ve İzinler"
+    },
+    "departments": {
+      "management": "Yönetim",
+      "customerRelations": "Müşteri İlişkileri",
+      "support": "Destek",
+      "sales": "Satış",
+      "technicalSupport": "Teknik Destek",
+      "analytics": "Analiz"
+    },
+    "mockData": {
+      "lastActive": {
+        "2min": "2 dakika önce",
+        "15min": "15 dakika önce",
+        "30min": "30 dakika önce",
+        "1hour": "1 saat önce",
+        "2hours": "2 saat önce",
+        "3days": "3 gün önce"
+      },
+      "avgResponseTime": {
+        "2min30sec": "2 dk 30 sn",
+        "3min15sec": "3 dk 15 sn",
+        "3min45sec": "3 dk 45 sn",
+        "4min20sec": "4 dk 20 sn",
+        "5min10sec": "5 dk 10 sn"
+      }
+    },
+    "viewModes": {
+      "grid": "Grid",
+      "list": "Liste"
+    },
+    "exportTeam": "Ekibi Dışa Aktar",
+    "managePermissions": "İzinleri Yönet",
+    "allRoles": "Tüm Roller",
+    "activeMembers": "Aktif Üyeler",
+    "allStatuses": "Tüm Durumlar",
+    "gridView": "Gridview",
+    "listView": "Listview",
+    "details": "Details",
+    "edit": "Düzenle",
+    "delete": "Sil",
+    "close": "Close",
+    "cancel": "İptal",
+    "save": "Kaydet",
+    "saveChanges": "Değişiklikleri Kaydet",
+    "moreOptions": "Daha fazla seçenek",
+    "deleteMessage": "Mesajı Sil",
+    "deleteMessageConfirm": "Bu mesajı silmek istediğinizden emin misiniz? Bu işlem geri alınamaz.",
+    "stats": {
+      "totalTeam": "Toplam Ekip",
+      "activeMembers": "Aktif Üyeler",
+      "onLeave": "İzinde",
+      "avgSatisfaction": "Ort. Memnuniyet"
+    },
+    "filters": {
+      "allRoles": "Tüm Roller",
+      "activeMembers": "Aktif Üyeler",
+      "allStatuses": "Allstatuses"
+    },
+    "table": {
+      "member": "Üye",
+      "role": "Rol",
+      "department": "Bölüm",
+      "status": "Durum",
+      "lastActivity": "Son Aktivite",
+      "actions": "İşlemler",
+      "performance": "Performance"
+    },
+    "roles": {
+      "owner": "Sahip",
+      "admin": "Yönetici",
+      "teamLeader": "Takım Lideri",
+      "supportSpecialist": "Destek Uzmanı",
+      "operator": "Operatör",
+      "agent": "Temsilci",
+      "viewer": "İzleyici"
+    },
+    "status": {
+      "active": "Aktif",
+      "offline": "Çevrimdışı",
+      "busy": "Meşgul",
+      "away": "Away",
+      "inactive": "Pasif",
+      "onLeave": "İzinde"
+    },
+    "actions": {
+      "endLeave": "İzni Bitir",
+      "markOnLeave": "Acil İzinli İşaretle",
+      "makeActive": "Aktif yap",
+      "quickLeave": "Hızlı izin",
+      "markEmergencyLeave": "Acil İzinli İşaretle",
+      "add": "Ekle",
+      "cancel": "İptal",
+      "delete": "Sil",
+      "edit": "Düzenle",
+      "remove": "Kaldır",
+      "saveChanges": "Değişiklikleri Kaydet"
+    },
+    "performance": {
+      "conversations": "Konuşmalar",
+      "satisfaction": "Memnuniyet",
+      "avgResponse": "Ort. Yanıt",
+      "tasks": "Görevler",
+      "title": "Performans Metrikleri"
+    },
+    "gridLabels": {
+      "conversations": "Konuşmalar",
+      "satisfaction": "Memnuniyet",
+      "avgResponse": "Ort. Yanıt",
+      "tasks": "Görevler",
+      "details": "Detaylar"
+    },
+    "leaveInfo": {
+      "title": "İzin Bilgileri",
+      "annualRight": "Yıllık Hak",
+      "used": "Kullanılan",
+      "remaining": "Kalan",
+      "days": "gün",
+      "currentlyOnLeave": "🏖️ Şu Anda İzinde",
+      "startDate": "Başlangıç:",
+      "endDate": "Bitiş:"
+    },
+    "leave": {
+      "title": "İzin Bilgileri",
+      "annualDays": "Yıllık İzin Hakkı",
+      "usedDays": "Kullanılan İzin",
+      "remainingDays": "Kalan İzin",
+      "days": "gün",
+      "currentlyOnLeave": "🏖️ Şu Anda İzinde",
+      "startDate": "Başlangıç",
+      "endDate": "Bitiş"
+    },
+    "detailModal": {
+      "role": "Rol",
+      "status": "Durum",
+      "department": "Departman",
+      "joinDate": "Katılım Tarihi",
+      "close": "Kapat"
+    },
+    "editMemberModal": {
+      "personalInfo": "Kişisel Bilgiler",
+      "roleAndStatus": "Rol ve Durum",
+      "fullName": "Ad Soyad",
+      "email": "Email",
+      "phone": "Telefon",
+      "department": "Departman",
+      "role": "Rol",
+      "status": "Durum",
+      "changeNotification": "Değişiklik Bildirimi",
+      "changeNotificationDesc": "Yapılan değişiklikler kullanıcıya email ile bildirilecektir.",
+      "statusOptions": {
+        "active": "Aktif",
+        "inactive": "Pasif",
+        "onLeave": "İzinde"
+      }
+    },
+    "permissions": {
+      "title": "İzinler"
+    },
+    "editModal": {
+      "title": "Ekip Üyesini Düzenle",
+      "personalInfo": "Kişisel Bilgiler",
+      "roleAndStatus": "Rol ve Durum",
+      "name": "Ad Soyad",
+      "email": "E-posta",
+      "phone": "Telefon",
+      "department": "Department",
+      "role": "Rol",
+      "status": "Durum",
+      "changeNotification": "Değişiklik Bildirimi",
+      "changeNotificationDesc": "Yapılan değişiklikler kullanıcıya email ile bildirilecektir."
+    },
+    "addMemberModal": {
+      "title": "Yeni Ekip Üyesi Ekle",
+      "personalInfo": "Kişisel Bilgiler",
+      "roleAndAuth": "Rol ve Yetki",
+      "dailyBreakRight": "Günlük Mola Hakkı",
+      "dailyBreakMinutes": "Günlük Mola Süresi (Dakika)",
+      "dailyBreakDesc": "Agent günde kaç dakika mola kullanabilir? (Örnek: 30 dakika)",
+      "weeklySchedule": "Haftalık Çalışma Programı",
+      "weeklyScheduleDesc": "Haftanın hangi günleri çalışacak? (Çalışma günlerini seçin)",
+      "annualLeaveRights": "Yıllık İzin Hakları",
+      "optional": "(Opsiyonel)",
+      "annualLeaveDays": "Yıllık İzin Hakkı (Gün)",
+      "usedLeaveDays": "Kullanılan İzin (Gün)",
+      "remainingLeaveDays": "Kalan İzin (Gün)",
+      "defaultDays": "Varsayılan: 20 gün",
+      "previouslyUsed": "Daha önce kullanılan",
+      "autoCalculated": "Otomatik hesaplanır",
+      "sufficient": "Yeterli",
+      "medium": "Orta",
+      "low": "Az",
+      "currentLeaveDates": "Şu Anki İzin Tarihleri (Opsiyonel)",
+      "leaveStartDate": "İzin Başlangıç Tarihi",
+      "leaveEndDate": "İzin Bitiş Tarihi",
+      "leaveDatesHint": "Kullanıcı şu anda izinli ise tarih aralığını girebilirsiniz, boş bırakabilirsiniz",
+      "workingDays": {
+        "monday": "Pazartesi",
+        "tuesday": "Salı",
+        "wednesday": "Çarşamba",
+        "thursday": "Perşembe",
+        "friday": "Cuma",
+        "saturday": "Cumartesi",
+        "sunday": "Pazar"
+      },
+      "workingDaysShort": {
+        "mon": "Pzt",
+        "tue": "Sal",
+        "wed": "Çar",
+        "thu": "Per",
+        "fri": "Cum",
+        "sat": "Cmt",
+        "sun": "Paz"
+      },
+      "working": "✓ Çalışıyor",
+      "dayOff": "✗ İzinli",
+      "workingDay": "✓ Çalışma Günü",
+      "weekendDayOff": "✗ Hafta Sonu / İzin Günü"
+    },
+    "sidebar": {
+      "searchChannels": "Kanal ara...",
+      "searchChannelsAria": "Kanal ara",
+      "privateChannel": "Özel kanal",
+      "publicChannel": "Genel kanal",
+      "createChannel": "Yeni Kanal Oluştur",
+      "createChannelAdmin": "Yeni Kanal Oluştur (Sadece Admin/Owner)",
+      "newDirectMessage": "Yeni Direkt Mesaj"
+    },
+    "modals": {
+      "editMember": "Ekip Üyesini Düzenle",
+      "removeMember": "Ekip Üyesini Çıkar",
+      "createChannel": {
+        "creating": "Oluşturuluyor...",
+        "create": "Oluştur",
+        "descriptionOptional": "Açıklama (Opsiyonel)",
+        "validation": {
+          "nameRequired": "Kanal adı gereklidir",
+          "nameMinLength": "Kanal adı en az 3 karakter olmalıdır",
+          "nameMaxLength": "Kanal adı en fazla 50 karakter olabilir",
+          "nameInvalidChars": "Kanal adı sadece harf, rakam, tire ve alt çizgi içerebilir"
+        }
+      },
+      "call": {
+        "calling": "Aranıyor...",
+        "callEnded": "Arama Sonlandı",
+        "micMute": "Mikrofonu Kapat",
+        "micUnmute": "Mikrofonu Aç",
+        "videoOff": "Videoyu Kapat",
+        "videoOn": "Videoyu Aç",
+        "speakerMute": "Sesi Kapat",
+        "speakerUnmute": "Sesi Aç"
+      }
+    },
+    "placeholders": {
+      "name": "Ahmet Yılmaz",
+      "email": "ahmet@asistanapp.com",
+      "phone": "+90 532 123 4567",
+      "department": "Müşteri İlişkileri"
+    },
+    "messages": {
+      "memberRemoved": "{{name}} ekipten çıkarıldı!",
+      "memberActivated": "{{name}} aktif duruma getirildi!",
+      "memberMarkedOnLeave": "{{name}} acil izinli olarak işaretlendi!",
+      "memberUpdated": "{{name}} başarıyla güncellendi!",
+      "memberAdded": "{{name}} başarıyla eklendi! İzin: {{leave}} gün, Mola: {{break}} dk",
+      "confirmRemove": "{{name}} kişisini ekipten çıkarmak istediğinize emin misiniz? Bu işlem geri alınamaz.",
+      "memberMarkedLeave": "{{name}} acil izinli olarak işaretlendi!",
+      "confirmDelete": "Bu üyeyi silmek istediğinizden emin misiniz?"
+    },
+    "chat": {
+      "messagePlaceholder": "Mesaj yaz... (@mention için @ kullan)",
+      "cancelReply": "Yanıtı iptal et",
+      "addFile": "Dosya ekle",
+      "fileOptions": "Dosya ekleme seçenekleri",
+      "addEmoji": "Emoji ekle",
+      "mentionUser": "Kullanıcı etiketle",
+      "typeMessage": "Mesaj yaz",
+      "send": "Gönder",
+      "logout": "Çıkış Yap"
+    },
+    "header": {
+      "back": "Geri dön",
+      "search": "Search",
+      "notifications": "Notifications",
+      "userMenu": "Kullanıcı Menüsü",
+      "confirmLogout": "Çıkış yapmak istediğinizden emin misiniz?"
+    },
+    "channels": {
+      "noChannelsFound": "Kanal bulunamadı",
+      "noChannelsYet": "Henüz kanal yok",
+      "noUsersFound": "Kullanıcı bulunamadı",
+      "noDirectMessagesYet": "Henüz direkt mesaj yok"
+    },
+    "newMember": "Yeni ekip üyesi",
+    "workingStatus": {
+      "working": "Çalışıyor",
+      "off": "İzinli"
+    },
+    "callControls": "Callcontrols",
+    "connected": "Connected",
+    "endCall": "Endcall",
+    "leave": {
+      "annualDays": "Annualdays",
+      "currentlyOnLeave": "Currentlyonleave",
+      "days": "Days",
+      "endDate": "Enddate",
+      "remainingDays": "Remainingdays",
+      "startDate": "Startdate",
+      "title": "Başlık",
+      "usedDays": "Useddays"
+    },
+    "searchMessages": "Searchmessages",
+    "searchQuery": "Searchquery",
+    "searchResults": "Searchresults",
+    "call": {
+      "calling": "Aranıyor...",
+      "videoOn": "Videoyu Aç",
+      "videoOff": "Videoyu Kapat",
+      "soundOn": "Sesi Aç",
+      "soundOff": "Sesi Kapat"
+    },
+    "channelCreation": "Kanal Oluşturma",
+    "muteToggle": "Sesi Aç/Kapat"
+  },
+  "reports": {
+    "lastUpdate": "Son güncelleme",
+    "title": "Raporlar & Analizler",
+    "subtitle": "Detaylı performans metrikleri ve istatistikler",
+    "mockData": {
+      "teamMembers": {
+        "name1": "Ahmet Yılmaz",
+        "name2": "Ayşe Demir",
+        "name3": "Zeynep Şahin",
+        "name4": "Can Öztürk"
+      }
+    },
+    "allReports": "Tüm Raporlar",
+    "selectedReport": "Seçili Rapor",
+    "selectCategory": "Detaylı analiz için bir kategori seçin",
+    "clickForDetails": "Detaylı bilgiler için karta tıklayın",
+    "noReportsFound": "Seçilen kategoride rapor bulunamadı",
+    "exporting": "İndiriliyor...",
+    "close": "Close",
+    "dateRangeSelect": "Tarih aralığı seç",
+    "downloadPDF": "PDF olarak indir",
+    "downloadExcel": "Excel olarak indir",
+    "downloadCSV": "CSV olarak indir",
+    "export": {
+      "title": "Raporlar ve Analizler",
+      "subtitle": "AsistanApp Yönetim Paneli",
+      "description": "Detaylı performans ve analiz raporları",
+      "dateRange": "Son 30 Gün",
+      "statsTitle": "Genel İstatistikler",
+      "totalConversations": "Toplam Görüşme",
+      "aiSuccessRate": "AI Başarı Oranı",
+      "avgResponseTime": "Ortalama Yanıt Süresi",
+      "customerSatisfaction": "Müşteri Memnuniyeti",
+      "note1": "Bu rapor otomatik olarak oluşturulmuştur.",
+      "note2": "Detaylı analiz için ilgili kategori raporlarını inceleyiniz.",
+      "note3": "Sorularınız için destek ekibimizle iletişime geçebilirsiniz.",
+      "pdfDownloading": "✅ Rapor PDF olarak indiriliyor...",
+      "excelDownloading": "✅ Excel raporu hazırlanıyor...",
+      "csvExporting": "✅ CSV dosyası oluşturuluyor...",
+      "success": "Rapor başarıyla indirildi!",
+      "error": "Rapor indirilirken hata oluştu"
+    },
+    "data": {
+      "totalConversations": "Toplam Konuşma",
+      "aiSuccessRate": "AI Başarı Oranı",
+      "conversionRate": "Dönüşüm Oranı",
+      "customerSatisfaction": "Müşteri Memnuniyeti",
+      "allReports": "Tüm Raporlar",
+      "dateRanges": {
+        "7d": "Son 7 Gün",
+        "30d": "Son 30 Gün",
+        "90d": "Son 90 Gün",
+        "1y": "Son 1 Yıl"
+      },
+      "categories": {
+        "ai": "AI Performansı",
+        "channels": "Kanal Analizi",
+        "satisfaction": "Müşteri Memnuniyeti",
+        "time": "Zaman Analizi",
+        "team": "Ekip Performansı",
+        "conversion": "Dönüşüm Oranları",
+        "financial": "Finansal Raporlar",
+        "trends": "Trendler & Tahminler",
+        "sla": "Acil Durum & SLA"
+      }
+    },
+    "categories": {
+      "ai": {
+        "title": "AI Performansı",
+        "description": "AI asistan başarı oranı, otomatik yanıt performansı ve öğrenme metrikleri"
+      },
+      "channels": {
+        "title": "Kanal Analizi",
+        "description": "WhatsApp, Instagram, Web ve diğer kanalların performans karşılaştırması"
+      },
+      "satisfaction": {
+        "title": "Müşteri Memnuniyeti",
+        "description": "CSAT skorları, NPS değerleri ve müşteri geri bildirimleri"
+      },
+      "time": {
+        "title": "Zaman Analizi",
+        "description": "Ortalama yanıt süreleri, çözüm süreleri ve zaman dilimine göre istatistikler"
+      },
+      "team": {
+        "title": "Ekip Performansı",
+        "description": "Agent bazlı performans, iş yükü dağılımı ve verimlilik metrikleri"
+      },
+      "conversion": {
+        "title": "Dönüşüm Oranları",
+        "description": "Satış dönüşümleri, funnel analizi ve hedef takibi"
+      },
+      "financial": {
+        "title": "Finansal Raporlar",
+        "description": "Gelir analizi, maliyet karşılaştırması ve ROI hesaplamaları"
+      },
+      "trends": {
+        "title": "Trendler & Tahminler",
+        "description": "Gelecek projeksiyonları, trend analizi ve tahminsel raporlar"
+      },
+      "sla": {
+        "title": "Acil Durum & SLA",
+        "description": "SLA uygunluğu, acil durum müdahalesi ve kritik metriklerin takibi"
+      }
+    },
+    "modals": {
+      "ai": {
+        "title": "AI Performans Raporu",
+        "subtitle": "Son 30 günlük AI asistan performans analizi",
+        "successRate": "Başarı Oranı",
+        "growthThisMonth": "+{{rate}}% bu ay",
+        "autoResolution": "Otomatik Çözüm",
+        "automation": "{{rate}}% otomasyon",
+        "intentAccuracy": "Niyet Doğruluğu",
+        "intentRecognition": "Intent recognition",
+        "responseQuality": "Yanıt Kalitesi",
+        "userRating": "Kullanıcı değerlendirmesi",
+        "intentCategoriesAnalysis": "Niyet Kategorileri Analizi",
+        "queries": "sorgu",
+        "accuracy": "doğruluk",
+        "learningCurve": "Öğrenme Eğrisi (Haftalık)",
+        "insights": "💡 Öneriler",
+        "insight1": "İade işlemleri kategorisinde doğruluk oranı %85.3 ile en düşük seviyede. Bu kategori için daha fazla eğitim verisi eklenebilir.",
+        "insight2": "Son 4 haftada %5.4 iyileşme kaydedildi. Mevcut öğrenme hızı ile 2 ay içinde %90+ başarı oranına ulaşılabilir.",
+        "insight3": "İnsan müdahale oranı %12.5. Bu oran sektör ortalaması (%15-20) altında ve çok iyi bir seviye."
+      },
+      "channels": {
+        "title": "Kanal Analizi Raporu",
+        "subtitle": "Son 30 günlük çok kanallı performans karşılaştırması",
+        "totalConversations": "Toplam Konuşma",
+        "avgResponseTime": "Ort. Yanıt Süresi",
+        "avgConversion": "Ort. Dönüşüm",
+        "channelComparison": "Kanal Performans Karşılaştırması",
+        "conversations": "konuşma",
+        "responseTime": "Yanıt Süresi",
+        "satisfaction": "Memnuniyet",
+        "conversion": "Dönüşüm",
+        "share": "Pay",
+        "shareLabel": "{{channel}} payı",
+        "analysis": "📊 Analiz",
+        "insight1": "<strong>WhatsApp</strong> en popüler kanal (%54.8 pay) ve en hızlı büyüyen (+15.3%). Odak noktası olarak korunmalı.",
+        "insight2": "<strong>Web Chat</strong> en yüksek dönüşüm oranına (%52.5) ve en hızlı yanıt süresine (1m 50s) sahip. Potansiyel müşteriler için ideal.",
+        "insight3": "<strong>Instagram</strong> %22.1 büyüme ile en hızlı gelişen kanal. Genç kitleye ulaşmak için stratejik önem taşıyor.",
+        "insight4": "<strong>Email</strong> kanali %2.3 düşüş gösteriyor. Diğer kanallara yönlendirme stratejisi değerlendirilebilir.",
+        "dataSource": "Veri kaynağı: Tüm entegre kanallar"
+      },
+      "satisfaction": {
+        "title": "Müşteri Memnuniyeti Raporu",
+        "subtitle": "Son 30 günlük CSAT, NPS ve geri bildirim analizi",
+        "overallScore": "Genel Skor",
+        "csatScore": "CSAT Skoru",
+        "csatLabel": "Customer Satisfaction",
+        "npsScore": "NPS Skoru",
+        "npsLabel": "Net Promoter Score",
+        "ratingDistribution": "Puan Dağılımı",
+        "responses": "yanıt",
+        "sentimentAnalysis": "Duygu Analizi",
+        "veryHappy": "Çok Memnun",
+        "happy": "Memnun",
+        "neutral": "Nötr",
+        "unhappy": "Memnun Değil",
+        "topTopics": "En Çok Bahsedilen Konular",
+        "mentions": "bahsedilme",
+        "feedbackTopics": {
+          "fastResponse": "Hızlı Yanıt",
+          "professionalSupport": "Profesyonel Destek",
+          "problemSolving": "Sorun Çözümü",
+          "waitingTime": "Bekleme Süresi",
+          "technicalIssues": "Teknik Sorunlar"
+        },
+        "insights": "🎯 Öneriler",
+        "insight1": "Genel memnuniyet skoru 4.6/5.0 ile mükemmel seviyede. %82 müşteri 4-5 yıldız veriyor.",
+        "insight2": "NPS skoru 67 ile \"İyi\" kategorisinde. 70+ hedefi için promoter oranını artırmaya odaklanın.",
+        "insight3": "\"Bekleme Süresi\" en çok şikayet edilen konu. Yanıt süresini optimize etmek öncelikli olmalı.",
+        "totalResponses": "{{count}} anket yanıtı"
+      },
+      "time": {
+        "title": "Zaman Analizi Raporu",
+        "subtitle": "Son 30 günlük yanıt ve çözüm süresi metrikleri",
+        "firstResponse": "İlk Yanıt",
+        "firstResponseLabel": "First Response Time",
+        "avgResponse": "Ort. Yanıt",
+        "avgResponseLabel": "Average Response Time",
+        "avgResolution": "Ort. Çözüm",
+        "avgResolutionLabel": "Average Resolution Time",
+        "slaCompliance": "SLA Uyumu",
+        "hourlyDistribution": "Saatlik Dağılım & Yoğunluk",
+        "night": "Gece (00-06)",
+        "daytime": "Gündüz (06-18)",
+        "evening": "Akşam (18-24)",
+        "responseTimeBreakdown": "Yanıt Süresi Dağılımı",
+        "lessThan1Min": "< 1 dakika",
+        "between1And3Min": "1-3 dakika",
+        "between3And5Min": "3-5 dakika",
+        "between5And10Min": "5-10 dakika",
+        "moreThan10Min": "> 10 dakika",
+        "weeklyPerformance": "Haftalık Performans",
+        "weekdays": {
+          "monday": "Pazartesi",
+          "tuesday": "Salı",
+          "wednesday": "Çarşamba",
+          "thursday": "Perşembe",
+          "friday": "Cuma",
+          "saturday": "Cumartesi",
+          "sunday": "Pazar"
+        },
+        "insights": "⏱️ Zaman Optimizasyon Önerileri",
+        "insight1": "<strong>Yoğun saatler:</strong> 12:00-18:00 arası günlük konuşmaların %47'sini oluşturuyor. Bu saatlerde ekip takviyesi yapılabilir.",
+        "insight2": "<strong>İlk yanıt süresi:</strong> 45 saniye ile sektör ortalamasının (2-3 dakika) çok altında. Mükemmel performans!",
+        "insight3": "<strong>Pazar günü:</strong> En hızlı yanıt süresine (2m 8s) sahip. Hafta sonu düşük yoğunluk avantajı sağlıyor.",
+        "insight4": "<strong>SLA uyumu %94.3</strong> ile hedefin üzerinde. Kalan %5.7 genellikle karmaşık teknik sorunlardan kaynaklanıyor.",
+        "peak": "Peak",
+        "hourlyLabel": "{{hour}}: {{conversations}} konuşma, {{avgTime}}s ortalama",
+        "avgLabel": "Ort"
+      },
+      "team": {
+        "title": "Ekip Performans Raporu",
+        "subtitle": "Son 30 günlük agent bazlı performans analizi",
+        "totalAgents": "Toplam Agent",
+        "activeAgents": "Aktif Agent",
+        "conversations": "Konuşma",
+        "avgPerAgent": "Ort/Agent",
+        "satisfaction": "Memnuniyet",
+        "efficiency": "Verimlilik",
+        "topPerformers": "En İyi Performans Gösterenler",
+        "workloadDistribution": "İş Yükü Dağılımı (Aylık Konuşma)",
+        "agentCount": "{{count}} agent",
+        "teamAnalysis": "Ekip Analizi",
+        "footerStats": "{{agents}} agent • {{conversations}} konuşma",
+        "conversationsLabel": "Konuşma",
+        "avgTime": "Ort. Süre",
+        "satisfactionLabel": "Memnuniyet",
+        "resolution": "Çözüm",
+        "ranking": "Sıralama",
+        "role": {
+          "seniorAgent": "Senior Agent",
+          "agent": "Agent",
+          "juniorAgent": "Junior Agent"
+        },
+        "insights": "👥 Ekip Analizi",
+        "insight1": "<strong>Ahmet Yılmaz</strong> en yüksek performansı gösteriyor: 420 konuşma, 4.8/5.0 memnuniyet, %95 çözüm oranı.",
+        "insight2": "İş yükü dengeli dağılmış: %75 agent 200-500 konuşma aralığında. Sağlıklı dağılım.",
+        "insight3": "Junior agent'lar için mentorluk programı önerilebilir. Can Öztürk 3m 15s ile ekip ortalamasının üzerinde.",
+        "insight4": "Ekip memnuniyet skoru 4.6/5.0 ile mükemmel seviyede. Ekip moral ve motivasyonu yüksek görünüyor."
+      },
+      "conversion": {
+        "title": "Dönüşüm Oranları Raporu",
+        "subtitle": "Satış hunisi ve dönüşüm analizi",
+        "generalConversion": "Genel Dönüşüm",
+        "cartConversion": "Sepet Dönüşümü",
+        "avgOrder": "Ort. Sipariş",
+        "growth": "Büyüme",
+        "visitor": "Ziyaretçi",
+        "chatStarted": "Sohbet Başlatan",
+        "productInterest": "Ürün İlgisi",
+        "addToCart": "Sepete Ekleme",
+        "checkoutPage": "Ödeme Sayfası",
+        "purchased": "Satın Alan",
+        "salesFunnel": "Satış Hunisi",
+        "peopleCount": "{{count}} kişi",
+        "loss": "{{percentage}}% kayıp",
+        "optimizationSuggestions": "Optimizasyon Önerileri",
+        "suggestion1": "Ziyaretçi→Sohbet dönüşümü %53.4 ile iyi. Chatbot yerleşimi optimize.",
+        "suggestion2": "Sepet→Ödeme aşamasında %5.6 kayıp. Ödeme deneyimi iyileştirilebilir.",
+        "suggestion3": "Genel dönüşüm %4.7 sektör ortalamasının (%3-4) üzerinde."
+      },
+      "financial": {
+        "title": "Finansal Raporlar",
+        "subtitle": "Gelir, maliyet ve ROI analizi",
+        "revenueDistribution": "💰 Gelir Dağılımı",
+        "categories": {
+          "productSales": "Ürün Satışları",
+          "serviceFees": "Hizmet Bedelleri",
+          "subscriptions": "Abonelikler"
+        },
+        "insights": "📈 Finansal Analiz",
+        "insight1": "ROI %241 ile yatırım getirisi mükemmel seviyede.",
+        "insight2": "Kâr marjı %70.7 (₺344K kâr / ₺487K gelir).",
+        "insight3": "Aylık %15.3 büyüme sürdürülebilir ve sağlıklı."
+      },
+      "trends": {
+        "title": "Trendler & Tahminler",
+        "subtitle": "Gelecek projeksiyonları ve trend analizi",
+        "conversationVolume": "Konuşma Hacmi",
+        "aiSuccessRate": "AI Başarı Oranı",
+        "avgResponseTime": "Ort. Yanıt Süresi",
+        "conversionRate": "Dönüşüm Oranı",
+        "nextMonth": "Gelecek Ay",
+        "threeMonths": "3 Ay",
+        "sixMonths": "6 Ay",
+        "oneYear": "1 Yıl",
+        "trendAnalysis": "Trend Analizi",
+        "current": "Mevcut",
+        "prediction": "Tahmin",
+        "futureProjections": "Gelecek Projeksiyonları",
+        "confidence": "Güven",
+        "predictionNotes": "Tahmin Notları",
+        "insight1": "Gelecek ay konuşma hacminde %24.6 artış bekleniyor (3,420 konuşma).",
+        "insight2": "AI başarı oranı 6 ay içinde %92+ hedefine ulaşabilir.",
+        "insight3": "Yanıt süresinde %12.6 iyileşme trendi devam ediyor."
+      },
+      "sla": {
+        "title": "Acil Durum & SLA Raporu",
+        "subtitle": "SLA uygunluğu ve acil müdahale metrikleri",
+        "overallSLA": "Genel SLA",
+        "tier1": "Tier 1",
+        "tier2": "Tier 2",
+        "tier3": "Tier 3",
+        "emergency": "Acil Durum",
+        "priorityCompliance": "🎯 Öncelik Bazlı SLA Uyumu",
+        "priority": {
+          "critical": "Kritik",
+          "high": "Yüksek",
+          "normal": "Normal",
+          "low": "Düşük"
+        },
+        "target": "Hedef",
+        "actual": "Gerçek",
+        "successful": "{{met}}/{{total}} başarılı",
+        "recentViolations": "⚠️ Son SLA İhlalleri",
+        "table": {
+          "date": "Tarih",
+          "type": "Tip",
+          "delay": "Gecikme",
+          "reason": "Neden"
+        },
+        "violationReasons": {
+          "capacityExceeded": "Agent kapasitesi aşımı",
+          "technicalIssue": "Teknik sorun",
+          "systemSlowness": "Sistem yavaşlığı"
+        },
+        "insights": "🚨 SLA Analizi",
+        "insight1": "Genel SLA uyumu %94.3 ile hedefin (%90) üzerinde.",
+        "insight2": "Kritik seviye müdahalelerde %98.7 başarı - mükemmel!",
+        "insight3": "Son 30 günde sadece 3 ihlal kaydedildi (toplam 3,242 vakadan).",
+        "insight4": "İhlallerin çoğu yüksek yoğunluk saatlerinde gerçekleşiyor."
+      }
+    },
+    "viewDetails": "Detaylı İncele",
+    "time": {
+      "excellentLevel": "Mükemmel seviye"
+    },
+    "financial": {
+      "totalRevenue": "Toplam Gelir",
+      "netProfit": "Net Kâr",
+      "roi": "ROI",
+      "monthlyGrowth": "Aylık Büyüme"
+    },
+    "satisfaction": {
+      "sentiments": {
+        "veryHappy": "Çok Memnun",
+        "neutral": "Nötr",
+        "unhappy": "Memnun Değil"
+      }
+    },
+    "dateRanges": {
+      "24h": "Son 24 Saat",
+      "30d": "Son 30 Gün",
+      "7d": "Son 7 Gün",
+      "90d": "Son 90 Gün",
+      "custom": "Özel Tarih"
+    }
+  },
+  "analytics": {
+    "title": "Platform Analitiği",
+    "subtitle": "Tüm platform genelinde detaylı istatistikler",
+    "metrics": {
+      "totalConversations": "Toplam Konuşma",
+      "activeUsers": "Aktif Kullanıcı",
+      "apiCalls": "API Çağrıları",
+      "avgResponse": "Ortalama Yanıt",
+      "faster": "%15 daha hızlı"
+    },
+    "charts": {
+      "conversationTrend": "Konuşma Trendi",
+      "channelDistribution": "Kanal Dağılımı"
+    },
+    "conversationCount": "{{count}} konuşma"
+  },
+  "system": {
+    "title": "Sistem Yönetimi",
+    "subtitle": "Platform altyapısı ve sistem durumu",
+    "metrics": {
+      "cpuUsage": "CPU Kullanımı",
+      "ramUsage": "RAM Kullanımı",
+      "diskUsage": "Disk Kullanımı",
+      "network": "Network"
+    },
+    "serviceStatus": "Servis Durumu",
+    "viewAllLogs": "Tüm logları görüntüle →",
+    "systemLogs": "Sistem Logları",
+    "systemLogsDesc": "Tüm sistem aktivitelerini görüntüle ve filtrele",
+    "searchLogs": "Log mesajlarında ara...",
+    "filterAll": "Tümü",
+    "filterInfo": "Filterinfo",
+    "filterWarning": "Filterwarning",
+    "filterError": "Filtererror",
+    "filter": "Filter",
+    "search": "Search",
+    "logRecords": "Log Kayıtları",
+    "level": "Level",
+    "message": "Message",
+    "service": "Service",
+    "time": "Time",
+    "exportFailed": "Loglar dışa aktarılamadı",
+    "mockData": {
+      "time": {
+        "2min": "2 dakika önce",
+        "10min": "10 dakika önce",
+        "15min": "15 dakika önce",
+        "20min": "20 dakika önce",
+        "35min": "35 dakika önce",
+        "1hour": "1 saat önce",
+        "2hours": "2 saat önce",
+        "3hours": "3 saat önce",
+        "4hours": "4 saat önce",
+        "5hours": "5 saat önce",
+        "6hours": "6 saat önce",
+        "8hours": "8 saat önce",
+        "12hours": "12 saat önce",
+        "1day": "1 gün önce"
+      }
+    }
+  },
+  "settings": {
+    "title": "Başlık",
+    "subtitle": "Hesabınızı ve sisteminizi yönetin",
+    "navigation": {
+      "profile": {
+        "label": "Profil & Hesap",
+        "description": "Kişisel bilgiler ve hesap ayarları"
+      },
+      "business": {
+        "label": "İşletme Bilgileri",
+        "description": "Firma bilgileri ve çalışma saatleri"
+      },
+      "ai": {
+        "label": "Etiket",
+        "description": "Yapay zeka davranış ve ayarları"
+      },
+      "channels": {
+        "label": "Kanal Entegrasyonları",
+        "description": "WhatsApp, Instagram, Facebook, Web"
+      },
+      "appointments": {
+        "label": "Randevu Ayarları",
+        "description": "Randevu kuralları ve hatırlatmalar"
+      },
+      "notifications": {
+        "label": "Etiket",
+        "description": "Email, SMS ve push bildirimleri"
+      },
+      "billing": {
+        "label": "Ödeme & Faturalama",
+        "description": "Abonelik planı ve ödeme yöntemleri"
+      },
+      "integrations": {
+        "label": "Etiket",
+        "description": "API ve 3. parti entegrasyonlar"
+      },
+      "security": {
+        "label": "Güvenlik & Gizlilik",
+        "description": "Güvenlik ayarları ve KVKK"
+      },
+      "customization": {
+        "label": "Özelleştirme",
+        "description": "Tema, dil ve görünüm"
+      },
+      "data": {
+        "label": "Veri Yönetimi",
+        "description": "İçe/Dışa aktarma ve yedekleme"
+      }
+    },
+    "common": {
+      "cancel": "İptal",
+      "save": "Değişiklikleri Kaydet",
+      "saving": "Kaydediliyor...",
+      "saveChanges": "Değişiklikleri Kaydet"
+    },
+    "business": {
+      "mockData": {
+        "businessName": "AsistanApp Diş Kliniği"
+      },
+      "instagramPlaceholder": "@username",
+      "addressInfo": "Adres Bilgileri",
+      "basicInfo": "Temel Bilgiler",
+      "businessTypes": {
+        "aesthetic_center": "Estetik Merkezi",
+        "beauty_salon": "Güzellik Salonu",
+        "cafe": "Cafe",
+        "dental_clinic": "Diş Kliniği",
+        "fitness_center": "Fitness Merkezi",
+        "hair_salon": "Kuaför",
+        "hospital": "Hastane",
+        "hotel": "Otel",
+        "other": "Diğer",
+        "restaurant": "Restoran"
+      },
+      "cities": {
+        "Ankara": "Ankara",
+        "Bursa": "Bursa",
+        "Istanbul": "İstanbul",
+        "Izmir": "İzmir"
+      },
+      "contactInfo": "İletişim Bilgileri",
+      "labels": {
+        "city": "Şehir",
+        "companyName": "Firma Adı",
+        "description": "Açıklama",
+        "district": "İlçe",
+        "email": "E-posta",
+        "fullAddress": "Tam Adres",
+        "instagram": "Instagram",
+        "phone": "Telefon",
+        "postalCode": "Posta Kodu",
+        "sector": "Sektör",
+        "taxNumber": "Vergi Numarası",
+        "website": "Web Sitesi"
+      },
+      "logo": {
+        "requirements": "PNG veya SVG, maksimum 1MB",
+        "section": "Logo",
+        "upload": "Logo Yükle"
+      },
+      "placeholders": {
+        "description": "Modern diş sağlığı ve estetik tedaviler",
+        "address": "Levent Mahallesi, Cevizli Sokak No:15",
+        "district": "Beşiktaş"
+      },
+      "messages": {
+        "logoTooLarge": "Logo dosyası çok büyük (max 1MB)",
+        "logoUploaded": "Logo başarıyla yüklendi",
+        "settingsSaved": "İşletme bilgileri kaydedildi"
+      },
+      "subtitle": "İşletme bilgilerinizi yönetin",
+      "title": "İşletme Bilgileri",
+      "workingHours": {
+        "closed": "Kapalı",
+        "days": {
+          "friday": "Cuma",
+          "monday": "Pazartesi",
+          "saturday": "Cumartesi",
+          "sunday": "Pazar",
+          "thursday": "Perşembe",
+          "tuesday": "Salı",
+          "wednesday": "Çarşamba"
+        },
+        "title": "Çalışma Saatleri"
+      }
+    },
+    "channels": {
+      "copy": "Copy",
+      "messages": {
+        "settingsSaved": "✅ Kanal ayarları başarıyla kaydedildi!",
+        "oauthOpening": "{{channel}} için OAuth bağlantısı açılıyor...",
+        "instagramConnected": "✅ Instagram başarıyla bağlandı!",
+        "facebookConnected": "✅ Facebook başarıyla bağlandı!",
+        "confirmDisconnect": "{{channel}} bağlantısını kesmek istediğinizden emin misiniz?",
+        "channelDisconnected": "✅ {{channel}} bağlantısı kesildi!",
+        "embedCopied": "✅ Embed kodu kopyalandı!"
+      },
+      "instagram": {
+        "connect": "Bağlan",
+        "connectedAccount": "Bağlı Hesap",
+        "disconnect": "Bağlantıyı Kes",
+        "enabled": "Etkin",
+        "subtitle": "Instagram Direct Message entegrasyonu",
+        "title": "Başlık"
+      },
+      "phone": {
+        "enabled": "Etkin",
+        "numberLabel": "Telefon Numarası",
+        "recordCalls": "Aramaları Kaydet",
+        "recordDescription": "Tüm telefon görüşmelerini otomatik kaydet",
+        "subtitle": "Telefon desteği ve arama kaydı ayarları",
+        "title": "Başlık"
+      },
+      "subtitle": "Müşterilerinize ulaşmak için kullandığınız kanalları yönetin",
+      "title": "Başlık",
+      "web": {
+        "colorLabel": "Widget Rengi",
+        "embedCode": "Embed Kodu",
+        "enabled": "Etkin",
+        "positionBottomLeft": "Sol Alt",
+        "positionBottomRight": "Sağ Alt",
+        "positionLabel": "Konum",
+        "subtitle": "Web sitenize ekleyebileceğiniz canlı destek widget'ı",
+        "title": "Web Widget"
+      },
+      "whatsapp": {
+        "apiToken": "API Token",
+        "enabled": "Etkin",
+        "phoneLabel": "Telefon Numarası",
+        "subtitle": "WhatsApp Business API entegrasyonu",
+        "title": "Başlık",
+        "verified": "Doğrulandı"
+      }
+    },
+    "data": {
+      "title": "Veri Yönetimi",
+      "subtitle": "Veri içe/dışa aktarma ve yedekleme işlemleri",
+      "export": {
+        "title": "Veri Dışa Aktarma",
+        "description": "Verilerinizi Excel veya CSV formatında indirin",
+        "customers": "Müşteri Listesi",
+        "appointments": "Randevu Geçmişi",
+        "messages": "Mesaj Geçmişi",
+        "reports": "Tüm Raporlar",
+        "formats": {
+          "excel": "Excel",
+          "csv": "Csv",
+          "pdf": "Pdf"
+        }
+      },
+      "import": {
+        "title": "Veri İçe Aktarma",
+        "description": "Excel veya CSV dosyalarından veri yükleyin",
+        "uploadCustomers": "Müşteri Listesi Yükle",
+        "uploadCustomersDesc": "Excel veya CSV formatında",
+        "bulkAppointments": "Toplu Randevu Ekleme",
+        "bulkAppointmentsDesc": "Excel formatında",
+        "select": "Seç",
+        "templateNote": "<strong>Not:</strong> İçe aktarma şablonları için lütfen destek ekibimizle iletişime geçin."
+      },
+      "backup": {
+        "title": "Manuel Yedekleme",
+        "description": "Tüm verilerinizin yedeğini hemen alın",
+        "backupNow": "Şimdi Yedekle",
+        "lastBackup": "Son Yedekleme",
+        "lastBackupInfo": "15 Ocak 2025, 03:00 • 2.4 GB",
+        "download": "İndir"
+      },
+      "bulkDelete": {
+        "title": "⚠️ Toplu Veri Silme",
+        "description": "Belirli tarih aralığındaki verileri toplu olarak silin. <strong>Bu işlem geri alınamaz!</strong>",
+        "startDate": "Başlangıç Tarihi",
+        "endDate": "Bitiş Tarihi",
+        "delete": "Toplu Sil"
+      },
+      "messages": {
+        "customersExporting": "✅ Müşteri listesi indiriliyor...\n\nDosya adı: {{fileName}}",
+        "appointmentsExporting": "✅ Randevu geçmişi indiriliyor...\n\nDosya adı: {{fileName}}",
+        "messagesExporting": "✅ Mesaj geçmişi indiriliyor...\n\nDosya adı: {{fileName}}",
+        "reportsExporting": "✅ Raporlar PDF formatında indiriliyor...\n\nDosya adı: {{fileName}}",
+        "customersImporting": "✅ \"{{fileName}}\" dosyası yükleniyor...\n\nBoyut: {{size}} KB\n\nİşlem tamamlandığında bildirim alacaksınız.",
+        "appointmentsImporting": "✅ \"{{fileName}}\" dosyası yükleniyor...\n\nToplu randevu ekleme başlatıldı.",
+        "lastBackupDownloading": "✅ Son yedek indiriliyor...\n\nDosya: {{fileName}}\nTarih: 15 Ocak 2025, 03:00\nBoyut: ~2.4 GB",
+        "doubleConfirmDelete": "Son kez soruyoruz: Bu işlem GERİ ALINAMAZ!\n\n\"Evet, verileri sil\" yazmanız gerekiyor."
+      },
+      "confirmManualBackup": "Tüm verilerinizin yedeği alınacak. Bu işlem birkaç dakika sürebilir. Devam etmek istiyor musunuz?",
+      "manualBackupStarted": "💾 Manuel yedekleme başlatıldı!\n\n• Müşteri verileri\n• Konuşma geçmişi\n• Randevular\n• Ayarlar\n\nYedek tamamlandığında email adresinize gönderilecek.",
+      "confirmBulkDelete": "⚠️ TEHLİKE!\n\nBu işlem geri alınamaz!\n\nBelirttiğiniz tarih aralığındaki TÜM veriler kalıcı olarak silinecek:\n• Müşteriler\n• Konuşmalar\n• Randevular\n• Mesajlar\n\nEmin misiniz?",
+      "bulkDeleteCancelled": "🛡️ Güvenlik nedeniyle bu işlem iptal edildi.\n\nGerçek ortamda bu işlem için ek doğrulama gerekir."
+    },
+    "customization": {
+      "title": "Özelleştirme & Tema",
+      "subtitle": "Arayüz görünümünü ve tercihlerinizi ayarlayın",
+      "appearance": {
+        "title": "Görünüm Teması",
+        "light": "Açık Tema",
+        "dark": "Koyu Tema"
+      },
+      "accentColor": {
+        "title": "Vurgu Rengi",
+        "blue": "Blue",
+        "purple": "Purple",
+        "green": "Yeşil",
+        "orange": "Orange",
+        "red": "Kırmızı"
+      },
+      "localization": {
+        "title": "Bölgeselleştirme",
+        "language": "Language",
+        "languageTurkish": "Türkçe",
+        "languageEnglish": "Languageenglish",
+        "currency": "Para Birimi",
+        "currencyTRY": "₺ Türk Lirası (TRY)",
+        "currencyUSD": "$ Dolar (USD)",
+        "currencyEUR": "€ Euro (EUR)",
+        "numberFormat": "Sayı Formatı",
+        "numberFormatTR": "1.000,00 (TR)",
+        "numberFormatEN": "1,000.00 (EN)"
+      },
+      "dashboard": {
+        "title": "Dashboard Düzeni",
+        "defaultPage": "Varsayılan Sayfa (Giriş Sonrası)",
+        "pages": {
+          "dashboard": "Dashboard",
+          "conversations": "Konuşmalar",
+          "appointments": "Appointments",
+          "reports": "Raporlar"
+        }
+      },
+      "preview": {
+        "title": "Önizleme",
+        "sampleTitle": "Örnek Başlık",
+        "sampleDescription": "Bu bir önizleme metnidir"
+      },
+      "messages": {
+        "settingsSaved": "✅ Özelleştirme ayarları kaydedildi ve uygulandı!",
+        "themeApplied": "Tema: {{theme}}",
+        "themeDark": "Themedark",
+        "themeLight": "Açık",
+        "accentColorApplied": "Vurgu Rengi: {{color}}",
+        "languageApplied": "Dil: {{language}}",
+        "currencyApplied": "Para Birimi: {{currency}}",
+        "numberFormatApplied": "Sayı Formatı: {{format}}",
+        "refreshNote": "🔄 Bazı değişiklikler için sayfayı yenileyin.",
+        "settingsLoaded": "✅ Kaydedilmiş özelleştirme ayarları yüklendi:",
+        "loadFailed": "Özelleştirme ayarları yüklenemedi:"
+      },
+      "sampleButton": "Örnek Buton",
+      "languages": {
+        "tr": "Türkçe",
+        "en": "En"
+      }
+    },
+    "notifications": {
+      "title": "Bildirim Ayarları",
+      "subtitle": "Bildirimleri özelleştirin",
+      "email": {
+        "title": "Email Bildirimleri",
+        "newAppointment": "Yeni Randevu",
+        "appointmentCancel": "Randevu İptali",
+        "newCustomer": "Yeni Müşteri Kaydı",
+        "aiHandoff": "AI Tıkanması (İnsan Müdahalesi Gerekli)",
+        "dailyReport": "Günlük Özet Raporu"
+      },
+      "sms": {
+        "title": "SMS Bildirimleri",
+        "urgent": "Acil Durumlar",
+        "important": "Önemli Randevular",
+        "lowCredit": "SMS Kredisi Düşük Uyarısı"
+      },
+      "push": {
+        "title": "Push Bildirimleri",
+        "newMessage": "Anlık Mesajlar",
+        "liveCalls": "Canlı Aramalar",
+        "urgentRequests": "Acil Talepler"
+      },
+      "quietHours": {
+        "title": "Sessiz Saatler",
+        "enable": "Sessiz Saatleri Etkinleştir",
+        "description": "Bu saatlerde bildirim gelmesin",
+        "start": "Başlangıç",
+        "end": "Bitiş"
+      },
+      "settingsSaved": "✅ Bildirim ayarları başarıyla kaydedildi!"
+    },
+    "appointments": {
+      "title": "Randevu Ayarları",
+      "description": "Randevu sistemini yapılandırın",
+      "generalSettings": "Genel Ayarlar",
+      "appointmentDuration": "Randevu Süresi",
+      "duration15min": "15 dakika",
+      "duration30min": "30 dakika",
+      "duration45min": "45 dakika",
+      "duration60min": "1 saat",
+      "bufferTime": "Aralar Boşluk",
+      "noBuffer": "Boşluk yok",
+      "buffer5min": "5 dakika",
+      "buffer10min": "10 dakika",
+      "buffer15min": "15 dakika",
+      "maxConcurrent": "Eş Zamanlı Randevu",
+      "minNotice": "Minimum Bildirim (saat)",
+      "approvalSystem": "Onay Sistemi",
+      "autoApprove": "Otomatik Onay",
+      "autoApproveDesc": "Randevular otomatik onaylansın",
+      "cancelAndChange": "İptal & Değişiklik",
+      "customerCanCancel": "Müşteri İptal Edebilir",
+      "customerCanCancelDesc": "Müşteriler randevuyu iptal edebilsin",
+      "cancelDeadline": "İptal Son Saat (randevudan önce)",
+      "cancelDeadlineExample": "Örn: 24 saat öncesine kadar iptal edilebilir",
+      "reminderSettings": "Hatırlatma Ayarları",
+      "sendReminder": "Hatırlatma Gönder",
+      "sendReminderDesc": "Randevu hatırlatmaları aktif",
+      "reminderTime": "Hatırlatma Zamanı (saat önce)",
+      "reminder2h": "2 saat önce",
+      "reminder12h": "12 saat önce",
+      "reminder1d": "1 gün önce",
+      "reminder2d": "2 gün önce",
+      "smsReminder": "SMS Hatırlatma",
+      "emailReminder": "Email Hatırlatma",
+      "whatsappReminder": "Whatsappreminder",
+      "settingsSaved": "✅ Randevu ayarları kaydedildi!"
+    },
+    "ai": {
+      "title": "Asistan Ayarları",
+      "subtitle": "Yapay zeka asistanınızın davranışını ve yanıtlarını özelleştirin",
+      "personality": {
+        "title": "Kişilik & Ton",
+        "assistantPersonality": "Asistan Kişiliği",
+        "personalityTypes": {
+          "professional": "Professional",
+          "friendly": "Friendly",
+          "energetic": "Energetic",
+          "formal": "Formal"
+        },
+        "personalityDesc": "Asistan'ın genel davranış tarzı",
+        "responseTone": "Yanıt Tonu",
+        "toneTypes": {
+          "formal": "Formal",
+          "friendly": "Arkadaşça",
+          "technical": "Technical",
+          "casual": "Gündelik"
+        },
+        "toneDesc": "Yanıtların üslup tarzı",
+        "emojiUsage": "Emoji Kullanımı",
+        "emojiTypes": {
+          "never": "Hiç Kullanma",
+          "sometimes": "Ara Sıra",
+          "frequently": "Sık Sık"
+        },
+        "responseLength": "Yanıt Uzunluğu",
+        "lengthTypes": {
+          "short": "Kısa (1-2 cümle)",
+          "medium": "Orta (3-4 cümle)",
+          "long": "Detaylı (5+ cümle)"
+        }
+      },
+      "handoff": {
+        "title": "Akıllı Devir Ayarları",
+        "autoHandoff": "Otomatik İnsan Devri",
+        "autoHandoffDesc": "Asistan çözemediği durumlarda otomatik olarak insana devretsin",
+        "threshold": "Devir Eşiği (Mesaj Sayısı)",
+        "thresholdDesc": "Asistan bu kadar mesajdan sonra yanıt veremezse insana devredilir",
+        "workingHoursOnly": "Sadece Çalışma Saatlerinde Asistan",
+        "workingHoursDesc": "Mesai dışında asistan pasif olsun, sadece mesaj toplansın"
+      },
+      "urgentKeywords": {
+        "title": "Acil Durum Anahtar Kelimeleri",
+        "description": "Bu kelimeleri içeren mesajlar anında insana devredilir",
+        "confirmRemove": "\"{{keyword}}\" kelimesini kaldırmak istediğinizden emin misiniz?",
+        "mockData": {
+          "urgent": "acil",
+          "complaint": "şikayet",
+          "cancel": "iptal",
+          "problem": "sorun",
+          "return": "iade",
+          "pain": "ağrı",
+          "bleeding": "kanama",
+          "hurt": "acı"
+        }
+      },
+      "customMessages": {
+        "title": "Özel Mesajlar",
+        "greeting": "Selamlama Mesajı",
+        "goodbye": "Veda Mesajı",
+        "busy": "Meşguliyet Mesajı",
+        "holiday": "Tatil Mesajı",
+        "defaultGreeting": "Merhaba! 👋 Size nasıl yardımcı olabilirim?",
+        "defaultGoodbye": "İyi günler dilerim! Başka bir konuda yardıma ihtiyacınız olursa her zaman buradayım. 😊",
+        "defaultBusy": "Şu anda yoğunuz, en kısa sürede size dönüş yapacağız.",
+        "defaultHoliday": "Bugün kapalıyız. Hafta içi 09:00-18:00 saatleri arasında hizmet veriyoruz."
+      },
+      "knowledgeBase": {
+        "title": "Bilgi Bankası",
+        "description": "Asistanınıza öğretmek istediğiniz bilgileri metin olarak girin veya döküman yükleyin",
+        "textInput": "Metin ile Bilgi Ekle",
+        "saveKnowledge": "Bilgiyi Kaydet",
+        "uploadDocument": "Döküman Yükle",
+        "uploadDescription": "PDF, TXT, DOC veya XLSX. Maksimum 10MB.",
+        "selectFile": "Dosya Seç",
+        "uploaded": "yüklendi",
+        "delete": "Sil",
+        "confirmDelete": "\"{{fileName}}\" dosyasını silmek istediğinizden emin misiniz?"
+      },
+      "addKeyword": "Addkeyword",
+      "addKeywordPlaceholder": "Örn: acil, şikayet...",
+      "contextPlaceholder": "Örn: Firmamız 2010 yılında kurulmuştur. Diş sağlığı alanında uzmanız...",
+      "messages": {
+        "settingsSaved": "✅ Asistan ayarları başarıyla kaydedildi!",
+        "keywordRequired": "❌ Lütfen bir anahtar kelime giriniz!",
+        "keywordExists": "❌ Bu kelime zaten listede mevcut!",
+        "keywordAdded": "✅ Anahtar kelime eklendi!",
+        "keywordRemoved": "✅ Anahtar kelime kaldırıldı!",
+        "fileTooLarge": "❌ Dosya boyutu 10MB'dan küçük olmalıdır!",
+        "fileUploaded": "✅ Dosya başarıyla yüklendi!",
+        "fileDeleted": "✅ Dosya silindi!",
+        "contextSaved": "✅ Bilgi bankasına eklendi!"
+      },
+      "timeAgo": {
+        "justNow": "Az önce",
+        "daysAgo": "{{count}} gün önce",
+        "weeksAgo": "{{count}} hafta önce"
+      }
+    },
+    "profile": {
+      "title": "Profil & Hesap Ayarları",
+      "description": "Kişisel bilgilerinizi ve hesap tercihlerinizi yönetin",
+      "profilePhoto": "Profil Fotoğrafı",
+      "uploadPhoto": "Fotoğraf Yükle",
+      "remove": "Kaldır",
+      "photoRequirements": "JPG, PNG veya GIF. Maksimum 2MB.",
+      "personalInfo": "Kişisel Bilgiler",
+      "firstName": "Firstname",
+      "lastName": "Lastname",
+      "phone": "Telefon",
+      "preferences": "Preferences",
+      "language": "Language",
+      "languageTurkish": "Türkçe",
+      "languageEnglish": "Languageenglish",
+      "timezone": "Zaman Dilimi",
+      "timezoneIstanbul": "Istanbul (GMT+3)",
+      "timezoneLondon": "London (GMT+0)",
+      "timezoneNewYork": "New York (GMT-5)",
+      "dateFormat": "Tarih Formatı",
+      "changePassword": "Şifre Değiştir",
+      "currentPassword": "Mevcut Şifre",
+      "newPassword": "Yeni Şifre",
+      "confirmNewPassword": "Yeni Şifre (Tekrar)",
+      "updatePassword": "Şifreyi Güncelle",
+      "passwordPlaceholder": "••••••••",
+      "twoFA": "İki Faktörlü Doğrulama (2FA)",
+      "twoFADesc": "Hesabınızı ekstra bir güvenlik katmanı ile koruyun",
+      "twoFAActive": "<strong>Aktif:</strong> Hesabınız 2FA ile korunuyor.",
+      "twoFARecommended": "<strong>Önerilen:</strong> 2FA'yı etkinleştirerek hesabınızı yetkisiz erişime karşı koruyun.",
+      "activeSessions": "Aktif Oturumlar",
+      "sessionActive": "Sessionactive",
+      "sessionLastActivity": "Son aktivite",
+      "terminateSession": "Sonlandır",
+      "enable2FA": "2FA Etkinleştir",
+      "qrCode": "QR Kod",
+      "scanWithAuthenticator": "Google Authenticator ile tarayın",
+      "twoFAInstructions": "Google Authenticator veya benzer bir uygulama ile yukarıdaki QR kodu tarayın ve uygulamadaki 6 haneli kodu aşağıya girin.",
+      "twoFACode": "6 haneli kod",
+      "confirm": "Confirm",
+      "lastActive2min": "2 dakika önce",
+      "lastActive3h": "3 saat önce",
+      "lastActive1d": "1 gün önce",
+      "messages": {
+        "fileTooLarge": "❌ Dosya boyutu 2MB'dan küçük olmalıdır!",
+        "photoUploaded": "✅ Fotoğraf yüklendi! Değişiklikleri kaydetmeyi unutmayın.",
+        "confirmRemovePhoto": "Profil fotoğrafınızı kaldırmak istediğinizden emin misiniz?",
+        "photoRemoved": "✅ Profil fotoğrafı kaldırıldı!",
+        "profileSaved": "✅ Profil bilgileri başarıyla kaydedildi!",
+        "currentPasswordRequired": "❌ Mevcut şifrenizi giriniz!",
+        "passwordTooShort": "❌ Yeni şifre en az 8 karakter olmalıdır!",
+        "passwordMismatch": "❌ Yeni şifreler eşleşmiyor!",
+        "passwordChanged": "✅ Şifre başarıyla değiştirildi!",
+        "confirmEndSession": "Bu oturumu sonlandırmak istediğinizden emin misiniz?",
+        "sessionEnded": "🔒 Oturum sonlandırıldı!",
+        "twoFAEnabled": "✅ 2FA başarıyla etkinleştirildi!",
+        "twoFAVerificationFailed": "Lütfen 6 haneli kodu girin",
+        "twoFADisabled": "✅ 2FA devre dışı bırakıldı!",
+        "confirmDisable2FA": "İki faktörlü doğrulamayı devre dışı bırakmak istediğinizden emin misiniz?"
+      }
+    },
+    "api": {
+      "placeholders": {
+        "openaiKey": "sk-proj-...",
+        "anthropicKey": "sk-ant-...",
+        "webhookSecret": "whsec_..."
+      },
+      "close": "Close",
+      "requestApproval": "Manuel Onay İste",
+      "confirmRefresh": "API anahtarını yenilemek istediğinizden emin misiniz? Eski anahtar geçersiz olacak.",
+      "messages": {
+        "saved": "Harici API ayarları kaydedildi!"
+      },
+      "show": "Göster",
+      "hide": "Hide"
+    },
+    "team": {
+      "edit": "Düzenle",
+      "delete": "Sil",
+      "save": "Kaydet",
+      "cancel": "İptal",
+      "editMember": "Üyeyi Düzenle",
+      "editRole": "Rolü Düzenle",
+      "inviteNewMember": "Yeni Üye Davet Et",
+      "lastLogin": "Son Giriş",
+      "rolePermissions": "Rol İzinleri",
+      "sendInvite": "Davet Gönder",
+      "subtitle": "Ekip üyelerini yönetin",
+      "teamMembers": "Ekip Üyeleri",
+      "title": "Ekip",
+      "roles": {
+        "owner": {
+          "label": "Firma Sahibi",
+          "description": "Tam yetki"
+        },
+        "admin": {
+          "label": "Admin",
+          "description": "Sistem yönetimi"
+        },
+        "manager": {
+          "label": "Müdür",
+          "description": "Ekip yönetimi"
+        },
+        "agent": {
+          "label": "Temsilci",
+          "description": "Müşteri hizmetleri"
+        },
+        "readonly": {
+          "label": "İzleyici",
+          "description": "Sadece görüntüleme"
+        }
+      },
+      "labels": {
+        "name": "İsim",
+        "email": "Email",
+        "role": "Rol",
+        "status": "Durum"
+      },
+      "status": {
+        "active": "Aktif",
+        "inactive": "Pasif"
+      },
+      "sampleData": {
+        "lastLogin2min": "2 dakika önce",
+        "lastLogin1h": "1 saat önce",
+        "lastLogin5min": "5 dakika önce",
+        "drName": "Dr. Ayşe Yılmaz",
+        "receptionistName": "Resepsiyonist Elif"
+      },
+      "permissionsModal": {
+        "title": "Rol İzinleri",
+        "sections": {
+          "dashboard": "Dashboard & Raporlar",
+          "conversations": "Konuşmalar & Müşteriler",
+          "teamManagement": "Ekip Yönetimi",
+          "settingsConfig": "Ayarlar & Yapılandırma"
+        },
+        "permissions": {
+          "dashboardView": "Dashboard Görüntüleme",
+          "dashboardViewDesc": "Ana sayfa ve genel istatistikleri görüntüleyebilir",
+          "reportsView": "Raporları Görüntüleme",
+          "reportsViewDesc": "Detaylı raporları ve analizleri görüntüleyebilir",
+          "reportsExport": "Raporları Dışa Aktarma",
+          "reportsExportDesc": "PDF, Excel formatında raporları indirebilir",
+          "conversationsView": "Konuşmaları Görüntüleme",
+          "conversationsViewDesc": "Müşteri konuşmalarını okuyabilir",
+          "sendMessage": "Mesaj Gönderme",
+          "sendMessageDesc": "Müşterilere mesaj gönderebilir",
+          "assignConversation": "Konuşma Atama",
+          "assignConversationDesc": "Konuşmaları ekip üyelerine atayabilir",
+          "addTeamMember": "Ekip Üyesi Ekleme",
+          "addTeamMemberDesc": "Yeni ekip üyeleri ekleyebilir",
+          "editTeamMember": "Ekip Üyesi Düzenleme",
+          "editTeamMemberDesc": "Ekip üyelerinin bilgilerini değiştirebilir",
+          "editRolePermissions": "Rol İzinleri Düzenleme",
+          "editRolePermissionsDesc": "Rollerin yetkilerini değiştirebilir",
+          "assistantSettings": "Asistan Ayarları",
+          "assistantSettingsDesc": "AI davranışlarını yapılandırabilir",
+          "billingPayment": "Fatura & Ödeme",
+          "billingPaymentDesc": "Abonelik ve ödeme ayarlarını yönetebilir",
+          "apiIntegrations": "API Entegrasyonları",
+          "apiIntegrationsDesc": "Harici API ayarlarını yapılandırabilir"
+        }
+      },
+      "messages": {
+        "inviteSent": "✉️ {{email}} adresine davet gönderildi!",
+        "confirmRemove": "Bu kullanıcıyı kaldırmak istediğinizden emin misiniz?",
+        "userRemoved": "✅ Kullanıcı kaldırıldı!",
+        "permissionsSaved": "✅ Rol izinleri kaydedildi!"
+      },
+      "channelModal": {
+        "channelSlugPlaceholder": "örn: genel-sohbet, destek-ekibi",
+        "descriptionPlaceholder": "Kanal açıklaması (opsiyonel)",
+        "close": "Kapat",
+        "required": "Gerekli",
+        "cancel": "İptal"
+      }
+    },
+    "security": {
+      "title": "Güvenlik & Gizlilik",
+      "description": "Güvenlik ayarlarınızı yönetin",
+      "dataSecurity": "Veri Güvenliği",
+      "encryption": "Veri Şifreleme",
+      "encryptionDesc": "Tüm veriler AES-256 ile şifrelenir",
+      "sessionTimeout": "Oturum Zaman Aşımı (dakika)",
+      "timeouts": {
+        "15min": "15 dakika",
+        "30min": "30 dakika",
+        "1hour": "1 saat",
+        "2hours": "2 saat"
+      },
+      "ipRestriction": "IP Kısıtlaması",
+      "ipRestrictionDesc": "Sadece belirli IP adreslerinden erişime izin ver",
+      "allowedIPs": "İzin Verilen IP Adresleri",
+      "ipHelp": "Her satıra bir IP adresi",
+      "activityLogs": "Aktivite Logları",
+      "kvkkGdpr": "KVKK / GDPR Uyum",
+      "dataRetention": "Veri Saklama Süresi (gün)",
+      "retentionPeriods": {
+        "90days": "90 gün",
+        "6months": "6 ay",
+        "1year": "1 yıl",
+        "2years": "2 yıl"
+      },
+      "exportData": "Tüm Verilerimi İndir",
+      "autoBackup": "Otomatik Yedekleme",
+      "autoBackupDesc": "Verileriniz otomatik olarak yedeklenir",
+      "backupFrequency": "Yedekleme Sıklığı",
+      "frequencies": {
+        "daily": "Günlük",
+        "weekly": "Haftalık",
+        "monthly": "Aylık"
+      },
+      "dangerZone": "Tehlikeli Alan",
+      "dangerZoneDesc": "Bu işlemler geri alınamaz. Dikkatli olun!",
+      "deleteAccount": "Hesabımı Kalıcı Olarak Sil",
+      "cancel": "İptal",
+      "ipPlaceholder": "192.168.1.1\n10.0.0.1",
+      "actions": {
+        "saveChanges": "Değişiklikleri Kaydet"
+      },
+      "messages": {
+        "saved": "✅ Güvenlik ayarları kaydedildi!",
+        "exportingData": "📦 Verileriniz hazırlanıyor ve email adresinize gönderilecek!",
+        "confirmDeleteAccount": "⚠️ UYARI: Bu işlem geri alınamaz! Tüm verileriniz kalıcı olarak silinecek. Emin misiniz?",
+        "deleteCancelled": "Hesap silme işlemi iptal edildi. (Demo)"
+      },
+      "status": {
+        "success": "Başarılı",
+        "failed": "Başarısız"
+      },
+      "mockData": {
+        "actions": {
+          "login": "Giriş",
+          "settingsChange": "Ayar değişikliği",
+          "loginAttempt": "Giriş denemesi"
+        }
+      }
+    },
+    "integrations": {
+      "apiKey": "API Anahtarı",
+      "connect": "Bağlan",
+      "createKey": "Yeni Anahtar Oluştur",
+      "revoke": "İptal Et",
+      "cancel": "İptal",
+      "actions": {
+        "saveChanges": "Değişiklikleri Kaydet"
+      },
+      "messages": {
+        "saved": "✅ Entegrasyon ayarları kaydedildi!"
+      }
+    },
+    "billing": {
+      "title": "Ödeme & Faturalama",
+      "subtitle": "Abonelik planınız ve ödeme bilgileriniz",
+      "downloadInvoice": "Fatura İndir",
+      "currentPlan": "Mevcut Paket",
+      "monthly": "aylık",
+      "upgradePlan": "Paketi Yükselt",
+      "usageStats": "Kullanım İstatistikleri",
+      "sms": "SMS",
+      "aiMessage": "AI Mesaj",
+      "storage": "Depolama",
+      "unlimited": "Sınırsız",
+      "paymentMethod": "Ödeme Yöntemi",
+      "cardExpiry": "Geçerlilik",
+      "changeCard": "Kart Değiştir",
+      "autoPayment": "Otomatik ödeme aktif",
+      "invoiceHistory": "Fatura Geçmişi",
+      "paid": "Ödendi",
+      "plans": {
+        "starter": "Starter",
+        "pro": "Pro",
+        "enterprise": "Enterprise"
+      },
+      "features": {
+        "unlimitedAI": "Sınırsız AI mesaj",
+        "sms10k": "10,000 SMS/ay",
+        "storage50gb": "50 GB depolama",
+        "team10": "10 ekip üyesi"
+      },
+      "planFeatures": {
+        "starter": {
+          "ai5k": "5,000 AI mesaj/ay",
+          "sms1k": "1,000 SMS/ay",
+          "storage10gb": "10 GB depolama",
+          "team3": "3 ekip üyesi",
+          "emailSupport": "Email destek"
+        },
+        "pro": {
+          "unlimitedAI": "Sınırsız AI mesaj",
+          "sms10k": "10,000 SMS/ay",
+          "storage50gb": "50 GB depolama",
+          "team10": "10 ekip üyesi",
+          "prioritySupport": "Öncelikli destek",
+          "apiAccess": "API erişimi"
+        },
+        "enterprise": {
+          "unlimitedAll": "Sınırsız her şey",
+          "dedicatedServer": "Özel sunucu",
+          "slaGuarantee": "SLA garantisi",
+          "unlimitedTeam": "Sınırsız ekip",
+          "support247": "7/24 destek",
+          "customIntegrations": "Özel entegrasyonlar"
+        }
+      },
+      "upgradeModal": {
+        "title": "Plan Yükselt",
+        "recommended": "ÖNERİLEN",
+        "currentPlan": "Mevcut Paketiniz",
+        "perMonth": "/ay",
+        "selectPlan": "Planı Seç"
+      },
+      "paymentModal": {
+        "title": "Ödeme Yöntemi Değiştir",
+        "cardNumber": "Kart Numarası",
+        "expiryDate": "Son Kullanma Tarihi",
+        "cvv": "CVV",
+        "cardholderName": "Kart Üzerindeki İsim",
+        "securityNote": "Ödeme bilgileriniz güvenli şekilde saklanır",
+        "cancel": "İptal",
+        "save": "Kaydet",
+        "cardHolder": "Kart Sahibi",
+        "securePayment": "Güvenli Ödeme"
+      },
+      "placeholders": {
+        "expiryDate": "MM/YY",
+        "cardHolder": "Ahmet Yılmaz"
+      },
+      "messages": {
+        "downloadingInvoice": "{{invoiceNumber}} faturası indiriliyor...",
+        "changingPlan": "{{planName}} planına geçiliyor...",
+        "updatingPayment": "Ödeme yöntemi güncelleniyor..."
+      },
+      "actions": {
+        "cancel": "İptal",
+        "save": "Kaydet"
+      },
+      "usage": {
+        "title": "Kullanım İstatistikleri",
+        "sms": "SMS",
+        "aiMessage": "AI Mesaj",
+        "storage": "Depolama"
+      }
+    },
+    "api": {
+      "title": "API Ayarları",
+      "subtitle": "API kullanımınızı yönetin ve limitlerinizi görüntüleyin",
+      "usageLimits": "Kullanım Limitleri",
+      "upgradePlan": "Planı Yükselt",
+      "usage": {
+        "apiRequests": "API İstekleri",
+        "messages": "Mesajlar",
+        "aiTokens": "AI Tokens",
+        "used": "kullanıldı"
+      },
+      "limitWarning": "Limitinize yaklaşıyorsunuz!",
+      "limitWarningDesc": "Daha fazla kapasite için planınızı yükseltmeyi düşünün.",
+      "apiKeys": "API Anahtarları",
+      "createNewKey": "Yeni Anahtar Oluştur",
+      "created": "Oluşturulma",
+      "lastUsed": "Son Kullanım",
+      "status": {
+        "active": "Aktif",
+        "inactive": "Pasif"
+      },
+      "hide": "Gizle",
+      "show": "Göster",
+      "copied": "Kopyalandı",
+      "copy": "Kopyala",
+      "regenerate": "Yeniden Oluştur",
+      "revoke": "İptal Et",
+      "securityNote": "Güvenlik Notu",
+      "securityNoteDesc": "API anahtarlarınızı kimseyle paylaşmayın ve güvenli bir şekilde saklayın. Anahtarlarınız tüm verilerinize erişim sağlar.",
+      "externalIntegrations": "Harici API Entegrasyonları",
+      "externalIntegrationsDesc": "Kendi API anahtarlarınızı kullanarak harici servislere bağlanın",
+      "openaiKey": "OpenAI API Anahtarı",
+      "openaiDesc": "Kendi OpenAI anahtarınızı kullanarak sınırsız AI işlemi yapın",
+      "anthropicKey": "Anthropic Claude API Anahtarı",
+      "anthropicDesc": "Claude AI modellerini kullanmak için Anthropic anahtarınız",
+      "webhookUrl": "Webhook URL",
+      "webhookUrlDesc": "Olaylar için bildirim almak istediğiniz URL",
+      "webhookSecret": "Webhook Secret",
+      "webhookSecretDesc": "Webhook isteklerini doğrulamak için gizli anahtar",
+      "placeholders": {
+        "openaiKey": "sk-...",
+        "anthropicKey": "sk-ant-...",
+        "webhookUrl": "https://example.com/webhook",
+        "webhookSecret": "whsec_..."
+      },
+      "saveSettings": "Ayarları Kaydet",
+      "importantNote": "Önemli Not",
+      "importantNoteDesc": "Bu API anahtarları güvenli bir şekilde şifrelenir ve sadece sizin tenant'ınız için kullanılır. Platform genelinde paylaşılmaz.",
+      "plans": {
+        "professional": "Professional",
+        "enterprise": "Enterprise"
+      },
+      "perMonth": "/ay",
+      "requestApproval": "Onay Talep Et",
+      "close": "Kapat",
+      "confirmRefresh": "Bu API anahtarını yenilemek istediğinizden emin misiniz? Eski anahtar geçersiz hale gelecek.",
+      "upgradeModal": {
+        "title": "API Limitinizi Yükseltin",
+        "subtitle": "Daha fazla API kapasitesi ve özellikler edinin",
+        "yourCurrentPlan": "Mevcut planınız",
+        "recommended": "ÖNERİLEN",
+        "features": {
+          "apiRequests50k": "50,000 API isteği/ay",
+          "messages25k": "25,000 mesaj/ay",
+          "aiTokens2500k": "2,500,000 AI tokens/ay",
+          "prioritySupport": "Öncelikli destek",
+          "advancedAnalytics": "Gelişmiş analitik"
+        },
+        "upgradeNow": "Hemen Yükselt",
+        "autoUpgradeNote": "Otomatik yükseltme: Limitinize ulaştığınızda sistem sizi uyarır ve sonraki seviyeye geçmeniz için onay ister."
+      },
+      "messages": {
+        "saved": "✅ API ayarları kaydedildi!"
+      }
+    },
+    "saveAll": "Tümünü Kaydet",
+    "platformTitle": "Platform Ayarları",
+    "platformSubtitle": "AsistanApp platform yapılandırması",
+    "save": "Kaydet",
+    "general": {
+      "title": "Genel Ayarlar",
+      "platformName": "Platform Adı",
+      "platformUrl": "Platform URL",
+      "supportEmail": "Destek E-posta"
+    },
+    "notificationsSettings": {
+      "title": "Bildirim Ayarları",
+      "emailTitle": "E-posta Bildirimleri",
+      "emailDescription": "Sistem e-postaları ve bildirimler gönder",
+      "smsTitle": "SMS Bildirimleri",
+      "smsDescription": "Önemli olaylar için SMS gönder",
+      "pushTitle": "Push Bildirimleri",
+      "pushDescription": "Browser push notifications aktif",
+      "enableEmail": "Etkinleştir: E-posta Bildirimleri",
+      "enableSMS": "Etkinleştir: SMS Bildirimleri",
+      "enablePush": "Etkinleştir: Push Bildirimleri"
+    },
+    "securitySettings": {
+      "title": "Güvenlik Ayarları",
+      "sessionTimeout": "Session Timeout (dakika)",
+      "passwordMinLength": "Min. Şifre Uzunluğu",
+      "twoFactorTitle": "2FA Zorunlu",
+      "twoFactorDescription": "Tüm kullanıcılar için iki faktörlü kimlik doğrulama zorunlu",
+      "enable2FA": "Etkinleştir: 2FA Zorunlu"
+    },
+    "apiSettings": {
+      "title": "API Ayarları",
+      "rateLimit": "Rate Limit (requests/hour)",
+      "webhookTimeout": "Webhook Timeout (saniye)"
+    },
+    "billingSettings": {
+      "title": "Faturalandırma Ayarları",
+      "currency": "Para Birimi",
+      "taxRate": "KDV Oranı (%)",
+      "invoicePrefix": "Fatura Prefix"
+    }
+  },
+  "layout": {
+    "toggleMenu": "Menüyü Aç/Kapat"
+  },
+  "Instagram": "Instagram",
+  "common": {
+    "cancel": "İptal",
+    "delete": "Sil"
+  },
+  "file": "File",
+  "image": "Image",
+  "input": "Input",
+  "instagram": "Instagram",
+  "openConversation": "Konuşmayı Aç",
+  "video": "Video",
+  "reports": {
+    "modals": {
+      "team": {
+        "conversations": "Konuşma",
+        "avgTime": "Ort. Süre",
+        "satisfaction": "Memnuniyet",
+        "resolved": "Çözüm",
+        "ranking": "Sıralama"
+      }
+    }
+  },
+  "teamChat": {
+    "selectChannel": "Bir kanal seçin",
+    "selectChannelDescription": "Mesajlaşmaya başlamak için sol taraftan bir kanal seçin",
+    "channelCreated": "\"{{name}}\" kanalı oluşturuldu!",
+    "sidebar": {
+      "channels": "Kanallar",
+      "createChannel": "Kanal Oluştur",
+      "createChannelAdmin": "Yeni kanal oluştur (sadece yöneticiler)",
+      "searchChannels": "Kanal ara...",
+      "searchChannelsAria": "Kanallarda ara",
+      "privateChannel": "Özel kanal",
+      "publicChannel": "Genel kanal",
+      "unreadMessages": "{{count}} okunmamış mesaj",
+      "unread": "{{count}} okunmamış",
+      "channelsSection": "Kanallar",
+      "noChannelsFound": "Kanal bulunamadı",
+      "noChannelsYet": "Henüz kanal yok",
+      "directMessages": "Direkt Mesajlar",
+      "newDirectMessage": "Yeni direkt mesaj",
+      "noUsersFound": "Kullanıcı bulunamadı",
+      "noDirectMessagesYet": "Henüz direkt mesaj yok",
+      "channelCount_one": "{{count}} kanal",
+      "channelCount_other": "{{count}} kanal"
+    },
+    "messages": {
+      "noMessages": "Henüz mesaj yok. İlk mesajı siz gönderin!",
+      "userAvatar": "Kullanıcı avatarı",
+      "user": "Kullanıcı {{userId}}"
+    },
+    "header": {
+      "title": "Ekip Chat",
+      "confirmLogout": "Çıkış yapmak istediğinizden emin misiniz?",
+      "unreadNotifications": "{{count}} okunmamış bildirim",
+      "notificationsAria": "Bildirimler menüsü",
+      "notifications": "Bildirimler",
+      "noNotifications": "Bildirim bulunmamaktadır",
+      "myProfile": "Profilim",
+      "settings": "Ayarlar"
+    },
+    "input": {
+      "replyingTo": "Yanıtlanıyor",
+      "user": "Kullanıcı {{userId}}",
+      "cancelReply": "Yanıtı iptal et",
+      "image": "Resim",
+      "video": "Video",
+      "file": "Dosya",
+      "addEmoji": "Emoji ekle",
+      "mentionUser": "Kullanıcı bahset",
+      "messagePlaceholder": "Mesajınızı yazın...",
+      "typeMessage": "Mesaj yaz",
+      "send": "Gönder"
+    },
+    "modals": {
+      "createChannel": {
+        "title": "Yeni Kanal Oluştur",
+        "channelName": "Kanal Adı",
+        "spacesHelp": "Boşluklar otomatik olarak tire (-) ile değiştirilir",
+        "makePrivate": "Özel kanal yap",
+        "privateHelp": "Sadece davet edilen kullanıcılar görebilir",
+        "members": "Üyeler",
+        "allTeam": "Tüm ekip",
+        "specificMembers": "Belirli kişiler",
+        "specificMembersHelp": "Üye seçimi backend hazır olduğunda eklenecek"
+      },
+      "call": {
+        "unknown": "Bilinmeyen",
+        "endCall": "Aramayı Sonlandır"
+      },
+      "search": {
+        "title": "Mesajlarda Ara",
+        "user": "Kullanıcı {{userId}}",
+        "noResults": "Sonuç bulunamadı",
+        "noResultsFor": "\"{{query}}\" için eşleşen mesaj yok",
+        "typeToSearch": "Arama yapmak için bir şeyler yazın",
+        "searchInContent": "Mesaj içeriğinde arama yapabilirsiniz",
+        "resultsFound": "{{count}} sonuç bulundu"
+      }
+    }
+  }
+}

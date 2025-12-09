@@ -1,0 +1,14 @@
+{
+  "required": "Bu alan zorunludur",
+  "email": "Geçerli bir e-posta adresi girin",
+  "minLength": "En az {{min}} karakter olmalıdır",
+  "maxLength": "En fazla {{max}} karakter olmalıdır",
+  "phone": "Geçerli bir telefon numarası girin",
+  "password": {
+    "weak": "Şifre çok zayıf",
+    "medium": "Şifre orta güçlü",
+    "strong": "Şifre güçlü",
+    "mismatch": "Şifreler eşleşmiyor"
+  }
+}
+

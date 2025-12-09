@@ -1,0 +1,180 @@
+{
+  "tenants": {
+    "title": "Kiracılar",
+    "add": "Kiracı Ekle",
+    "edit": "Düzenle",
+    "delete": "Sil",
+    "searchPlaceholder": "Firma ara...",
+    "viewDetails": "Detayları Görüntüle",
+    "moreActions": "Daha Fazla",
+    "status": {
+      "all": "Tüm Durumlar",
+      "active": "Aktif",
+      "trial": "Deneme",
+      "past_due": "Gecikmiş",
+      "canceled": "İptal"
+    },
+    "export": {
+      "button": "Dışa Aktar",
+      "exporting": "Aktarılıyor...",
+      "excel": "Excel (.xlsx)",
+      "csv": "CSV (.csv)"
+    },
+    "actions": {
+      "activate": "Aktif Et"
+    },
+    "stats": {
+      "activeTenants": "Aktif Firmalar"
+    },
+    "payment": {
+      "paid": "Ödendi",
+      "pending": "Bekliyor",
+      "overdue": "Gecikmiş"
+    },
+    "messages": {
+      "exportFailed": "Dışa aktarma başarısız oldu",
+      "suspendReasonPrompt": "Askıya alma sebebini girin:",
+      "confirmSuspend": "Bu firmayı askıya almak istediğinizden emin misiniz?",
+      "actionFailed": "İşlem başarısız oldu",
+      "confirmDelete": "Bu firmayı kalıcı olarak silmek istediğinizden emin misiniz? Bu işlem geri alınamaz!",
+      "tenantCreated": "Firma başarıyla oluşturuldu! (Backend entegrasyonu yapılacak)"
+    },
+    "create": {
+      "title": "Yeni Firma Ekle",
+      "steps": {
+        "companyInfo": "Firma Bilgileri",
+        "contactPerson": "İletişim Kişisi",
+        "billingAddress": "Fatura Adresi",
+        "planFeatures": "Plan ve Özellikler"
+      },
+      "buttons": {
+        "cancel": "İptal",
+        "back": "Geri",
+        "next": "Devam",
+        "create": "Firma Oluştur"
+      },
+      "labels": {
+        "companyInfo": "Şirket Bilgileri",
+        "companyName": "Şirket Adı",
+        "email": "E-posta",
+        "phone": "Telefon",
+        "website": "Website",
+        "contactPerson": "İletişim Kişisi",
+        "firstName": "Ad",
+        "lastName": "Soyad",
+        "billingAddress": "Fatura Adresi",
+        "legalName": "Şirket Ünvanı",
+        "address": "Adres",
+        "city": "Şehir",
+        "district": "İlçe/Bölge",
+        "postalCode": "Posta Kodu",
+        "country": "Ülke",
+        "taxNumber": "Vergi Numarası",
+        "planFeatures": "Abonelik ve Özellikler",
+        "planSelection": "Plan Seçimi",
+        "dataLocation": "Veri Konumu",
+        "features": "Özellikler",
+        "paymentStatus": "Ödeme Durumu",
+        "required": "*"
+      },
+      "plans": {
+        "starter": "Başlangıç",
+        "professional": "Profesyonel",
+        "enterprise": "Kurumsal",
+        "free": "Deneme"
+      },
+      "features": {
+        "voiceEnabled": "Sesli Asistan",
+        "voiceDesc": "Telefon ve sesli mesaj desteği",
+        "multiChannel": "Çoklu Kanal",
+        "multiChannelDesc": "WhatsApp, Instagram, Facebook, vb.",
+        "analytics": "Gelişmiş Analitik",
+        "analyticsDesc": "Detaylı raporlar ve dashboard",
+        "customIntegrations": "Özel Entegrasyonlar",
+        "customIntegrationsDesc": "API ve webhook desteği"
+      },
+      "dataLocations": {
+        "tr": "Türkiye",
+        "eu": "Avrupa (EU)",
+        "us": "Amerika (US)"
+      },
+      "countries": {
+        "TR": "Türkiye",
+        "US": "Amerika Birleşik Devletleri",
+        "GB": "Birleşik Krallık",
+        "DE": "Almanya"
+      },
+      "paymentTypes": {
+        "prepaid_yearly": "1 Yıl Peşin (Ödeme alındı)",
+        "prepaid_6months": "6 Ay Peşin (Ödeme alındı)",
+        "monthly_commitment": "Yıllık Taahhüt - Aylık Ödeme",
+        "monthly_flexible": "Aylık Esnek Ödeme"
+      },
+      "misc": {
+        "step": "Adım {{current}} / {{total}}",
+        "paymentNote": "Peşin ödemelerde faturalama otomatik durdurulur. Taahhütlü/Esnek ödemelerde müşteri kart ekleyecektir.",
+        "apiConfigOptional": "API Yapılandırması (Opsiyonel)",
+        "apiConfigNote": "Müşteri daha sonra kendi panelinden de ekleyebilir."
+      },
+      "validation": {
+        "companyNameRequired": "Firma adı gerekli",
+        "firstNameRequired": "Ad gerekli",
+        "lastNameRequired": "Soyad gerekli",
+        "emailRequired": "E-posta gerekli",
+        "phoneRequired": "Telefon gerekli",
+        "cityRequired": "Şehir gerekli",
+        "addressRequired": "Adres gerekli",
+        "postalCodeRequired": "Posta kodu gerekli"
+      },
+      "placeholders": {
+        "companyName": "Firma Adı",
+        "companyEmail": "E-posta",
+        "companyPhone": "Telefon",
+        "legalName": "Yasal Firma Adı",
+        "address": "Adres",
+        "city": "Şehir",
+        "district": "İlçe",
+        "adminFirstName": "Ad",
+        "adminLastName": "Soyad",
+        "adminEmail": "E-posta",
+        "adminPhone": "Telefon",
+        "apiKeyPlaceholder": "API Anahtarı",
+        "anthropicKeyPlaceholder": "Anthropic API Anahtarı"
+      }
+    },
+    "tenantDetail": {
+      "notFound": "Firma bulunamadı"
+    }
+  },
+  "billing": {
+    "title": "Faturalandırma",
+    "revenue": "Gelir"
+  },
+  "financial": {
+    "title": "Finansal Raporlar",
+    "subtitle": "Tüm firmalar için genel finansal özet ve analizler",
+    "periods": {
+      "30d": "Son 30 Gün",
+      "90d": "Son 90 Gün",
+      "1y": "Son 1 Yıl"
+    },
+    "export": {
+      "button": "Dışa Aktar",
+      "exporting": "Aktarılıyor...",
+      "loading": "Yükleniyor..."
+    },
+    "messages": {
+      "noDataYet": "Henüz veri yüklenmedi",
+      "exportFailed": "Dışa aktarma başarısız oldu",
+      "loading": "Finansal veriler yükleniyor...",
+      "loadFailed": "Veri yüklenemedi"
+    },
+    "insights": {
+      "lowChurn": "Düşük Churn",
+      "lowChurnDesc": "%{{rate}} churn oranı ile stabil müşteri tabanı"
+    }
+  },
+  "tenantDetail": {
+    "notFound": "Firma bulunamadı"
+  }
+}

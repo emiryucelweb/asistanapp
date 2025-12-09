@@ -1,0 +1,1252 @@
+{
+  "sidebar": {
+    "overview": "Overview",
+    "tenants": "Tenants",
+    "financialReports": "Financial Reports",
+    "users": "Users",
+    "analytics": "Analytics",
+    "system": "System",
+    "settings": "Settings"
+  },
+  "reports": {
+    "lastUpdate": "Last update",
+    "close": "Close",
+    "export": {
+      "title": "Reports and Analytics",
+      "subtitle": "AsistanApp Management Panel",
+      "description": "Detailed performance and analysis reports",
+      "dateRange": "Last 30 Days",
+      "statsTitle": "General Statistics",
+      "totalConversations": "Total Conversations",
+      "aiSuccessRate": "AI Success Rate",
+      "avgResponseTime": "Average Response Time",
+      "customerSatisfaction": "Customer Satisfaction",
+      "note1": "This report has been generated automatically.",
+      "note2": "Please review category reports for detailed analysis.",
+      "note3": "Contact our support team for any questions.",
+      "pdfDownloading": "✅ Downloading report as PDF...",
+      "excelDownloading": "✅ Preparing Excel report...",
+      "csvExporting": "✅ Creating CSV file...",
+      "success": "Report downloaded successfully!",
+      "error": "Error occurred while downloading report"
+    },
+    "data": {
+      "totalConversations": "Total Conversations",
+      "aiSuccessRate": "AI Success Rate",
+      "conversionRate": "Conversion Rate",
+      "customerSatisfaction": "Customer Satisfaction",
+      "allReports": "All Reports",
+      "dateRanges": {
+        "7d": "Last 7 Days",
+        "30d": "Last 30 Days",
+        "90d": "Last 90 Days",
+        "1y": "Last 1 Year"
+      },
+      "categories": {
+        "ai": "AI Performance",
+        "channels": "Channel Analysis",
+        "satisfaction": "Customer Satisfaction",
+        "time": "Time Analysis",
+        "team": "Team Performance",
+        "conversion": "Conversion Rates",
+        "financial": "Financial Reports",
+        "trends": "Trends & Predictions",
+        "sla": "Emergency & SLA"
+      }
+    },
+    "modals": {
+      "conversion": {
+        "title": "Conversion Rates Report",
+        "subtitle": "Sales funnel and conversion analysis",
+        "generalConversion": "General Conversion",
+        "cartConversion": "Cart Conversion",
+        "avgOrder": "Avg. Order",
+        "growth": "Growth",
+        "visitor": "Visitor",
+        "chatStarted": "Chat Started",
+        "productInterest": "Product Interest",
+        "addToCart": "Add to Cart",
+        "checkoutPage": "Checkout Page",
+        "purchased": "Purchased",
+        "salesFunnel": "Sales Funnel",
+        "peopleCount": "{{count}} people",
+        "loss": "{{percentage}}% loss",
+        "optimizationSuggestions": "Optimization Suggestions",
+        "suggestion1": "Visitor→Chat conversion is good at 53.4%. Chatbot placement optimized.",
+        "suggestion2": "5.6% loss in Cart→Payment stage. Payment experience can be improved.",
+        "suggestion3": "General conversion of 4.7% is above the industry average (3-4%)."
+      },
+      "team": {
+        "title": "Team Performance Report",
+        "subtitle": "30-day agent-based performance analysis",
+        "totalAgents": "Total Agents",
+        "activeAgents": "Active Agents",
+        "conversations": "Conversations",
+        "avgPerAgent": "Avg/Agent",
+        "satisfaction": "Satisfaction",
+        "efficiency": "Efficiency",
+        "topPerformers": "Top Performers",
+        "workloadDistribution": "Workload Distribution (Monthly Conversations)",
+        "agentCount": "{{count}} agents",
+        "teamAnalysis": "Team Analysis",
+        "footerStats": "{{agents}} agents • {{conversations}} conversations"
+      },
+      "trends": {
+        "title": "Trends & Predictions",
+        "subtitle": "Future projections and trend analysis",
+        "conversationVolume": "Conversation Volume",
+        "aiSuccessRate": "AI Success Rate",
+        "avgResponseTime": "Avg. Response Time",
+        "conversionRate": "Conversion Rate",
+        "nextMonth": "Next Month",
+        "threeMonths": "3 Months",
+        "sixMonths": "6 Months",
+        "oneYear": "1 Year",
+        "trendAnalysis": "Trend Analysis",
+        "current": "Current",
+        "prediction": "Prediction",
+        "futureProjections": "Future Projections",
+        "confidence": "Confidence",
+        "predictionNotes": "Prediction Notes"
+      }
+    },
+    "viewDetails": "View Details",
+    "time": {
+      "excellentLevel": "Excellent level"
+    },
+    "financial": {
+      "totalRevenue": "Total Revenue",
+      "netProfit": "Net Profit",
+      "roi": "ROI",
+      "monthlyGrowth": "Monthly Growth"
+    },
+    "satisfaction": {
+      "sentiments": {
+        "veryHappy": "Very Happy",
+        "neutral": "Neutral",
+        "unhappy": "Unhappy"
+      }
+    },
+    "dateRanges": {
+      "24h": "Last 24 Hours",
+      "30d": "Last 30 Days",
+      "7d": "Last 7 Days",
+      "90d": "Last 90 Days",
+      "custom": "Custom Range"
+    }
+  },
+  "analytics": {
+    "title": "Platform Analytics",
+    "subtitle": "Detailed statistics across the entire platform",
+    "metrics": {
+      "totalConversations": "Total Conversations",
+      "activeUsers": "Active Users",
+      "apiCalls": "API Calls",
+      "avgResponse": "Average Response",
+      "faster": "15% faster"
+    },
+    "charts": {
+      "conversationTrend": "Conversation Trend",
+      "channelDistribution": "Channel Distribution"
+    },
+    "conversationCount": "{{count}} conversations"
+  },
+  "system": {
+    "title": "System Management",
+    "subtitle": "Platform infrastructure and system status",
+    "recentLogs": "Recent System Logs",
+    "exporting": "Exporting...",
+    "export": "Export",
+    "logsShowing": "log entries showing",
+    "close": "Close",
+    "metrics": {
+      "cpuUsage": "CPU Usage",
+      "ramUsage": "RAM Usage",
+      "diskUsage": "Disk Usage",
+      "network": "Network"
+    },
+    "serviceStatus": "Service Status",
+    "viewAllLogs": "View all logs →",
+    "systemLogs": "System Logs",
+    "systemLogsDesc": "View and filter all system activities",
+    "searchLogs": "Search in log messages...",
+    "filterAll": "All",
+    "filterInfo": "Info",
+    "filterWarning": "Warning",
+    "filterError": "Error",
+    "filter": "Filter",
+    "search": "Search",
+    "logRecords": "Log Records",
+    "level": "Level",
+    "message": "Message",
+    "service": "Service",
+    "time": "Time",
+    "exportFailed": "Failed to export logs",
+    "totalLogs": "Total",
+    "mockData": {
+      "time": {
+        "2min": "2 minutes ago",
+        "10min": "10 minutes ago",
+        "15min": "15 minutes ago",
+        "20min": "20 minutes ago",
+        "35min": "35 minutes ago",
+        "1hour": "1 hour ago",
+        "2hours": "2 hours ago",
+        "3hours": "3 hours ago",
+        "4hours": "4 hours ago",
+        "5hours": "5 hours ago",
+        "6hours": "6 hours ago",
+        "8hours": "8 hours ago",
+        "12hours": "12 hours ago",
+        "1day": "1 day ago"
+      }
+    }
+  },
+  "help": {
+    "categories": {
+      "all": "All",
+      "gettingStarted": "Getting Started",
+      "features": "Features",
+      "settings": "Settings",
+      "team": "Team Management",
+      "analytics": "Analytics",
+      "troubleshooting": "Troubleshooting"
+    }
+  },
+  "dashboard": {
+    "pageTitle": "Dashboard",
+    "revenueTrends": "Revenue Trends",
+    "conversationTrends": "Conversation Trends",
+    "startDate": "Start Date",
+    "endDate": "End Date",
+    "selectDates": "Please select start and end dates",
+    "apply": "Apply",
+    "dateRanges": {
+      "24h": "Last 24 Hours",
+      "7d": "Last 7 Days",
+      "30d": "Last 30 Days",
+      "1y": "Last 1 Year",
+      "custom": "Custom Date Range"
+    },
+    "dateRangeDescriptions": {
+      "24h": "Performance summary of the last 24 hours",
+      "7d": "Performance summary of the last 7 days",
+      "30d": "Performance summary of the last 30 days",
+      "1y": "Performance summary of the last year",
+      "custom": "Performance summary of the selected date range"
+    },
+    "metrics": "Metrics",
+    "recentAlerts": "Recent Alerts",
+    "alerts": {
+      "highConversationVolume": "High Conversation Volume",
+      "lowSatisfactionRate": "Low Satisfaction Rate",
+      "aiResponseTimeIncreased": "AI Response Time Increased",
+      "pendingConversationIncrease": "Pending Conversation Increase",
+      "time": {
+        "hoursAgo": "{{count}} hours ago",
+        "hoursAgo_one": "{{count}} hour ago"
+      }
+    },
+    "channelDistribution": "Channel Distribution",
+    "totalConversations": "Total Conversations",
+    "channels": {
+      "phone": "Phone"
+    },
+    "teamPerformance": "Team Performance",
+    "teamPerformanceTable": {
+      "teamMember": "Team Member",
+      "resolvedConversations": "Resolved Conversations",
+      "avgResponseTime": "Avg Response Time",
+      "satisfactionRate": "Satisfaction Rate",
+      "mockNames": {
+        "member1": "John Smith",
+        "member2": "Sarah Johnson",
+        "member3": "Michael Brown"
+      },
+      "mockTimes": {
+        "hours": "{{count}} hours",
+        "hours_one": "{{count}} hour"
+      }
+    },
+    "kpi": {
+      "activeConversations": "Active Conversations",
+      "aiResolutionRate": "AI Resolution Rate",
+      "customerSatisfaction": "Customer Satisfaction",
+      "revenue": "Revenue"
+    },
+    "aiPerformance": {
+      "title": "AI Performance Summary",
+      "resolutionRate": "Resolution Rate",
+      "aiResolved": "AI Resolved",
+      "handedToAgent": "Handed to Agent",
+      "pending": "Pending"
+    },
+    "dateRanges": {
+      "7d": "Last 7 Days"
+    },
+    "searchCompany": "Search company"
+  },
+  "settings": {
+    "customization": {
+      "languages": {
+        "tr": "Turkish",
+        "en": "En"
+      },
+      "dashboard": {
+        "pages": {
+          "dashboard": "Dashboard"
+        }
+      }
+    },
+    "security": {
+      "title": "Security & Privacy",
+      "description": "Manage your security settings",
+      "dataSecurity": "Data Security",
+      "encryption": "Data Encryption",
+      "encryptionDesc": "All data is encrypted with AES-256",
+      "sessionTimeout": "Session Timeout (minutes)",
+      "timeouts": {
+        "15min": "15 minutes",
+        "30min": "30 minutes",
+        "1hour": "1 hour",
+        "2hours": "2 hours"
+      },
+      "ipRestriction": "IP Restriction",
+      "ipRestrictionDesc": "Only allow access from specific IP addresses",
+      "allowedIPs": "Allowed IP Addresses",
+      "ipHelp": "One IP address per line",
+      "ipPlaceholder": "192.168.1.1\n10.0.0.1",
+      "activityLogs": "Activity Logs",
+      "kvkkGdpr": "GDPR Compliance",
+      "dataRetention": "Data Retention Period (days)",
+      "retentionPeriods": {
+        "90days": "90 days",
+        "6months": "6 months",
+        "1year": "1 year",
+        "2years": "2 years"
+      },
+      "exportData": "Export All My Data",
+      "autoBackup": "Auto Backup",
+      "autoBackupDesc": "Your data is automatically backed up",
+      "backupFrequency": "Backup Frequency",
+      "frequencies": {
+        "daily": "Daily",
+        "weekly": "Weekly",
+        "monthly": "Monthly"
+      },
+      "dangerZone": "Danger Zone",
+      "dangerZoneDesc": "These actions are irreversible. Be careful!",
+      "deleteAccount": "Delete My Account Permanently",
+      "cancel": "Cancel",
+      "status": {
+        "success": "Success",
+        "failed": "Failed"
+      },
+      "actions": {
+        "saveChanges": "Save Changes"
+      },
+      "messages": {
+        "saved": "✅ Security settings saved!",
+        "exportingData": "📦 Your data is being prepared and will be sent to your email!",
+        "confirmDeleteAccount": "⚠️ WARNING: This action cannot be undone! All your data will be permanently deleted. Are you sure?",
+        "deleteCancelled": "Account deletion cancelled. (Demo)"
+      }
+    },
+    "integrations": {
+      "apiKey": "API Key",
+      "connect": "Connect",
+      "createKey": "Create New Key",
+      "revoke": "Revoke",
+      "cancel": "Cancel",
+      "actions": {
+        "saveChanges": "Save Changes"
+      },
+      "messages": {
+        "saved": "✅ Integration settings saved!"
+      }
+    },
+    "business": {
+      "instagramPlaceholder": "@username",
+      "addressInfo": "Address Information",
+      "basicInfo": "Basic Information",
+      "businessTypes": {
+        "aesthetic_center": "Aesthetic Center",
+        "beauty_salon": "Beauty Salon",
+        "cafe": "Cafe",
+        "dental_clinic": "Dental Clinic",
+        "fitness_center": "Fitness Center",
+        "hair_salon": "Hair Salon",
+        "hospital": "Hospital",
+        "hotel": "Hotel",
+        "other": "Other",
+        "restaurant": "Restaurant"
+      },
+      "cities": {
+        "Ankara": "Ankara",
+        "Bursa": "Bursa",
+        "Istanbul": "Istanbul",
+        "Izmir": "Izmir"
+      },
+      "contactInfo": "Contact Information",
+      "labels": {
+        "city": "City",
+        "companyName": "Company Name",
+        "description": "Description",
+        "district": "District",
+        "email": "Email",
+        "fullAddress": "Full Address",
+        "instagram": "Instagram",
+        "phone": "Phone",
+        "postalCode": "Postal Code",
+        "sector": "Sector",
+        "taxNumber": "Tax Number",
+        "website": "Website"
+      },
+      "logo": {
+        "requirements": "PNG or SVG, max 1MB",
+        "section": "Logo",
+        "upload": "Upload Logo"
+      },
+      "placeholders": {
+        "description": "Modern dental health and aesthetic treatments",
+        "address": "Levent Street, Cevizli Road No:15",
+        "district": "Beşiktaş"
+      },
+      "messages": {
+        "logoTooLarge": "Logo file too large (max 1MB)",
+        "logoUploaded": "Logo uploaded successfully",
+        "settingsSaved": "Business information saved"
+      },
+      "subtitle": "Manage your business information",
+      "title": "Business Information",
+      "workingHours": {
+        "closed": "Closed",
+        "days": {
+          "friday": "Friday",
+          "monday": "Monday",
+          "saturday": "Saturday",
+          "sunday": "Sunday",
+          "thursday": "Thursday",
+          "tuesday": "Tuesday",
+          "wednesday": "Wednesday"
+        },
+        "title": "Working Hours"
+      }
+    },
+    "channels": {
+      "instagram": {
+        "connect": "Connect",
+        "connectedAccount": "Connected Account",
+        "disconnect": "Disconnect",
+        "enabled": "Enabled",
+        "subtitle": "Instagram Direct Message integration",
+        "title": "Title"
+      },
+      "phone": {
+        "enabled": "Enabled",
+        "numberLabel": "Phone Number",
+        "recordCalls": "Record Calls",
+        "recordDescription": "Automatically record all phone calls",
+        "subtitle": "Phone support and call recording settings",
+        "title": "Title"
+      },
+      "subtitle": "Manage channels you use to reach your customers",
+      "title": "Title",
+      "web": {
+        "colorLabel": "Widget Color",
+        "embedCode": "Embed Code",
+        "enabled": "Enabled",
+        "positionBottomLeft": "Bottom Left",
+        "positionBottomRight": "Bottom Right",
+        "positionLabel": "Position",
+        "subtitle": "Live support widget for your website",
+        "title": "Web Widget"
+      },
+      "whatsapp": {
+        "apiToken": "API Token",
+        "enabled": "Enabled",
+        "phoneLabel": "Phone Number",
+        "subtitle": "WhatsApp Business API integration",
+        "title": "Title",
+        "verified": "Verified"
+      }
+    },
+    "common": {
+      "saveChanges": "Save Changes"
+    },
+    "saveAll": "Saveall",
+    "api": {
+      "title": "API Settings",
+      "subtitle": "Manage your API usage and view your limits",
+      "usageLimits": "Usage Limits",
+      "upgradePlan": "Upgrade Plan",
+      "usage": {
+        "apiRequests": "API Requests",
+        "messages": "Messages",
+        "aiTokens": "AI Tokens",
+        "used": "used"
+      },
+      "limitWarning": "You're approaching your limit!",
+      "limitWarningDesc": "Consider upgrading your plan for more capacity.",
+      "apiKeys": "API Keys",
+      "createNewKey": "Create New Key",
+      "created": "Created",
+      "lastUsed": "Last Used",
+      "status": {
+        "active": "Active",
+        "inactive": "Inactive"
+      },
+      "hide": "Hide",
+      "show": "Show",
+      "copied": "Copied",
+      "copy": "Copy",
+      "regenerate": "Regenerate",
+      "revoke": "Revoke",
+      "securityNote": "Security Note",
+      "securityNoteDesc": "Never share your API keys and keep them secure. Your keys provide access to all your data.",
+      "externalIntegrations": "External API Integrations",
+      "externalIntegrationsDesc": "Connect to external services using your own API keys",
+      "openaiKey": "OpenAI API Key",
+      "openaiDesc": "Use your own OpenAI key for unlimited AI operations",
+      "anthropicKey": "Anthropic Claude API Key",
+      "anthropicDesc": "Your Anthropic key to use Claude AI models",
+      "webhookUrl": "Webhook URL",
+      "webhookUrlDesc": "URL to receive notifications for events",
+      "webhookSecret": "Webhook Secret",
+      "webhookSecretDesc": "Secret key to verify webhook requests",
+      "placeholders": {
+        "openaiKey": "sk-...",
+        "anthropicKey": "sk-ant-...",
+        "webhookUrl": "https://example.com/webhook",
+        "webhookSecret": "whsec_..."
+      },
+      "saveSettings": "Save Settings",
+      "importantNote": "Important Note",
+      "importantNoteDesc": "These API keys are securely encrypted and only used for your tenant. They are not shared platform-wide.",
+      "plans": {
+        "professional": "Professional",
+        "enterprise": "Enterprise"
+      },
+      "perMonth": "/month",
+      "requestApproval": "Request Approval",
+      "close": "Close",
+      "confirmRefresh": "Are you sure you want to regenerate this API key? The old key will become invalid.",
+      "upgradeModal": {
+        "title": "Upgrade Your API Limits",
+        "subtitle": "Get more API capacity and features",
+        "yourCurrentPlan": "Your current plan",
+        "recommended": "RECOMMENDED",
+        "features": {
+          "apiRequests50k": "50,000 API requests/month",
+          "messages25k": "25,000 messages/month",
+          "aiTokens2500k": "2,500,000 AI tokens/month",
+          "prioritySupport": "Priority support",
+          "advancedAnalytics": "Advanced analytics"
+        },
+        "upgradeNow": "Upgrade Now",
+        "autoUpgradeNote": "Auto upgrade: When you reach your limit, the system will notify you and ask for approval to upgrade to the next tier."
+      },
+      "messages": {
+        "saved": "✅ API settings saved!"
+      }
+    },
+    "billing": {
+      "title": "Billing & Payment",
+      "subtitle": "Your subscription plan and payment information",
+      "downloadInvoice": "Download Invoice",
+      "currentPlan": "Current Plan",
+      "monthly": "monthly",
+      "upgradePlan": "Upgrade Plan",
+      "usageStats": "Usage Statistics",
+      "sms": "SMS",
+      "aiMessage": "AI Message",
+      "storage": "Storage",
+      "unlimited": "Unlimited",
+      "paymentMethod": "Payment Method",
+      "cardExpiry": "Expiry",
+      "changeCard": "Change Card",
+      "autoPayment": "Auto payment active",
+      "invoiceHistory": "Invoice History",
+      "paid": "Paid",
+      "plans": {
+        "starter": "Starter",
+        "pro": "Pro",
+        "enterprise": "Enterprise"
+      },
+      "features": {
+        "unlimitedAI": "Unlimited AI messages",
+        "sms10k": "10,000 SMS/month",
+        "storage50gb": "50 GB storage",
+        "team10": "10 team members"
+      },
+      "planFeatures": {
+        "starter": {
+          "ai5k": "5,000 AI messages/month",
+          "sms1k": "1,000 SMS/month",
+          "storage10gb": "10 GB storage",
+          "team3": "3 team members",
+          "emailSupport": "Email support"
+        },
+        "pro": {
+          "unlimitedAI": "Unlimited AI messages",
+          "sms10k": "10,000 SMS/month",
+          "storage50gb": "50 GB storage",
+          "team10": "10 team members",
+          "prioritySupport": "Priority support",
+          "apiAccess": "API access"
+        },
+        "enterprise": {
+          "unlimitedAll": "Unlimited everything",
+          "dedicatedServer": "Dedicated server",
+          "slaGuarantee": "SLA guarantee",
+          "unlimitedTeam": "Unlimited team",
+          "support247": "24/7 support",
+          "customIntegrations": "Custom integrations"
+        }
+      },
+      "upgradeModal": {
+        "title": "Upgrade Plan",
+        "recommended": "RECOMMENDED",
+        "currentPlan": "Your Current Plan",
+        "perMonth": "/month",
+        "selectPlan": "Select Plan"
+      },
+      "paymentModal": {
+        "title": "Change Payment Method",
+        "cardNumber": "Card Number",
+        "expiryDate": "Expiry Date",
+        "cvv": "CVV",
+        "cardholderName": "Cardholder Name",
+        "securityNote": "Your payment information is stored securely",
+        "cancel": "Cancel",
+        "save": "Save",
+        "cardHolder": "Card Holder",
+        "securePayment": "Secure Payment"
+      },
+      "placeholders": {
+        "expiryDate": "MM/YY",
+        "cardHolder": "John Doe"
+      },
+      "messages": {
+        "downloadingInvoice": "Downloading invoice {{invoiceNumber}}...",
+        "changingPlan": "Switching to {{planName}} plan...",
+        "updatingPayment": "Updating payment method..."
+      },
+      "actions": {
+        "cancel": "Cancel",
+        "save": "Save"
+      },
+      "usage": {
+        "title": "Usage Statistics",
+        "sms": "SMS",
+        "aiMessage": "AI Message",
+        "storage": "Storage"
+      }
+    },
+    "team": {
+      "edit": "Edit",
+      "delete": "Delete",
+      "save": "Save",
+      "cancel": "Cancel",
+      "editMember": "Edit Member",
+      "editRole": "Edit Role",
+      "inviteNewMember": "Invite New Member",
+      "lastLogin": "Last Login",
+      "rolePermissions": "Role Permissions",
+      "sendInvite": "Send Invite",
+      "subtitle": "Manage team members",
+      "teamMembers": "Team Members",
+      "title": "Team",
+      "roles": {
+        "owner": {
+          "label": "Owner",
+          "description": "Full access"
+        },
+        "admin": {
+          "label": "Admin",
+          "description": "System administration"
+        },
+        "manager": {
+          "label": "Manager",
+          "description": "Team management"
+        },
+        "agent": {
+          "label": "Agent",
+          "description": "Customer service"
+        },
+        "readonly": {
+          "label": "Viewer",
+          "description": "View only"
+        }
+      },
+      "labels": {
+        "name": "Name",
+        "email": "Email",
+        "role": "Role",
+        "status": "Status"
+      },
+      "status": {
+        "active": "Active",
+        "inactive": "Inactive"
+      },
+      "sampleData": {
+        "lastLogin2min": "2 minutes ago",
+        "lastLogin1h": "1 hour ago",
+        "lastLogin5min": "5 minutes ago",
+        "drName": "Dr. Emily Smith",
+        "receptionistName": "Receptionist Sarah"
+      },
+      "permissionsModal": {
+        "title": "Role Permissions",
+        "sections": {
+          "dashboard": "Dashboard & Reports",
+          "conversations": "Conversations & Customers",
+          "teamManagement": "Team Management",
+          "settingsConfig": "Settings & Configuration"
+        },
+        "permissions": {
+          "dashboardView": "View Dashboard",
+          "dashboardViewDesc": "Can view main page and general statistics",
+          "reportsView": "View Reports",
+          "reportsViewDesc": "Can view detailed reports and analytics",
+          "reportsExport": "Export Reports",
+          "reportsExportDesc": "Can download reports in PDF, Excel format",
+          "conversationsView": "View Conversations",
+          "conversationsViewDesc": "Can read customer conversations",
+          "sendMessage": "Send Messages",
+          "sendMessageDesc": "Can send messages to customers",
+          "assignConversation": "Assign Conversations",
+          "assignConversationDesc": "Can assign conversations to team members",
+          "addTeamMember": "Add Team Members",
+          "addTeamMemberDesc": "Can add new team members",
+          "editTeamMember": "Edit Team Members",
+          "editTeamMemberDesc": "Can modify team member information",
+          "editRolePermissions": "Edit Role Permissions",
+          "editRolePermissionsDesc": "Can change role permissions",
+          "assistantSettings": "Assistant Settings",
+          "assistantSettingsDesc": "Can configure AI behaviors",
+          "billingPayment": "Billing & Payment",
+          "billingPaymentDesc": "Can manage subscription and payment settings",
+          "apiIntegrations": "API Integrations",
+          "apiIntegrationsDesc": "Can configure external API settings"
+        }
+      },
+      "messages": {
+        "inviteSent": "✉️ Invitation sent to {{email}}!",
+        "confirmRemove": "Are you sure you want to remove this user?",
+        "userRemoved": "✅ User removed!",
+        "permissionsSaved": "✅ Role permissions saved!"
+      },
+      "channelModal": {
+        "channelSlugPlaceholder": "e.g: general-chat, support-team",
+        "descriptionPlaceholder": "Channel description (optional)",
+        "close": "Close",
+        "required": "Required",
+        "cancel": "Cancel"
+      }
+    },
+    "data": {
+      "export": {
+        "formats": {
+          "excel": "Excel",
+          "csv": "Csv",
+          "pdf": "Pdf"
+        }
+      }
+    }
+  },
+  "team": {
+    "search": "Search team member (name, email)...",
+    "title": "Team Management",
+    "subtitle": "Manage team members and track their performance",
+    "stats": {
+      "totalTeam": "Total Team",
+      "activeMembers": "Active Members",
+      "onLeave": "On Leave",
+      "avgSatisfaction": "Avg. Satisfaction"
+    },
+    "filters": {
+      "allRoles": "All Roles",
+      "allStatuses": "All Statuses"
+    },
+    "table": {
+      "member": "Member",
+      "role": "Role",
+      "status": "Status",
+      "performance": "Performance",
+      "lastActivity": "Last Activity",
+      "actions": "Actions"
+    },
+    "roles": {
+      "owner": "Owner",
+      "admin": "Admin",
+      "agent": "Agent",
+      "viewer": "Viewer"
+    },
+    "status": {
+      "active": "Active",
+      "inactive": "Inactive",
+      "onLeave": "On Leave"
+    },
+    "departments": {
+      "management": "Management",
+      "customerRelations": "Customer Relations",
+      "support": "Support",
+      "sales": "Sales",
+      "technicalSupport": "Technical Support",
+      "analytics": "Analytics"
+    },
+    "mockData": {
+      "lastActive": {
+        "2min": "2 minutes ago",
+        "15min": "15 minutes ago",
+        "30min": "30 minutes ago",
+        "1hour": "1 hour ago",
+        "2hours": "2 hours ago",
+        "3days": "3 days ago"
+      },
+      "avgResponseTime": {
+        "2min30sec": "2 min 30 sec",
+        "3min15sec": "3 min 15 sec",
+        "3min45sec": "3 min 45 sec",
+        "4min20sec": "4 min 20 sec",
+        "5min10sec": "5 min 10 sec"
+      }
+    },
+    "viewModes": {
+      "grid": "Grid",
+      "list": "List"
+    },
+    "moreOptions": "More options",
+    "gridLabels": {
+      "conversations": "Conversations",
+      "satisfaction": "Satisfaction",
+      "avgResponse": "Avg. Response",
+      "tasks": "Tasks",
+      "details": "Details"
+    },
+    "detailModal": {
+      "role": "Role",
+      "status": "Status",
+      "department": "Department",
+      "joinDate": "Join Date",
+      "close": "Close"
+    },
+    "editMemberModal": {
+      "personalInfo": "Personal Information",
+      "roleAndStatus": "Role and Status",
+      "fullName": "Full Name",
+      "email": "Email",
+      "phone": "Phone",
+      "department": "Department",
+      "role": "Role",
+      "status": "Status",
+      "changeNotification": "Change Notification",
+      "changeNotificationDesc": "Changes will be notified to the user via email.",
+      "statusOptions": {
+        "active": "Active",
+        "inactive": "Inactive",
+        "onLeave": "On Leave"
+      }
+    },
+    "leave": {
+      "title": "Leave Information",
+      "annualDays": "Annual Leave",
+      "usedDays": "Used Leave",
+      "remainingDays": "Remaining Leave",
+      "days": "days",
+      "currentlyOnLeave": "🏖️ Currently On Leave",
+      "startDate": "Start",
+      "endDate": "End"
+    },
+    "permissions": {
+      "title": "Permissions"
+    },
+    "performance": {
+      "title": "Performance Metrics",
+      "conversations": "Conversations",
+      "satisfaction": "Satisfaction",
+      "avgResponse": "Avg. Response",
+      "tasks": "Tasks"
+    },
+    "placeholders": {
+      "name": "John Smith",
+      "email": "john@asistanapp.com",
+      "phone": "+1 555 123 4567",
+      "department": "Customer Relations"
+    },
+    "addMember": {
+      "title": "Add Team Member",
+      "personalInfo": "Personal Information",
+      "name": "Full Name",
+      "email": "Email",
+      "phone": "Phone",
+      "department": "Department",
+      "role": "Role",
+      "roleAndPermissions": "Role & Permissions"
+    },
+    "addMemberModal": {
+      "title": "Add New Team Member",
+      "personalInfo": "Personal Information",
+      "roleAndAuth": "Role and Authority",
+      "dailyBreakRight": "Daily Break Allowance",
+      "dailyBreakMinutes": "Daily Break Duration (Minutes)",
+      "dailyBreakDesc": "How many minutes can the agent take breaks per day? (Example: 30 minutes)",
+      "weeklySchedule": "Weekly Work Schedule",
+      "weeklyScheduleDesc": "Which days of the week will they work? (Select working days)",
+      "annualLeaveRights": "Annual Leave Rights",
+      "optional": "(Optional)",
+      "annualLeaveDays": "Annual Leave Entitlement (Days)",
+      "usedLeaveDays": "Used Leave (Days)",
+      "remainingLeaveDays": "Remaining Leave (Days)",
+      "defaultDays": "Default: 20 days",
+      "previouslyUsed": "Previously used",
+      "autoCalculated": "Automatically calculated",
+      "sufficient": "Sufficient",
+      "medium": "Medium",
+      "low": "Low",
+      "currentLeaveDates": "Current Leave Dates (Optional)",
+      "leaveStartDate": "Leave Start Date",
+      "leaveEndDate": "Leave End Date",
+      "leaveDatesHint": "If the user is currently on leave, you can enter the date range or leave it blank",
+      "workingDays": {
+        "monday": "Monday",
+        "tuesday": "Tuesday",
+        "wednesday": "Wednesday",
+        "thursday": "Thursday",
+        "friday": "Friday",
+        "saturday": "Saturday",
+        "sunday": "Sunday"
+      },
+      "workingDaysShort": {
+        "mon": "Mon",
+        "tue": "Tue",
+        "wed": "Wed",
+        "thu": "Thu",
+        "fri": "Fri",
+        "sat": "Sat",
+        "sun": "Sun"
+      },
+      "working": "✓ Working",
+      "dayOff": "✗ Off",
+      "workingDay": "✓ Working Day",
+      "weekendDayOff": "✗ Weekend / Day Off"
+    },
+    "modals": {
+      "editMember": "Edit Team Member",
+      "removeMember": "Remove Team Member"
+    },
+    "newMember": "New team member",
+    "workingStatus": {
+      "working": "Working",
+      "off": "Off"
+    },
+    "channels": {
+      "noChannelsFound": "No channels found",
+      "noChannelsYet": "No channels yet",
+      "noUsersFound": "No users found",
+      "noDirectMessagesYet": "No direct messages yet"
+    },
+    "actions": {
+      "endLeave": "End Leave",
+      "markEmergencyLeave": "Mark Emergency Leave",
+      "makeActive": "Make active",
+      "quickLeave": "Quick leave",
+      "add": "Add",
+      "cancel": "Cancel",
+      "delete": "Delete",
+      "edit": "Edit",
+      "remove": "Remove",
+      "saveChanges": "Save Changes"
+    },
+    "modals": {
+      "createChannel": {
+        "creating": "Creating...",
+        "create": "Create",
+        "descriptionOptional": "Description (Optional)",
+        "validation": {
+          "nameRequired": "Channel name is required",
+          "nameMinLength": "Channel name must be at least 3 characters",
+          "nameMaxLength": "Channel name must be at most 50 characters",
+          "nameInvalidChars": "Channel name can only contain letters, numbers, hyphens and underscores"
+        }
+      },
+      "call": {
+        "callEnded": "Callended"
+      }
+    },
+    "messages": {
+      "memberActivated": "{{name}} has been activated!",
+      "memberMarkedLeave": "{{name}} has been marked as emergency leave!",
+      "memberAdded": "{{name}} successfully added! Leave: {{leave}} days, Break: {{break}} min",
+      "memberUpdated": "{{name}} successfully updated!",
+      "confirmDelete": "Are you sure you want to delete this member?"
+    },
+    "newMember": "New team member",
+    "workingStatus": {
+      "working": "Working",
+      "off": "Off"
+    },
+    "callControls": "Callcontrols",
+    "chat": {
+      "logout": "Logout"
+    },
+    "connected": "Connected",
+    "endCall": "Endcall",
+    "filters": {
+      "allStatuses": "Allstatuses"
+    },
+    "leave": {
+      "annualDays": "Annualdays",
+      "currentlyOnLeave": "Currentlyonleave",
+      "days": "Days",
+      "endDate": "Enddate",
+      "remainingDays": "Remainingdays",
+      "startDate": "Startdate",
+      "title": "Title",
+      "usedDays": "Useddays"
+    },
+    "performance": {
+      "title": "Title"
+    },
+    "searchMessages": "Searchmessages",
+    "searchQuery": "Searchquery",
+    "searchResults": "Searchresults",
+    "addMember": {
+      "title": "Add Team Member",
+      "personalInfo": "Personal Information",
+      "name": "Full Name",
+      "email": "Email",
+      "phone": "Phone",
+      "department": "Department",
+      "role": "Role",
+      "roleAndPermissions": "Role & Permissions"
+    },
+    "call": {
+      "calling": "Calling...",
+      "videoOn": "Turn Video On",
+      "videoOff": "Turn Video Off",
+      "soundOn": "Turn Sound On",
+      "soundOff": "Turn Sound Off"
+    },
+    "channelCreation": "Channel Creation",
+    "muteToggle": "Toggle Mute"
+  },
+  "users": {
+    "validation": {
+      "allFieldsRequired": "Please fill in all required fields!",
+      "passwordMinLength": "Password must be at least 8 characters!"
+    },
+    "messages": {
+      "userAdded": "{{name}} successfully added! (Tenant: {{tenant}}, Role: {{role}})"
+    }
+  },
+  "conversations": {
+    "tabs": {
+      "assistant": "Assistant",
+      "assistantShort": "AI",
+      "employee": "Employee",
+      "employeeShort": "Team",
+      "past": "Past Conversations",
+      "pastShort": "Past",
+      "phone": "Phone Conversations",
+      "phoneShort": "Phone",
+      "needsHelp": "Needs Help",
+      "needsHelpShort": "Help"
+    },
+    "time": {
+      "now": "Now",
+      "minutesAgo": "{{count}} min ago",
+      "minutesAgo_one": "{{count}} min ago",
+      "hoursAgo": "{{count}} hours ago",
+      "hoursAgo_one": "{{count}} hour ago",
+      "daysAgo": "{{count}} days ago",
+      "daysAgo_one": "{{count}} day ago"
+    },
+    "noConversationsFound": "No conversations found",
+    "autoArchiveInfo": "Conversations are automatically archived after 24 hours",
+    "addFile": "Add File",
+    "autoArchiveInfo": "Auto-archive information",
+    "loadMore": "Load More",
+    "messagePlaceholder": "Type your message...",
+    "needsHelp": "Needs Help",
+    "sendMessage": "Send Message",
+    "timeLabels": {
+      "now": "Now",
+      "minutesAgo": "{{count}} minutes ago",
+      "hoursAgo": "{{count}} hours ago"
+    },
+    "assignedTo": "Conversation assigned to {{name}}!",
+    "fullscreen": {
+      "enter": "Fullscreen (F11)",
+      "exit": "Exit Fullscreen (Esc)"
+    }
+  },
+  "layout": {
+    "toggleMenu": "Toggle Menu"
+  },
+  "Instagram": "Instagram",
+  "common": {
+    "cancel": "Cancel",
+    "delete": "Delete"
+  },
+  "file": "File",
+  "image": "Image",
+  "input": "Input",
+  "instagram": "Instagram",
+  "openConversation": "Open Conversation",
+  "video": "Video",
+  "notifications": {
+    "mockData": {
+      "newTenant": {
+        "title": "New Tenant Registration",
+        "message": "ABC Company registered in the system"
+      },
+      "paymentReceived": {
+        "title": "Payment Received",
+        "message": "XYZ Corp made annual payment"
+      }
+    }
+  },
+  "reports": {
+    "mockData": {
+      "teamMembers": {
+        "name1": "John Smith",
+        "name2": "Jane Doe",
+        "name3": "Sarah Johnson",
+        "name4": "David Wilson"
+      }
+    },
+    "modals": {
+      "team": {
+        "conversations": "Conversations",
+        "avgTime": "Avg. Time",
+        "satisfaction": "Satisfaction",
+        "resolved": "Resolved",
+        "ranking": "Ranking"
+      }
+    }
+  },
+  "teamChat": {
+    "selectChannel": "Select a channel",
+    "selectChannelDescription": "Choose a channel from the left to start messaging",
+    "channelCreated": "Channel \"{{name}}\" has been created!",
+    "sidebar": {
+      "channels": "Channels",
+      "createChannel": "Create Channel",
+      "createChannelAdmin": "Create new channel (admins only)",
+      "searchChannels": "Search channels...",
+      "searchChannelsAria": "Search in channels",
+      "privateChannel": "Private channel",
+      "publicChannel": "Public channel",
+      "unreadMessages": "{{count}} unread messages",
+      "unread": "{{count}} unread",
+      "channelsSection": "Channels",
+      "noChannelsFound": "No channels found",
+      "noChannelsYet": "No channels yet",
+      "directMessages": "Direct Messages",
+      "newDirectMessage": "New direct message",
+      "noUsersFound": "No users found",
+      "noDirectMessagesYet": "No direct messages yet",
+      "channelCount_one": "{{count}} channel",
+      "channelCount_other": "{{count}} channels"
+    },
+    "messages": {
+      "noMessages": "No messages yet. Send the first message!",
+      "userAvatar": "User avatar",
+      "user": "User {{userId}}"
+    },
+    "header": {
+      "title": "Team Chat",
+      "confirmLogout": "Are you sure you want to logout?",
+      "unreadNotifications": "{{count}} unread notifications",
+      "notificationsAria": "Notifications menu",
+      "notifications": "Notifications",
+      "noNotifications": "No notifications available",
+      "myProfile": "My Profile",
+      "settings": "Settings"
+    },
+    "input": {
+      "replyingTo": "Replying to",
+      "user": "User {{userId}}",
+      "cancelReply": "Cancel reply",
+      "image": "Image",
+      "video": "Video",
+      "file": "File",
+      "addEmoji": "Add emoji",
+      "mentionUser": "Mention user",
+      "messagePlaceholder": "Type your message...",
+      "typeMessage": "Type message",
+      "send": "Send"
+    },
+    "modals": {
+      "createChannel": {
+        "title": "Create New Channel",
+        "channelName": "Channel Name",
+        "spacesHelp": "Spaces will be automatically replaced with hyphens (-)",
+        "makePrivate": "Make private channel",
+        "privateHelp": "Only invited users can see",
+        "members": "Members",
+        "allTeam": "All team",
+        "specificMembers": "Specific members",
+        "specificMembersHelp": "Member selection will be added when backend is ready"
+      },
+      "call": {
+        "unknown": "Unknown",
+        "endCall": "End Call"
+      },
+      "search": {
+        "title": "Search Messages",
+        "user": "User {{userId}}",
+        "noResults": "No results found",
+        "noResultsFor": "No matching messages for \"{{query}}\"",
+        "typeToSearch": "Type something to search",
+        "searchInContent": "You can search in message content",
+        "resultsFound": "{{count}} results found"
+      }
+    }
+  },
+  "settings": {
+    "platformTitle": "Platform Settings",
+    "platformSubtitle": "AsistanApp platform configuration",
+    "save": "Save",
+    "saveAll": "Save All",
+    "general": {
+      "title": "General Settings",
+      "platformName": "Platform Name",
+      "platformUrl": "Platform URL",
+      "supportEmail": "Support Email"
+    },
+    "notificationsSettings": {
+      "title": "Notification Settings",
+      "emailTitle": "Email Notifications",
+      "emailDescription": "Send system emails and notifications",
+      "smsTitle": "SMS Notifications",
+      "smsDescription": "Send SMS for important events",
+      "pushTitle": "Push Notifications",
+      "pushDescription": "Browser push notifications active",
+      "enableEmail": "Enable: Email Notifications",
+      "enableSMS": "Enable: SMS Notifications",
+      "enablePush": "Enable: Push Notifications"
+    },
+    "securitySettings": {
+      "title": "Security Settings",
+      "sessionTimeout": "Session Timeout (minutes)",
+      "passwordMinLength": "Min. Password Length",
+      "twoFactorTitle": "2FA Required",
+      "twoFactorDescription": "Two-factor authentication required for all users",
+      "enable2FA": "Enable: 2FA Required"
+    },
+    "apiSettings": {
+      "title": "API Settings",
+      "rateLimit": "Rate Limit (requests/hour)",
+      "webhookTimeout": "Webhook Timeout (seconds)"
+    },
+    "billingSettings": {
+      "title": "Billing Settings",
+      "currency": "Currency",
+      "taxRate": "Tax Rate (%)",
+      "invoicePrefix": "Invoice Prefix"
+    }
+  }
+}

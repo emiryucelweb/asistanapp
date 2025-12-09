@@ -1,0 +1,2 @@
+import{l as n}from"./index-2fxJB1qk.js";import"./vendor-CytKP1XG.js";import"./charts-B4blyqpX.js";import"./router-D3gKB-SL.js";import"./i18n-b0rokw0Y.js";function o(){{n.debug("[Sentry] Error tracking disabled (no DSN or development mode)");return}}function p(e,r){}function l(e,r="info",t){}function g(e,r,t,i){}o();export{g as addSentryBreadcrumb,p as captureSentryException,l as captureSentryMessage,o as initializeSentry};
+//# sourceMappingURL=sentry-ypkDjaJc.js.map

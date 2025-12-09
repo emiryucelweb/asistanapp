@@ -1,0 +1,16 @@
+{
+  "notFound": {
+    "title": "Page Not Found",
+    "message": "The page you're looking for doesn't exist",
+    "backHome": "Go Back Home"
+  },
+  "serverError": {
+    "title": "Server Error",
+    "message": "An error occurred, please try again later"
+  },
+  "network": {
+    "title": "Connection Error",
+    "message": "Please check your internet connection"
+  }
+}
+

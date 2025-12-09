@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Fix Loading...</title>
+    <script>
+        // Sayfa yüklenir yüklenmez çalış
+        console.log('🔧 LocalStorage temizleniyor...');
+        
+        // Tüm auth storage'ı sil
+        localStorage.removeItem('asistan-auth-storage');
+        
+        // Tüm storage'ı sil (aggressive)
+        localStorage.clear();
+        sessionStorage.clear();
+        
+        console.log('✅ Storage temizlendi!');
+        
+        // Ana sayfaya yönlendir
+        setTimeout(() => {
+            window.location.href = '/';
+        }, 500);
+    </script>
+</head>
+<body>
+    <h1 style="text-align:center; font-family:system-ui; margin-top:50px;">
+        🔄 Düzeltiliyor...
+    </h1>
+</body>
+</html>
