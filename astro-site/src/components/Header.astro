@@ -45,6 +45,12 @@
           </a>
         </li>
         <li>
+          <a href="/demo" class="demo-link">
+            <span data-i18n="tr">Demo</span>
+            <span data-i18n="en">Demo</span>
+          </a>
+        </li>
+        <li>
           <a href="/about">
             <span data-i18n="tr">Hakkımızda</span>
             <span data-i18n="en">About</span>
@@ -101,3 +107,20 @@
     });
   });
 </script>
+
+<style>
+  .demo-link {
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.375rem;
+    background: linear-gradient(135deg, var(--primary), var(--primary-hover));
+    color: white;
+    font-weight: 600;
+    font-size: 0.875rem;
+    transition: all 0.3s ease;
+  }
+  
+  .demo-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+</style>
