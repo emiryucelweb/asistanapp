@@ -91,7 +91,8 @@ export async function initializeI18n(): Promise<typeof i18n> {
       // Backend options for loading translation files
       backend: {
         // Path to load translation files with cache busting
-        loadPath: '/locales/{{lng}}/{{ns}}.json?v=' + Date.now(),
+        // For demo deployment, we need to include the /demo prefix
+        loadPath: '/demo/locales/{{lng}}/{{ns}}.json?v=' + Date.now(),
         
         // Allow cross-origin requests
         crossDomain: false,

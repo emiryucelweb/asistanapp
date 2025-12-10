@@ -4,6 +4,8 @@
  */
 import api from '../client';
 import { ApiResponse, ListParams } from '../types';
+import { isMockMode } from '@/services/api/config';
+import { mockConversationsApi } from '@/services/api/mock/conversations.mock';
 
 export interface Conversation {
   id: string;
@@ -46,6 +48,10 @@ export const conversationsService = {
    * Get all conversations with filters
    */
   getConversations: async (params?: ListParams): Promise<ApiResponse<Conversation[]>> => {
+    if (isMockMode()) {
+      const result = await mockConversationsApi.getConversations(params);
+      return { success: true, data: result.conversations as unknown as Conversation[] };
+    }
     const response = await api.get<ApiResponse<Conversation[]>>('/conversations', { params });
     return response.data;
   },
@@ -54,6 +60,10 @@ export const conversationsService = {
    * Get single conversation by ID
    */
   getConversation: async (id: string): Promise<ApiResponse<Conversation>> => {
+    if (isMockMode()) {
+      const result = await mockConversationsApi.getConversationById(id);
+      return { success: true, data: result as unknown as Conversation };
+    }
     const response = await api.get<ApiResponse<Conversation>>(`/conversations/${id}`);
     return response.data;
   },
@@ -62,6 +72,10 @@ export const conversationsService = {
    * Get messages for a conversation
    */
   getMessages: async (conversationId: string, params?: ListParams): Promise<ApiResponse<Message[]>> => {
+    if (isMockMode()) {
+      const result = await mockConversationsApi.getMessages(conversationId);
+      return { success: true, data: result as unknown as Message[] };
+    }
     const response = await api.get<ApiResponse<Message[]>>(`/conversations/${conversationId}/messages`, { params });
     return response.data;
   },
@@ -70,6 +84,20 @@ export const conversationsService = {
    * Send a message
    */
   sendMessage: async (dto: CreateMessageDto): Promise<ApiResponse<Message>> => {
+    if (isMockMode()) {
+      const result = await mockConversationsApi.sendMessage(dto.conversationId, dto.content);
+      return { 
+        success: true, 
+        data: {
+          id: result.messageId,
+          conversationId: dto.conversationId,
+          sender: 'agent',
+          content: dto.content,
+          timestamp: new Date(),
+          read: true
+        } as Message
+      };
+    }
     const formData = new FormData();
     formData.append('content', dto.content);
     formData.append('conversationId', dto.conversationId);
@@ -114,6 +142,11 @@ export const conversationsService = {
    * Uses PATCH /:id with status update since backend doesn't have /resolve endpoint
    */
   resolveConversation: async (conversationId: string): Promise<ApiResponse<Conversation>> => {
+    if (isMockMode()) {
+      await mockConversationsApi.updateConversationStatus(conversationId, 'resolved');
+      const conv = await mockConversationsApi.getConversationById(conversationId);
+      return { success: true, data: { ...conv, status: 'resolved' } as unknown as Conversation };
+    }
     const response = await api.patch<ApiResponse<Conversation>>(`/conversations/${conversationId}`, {
       status: 'resolved'
     });
@@ -124,6 +157,11 @@ export const conversationsService = {
    * Assign conversation to an agent
    */
   assignConversation: async (conversationId: string, agentId: string): Promise<ApiResponse<Conversation>> => {
+    if (isMockMode()) {
+      await mockConversationsApi.assignConversation(conversationId, agentId);
+      const conv = await mockConversationsApi.getConversationById(conversationId);
+      return { success: true, data: { ...conv, assignedTo: 'human', assignedAgent: agentId } as unknown as Conversation };
+    }
     const response = await api.post<ApiResponse<Conversation>>(`/conversations/${conversationId}/assign`, {
       agentId,
     });

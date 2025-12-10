@@ -4,43 +4,45 @@
  */
 
 import { mockDelay } from '../config';
+import { mockSuperAdminStats, mockTenants, mockSystemMetrics, mockIndustryBreakdown } from '@/data/mocks';
 
 export const mockDashboardData = {
   stats: {
-    totalTenants: 24,
-    activeTenants: 18,
-    trialTenants: 4,
+    totalTenants: mockSuperAdminStats.totalTenants,
+    activeTenants: mockSuperAdminStats.activeTenants,
+    trialTenants: mockSuperAdminStats.trialTenants,
     pastDueTenants: 2,
-    totalMonthlyRevenue: 45750,
-    totalMonthlyCosts: 15280,
-    totalProfit: 30470,
-    profitMargin: 66.6,
-    growthRate: 15.3,
+    totalMonthlyRevenue: mockSuperAdminStats.totalRevenue.monthly,
+    totalMonthlyCosts: 95820,
+    totalProfit: mockSuperAdminStats.totalRevenue.monthly - 95820,
+    profitMargin: ((mockSuperAdminStats.totalRevenue.monthly - 95820) / mockSuperAdminStats.totalRevenue.monthly * 100),
+    growthRate: mockSuperAdminStats.totalRevenue.growth,
     churnRate: 2.5,
   },
 
   recentActivity: [
-    { id: 1, type: 'new', tenant: 'Fashion Boutique', tenantId: 'tenant-1', action: 'Yeni firma kaydı', time: '5 dakika önce', color: 'green' },
-    { id: 2, type: 'payment', tenant: 'Acme E-commerce', tenantId: 'tenant-2', action: 'Ödeme alındı ($2,500)', time: '1 saat önce', color: 'blue' },
-    { id: 3, type: 'upgrade', tenant: 'TechStart SaaS', tenantId: 'tenant-3', action: 'Enterprise plana yükseltildi', time: '3 saat önce', color: 'purple' },
-    { id: 4, type: 'warning', tenant: 'HealthCare Plus', tenantId: 'tenant-4', action: 'Ödeme gecikmesi', time: '5 saat önce', color: 'red' },
-    { id: 5, type: 'api', tenant: 'Food Delivery Co', tenantId: 'tenant-5', action: 'API limiti %80 doldu', time: '1 gün önce', color: 'yellow' },
+    { id: 1, type: 'new', tenant: 'Modern Kafe', tenantId: 'tenant-005', action: 'Yeni firma kaydı', time: '5 dakika önce', color: 'green' },
+    { id: 2, type: 'payment', tenant: 'Smile Dental Klinik', tenantId: 'tenant-001', action: 'Ödeme alındı (8.500 TRY)', time: '1 saat önce', color: 'blue' },
+    { id: 3, type: 'upgrade', tenant: 'TechHub Yazılım', tenantId: 'tenant-002', action: 'Enterprise plana yükseltildi', time: '3 saat önce', color: 'purple' },
+    { id: 4, type: 'warning', tenant: 'Güzellik Salonu Luna', tenantId: 'tenant-003', action: 'API kullanım limiti aşıldı', time: '5 saat önce', color: 'red' },
+    { id: 5, type: 'api', tenant: 'E-Ticaret Mağazası', tenantId: 'tenant-004', action: 'Günlük mesaj limiti %85', time: '1 gün önce', color: 'yellow' },
   ],
 
-  topTenants: [
-    { name: 'Acme E-commerce', revenue: 2500, growth: 12.5, plan: 'Enterprise' },
-    { name: 'TechStart SaaS', revenue: 2400, growth: 18.2, plan: 'Professional' },
-    { name: 'HealthCare Plus', revenue: 2200, growth: -5.3, plan: 'Professional' },
-    { name: 'Fashion Boutique', revenue: 1999, growth: 22.1, plan: 'Starter' },
-    { name: 'Food Delivery Co', revenue: 1899, growth: 8.7, plan: 'Professional' },
-  ],
+  topTenants: mockTenants.slice(0, 5).map(tenant => ({
+    name: tenant.businessName,
+    revenue: tenant.stats.monthlyRevenue,
+    growth: tenant.stats.growth,
+    plan: tenant.plan
+  })),
 
   systemHealth: [
-    { name: 'API Server', status: 'operational', uptime: '99.9%' },
-    { name: 'Database', status: 'operational', uptime: '100%' },
+    { name: 'API Server', status: 'operational', uptime: '99.97%' },
+    { name: 'Database', status: 'operational', uptime: '99.99%' },
     { name: 'Cache', status: 'operational', uptime: '99.8%' },
-    { name: 'Storage', status: 'warning', uptime: '95.2%' },
+    { name: 'Storage', status: 'operational', uptime: '98.5%' },
   ],
+
+  industries: mockIndustryBreakdown,
 };
 
 /**

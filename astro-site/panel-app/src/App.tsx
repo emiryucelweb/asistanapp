@@ -17,6 +17,7 @@ import {
 import MainLayout from '@/shared/components/layout/MainLayout';
 import ProtectedRoute from '@/shared/components/auth/ProtectedRoute';
 import PublicRoute from '@/shared/components/auth/PublicRoute';
+import DemoGuard from '@/shared/components/auth/DemoGuard';
 import { ErrorBoundary } from '@/shared/components/errors';
 import { WebVitalsMonitor } from '@/shared/components/monitoring';
 
@@ -36,6 +37,7 @@ import { queryClient } from './lib/react-query/queryClient';
 
 // Pages
 const PanelSelector = React.lazy(() => import('@/shared/pages/PanelSelector'));
+const DemoLoginPage = React.lazy(() => import('@/shared/pages/DemoLoginPage'));
 const LoginPage = React.lazy(() => import('@/shared/pages/auth/LoginPage'));
 const ForgotPasswordPage = React.lazy(() => import('@/shared/pages/auth/ForgotPasswordPage'));
 const AdminLoginPage = React.lazy(() => import('@/shared/pages/auth/AdminLoginPage'));
@@ -141,7 +143,16 @@ function App() {
         
         <div className="App">
       <BusinessProvider defaultBusinessType="dental_clinic">
-              <Routes>
+        <DemoGuard>
+          <Routes>
+            <Route
+              path="/demo-login"
+              element={
+                <Suspense fallback={<FullPageLoader variant="dots" />}>
+                  <DemoLoginPage />
+                </Suspense>
+              }
+            />
             {/* Public routes - Firma Sahibi */}
             <Route
               path="/admin/login"
@@ -510,6 +521,7 @@ function App() {
               }
             />
           </Routes>
+        </DemoGuard>
       </BusinessProvider>
       
       {/* Toast Notifications */}
