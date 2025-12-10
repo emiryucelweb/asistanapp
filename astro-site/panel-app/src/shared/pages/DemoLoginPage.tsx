@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Lock } from 'lucide-react';
+import { Lock, Eye, EyeOff } from 'lucide-react';
 
 const DemoLoginPage: React.FC = () => {
   const [password, setPassword] = useState('');
+  const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState('');
   const navigate = useNavigate();
 
@@ -23,7 +24,14 @@ const DemoLoginPage: React.FC = () => {
     e.preventDefault();
     
     try {
-      const hashedPassword = await hashPassword(password);
+      // Trim password to remove accidental whitespace
+      const cleanPassword = password.trim();
+      const hashedPassword = await hashPassword(cleanPassword);
+      
+      console.log('Input Password Length:', cleanPassword.length);
+      console.log('Generated Hash:', hashedPassword);
+      console.log('Target Hash:   ', TARGET_HASH);
+      console.log('Match:', hashedPassword === TARGET_HASH);
       
       if (hashedPassword === TARGET_HASH) {
         sessionStorage.setItem('isDemoAuthenticated', 'true');
@@ -49,18 +57,25 @@ const DemoLoginPage: React.FC = () => {
         </div>
 
         <form onSubmit={handleLogin} className="space-y-6">
-          <div>
+          <div className="relative">
             <input
-              type="password"
+              type={showPassword ? "text" : "password"}
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               placeholder="Şifre"
-              className="w-full bg-gray-700 border border-gray-600 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-colors"
+              className="w-full bg-gray-700 border border-gray-600 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-colors pr-12"
             />
-            {error && (
-              <p className="mt-2 text-sm text-red-500">{error}</p>
-            )}
+            <button
+              type="button"
+              onClick={() => setShowPassword(!showPassword)}
+              className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-white transition-colors"
+            >
+              {showPassword ? <EyeOff size={20} /> : <Eye size={20} />}
+            </button>
           </div>
+          {error && (
+            <p className="text-sm text-red-500 text-center">{error}</p>
+          )}
 
           <button
             type="submit"
