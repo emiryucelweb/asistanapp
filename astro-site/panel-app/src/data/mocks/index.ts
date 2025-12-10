@@ -36,3 +36,22 @@ export const mockApiResponse = <T>(data: T, delay = MOCK_DATA_CONFIG.apiDelay): 
     }, delay);
   });
 };
+
+// ============================================================================
+// ULTRA-DETAILED MOCK DATA (NEW)
+// ============================================================================
+
+// Admin Panel - Detailed Mocks
+export * from './admin-customers.mock';
+export * from './admin-products.mock';
+export * from './admin-orders.mock';
+
+// Agent Panel - Detailed Mocks
+export * from './agent-conversations.mock';
+export * from './agent-quick-replies.mock';
+export * from './agent-performance.mock';
+
+// SuperAdmin Panel - Detailed Mocks
+export * from './superadmin-tenants.mock';
+export * from './superadmin-financial.mock';
+export * from './superadmin-analytics.mock';
