@@ -7,8 +7,8 @@ const DemoLoginPage: React.FC = () => {
   const [error, setError] = useState('');
   const navigate = useNavigate();
 
-  // SHA-256 hash of the demo password
-  const TARGET_HASH = '864448c896b82614512d3098a948acbb5ee8282c7edeb5ba1356297e10562700';
+  // SHA-256 hash of the demo password (AsistanApp2025)
+  const TARGET_HASH = '5283d2ebf22e694681ac4fb8aec48d434327b8a84b82ac4627f2c96722d69981';
 
   const hashPassword = async (pwd: string) => {
     const encoder = new TextEncoder();
