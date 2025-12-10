@@ -43,7 +43,7 @@ export const useAuthStore = create<AuthStore>()(
             // ✅ DEMO ŞİFRE KONTROLLARI - SHA-256 Hash
             const DEMO_PASSWORDS = {
               admin: '5283d2ebf22e694681ac4fb8aec48d434327b8a84b82ac4627f2c96722d69981', // AsistanApp2025
-              superadmin: '54465af9d2d6a93bb780d7b968de24fc5d5e0d74b01e5b7f8e8b4c5d8a9c2f3e', // SuperAdmin2025
+              superadmin: '54465af9f422cfdbe7ff4634a2cf7b4b4827aba7ba4d02a01d00d7b557c9511a', // SuperAdmin2025
               agent: '5283d2ebf22e694681ac4fb8aec48d434327b8a84b82ac4627f2c96722d69981', // AsistanApp2025
             };
             
