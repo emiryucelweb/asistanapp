@@ -1,3 +1,4 @@
+ 
 
 import React, { createContext, useContext, useCallback } from 'react';
 import { create } from 'zustand';
@@ -40,41 +41,6 @@ export const useAuthStore = create<AuthStore>()(
           try {
             set({ isLoading: true, error: null });
             
-            // ✅ DEMO ŞİFRE KONTROLLARI - SHA-256 Hash
-            const DEMO_PASSWORDS = {
-              admin: '5283d2ebf22e694681ac4fb8aec48d434327b8a84b82ac4627f2c96722d69981', // AsistanApp2025
-              superadmin: '54465af9d2d6a93bb780d7b968de24fc5d5e0d74b01e5b7f8e8b4c5d8a9c2f3e', // SuperAdmin2025
-              agent: '5283d2ebf22e694681ac4fb8aec48d434327b8a84b82ac4627f2c96722d69981', // AsistanApp2025
-            };
-            
-            const hashPassword = async (pwd: string) => {
-              const encoder = new TextEncoder();
-              const data = encoder.encode(pwd);
-              const hashBuffer = await crypto.subtle.digest('SHA-256', data);
-              const hashArray = Array.from(new Uint8Array(hashBuffer));
-              return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
-            };
-            
-            const hashedPassword = await hashPassword(credentials.password.trim());
-            
-            // Email'e göre role belirle
-            const userRole = credentials.email.includes('agent') || credentials.email.includes('ekip')
-              ? 'agent' as const 
-              : credentials.email.includes('business') 
-              ? 'owner' as const 
-              : 'admin' as const;
-            
-            // Role'e göre doğru şifreyi kontrol et
-            const requiredHash = userRole === 'admin' && credentials.email.includes('super')
-              ? DEMO_PASSWORDS.superadmin
-              : userRole === 'agent'
-              ? DEMO_PASSWORDS.agent
-              : DEMO_PASSWORDS.admin;
-            
-            if (hashedPassword !== requiredHash) {
-              throw new Error('E-posta veya şifre hatalı!');
-            }
-            
             // Real API authentication (with fallback to mock)
             try {
               // Try real API login first
@@ -111,6 +77,13 @@ export const useAuthStore = create<AuthStore>()(
             }
             
             // Fallback to mock authentication for development
+            // Email'e göre role belirle
+            const userRole = credentials.email.includes('agent') || credentials.email.includes('ekip') 
+              ? 'agent' as const 
+              : credentials.email.includes('business') 
+              ? 'owner' as const 
+              : 'admin' as const;
+            
             const mockUser = {
               id: '1',
               tenantId: 'default',
@@ -156,7 +129,7 @@ export const useAuthStore = create<AuthStore>()(
             
             toast.success(`Hoş geldiniz, ${mockUser.profile?.firstName}!`);
           } catch (error: any) {
-            const errorMessage = error.message || 'Login failed. Please try again.';
+            const errorMessage = 'Login failed. Please try again.';
             set({ 
               error: errorMessage, 
               isLoading: false,
