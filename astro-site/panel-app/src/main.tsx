@@ -166,7 +166,7 @@ async function bootstrapApp() {
       </div>
     }>
               <QueryClientProvider client={queryClient}>
-                <BrowserRouter>
+                <BrowserRouter basename="/demo">
                   <App />
                   <Toaster
                     position="top-right"
