@@ -471,38 +471,6 @@
     "time": "Time",
     "notSpecified": "Not specified",
     "none": "None"
-  },
-  "demo": {
-    "login": {
-      "title": "Demo Access",
-      "subtitle": "Please enter the demo password to continue.",
-      "password": "Password",
-      "showPassword": "Show password",
-      "hidePassword": "Hide password",
-      "submit": "Sign In",
-      "success": "Login successful! Redirecting...",
-      "error": "Invalid password. Please try again.",
-      "genericError": "An error occurred. Please try again.",
-      "passwordLength": "Password length",
-      "hashMatch": "Hash match"
-    },
-    "superAdmin": {
-      "title": "SuperAdmin Panel Access",
-      "subtitle": "Enter your password to access the SuperAdmin panel.",
-      "note": "This area is restricted to system administrators only."
-    },
-    "guard": {
-      "checking": "Checking demo access...",
-      "unauthorized": "Demo access password required",
-      "redirecting": "Redirecting to login page..."
-    }
-  },
-  "notifications": {
-    "title": "Notifications",
-    "markAllRead": "Mark all as read",
-    "empty": "No notifications yet",
-    "new": "New",
-    "viewAll": "View all"
   }
 }
 

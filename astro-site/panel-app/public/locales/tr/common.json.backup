@@ -471,38 +471,6 @@
     "time": "Saat",
     "notSpecified": "Belirtilmedi",
     "none": "Yok"
-  },
-  "demo": {
-    "login": {
-      "title": "Demo Erişimi",
-      "subtitle": "Devam etmek için lütfen demo şifresini giriniz.",
-      "password": "Şifre",
-      "showPassword": "Şifreyi göster",
-      "hidePassword": "Şifreyi gizle",
-      "submit": "Giriş Yap",
-      "success": "Giriş başarılı! Yönlendiriliyorsunuz...",
-      "error": "Hatalı şifre. Lütfen tekrar deneyin.",
-      "genericError": "Bir hata oluştu. Lütfen tekrar deneyin.",
-      "passwordLength": "Şifre uzunluğu",
-      "hashMatch": "Hash eşleşmesi"
-    },
-    "superAdmin": {
-      "title": "SuperAdmin Paneli Erişimi",
-      "subtitle": "SuperAdmin paneline giriş için şifrenizi girin.",
-      "note": "Bu alan sadece sistem yöneticileri içindir."
-    },
-    "guard": {
-      "checking": "Demo erişimi kontrol ediliyor...",
-      "unauthorized": "Demo erişim şifresi gerekli",
-      "redirecting": "Giriş sayfasına yönlendiriliyorsunuz..."
-    }
-  },
-  "notifications": {
-    "title": "Bildirimler",
-    "markAllRead": "Tümünü okundu işaretle",
-    "empty": "Henüz bildirim yok",
-    "new": "Yeni",
-    "viewAll": "Tümünü gör"
   }
 }
 

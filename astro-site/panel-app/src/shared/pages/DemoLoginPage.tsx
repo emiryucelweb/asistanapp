@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { Lock, Eye, EyeOff } from 'lucide-react';
+import toast from 'react-hot-toast';
 
 const DemoLoginPage: React.FC = () => {
+  const { t } = useTranslation('common');
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState('');
@@ -22,26 +25,25 @@ const DemoLoginPage: React.FC = () => {
 
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
+    setError('');
     
     try {
-      // Trim password to remove accidental whitespace
       const cleanPassword = password.trim();
       const hashedPassword = await hashPassword(cleanPassword);
       
-      console.log('Input Password Length:', cleanPassword.length);
-      console.log('Generated Hash:', hashedPassword);
-      console.log('Target Hash:   ', TARGET_HASH);
-      console.log('Match:', hashedPassword === TARGET_HASH);
-      
       if (hashedPassword === TARGET_HASH) {
         sessionStorage.setItem('isDemoAuthenticated', 'true');
+        toast.success(t('demo.login.success'));
         navigate('/');
       } else {
-        setError('Hatalı şifre');
+        const errorMsg = t('demo.login.error');
+        setError(errorMsg);
+        toast.error(errorMsg);
       }
     } catch (err) {
-      console.error('Hashing error:', err);
-      setError('Bir hata oluştu');
+      const errorMsg = t('demo.login.genericError');
+      setError(errorMsg);
+      toast.error(errorMsg);
     }
   };
 
@@ -52,8 +54,8 @@ const DemoLoginPage: React.FC = () => {
           <div className="w-16 h-16 bg-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
             <Lock className="w-8 h-8 text-blue-500" />
           </div>
-          <h1 className="text-2xl font-bold text-white mb-2">Demo Erişimi</h1>
-          <p className="text-gray-400">Devam etmek için lütfen demo şifresini giriniz.</p>
+          <h1 className="text-2xl font-bold text-white mb-2">{t('demo.login.title')}</h1>
+          <p className="text-gray-400">{t('demo.login.subtitle')}</p>
         </div>
 
         <form onSubmit={handleLogin} className="space-y-6">
@@ -62,13 +64,14 @@ const DemoLoginPage: React.FC = () => {
               type={showPassword ? "text" : "password"}
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              placeholder="Şifre"
+              placeholder={t('demo.login.password')}
               className="w-full bg-gray-700 border border-gray-600 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-colors pr-12"
             />
             <button
               type="button"
               onClick={() => setShowPassword(!showPassword)}
               className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-white transition-colors"
+              title={showPassword ? t('demo.login.hidePassword') : t('demo.login.showPassword')}
             >
               {showPassword ? <EyeOff size={20} /> : <Eye size={20} />}
             </button>
@@ -81,7 +84,7 @@ const DemoLoginPage: React.FC = () => {
             type="submit"
             className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-4 rounded-lg transition-colors duration-200"
           >
-            Giriş Yap
+            {t('demo.login.submit')}
           </button>
         </form>
       </div>
