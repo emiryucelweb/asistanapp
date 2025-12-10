@@ -57,20 +57,27 @@ export const useAuthStore = create<AuthStore>()(
             
             const hashedPassword = await hashPassword(credentials.password.trim());
             
-            // Email'e göre role belirle
-            const userRole = credentials.email.includes('agent') || credentials.email.includes('ekip')
-              ? 'agent' as const 
-              : credentials.email.includes('business') 
-              ? 'owner' as const 
-              : 'admin' as const;
+            // ✅ Email'e göre role belirle - ÇOK SPESIFIK KONTROL
+            let userRole: UserRole;
+            let requiredHash: string;
             
-            // Role'e göre doğru şifreyi kontrol et
-            const requiredHash = userRole === 'admin' && credentials.email.includes('super')
-              ? DEMO_PASSWORDS.superadmin
-              : userRole === 'agent'
-              ? DEMO_PASSWORDS.agent
-              : DEMO_PASSWORDS.admin;
+            if (credentials.email.includes('agent') || credentials.email.includes('ekip')) {
+              userRole = 'agent';
+              requiredHash = DEMO_PASSWORDS.agent;
+            } else if (credentials.email.includes('business')) {
+              userRole = 'owner';
+              requiredHash = DEMO_PASSWORDS.admin;
+            } else if (credentials.email.includes('superadmin') || credentials.email === 'super@asistanapp.com') {
+              // SuperAdmin için özel email kontrolü
+              userRole = 'admin';
+              requiredHash = DEMO_PASSWORDS.superadmin;
+            } else {
+              // Normal admin
+              userRole = 'admin';
+              requiredHash = DEMO_PASSWORDS.admin;
+            }
             
+            // ✅ Şifre kontrolü
             if (hashedPassword !== requiredHash) {
               throw new Error('E-posta veya şifre hatalı!');
             }
@@ -115,15 +122,15 @@ export const useAuthStore = create<AuthStore>()(
               id: '1',
               tenantId: 'default',
               email: credentials.email,
-              name: userRole === 'agent' ? 'Ekip Üyesi' : 'Test User',
+              name: userRole === 'agent' ? 'Ekip Üyesi' : userRole === 'owner' ? 'İşletme Sahibi' : 'Yönetici',
               role: userRole,
               permissions: ['all'],
               mfaEnabled: false,
               createdAt: new Date().toISOString(),
               updatedAt: new Date().toISOString(),
               profile: {
-                firstName: userRole === 'agent' ? 'Ekip' : 'Test',
-                lastName: userRole === 'agent' ? 'Üyesi' : 'User',
+                firstName: userRole === 'agent' ? 'Ekip' : userRole === 'owner' ? 'İşletme' : 'Yönetici',
+                lastName: userRole === 'agent' ? 'Üyesi' : userRole === 'owner' ? 'Sahibi' : 'User',
                 avatar: undefined,
                 timezone: 'Europe/Istanbul',
                 language: 'tr',
